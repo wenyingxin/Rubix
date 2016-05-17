@@ -1,4 +1,4 @@
-# Ruby X
+# Ruby X (develop开发分支)
 
 互联网金融前端框架语言。
 
