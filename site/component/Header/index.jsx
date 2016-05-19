@@ -1,9 +1,10 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router';
 import enquire from 'enquire.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
-import { Select, Menu, Row, Col, Icon } from 'antd';
+import { Select, Menu, Row, Col, Icon, Button } from 'antd';
 const Option = Select.Option;
 
 import './index.less';
@@ -12,6 +13,7 @@ import componentsList from '../../../_data/react-components';
 export default class Header extends React.Component {
   static contextTypes = {
     router: React.PropTypes.object.isRequired,
+    intl: React.PropTypes.object.isRequired,
   }
 
   constructor(props) {
@@ -76,23 +78,38 @@ export default class Header extends React.Component {
     return option.props['data-label'].indexOf(value.toLowerCase()) > -1;
   }
 
+  handleLangChange = () => {
+    if (typeof localStorage !== 'undefined') {
+      const locale = this.context.intl.locale === 'zh-CN' ? 'en-US' : 'zh-CN';
+      localStorage.setItem('locale', locale);
+      location.reload();
+    }
+  }
+
   render() {
     const routes = this.props.routes;
     let activeMenuItem = routes[1].path || 'home';
     activeMenuItem = activeMenuItem === 'components' ? 'docs/react' : activeMenuItem;
 
-    const options = Object.keys(componentsList).map(key => componentsList[key])
-    .filter(({ meta }) => /^component/.test(meta.fileName))
-    .map(({ meta }) => {
-      const pathSnippet = meta.fileName.split('/')[1];
-      const url = `/components/${pathSnippet}`;
-      return (
-        <Option value={url} key={url} data-label={`${meta.english.toLowerCase()} ${meta.chinese}`}>
-          <strong>{meta.english}</strong>
-          <span className="ant-component-decs">{meta.chinese}</span>
-        </Option>
-      );
-    });
+    const locale = this.context.intl.locale;
+    const options = Object.keys(componentsList)
+            .map((key) => {
+              const value = componentsList[key];
+              return value.localized ? value[locale] : value;
+            })
+            .filter(({ meta }) => {
+              return /^component/.test(meta.fileName);
+            })
+            .map(({ meta }) => {
+              const pathSnippet = meta.fileName.split('/')[1];
+              const url = `/components/${pathSnippet}`;
+              return (
+                <Option value={url} key={url} data-label={`${(meta.title || meta.english).toLowerCase()} ${meta.subtitle || meta.chinese}`}>
+                  <strong>{meta.title || meta.english}</strong>
+                  <span className="ant-component-decs">{meta.subtitle || meta.chinese}</span>
+                </Option>
+              );
+            });
 
     const menuStyle = {
       display: this.state.menuVisible ? 'block' : '',
@@ -113,7 +130,7 @@ export default class Header extends React.Component {
               type="menu" />
             <Link to="/" id="logo">
               <img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
-              <span>Ruby X</span>
+              <span>Ant Design</span>
             </Link>
           </Col>
           <Col className={`nav ${this.state.menuVisible ? 'nav-show' : 'nav-hide'}`}
@@ -129,51 +146,44 @@ export default class Header extends React.Component {
                 {options}
               </Select>
             </div>
+            {
+              location.port ? (
+                <Button id="lang" type="ghost" size="small" onClick={this.handleLangChange}>
+                  <FormattedMessage id="app.header.lang" />
+                </Button>
+              ) : null
+            }
             <Menu mode={this.state.menuMode} selectedKeys={[activeMenuItem]} id="nav">
               <Menu.Item key="home">
                 <Link to="/">
-                  首页
+                  <FormattedMessage id="app.header.menu.home" />
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="docs/practice">
+                <Link to="/docs/practice">
+                  <FormattedMessage id="app.header.menu.practice" />
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="docs/pattern">
+                <Link to="/docs/pattern">
+                  <FormattedMessage id="app.header.menu.pattern" />
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="docs/react">
+                <Link to="/docs/react">
+                  <FormattedMessage id="app.header.menu.react" />
                 </Link>
               </Menu.Item>
               <Menu.Item key="docs/spec">
-                  <Link to="/docs/spec">
-                    语言
-                  </Link>
-                </Menu.Item>
-              {/*
-                <Menu.Item key="docs/practice">
-                  <Link to="/docs/practice">
-                    实践
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="docs/pattern">
-                  <Link to="/docs/pattern">
-                    模式
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="docs/spec">
-                  <Link to="/docs/spec">
-                    语言
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="docs/resource">
-                  <Link to="/docs/resource">
-                    资源
-                  </Link>
-                </Menu.Item>
-              */}
-              
-              <Menu.Item key="docs/react">
-                <Link to="/docs/react">
-                  组件
+                <Link to="/docs/spec">
+                  <FormattedMessage id="app.header.menu.spec" />
                 </Link>
               </Menu.Item>
-              <Menu.Item key="docs/mobile">
-                <Link to="/docs/mobile">
-                  移动端
+              <Menu.Item key="docs/resource">
+                <Link to="/docs/resource">
+                  <FormattedMessage id="app.header.menu.resource" />
                 </Link>
               </Menu.Item>
-              
             </Menu>
           </Col>
         </Row>

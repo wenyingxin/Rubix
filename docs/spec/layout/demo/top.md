@@ -50,7 +50,7 @@ ReactDOM.render(
         </div>
       </div>
       <div className="ant-layout-footer">
-      Ruby X 版权所有 © 2016 应用开发七部
+      Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
       </div>
     </div>
   </BrowserDemo>

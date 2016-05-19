@@ -14,7 +14,7 @@ export default class Home extends React.Component {
     this.componentDidUpdate();
   }
   componentDidUpdate() {
-    utils.setTitle('Ruby X - 互联网前端开发框架语言');
+    utils.setTitle('Ant Design - 一个 UI 设计语言');
   }
   // To store style which is only for Home and has conflicts with others.
   getStyle() {
@@ -62,6 +62,7 @@ export default class Home extends React.Component {
         background: #777;
         box-shadow: 0 7px 0 0 #777, 0 14px 0 0 #777;
       }
+      #lang,
       #nav a {
         color: #eee;
         transition: color 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -84,6 +85,9 @@ export default class Home extends React.Component {
       }
       #footer a {
         color: #eee;
+      }
+      .down {
+        animation: upDownMove 1.2s ease-in-out infinite;
       }
     `;
   }

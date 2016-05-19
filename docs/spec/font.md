@@ -10,6 +10,14 @@ english: 字体
 
 ## 字体家族
 
+- 中文字体族：
+
+   <img src="https://os.alipayobjects.com/rmsportal/OKbesWXtRMCNGmO.png" width="100%">
+
+- 英文文字体族：
+
+   <img src="https://t.alipayobjects.com/images/T1bcXhXfNeXXXXXXXX.png" width="100%">
+
 字体家族 css 代码如下：
 
 ```css

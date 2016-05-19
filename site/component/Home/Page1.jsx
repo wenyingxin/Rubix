@@ -25,16 +25,13 @@ export default function Page1() {
       <QueueAnim className="text-wrapper" delay={300} key="text" duration={550} leaveReverse
         hideProps={{ child: null }}>
         <h2 key="h2">最佳实践</h2>
-        <p key="p" style={{ maxWidth: 310 }}>互联网银行、开放平台、银讯通、直销银行，积累了大量的优秀案例。</p>
+        <p key="p" style={{ maxWidth: 310 }}>近一年的中后台设计实践，积累了大量的优秀案例。</p>
         <div key="button">
           <Link to="/docs/practice/cases">
-            {/*
-              <Button type="primary" size="large">
-                了解更多
-                <Icon type="right" />
-              </Button>
-            */}
-            
+            <Button type="primary" size="large">
+              了解更多
+              <Icon type="right" />
+            </Button>
           </Link>
         </div>
       </QueueAnim>
