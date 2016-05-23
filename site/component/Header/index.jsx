@@ -5,6 +5,7 @@ import enquire from 'enquire.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
 import { Select, Menu, Row, Col, Icon } from 'antd';
+import logo from './logo.svg';
 const Option = Select.Option;
 
 import './index.less';
@@ -129,7 +130,7 @@ export default class Header extends React.Component {
               onClick={this.handleMenuIconClick}
               type="menu" />
             <Link to="/" id="logo">
-              <img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
+              <img alt="logo" src={logo} />
               <span>Ruby X</span>
             </Link>
           </Col>
