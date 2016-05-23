@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import enquire from 'enquire.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
-import { Select, Menu, Row, Col, Icon, Button } from 'antd';
+import { Select, Menu, Row, Col, Icon } from 'antd';
 const Option = Select.Option;
 
 import './index.less';
@@ -130,7 +130,7 @@ export default class Header extends React.Component {
               type="menu" />
             <Link to="/" id="logo">
               <img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
-              <span>Ant Design</span>
+              <span>Ruby X</span>
             </Link>
           </Col>
           <Col className={`nav ${this.state.menuVisible ? 'nav-show' : 'nav-hide'}`}
@@ -146,29 +146,38 @@ export default class Header extends React.Component {
                 {options}
               </Select>
             </div>
-            {
-              location.port ? (
-                <Button id="lang" type="ghost" size="small" onClick={this.handleLangChange}>
-                  <FormattedMessage id="app.header.lang" />
-                </Button>
-              ) : null
-            }
+            {/*
+              {
+                location.port ? (
+                  <Button id="lang" type="ghost" size="small" onClick={this.handleLangChange}>
+                    <FormattedMessage id="app.header.lang" />
+                  </Button>
+                ) : null
+              }
+            */}
             <Menu mode={this.state.menuMode} selectedKeys={[activeMenuItem]} id="nav">
               <Menu.Item key="home">
                 <Link to="/">
                   <FormattedMessage id="app.header.menu.home" />
                 </Link>
               </Menu.Item>
-              <Menu.Item key="docs/practice">
-                <Link to="/docs/practice">
-                  <FormattedMessage id="app.header.menu.practice" />
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="docs/pattern">
-                <Link to="/docs/pattern">
-                  <FormattedMessage id="app.header.menu.pattern" />
-                </Link>
-              </Menu.Item>
+              {/*
+                <Menu.Item key="docs/practice">
+                  <Link to="/docs/practice">
+                    <FormattedMessage id="app.header.menu.practice" />
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="docs/pattern">
+                  <Link to="/docs/pattern">
+                    <FormattedMessage id="app.header.menu.pattern" />
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="docs/resource">
+                  <Link to="/docs/resource">
+                    <FormattedMessage id="app.header.menu.resource" />
+                  </Link>
+                </Menu.Item>
+              */}
               <Menu.Item key="docs/react">
                 <Link to="/docs/react">
                   <FormattedMessage id="app.header.menu.react" />
@@ -177,11 +186,6 @@ export default class Header extends React.Component {
               <Menu.Item key="docs/spec">
                 <Link to="/docs/spec">
                   <FormattedMessage id="app.header.menu.spec" />
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="docs/resource">
-                <Link to="/docs/resource">
-                  <FormattedMessage id="app.header.menu.resource" />
                 </Link>
               </Menu.Item>
             </Menu>
