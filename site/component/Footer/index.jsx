@@ -1,8 +1,8 @@
 import React from 'react';
-import Modal from 'antd';
+// import Modal from 'antd';
 // import { Select, Modal } from 'antd';
-import { version as antdVersion } from '../../../package.json';
-import { docVersions } from '../../website.config';
+// import { version as antdVersion } from '../../../package.json';
+// import { docVersions } from '../../website.config';
 // const Option = Select.Option;
 
 function isLocalStorageNameSupported() {
@@ -17,7 +17,7 @@ function isLocalStorageNameSupported() {
   }
 }
 
-docVersions[antdVersion] = antdVersion;
+// docVersions[antdVersion] = antdVersion;
 
 export default class Footer extends React.Component {
   componentDidMount() {
@@ -35,24 +35,24 @@ export default class Footer extends React.Component {
     }
   }
 
-  infoNewVersion() {
-    Modal.info({
-      title: 'antd 新版发布！',
-      content: (
-        <div>
-          <img src="https://os.alipayobjects.com/rmsportal/nyqBompsynAQCpJ.svg" alt="Ant Design" />
-          <p>
-            您好，<a target="_blank" href="/#/changelog">antd@1.0</a> 已正式发布，欢迎升级。
-            如果您还需要使用旧版，请查阅 <a target="_blank" href="http://012x.ant.design">012x.ant.design</a>
-            ，也可通过页面右下角的文档版本选择框进行切换。
-          </p>
-        </div>
-      ),
-      onOk: () => localStorage.setItem('infoNewVersionSent', 'true'),
-      className: 'new-version-info-modal',
-      width: 470,
-    });
-  }
+  // infoNewVersion() {
+  //   Modal.info({
+  //     title: 'antd 新版发布！',
+  //     content: (
+  //       <div>
+  //         <img src="https://os.alipayobjects.com/rmsportal/nyqBompsynAQCpJ.svg" alt="Ant Design" />
+  //         <p>
+  //           您好，<a target="_blank" href="/#/changelog">antd@1.0</a> 已正式发布，欢迎升级。
+  //           如果您还需要使用旧版，请查阅 <a target="_blank" href="http://012x.ant.design">012x.ant.design</a>
+  //           ，也可通过页面右下角的文档版本选择框进行切换。
+  //         </p>
+  //       </div>
+  //     ),
+  //     onOk: () => localStorage.setItem('infoNewVersionSent', 'true'),
+  //     className: 'new-version-info-modal',
+  //     width: 470,
+  //   });
+  // }
 
   handleVersionChange = (url) => {
     window.location.href = url;
