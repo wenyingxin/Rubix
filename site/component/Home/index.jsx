@@ -14,7 +14,7 @@ export default class Home extends React.Component {
     this.componentDidUpdate();
   }
   componentDidUpdate() {
-    utils.setTitle('Ant Design - 一个 UI 设计语言');
+    utils.setTitle('RubyX - 农业银行互联网前端开发框架');
   }
   // To store style which is only for Home and has conflicts with others.
   getStyle() {

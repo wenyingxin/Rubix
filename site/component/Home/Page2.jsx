@@ -12,7 +12,7 @@ export default function Page2() {
         leaveReverse
         hideProps={{ child: null }}>
         <h2 key="h2">设计模式</h2>
-        <p key="p" style={{ maxWidth: 260 }}>总结中后台设计中反复出现的问题，并提供相应的解决方案。</p>
+        <p key="p" style={{ maxWidth: 260 }}>总结互联网前端开发设计中反复出现的问题，并提供相应的解决方案。</p>
         <div key="button">
           <Link to="/docs/pattern/navigation">
             <Button type="primary" size="large">

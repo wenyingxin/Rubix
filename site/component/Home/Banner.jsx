@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import ScrollElement from 'rc-scroll-anim/lib/ScrollElement';
-import GitHubButton from 'react-github-button';
 import 'react-github-button/assets/style.css';
 import { Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
@@ -29,8 +28,6 @@ export default class Banner extends React.Component {
                 <Icon type="smile-circle" /> 开始探索
               </Link>
             </div>
-            <GitHubButton key="github-button" type="stargazers"
-              namespace="ant-design" repo="ant-design" />
           </QueueAnim>
           <Icon type="down" className="down" />
         </ScrollElement>

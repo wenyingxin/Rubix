@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
     //   2. 超过截止日期后不再提示
     if (localStorage.getItem('infoNewVersionSent') !== 'true' ||
         new Date().getTime() > new Date('2016/05/22').getTime()) {
-      this.infoNewVersion();
+        // this.infoNewVersion();
     }
   }
 
