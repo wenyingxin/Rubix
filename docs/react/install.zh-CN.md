@@ -25,7 +25,7 @@ $ npm install rubyx --save
 
 ## 开发工具
 
-我们提供了 React 前端应用开发的 [脚手架工具](待补充...)，可以安装到全局直接使用。
+我们提供了 React 前端应用开发的 [脚手架工具]()，(待补充...)可以安装到全局直接使用。
 
 ```bash
 $ npm install rubyx-init -g
