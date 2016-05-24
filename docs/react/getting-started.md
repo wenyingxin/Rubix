@@ -3,15 +3,10 @@ order: 1
 english: 快速上手
 ---
 
-Ant Design React 致力于提供给程序员**愉悦**的开发体验。
+RubyX React 致力于提供给程序员**愉悦**的开发体验。
 
 ---
 
-## 第一个例子
-
-最简单的试用方式参照以下 CodePen 演示，也推荐 Fork 本例来进行 `Bug Report`，注意不要在实际项目中这样使用。
-
-- [antd CodePen](http://codepen.io/anon/pen/wGOWGW?editors=001)
 
 ## 标准开发
 
@@ -20,80 +15,34 @@ Ant Design React 致力于提供给程序员**愉悦**的开发体验。
 
 ### 1. 安装脚手架工具
 
-> 使用 `antd-init` 前，务必确认 [Node.js](https://nodejs.org/en/) 已经升级到 v4.x 或以上。
+待补充...
 
-```bash
-$ npm install antd-init -g
-```
-
-更多功能请参考 [脚手架工具](https://github.com/ant-design/antd-init/) 和 [开发工具文档](http://ant-tool.github.io/)。
 
 ### 2. 创建一个项目
 
-使用命令行进行初始化。
+待补充...
 
-```bash
-$ mkdir antd-demo && cd antd-demo
-$ antd-init
-$ npm install
-```
-
-若安装缓慢报错，可尝试用 `cnpm` 或别的镜像源自行安装：`rm -rf node_modules && cnpm install`.
 
 ### 3. 使用组件
 
-编辑 `src/component/App.jsx`，用 React 的方式直接使用 Ant Design React 的组件。
-
-```jsx
-import React from 'react';
-import { DatePicker, message } from 'antd';
-
-const App = React.createClass({
-  getInitialState() {
-    return {
-      date: ''
-    };
-  },
-  handleChange(value) {
-    message.info('您选择的日期是: ' + value.toString());
-    this.setState({
-      date: value
-    });
-  },
-  render() {
-    return <div style={{width: 400, margin: '100px auto'}}>
-      <DatePicker onChange={this.handleChange} />
-      <div style={{marginTop: 20}}>当前日期：{this.state.date.toString()}</div>
-    </div>;
-  }
-});
-
-export default App;
-```
-
-你可以在 [这里](/components/button) 选用更多组件。
+待补充...
 
 ### 4. 开发调试
 
-一键启动调试，访问 http://127.0.0.1:8989 查看效果。
-
-```bash
-$ npm start
-```
+待补充...
 
 ### 5. 构建和部署
 
 ```bash
-$ npm run build
+$ npm run dist
 ```
 
 入口文件会构建到 `dist` 目录中，你可以自由部署到不同环境中进行引用。
 
-> 上述例子用于帮助你理解 Ant Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。
 
 ## 兼容性
 
-Ant Design React 支持所有的现代浏览器和 IE8+。
+Ruby X 支持所有的现代浏览器和 IE8+。
 
 对于 IE8，需要提供 [es5-shim](http://facebook.github.io/react/docs/working-with-the-browser.html#browser-support-and-polyfills) 等 Polyfills 的支持。
 
@@ -130,34 +79,6 @@ Ant Design React 支持所有的现代浏览器和 IE8+。
   <script src="/index.js"></script>
 </html>
 ```
-
-另外，由于 `babel@6.x` 对 IE8 的支持不佳，你可能会遇到类似 [#28](https://github.com/ant-tool/atool-build/issues/28) 和 [#858](https://github.com/ant-design/ant-design/issues/858) 的 default 报错的问题。
-
-[antd-init](http://github.com/ant-design/antd-init) 脚手架已经解决了这个问题，你也可以参照这个 [webpack 配置](https://github.com/ant-design/antd-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8)。
-
-> 更多 IE8 下使用 React 的相关问题可以参考：https://github.com/xcatliu/react-ie8
-
-## 自行构建
-
-如果想自己维护工作流，我们推荐使用 [webpack](http://webpack.github.io/) 进行构建和调试。理论上你可以利用 React 生态圈中的 [各种脚手架](https://github.com/enaqx/awesome-react#boilerplates) 进行开发，如果遇到问题可参考我们所使用的 [webpack 配置](https://github.com/ant-tool/atool-build/blob/master/src/getWebpackCommonConfig.js) 进行 [定制](http://ant-tool.github.io/webpack-config.html)。
-
-目前社区也有很多基于 antd 定制的 [脚手架](https://github.com/ant-design/ant-design/issues/129)，欢迎进行试用和贡献。
-
-## 按需加载
-
-通过 `import { Button } from 'antd';` 引入会加载 antd 下所有的模块，如果要按需加载可以通过以下的写法来引用。
-
-```jsx
-import Button from 'antd/lib/button';
-```
-
-如果你使用 babel，我们推荐使用 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) 来进行按需加载，加入这个插件后。你可以仍然这么写：
-
-```jsx
-import { Button } from 'antd';
-```
-
-插件会帮你转换成上面的写法。另外此插件配合 [style](https://github.com/ant-design/babel-plugin-antd#usage) 属性可以做到模块样式的按需自动加载。
 
 ## 配置案例
 
