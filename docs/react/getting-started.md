@@ -79,12 +79,6 @@ Ruby X 支持所有的现代浏览器和 IE8+。
   <script src="/index.js"></script>
 </html>
 ```
-
-## 配置案例
-
-- [改变主色系](https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme)
-- [使用本地字体](https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont)
-
 ## 小甜点
 
 - 你可以享用 `npm` 生态圈里的所有模块。
