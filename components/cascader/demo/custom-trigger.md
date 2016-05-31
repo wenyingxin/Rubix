@@ -9,11 +9,15 @@ title: 可以自定义显示
 import { Cascader } from 'antd';
 
 const options = [{
-  value: 'zhejiang',
-  label: '浙江',
+  value: 'beijing',
+  label: '北京',
   children: [{
-    value: 'hangzhou',
-    label: '杭州',
+    value: 'haidian',
+    label: '海淀',
+    children: [{
+      value: 'beiqinglu',
+      label: '北清路',
+    }],
   }],
 }, {
   value: 'jiangsu',

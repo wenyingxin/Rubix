@@ -9,15 +9,15 @@ title: 自定义已选项
 import { Cascader } from 'antd';
 
 const options = [{
-  value: 'zhejiang',
-  label: '浙江',
+  value: 'beijing',
+  label: '北京',
   children: [{
-    value: 'hangzhou',
-    label: '杭州',
+    value: 'haidian',
+    label: '海淀',
     children: [{
-      value: 'xihu',
-      label: '西湖',
-      code: 752100,
+      value: 'beiqinglu',
+      label: '北清路',
+      code: 10086,
     }],
   }],
 }, {
@@ -54,7 +54,7 @@ const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
 ReactDOM.render(
   <Cascader
     options={options}
-    defaultValue={['zhejiang', 'hangzhou', 'xihu']}
+    defaultValue={['beijing', 'haidian', 'beiqinglu']}
     displayRender={displayRender}
     style={{ width: 200 }} />
 , mountNode);

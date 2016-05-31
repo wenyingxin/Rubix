@@ -9,14 +9,14 @@ title: 大小
 import { Cascader } from 'antd';
 
 const options = [{
-  value: 'zhejiang',
-  label: '浙江',
+  value: 'beijing',
+  label: '北京',
   children: [{
-    value: 'hangzhou',
-    label: '杭州',
+    value: 'haidian',
+    label: '海淀',
     children: [{
-      value: 'xihu',
-      label: '西湖',
+      value: 'beiqinglu',
+      label: '北清路',
     }],
   }],
 }, {

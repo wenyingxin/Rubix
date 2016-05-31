@@ -9,22 +9,22 @@ title: 基本
 import { Cascader } from 'antd';
 
 const options = [{
-  value: 'zhejiang',
-  label: '浙江',
+  value: 'beijing',
+  label: '北京',
   children: [{
-    value: 'hangzhou',
-    label: '杭州',
+    value: 'haidian',
+    label: '海淀',
     children: [{
-      value: 'xihu',
-      label: '西湖',
+      value: 'wudaokou',
+      label: '五道口',
     }],
   }],
 }, {
-  value: 'jiangsu',
-  label: '江苏',
+  value: 'hebei',
+  label: '河北',
   children: [{
-    value: 'nanjing',
-    label: '南京',
+    value: 'shijiazhuang',
+    label: '石家庄',
     children: [{
       value: 'zhonghuamen',
       label: '中华门',
