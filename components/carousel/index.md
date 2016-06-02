@@ -25,8 +25,6 @@ english: Carousel
 | beforeChange      | 切换面板的回调                              | function(from, to) | 无
 | afterChange       | 切换面板的回调                              | function(current)  | 无
 
-更多参数可参考：https://github.com/akiran/react-slick
-
 <style>
 .ant-carousel .slick-slide {
   text-align: center;

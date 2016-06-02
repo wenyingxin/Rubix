@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const prefix = 'ant-btn-group-';
+const prefix = 'rubyx-btn-group-';
 
 export default function ButtonGroup(props) {
   const { size, className, ...others } = props;
@@ -14,7 +14,7 @@ export default function ButtonGroup(props) {
   })[size] || '';
 
   const classes = classNames({
-    'ant-btn-group': true,
+    'rubyx-btn-group': true,
     [prefix + sizeCls]: sizeCls,
     [className]: className,
   });

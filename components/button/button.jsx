@@ -26,7 +26,7 @@ function insertSpace(child) {
 
 export default class Button extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-btn',
+    prefixCls: 'rubyx-btn',
     onClick() {},
     loading: false,
   }

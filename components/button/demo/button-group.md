@@ -82,10 +82,10 @@ ReactDOM.render(
 #components-button-demo-button-group h4:first-child {
   margin-top: 0;
 }
-#components-button-demo-button-group .ant-btn-group {
+#components-button-demo-button-group .rubyx-btn-group {
   margin-right: 8px;
 }
-#components-button-demo-button-group .ant-btn {
+#components-button-demo-button-group .rubyx-btn {
   margin-bottom: 12px;
   margin-right: 0;
 }
