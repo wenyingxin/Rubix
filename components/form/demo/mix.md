@@ -3,7 +3,7 @@ order: 5
 title: 表单组合
 ---
 
-集中营，展示和表单相关的其他 ant-design 组件。
+集中营，展示和表单相关的其他组件。
 
 ````jsx
 import { Form, Select, InputNumber, DatePicker, TimePicker, Switch, Radio,
@@ -49,15 +49,15 @@ let Demo = React.createClass({
           wrapperCol={{ span: 10 }}>
           <InputNumber min={1} max={10} style={{ width: 100 }}
             {...getFieldProps('inputNumber', { initialValue: 3 })} />
-          <span className="ant-form-text"> 台机器</span>
+          <span className="rubyx-form-text"> 台机器</span>
         </FormItem>
 
         <FormItem
           label="我是标题："
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 10 }}>
-          <p className="ant-form-text" id="static" name="static">唧唧复唧唧木兰当户织呀</p>
-          <p className="ant-form-text">
+          <p className="rubyx-form-text" id="static" name="static">唧唧复唧唧木兰当户织呀</p>
+          <p className="rubyx-form-text">
             <a href="#">链接文字</a>
           </p>
         </FormItem>
@@ -109,7 +109,7 @@ let Demo = React.createClass({
             <DatePicker {...getFieldProps('startDate')} />
           </Col>
           <Col span="1">
-            <p className="ant-form-split">-</p>
+            <p className="rubyx-form-split">-</p>
           </Col>
           <Col span="6">
             <DatePicker {...getFieldProps('endDate')} />

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export default class Cascader extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-cascader',
+    prefixCls: 'rubyx-cascader',
     placeholder: 'Please select',
     transitionName: 'slide-up',
     popupPlacement: 'bottomLeft',
@@ -74,8 +74,8 @@ export default class Cascader extends React.Component {
     const { prefixCls, children, placeholder, size, disabled,
             className, style, allowClear, ...otherProps } = props;
     const sizeCls = classNames({
-      'ant-input-lg': size === 'large',
-      'ant-input-sm': size === 'small',
+      'ruybx-input-lg': size === 'large',
+      'rubyx-input-sm': size === 'small',
     });
     const clearIcon = (allowClear && !disabled && this.state.value.length > 0) ?
       <Icon type="cross-circle"
@@ -106,7 +106,7 @@ export default class Cascader extends React.Component {
             className={pickerCls}>
             <Input {...otherProps}
               placeholder={this.state.value && this.state.value.length > 0 ? null : placeholder}
-              className={`${prefixCls}-input ant-input ${sizeCls}`}
+              className={`${prefixCls}-input rubyx-input ${sizeCls}`}
               value={null}
               disabled={disabled}
               readOnly />

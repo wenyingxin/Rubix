@@ -82,7 +82,7 @@ ReactDOM.render(
         </FormItem>
       </Col>
       <Col span="1">
-        <p className="ant-form-split">-</p>
+        <p className="rubyx-form-split">-</p>
       </Col>
       <Col span="6">
         <FormItem>
@@ -100,13 +100,13 @@ ReactDOM.render(
         <DatePicker />
       </Col>
       <Col span="1">
-        <p className="ant-form-split">-</p>
+        <p className="rubyx-form-split">-</p>
       </Col>
       <Col span="6">
         <DatePicker />
       </Col>
       <Col span="19" offset="5">
-        <p className="ant-form-explain">请选择正确日期</p>
+        <p className="rubyx-form-explain">请选择正确日期</p>
       </Col>
     </FormItem>
   </Form>

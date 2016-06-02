@@ -12,7 +12,7 @@ import { Form, Input, Row, Col, Button, DatePicker } from 'antd';
 const FormItem = Form.Item;
 
 ReactDOM.render(
-  <Form horizontal className="ant-advanced-search-form">
+  <Form horizontal className="rubyx-advanced-search-form">
     <Row gutter={16}>
       <Col sm={8}>
         <FormItem
@@ -88,7 +88,7 @@ ReactDOM.render(
 ````css
 /* 定制样式 */
 
-.ant-advanced-search-form {
+.rubyx-advanced-search-form {
   padding: 16px 8px;
   background: #f8f8f8;
   border: 1px solid #d9d9d9;
@@ -96,18 +96,18 @@ ReactDOM.render(
 }
 
 /* 由于输入标签长度不确定，所以需要微调使之看上去居中 */
-.ant-advanced-search-form > .row {
+.rubyx-advanced-search-form > .row {
   position: relative;
   left: -6px;
 }
 
-.ant-advanced-search-form .ant-btn + .ant-btn {
+.rubyx-advanced-search-form .rubyx-btn + .rubyx-btn {
   margin-left: 8px;
 }
 ````
 
 <style>
-#components-form-demo-advanced-search-form .ant-form-horizontal {
+#components-form-demo-advanced-search-form .rubyx-form-horizontal {
   max-width: none;
 }
 </style>

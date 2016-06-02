@@ -33,7 +33,7 @@ ReactDOM.render(
       wrapperCol={{ span: 16 }}>
       <InputGroup>
         <Input id="site4" placeholder="www.mysite" />
-        <div className="ant-input-group-wrap">
+        <div className="rubyx-input-group-wrap">
           <Select defaultValue=".com" style={{ width: 70 }}>
             <Option value=".com">.com</Option>
             <Option value=".jp">.jp</Option>
@@ -73,7 +73,7 @@ ReactDOM.render(
           <Input id="tel1" defaultValue="086" />
         </Col>
         <Col span="2">
-          <p className="ant-form-split">--</p>
+          <p className="rubyx-form-split">--</p>
         </Col>
         <Col span="6">
           <Input id="tel1" />

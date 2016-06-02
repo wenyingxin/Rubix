@@ -75,14 +75,14 @@ export default function wrapPicker(Picker, defaultFormat) {
       const props = this.props;
       const state = this.state;
       const pickerClass = classNames({
-        'ant-calendar-picker': true,
-        'ant-calendar-picker-open': state.open,
+        'rubyx-calendar-picker': true,
+        'rubyx-calendar-picker-open': state.open,
       });
       const pickerInputClass = classNames({
-        'ant-calendar-range-picker': true,
-        'ant-input': true,
-        'ant-input-lg': props.size === 'large',
-        'ant-input-sm': props.size === 'small',
+        'rubyx-calendar-range-picker': true,
+        'rubyx-input': true,
+        'rubyx-input-lg': props.size === 'large',
+        'rubyx-input-sm': props.size === 'small',
       });
 
       const locale = this.getLocale();
@@ -97,7 +97,7 @@ export default function wrapPicker(Picker, defaultFormat) {
         <TimePicker
           {...rcTimePickerProps}
           {...props.showTime}
-          prefixCls="ant-time-picker"
+          prefixCls="rubyx-time-picker"
           placeholder={locale.timePickerLocale.placeholder}
           locale={locale.timePickerLocale}
           transitionName="slide-up"

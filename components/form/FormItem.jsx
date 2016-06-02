@@ -8,7 +8,7 @@ function prefixClsFn(prefixCls, ...args) {
 export default class FormItem extends React.Component {
   static defaultProps = {
     hasFeedback: false,
-    prefixCls: 'ant-form',
+    prefixCls: 'rubyx-form',
   }
 
   static propTypes = {

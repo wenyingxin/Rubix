@@ -59,7 +59,7 @@ export default class RangePicker extends React.Component {
     const state = this.state;
 
     const calendarClassName = classNames({
-      'ant-calendar-time': showTime,
+      'rubyx-calendar-time': showTime,
     });
 
     let pickerChangeHandler = {
@@ -88,7 +88,7 @@ export default class RangePicker extends React.Component {
 
     const calendar = (
       <RangeCalendar
-        prefixCls="ant-calendar"
+        prefixCls="rubyx-calendar"
         className={calendarClassName}
         timePicker={props.timePicker}
         disabledDate={disabledDate}
@@ -107,7 +107,7 @@ export default class RangePicker extends React.Component {
         disabled={disabled}
         calendar={calendar}
         value={state.value}
-        prefixCls="ant-calendar-picker-container"
+        prefixCls="rubyx-calendar-picker-container"
         style={popupStyle}
         align={align}
         getCalendarContainer={getCalendarContainer}
@@ -126,15 +126,15 @@ export default class RangePicker extends React.Component {
                   onChange={props.handleInputChange}
                   value={start ? props.getFormatter().format(start) : ''}
                   placeholder={startPlaceholder}
-                  className="ant-calendar-range-picker-input" />
-                <span className="ant-calendar-range-picker-separator"> ~ </span>
+                  className="rubyx-calendar-range-picker-input" />
+                <span className="rubyx-calendar-range-picker-separator"> ~ </span>
                 <input
                   disabled={disabled}
                   onChange={props.handleInputChange}
                   value={end ? props.getFormatter().format(end) : ''}
                   placeholder={endPlaceholder}
-                  className="ant-calendar-range-picker-input" />
-                <span className="ant-calendar-picker-icon" />
+                  className="rubyx-calendar-range-picker-input" />
+                <span className="rubyx-calendar-picker-icon" />
               </span>
             );
           }

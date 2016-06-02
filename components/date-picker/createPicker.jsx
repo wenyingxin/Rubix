@@ -46,8 +46,8 @@ export default function createPicker(TheCalendar) {
       const disabledTime = props.showTime ? props.disabledTime : null;
 
       const calendarClassName = classNames({
-        'ant-calendar-time': props.showTime,
-        'ant-calendar-month': MonthCalendar === TheCalendar,
+        'rubyx-calendar-time': props.showTime,
+        'rubyx-calendar-month': MonthCalendar === TheCalendar,
       });
 
       let pickerChangeHandler = {
@@ -78,7 +78,7 @@ export default function createPicker(TheCalendar) {
           timePicker={props.timePicker}
           defaultValue={defaultCalendarValue}
           dateInputPlaceholder={placeholder}
-          prefixCls="ant-calendar"
+          prefixCls="rubyx-calendar"
           className={calendarClassName}
           {...calendarHandler} />
       );
@@ -96,7 +96,7 @@ export default function createPicker(TheCalendar) {
             disabled={props.disabled}
             calendar={calendar}
             value={this.state.value}
-            prefixCls="ant-calendar-picker-container"
+            prefixCls="rubyx-calendar-picker-container"
             style={props.popupStyle}
             align={props.align}
             getCalendarContainer={props.getCalendarContainer}
@@ -114,7 +114,7 @@ export default function createPicker(TheCalendar) {
                       value={value ? props.getFormatter().format(value) : ''}
                       placeholder={placeholder}
                       className={props.pickerInputClass} />
-                    <span className="ant-calendar-picker-icon" />
+                    <span className="rubyx-calendar-picker-icon" />
                   </span>
                 );
               }
