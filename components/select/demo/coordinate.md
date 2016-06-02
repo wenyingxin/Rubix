@@ -11,9 +11,9 @@ title: 联动
 import { Select } from 'antd';
 const Option = Select.Option;
 
-const provinceData = ['浙江', '江苏'];
+const provinceData = ['北京', '江苏'];
 const cityData = {
-  浙江: ['杭州', '宁波', '温州'],
+  北京: ['海淀', '朝阳', '丰台'],
   江苏: ['南京', '苏州', '镇江'],
 };
 

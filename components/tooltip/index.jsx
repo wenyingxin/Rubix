@@ -8,7 +8,7 @@ const placements = getPlacements({
 
 export default class Tooltip extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-tooltip',
+    prefixCls: 'rubyx-tooltip',
     placement: 'top',
     transitionName: 'zoom-big',
     mouseEnterDelay: 0.1,
