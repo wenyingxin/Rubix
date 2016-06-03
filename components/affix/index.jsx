@@ -115,7 +115,7 @@ export default class Affix extends React.Component {
 
   render() {
     const className = classNames({
-      'ant-affix': this.state.affixStyle,
+      'rubyx-affix': this.state.affixStyle,
     });
 
     return (

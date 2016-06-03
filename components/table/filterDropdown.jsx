@@ -69,7 +69,7 @@ export default class FilterMenu extends React.Component {
           const keyPath = keyPathOfSelectedItem[key];
           return keyPath.indexOf(item.value) >= 0;
         });
-        const subMenuCls = containSelected ? 'ant-dropdown-submenu-contain-selected' : '';
+        const subMenuCls = containSelected ? 'rubyx-dropdown-submenu-contain-selected' : '';
         return (
           <SubMenu title={item.text} className={subMenuCls} key={item.value.toString()}>
             {item.children.map(child => this.renderMenuItem(child))}
@@ -104,21 +104,21 @@ export default class FilterMenu extends React.Component {
       multiple = column.filterMultiple;
     }
     let menus = (
-      <div className="ant-table-filter-dropdown">
+      <div className="rubyx-table-filter-dropdown">
         <Menu multiple={multiple}
           onClick={this.handleMenuItemClick}
-          prefixCls="ant-dropdown-menu"
+          prefixCls="rubyx-dropdown-menu"
           onSelect={this.setSelectedKeys}
           onDeselect={this.setSelectedKeys}
           selectedKeys={this.state.selectedKeys}>
           {this.renderMenus(column.filters)}
         </Menu>
-        <div className="ant-table-filter-dropdown-btns">
-          <a className="ant-table-filter-dropdown-link confirm"
+        <div className="rubyx-table-filter-dropdown-btns">
+          <a className="rubyx-table-filter-dropdown-link confirm"
             onClick={this.handleConfirm}>
             {locale.filterConfirm}
           </a>
-          <a className="ant-table-filter-dropdown-link clear"
+          <a className="rubyx-table-filter-dropdown-link clear"
             onClick={this.handleClearFilters}>
             {locale.filterReset}
           </a>
@@ -128,7 +128,7 @@ export default class FilterMenu extends React.Component {
 
     let dropdownSelectedClass = '';
     if (this.props.selectedKeys.length > 0) {
-      dropdownSelectedClass = 'ant-table-filter-selected';
+      dropdownSelectedClass = 'rubyx-table-filter-selected';
     }
 
     return (

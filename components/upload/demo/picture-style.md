@@ -48,7 +48,7 @@ ReactDOM.render(
 
 ````css
 /* 加几行样式将上传项变成平铺样式 */
-.upload-list-inline .ant-upload-list-item {
+.upload-list-inline .rubyx-upload-list-item {
   display: inline-block;
   width: 200px;
   margin-right: 8px;

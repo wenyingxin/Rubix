@@ -27,10 +27,10 @@ const columns = [{
   render: (text, record) => (
     <span>
       <a href="#">操作一{record.name}</a>
-      <span className="ant-divider"></span>
+      <span className="rubyx-divider"></span>
       <a href="#">操作二</a>
-      <span className="ant-divider"></span>
-      <a href="#" className="ant-dropdown-link">
+      <span className="rubyx-divider"></span>
+      <a href="#" className="rubyx-dropdown-link">
         更多 <Icon type="down" />
       </a>
     </span>

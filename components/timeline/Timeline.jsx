@@ -4,7 +4,7 @@ import TimelineItem from './TimelineItem';
 
 export default class Timeline extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-timeline',
+    prefixCls: 'rubyx-timeline',
   }
 
   render() {

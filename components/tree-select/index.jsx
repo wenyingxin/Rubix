@@ -9,11 +9,11 @@ export default class TreeSelect extends React.Component {
   static SHOW_CHILD = SHOW_CHILD;
 
   static defaultProps = {
-    prefixCls: 'ant-select',
+    prefixCls: 'rubyx-select',
     transitionName: 'slide-up',
     choiceTransitionName: 'zoom',
     showSearch: false,
-    dropdownClassName: 'ant-select-tree-dropdown',
+    dropdownClassName: 'rubyx-select-tree-dropdown',
   }
 
   static contextTypes = {

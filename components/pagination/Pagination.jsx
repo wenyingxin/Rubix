@@ -8,7 +8,7 @@ export default class Pagination extends React.Component {
   static defaultProps = {
     locale: zhCN,
     className: '',
-    prefixCls: 'ant-pagination',
+    prefixCls: 'rubyx-pagination',
   }
 
   static contextTypes = {
@@ -33,7 +33,7 @@ export default class Pagination extends React.Component {
 
     return (
       <RcPagination selectComponentClass={selectComponentClass}
-        selectPrefixCls="ant-select"
+        selectPrefixCls="rubyx-select"
         {...this.props}
         locale={locale}
         className={className} />

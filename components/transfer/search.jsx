@@ -30,7 +30,7 @@ export default class Search extends React.Component {
     const { placeholder, value, prefixCls } = this.props;
     return (
       <div>
-        <input placeholder={placeholder} className={`${prefixCls} ant-input`} value={value} ref="input"
+        <input placeholder={placeholder} className={`${prefixCls} rubyx-input`} value={value} ref="input"
           onChange={this.handleChange} />
         {value && value.length > 0 ?
           <a href="#" className={`${prefixCls}-action`} onClick={this.handleClear}>

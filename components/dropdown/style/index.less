@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@dropdown-prefix-cls: ant-dropdown;
+@dropdown-prefix-cls: rubyx-dropdown;
 
 .@{dropdown-prefix-cls} {
   position: absolute;
@@ -16,7 +16,7 @@
   &-wrap {
     position: relative;
 
-    .ant-btn > .@{iconfont-css-prefix}-down {
+    .rubyx-btn > .@{iconfont-css-prefix}-down {
       .iconfont-size-under-12px(10px);
     }
 
@@ -163,7 +163,7 @@
 }
 
 .@{dropdown-prefix-cls}-button {
-  &.ant-btn-group > .ant-btn:last-child:not(:first-child) {
+  &.rubyx-btn-group > .rubyx-btn:last-child:not(:first-child) {
     padding-right: 7px;
   }
   .anticon-down {

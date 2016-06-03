@@ -19,7 +19,6 @@ API
 <TimePicker defaultValue="13:30:56" />
 ```
 
-> 注意：`0.11+` 后 `Timepicker` 改名为 `TimePicker`。
 
 | 参数                 | 说明 | 类型 | 默认值 |
 |---------------------|-----|-----|-------|
@@ -33,6 +32,6 @@ API
 | disabledMinutes     | 禁止选择部分分钟选项 | function(selectedHour) | 无 |
 | disabledSeconds     | 禁止选择部分秒选项 | function(selectedHour, selectedMinute) | 无 |
 | hideDisabledOptions | 隐藏禁止选择的选项 | boolean | false |
-| locale              | 国际化配置 | Object | [默认配置](https://github.com/ant-design/ant-design/issues/1270#issuecomment-201181384) |
+| locale              | 国际化配置 | Object |  |
 
-<style>.code-box-demo .ant-time-picker { margin: 0 8px 12px 0; }</style>
+<style>.code-box-demo .rubyx-time-picker { margin: 0 8px 12px 0; }</style>

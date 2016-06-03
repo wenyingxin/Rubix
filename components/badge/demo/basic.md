@@ -16,7 +16,7 @@ ReactDOM.render(
 ````
 
 ````css
-.ant-badge {
+.rubyx-badge {
   margin-right: 16px;
 }
 .head-example {

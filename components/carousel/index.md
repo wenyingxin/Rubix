@@ -26,7 +26,7 @@ english: Carousel
 | afterChange       | 切换面板的回调                              | function(current)  | 无
 
 <style>
-.ant-carousel .slick-slide {
+.rubyx-carousel .slick-slide {
   text-align: center;
   height: 100px;
   line-height: 100px;
@@ -34,7 +34,7 @@ english: Carousel
   color: #fff;
   overflow: hidden;
 }
-#components-carousel-demo-vertical .ant-carousel {
+#components-carousel-demo-vertical .rubyx-carousel {
   margin-right: 35px;
 }
 </style>

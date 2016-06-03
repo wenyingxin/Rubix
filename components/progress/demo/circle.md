@@ -18,8 +18,8 @@ ReactDOM.render(
 ````
 
 <style>
-.ant-progress-circle-wrap,
-.ant-progress-line-wrap {
+.rubyx-progress-circle-wrap,
+.rubyx-progress-line-wrap {
   margin-right: 8px;
   margin-bottom: 5px;
 }

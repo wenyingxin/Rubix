@@ -31,5 +31,5 @@ english: Calendar
 | fullscreen   | 是否全屏显示   | bool     | true         |
 | dateCellRender     | 自定义渲染日期单元格| function([GregorianCalendar](https://github.com/yiminghe/gregorian-calendar/))| 无           |
 | monthCellRender    | 自定义渲染月单元格  | function([GregorianCalendar](https://github.com/yiminghe/gregorian-calendar/))   | 无  |
-| locale       | 国际化配置     | object   | [默认配置](https://github.com/ant-design/ant-design/issues/424)  |
+| locale       | 国际化配置     | object   |   |
 | onPanelChange| 日期面板变化回调 | function(date, mode) | 无 |

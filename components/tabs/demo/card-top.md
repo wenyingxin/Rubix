@@ -27,15 +27,15 @@ ReactDOM.render(
   padding: 24px;
 }
 
-.card-container > .ant-tabs-card > .ant-tabs-content {
+.card-container > .rubyx-tabs-card > .rubyx-tabs-content {
   background: #fff;
   padding: 16px;
   height: 120px;
   margin-top: -16px;
 }
 
-.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-bar,
-.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+.card-container > .rubyx-tabs-card > .rubyx-tabs-bar .rubyx-tabs-bar,
+.card-container > .rubyx-tabs-card > .rubyx-tabs-bar .rubyx-tabs-tab-active {
   border-color: #fff;
 }
 ````

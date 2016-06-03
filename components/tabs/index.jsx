@@ -7,7 +7,7 @@ export default class Tabs extends React.Component {
   static TabPane = RcTabs.TabPane;
 
   static defaultProps = {
-    prefixCls: 'ant-tabs',
+    prefixCls: 'rubyx-tabs',
     animation: 'slide-horizontal',
     type: 'line', // or 'card' 'editable-card'
     onChange() {},

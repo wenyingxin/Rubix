@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 export default class Alert extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-alert',
+    prefixCls: 'rubyx-alert',
     showIcon: false,
     onClose() {},
     type: 'info',
@@ -84,7 +84,7 @@ export default class Alert extends React.Component {
         transitionName="slide-up"
         onEnd={this.animationEnd}>
         <div data-show={this.state.closing} className={alertCls}>
-          {showIcon ? <Icon className="ant-alert-icon" type={iconType} /> : null}
+          {showIcon ? <Icon className="rubyx-alert-icon" type={iconType} /> : null}
           <span className={`${prefixCls}-message`}>{message}</span>
           <span className={`${prefixCls}-description`}>{description}</span>
           {closable ? <a onClick={this.handleClose} className={`${prefixCls}-close-icon`}>

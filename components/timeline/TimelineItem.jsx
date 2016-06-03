@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export default class TimelineItem extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-timeline',
+    prefixCls: 'rubyx-timeline',
     color: 'blue',
     last: false,
     pending: false,

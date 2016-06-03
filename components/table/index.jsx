@@ -46,7 +46,7 @@ export default class Table extends React.Component {
 
   static defaultProps = {
     dataSource: [],
-    prefixCls: 'ant-table',
+    prefixCls: 'rubyx-table',
     useFixedHeader: false,
     rowSelection: null,
     className: '',
@@ -487,7 +487,7 @@ export default class Table extends React.Component {
         selectionColumn = {
           key: 'selection-column',
           render: this.renderSelectionRadio,
-          className: 'ant-table-selection-column',
+          className: 'rubyx-table-selection-column',
         };
       } else {
         const checkboxAllDisabled = data.every(item =>
@@ -502,7 +502,7 @@ export default class Table extends React.Component {
           key: 'selection-column',
           title: checkboxAll,
           render: this.renderSelectionCheckBox,
-          className: 'ant-table-selection-column',
+          className: 'rubyx-table-selection-column',
         };
       }
       if (columns[0] && columns[0].key === 'selection-column') {
@@ -547,19 +547,19 @@ export default class Table extends React.Component {
         if (isSortColumn) {
           column.className = column.className || '';
           if (sortOrder) {
-            column.className += ' ant-table-column-sort';
+            column.className += ' rubyx-table-column-sort';
           }
         }
         const isAscend = isSortColumn && sortOrder === 'ascend';
         const isDescend = isSortColumn && sortOrder === 'descend';
         sortButton = (
-          <div className="ant-table-column-sorter">
-            <span className={`ant-table-column-sorter-up ${isAscend ? 'on' : 'off'}`}
+          <div className="rubyx-table-column-sorter">
+            <span className={`rubyx-table-column-sorter-up ${isAscend ? 'on' : 'off'}`}
               title="↑"
               onClick={() => this.toggleSortOrder('ascend', column)}>
               <Icon type="caret-up" />
             </span>
-            <span className={`ant-table-column-sorter-down ${isDescend ? 'on' : 'off'}`}
+            <span className={`rubyx-table-column-sorter-down ${isDescend ? 'on' : 'off'}`}
               title="↓"
               onClick={() => this.toggleSortOrder('descend', column)}>
               <Icon type="caret-down" />
@@ -696,8 +696,8 @@ export default class Table extends React.Component {
     const locale = this.getLocale();
 
     const classString = classNames({
-      [`ant-table-${this.props.size}`]: true,
-      'ant-table-bordered': this.props.bordered,
+      [`rubyx-table-${this.props.size}`]: true,
+      'rubyx-table-bordered': this.props.bordered,
     });
 
     columns = this.renderColumnsDropdown(columns);
@@ -710,11 +710,11 @@ export default class Table extends React.Component {
     let emptyClass = '';
     if (!data || data.length === 0) {
       emptyText = (
-        <div className="ant-table-placeholder">
+        <div className="rubyx-table-placeholder">
           <Icon type="frown" />{locale.emptyText}
         </div>
       );
-      emptyClass = 'ant-table-empty';
+      emptyClass = 'rubyx-table-empty';
     }
 
     let table = (
@@ -731,9 +731,9 @@ export default class Table extends React.Component {
     // if there is no pagination or no data,
     // the height of spin should decrease by half of pagination
     const paginationPatchClass = (this.hasPagination() && data && data.length !== 0)
-            ? 'ant-table-with-pagination'
-            : 'ant-table-without-pagination';
-    const spinClassName = this.props.loading ? `${paginationPatchClass} ant-table-spin-holder` : '';
+            ? 'rubyx-table-with-pagination'
+            : 'rubyx-table-without-pagination';
+    const spinClassName = this.props.loading ? `${paginationPatchClass} rubyx-table-spin-holder` : '';
     table = <Spin className={spinClassName} spinning={this.props.loading}>{table}</Spin>;
     return (
       <div className={`${emptyClass} ${className} clearfix`} style={style}>

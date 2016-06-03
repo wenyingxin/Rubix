@@ -6,7 +6,7 @@ import warning from 'warning';
 
 export default class Spin extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-spin',
+    prefixCls: 'rubyx-spin',
     spinning: true,
   }
 

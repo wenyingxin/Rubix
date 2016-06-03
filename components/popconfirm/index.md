@@ -25,4 +25,4 @@ english: Popconfirm
 | onVisibleChange | 显示隐藏的回调                      | function(visible) | 无     |
 | okText    | 确认按钮文字                              | String        | 确定   |
 | cancelText| 取消按钮文字                              | String        | 取消   |
-| openClassName | 气泡框展现时触发器添加的类名，可用于打开浮层时高亮触发器 | string | ant-popover-open |
+| openClassName | 气泡框展现时触发器添加的类名，可用于打开浮层时高亮触发器 | string | rubyx-popover-open |

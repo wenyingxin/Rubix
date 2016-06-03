@@ -12,7 +12,7 @@ function getNumberArray(num) {
 
 export default class ScrollNumber extends React.Component {
   static defaultProps = {
-    prefixCls: 'ant-scroll-number',
+    prefixCls: 'rubyx-scroll-number',
     count: null,
     component: 'sup',
     onAnimated() {},

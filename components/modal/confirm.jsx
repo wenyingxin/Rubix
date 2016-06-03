@@ -77,17 +77,17 @@ export default function confirm(config) {
   }
 
   let body = (
-    <div className="ant-confirm-body">
+    <div className="rubyx-confirm-body">
       <Icon type={props.iconType} />
-      <span className="ant-confirm-title">{props.title}</span>
-      <div className="ant-confirm-content">{props.content}</div>
+      <span className="rubyx-confirm-title">{props.title}</span>
+      <div className="rubyx-confirm-content">{props.content}</div>
     </div>
   );
 
   let footer = null;
   if (props.okCancel) {
     footer = (
-      <div className="ant-confirm-btns">
+      <div className="rubyx-confirm-btns">
         <Button type="ghost" size="large" onClick={onCancel}>
           {props.cancelText}
         </Button>
@@ -98,7 +98,7 @@ export default function confirm(config) {
     );
   } else {
     footer = (
-      <div className="ant-confirm-btns">
+      <div className="rubyx-confirm-btns">
         <Button type="primary" size="large" onClick={onOk}>
           {props.okText}
         </Button>
@@ -107,8 +107,8 @@ export default function confirm(config) {
   }
 
   const classString = classNames({
-    'ant-confirm': true,
-    [`ant-confirm-${props.type}`]: true,
+    'rubyx-confirm': true,
+    [`rubyx-confirm-${props.type}`]: true,
     [props.className]: !!props.className,
   });
 

@@ -40,8 +40,8 @@ export default class Home extends React.Component {
         border-bottom: 1px solid transparent;
         transition: border .5s cubic-bezier(0.455, 0.03, 0.515, 0.955), background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       }
-      #header .ant-select-selection,
-      #header .ant-menu {
+      #header .rubyx-select-selection,
+      #header .rubyx-menu {
         background: transparent;
       }
       #header.home-nav-white {

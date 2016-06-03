@@ -22,7 +22,7 @@ const menu = (
 
 ReactDOM.render(
   <Dropdown overlay={menu}>
-    <a className="ant-dropdown-link" href="#">
+    <a className="rubyx-dropdown-link" href="#">
       多级菜单 <Icon type="down" />
     </a>
   </Dropdown>
