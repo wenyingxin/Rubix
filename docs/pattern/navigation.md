@@ -45,7 +45,7 @@ english: Navigation
 
 ---
 
-<img class="preview-img no-padding" align="right" alt="结构示例" src="https://os.alipayobjects.com/rmsportal/hutiGZWQYmIspjw.png">
+<img class="preview-img no-padding" align="right" alt="结构示例" src="/docs/pattern/navigator1.png">
 
 导航的结构由以下几部分组成。
 
