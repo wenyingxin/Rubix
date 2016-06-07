@@ -1,7 +1,7 @@
 {
   "name": "antd",
   "version": "1.1.0",
-  "title": "Ant Design",
+  "title": "Rubix",
   "description": "一个 UI 设计语言",
   "homepage": "http://ant.design/",
   "keywords": [
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/ant-design/ant-design/issues"
   },
-  "main": "dist/antd",
+  "main": "dist/rubix",
   "files": [
     "dist",
     "lib",
