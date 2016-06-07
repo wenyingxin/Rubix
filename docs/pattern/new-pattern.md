@@ -1,7 +1,7 @@
 ---
 order: 7
-chinese: 典型页面
+chinese: 新增pattern1111
 english: Classic
 ---
 
-新增pattern  敬请期待。
+新增pattern  敬请期待11111。
