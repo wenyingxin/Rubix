@@ -14,7 +14,7 @@ export default class Home extends React.Component {
     this.componentDidUpdate();
   }
   componentDidUpdate() {
-    utils.setTitle('RubyX - 农业银行互联网前端开发框架');
+    utils.setTitle('Rubix - 农业银行互联网前端开发框架');
   }
   // To store style which is only for Home and has conflicts with others.
   getStyle() {
@@ -40,8 +40,8 @@ export default class Home extends React.Component {
         border-bottom: 1px solid transparent;
         transition: border .5s cubic-bezier(0.455, 0.03, 0.515, 0.955), background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       }
-      #header .rubyx-select-selection,
-      #header .rubyx-menu {
+      #header .rubix-select-selection,
+      #header .rubix-menu {
         background: transparent;
       }
       #header.home-nav-white {

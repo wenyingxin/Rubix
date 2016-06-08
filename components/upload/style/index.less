@@ -1,8 +1,8 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@upload-prefix-cls: rubyx-upload;
-@upload-item: rubyx-upload-list-item;
+@upload-prefix-cls: rubix-upload;
+@upload-item: rubix-upload-list-item;
 @upload-pictrue-card-size: 96px;
 
 .@{upload-prefix-cls} {
@@ -71,7 +71,7 @@
     }
 
     p.@{upload-prefix-cls}-drag-icon {
-      .anticon {
+      .rubixicon {
         font-size: 80px;
         margin-top: -5px;
         color: tint(@primary-color, 20%);
@@ -86,7 +86,7 @@
       font-size: 12px;
       color: #999;
     }
-    .anticon-plus {
+    .rubixicon-plus {
       font-size: 30px;
       transition: all 0.3s ease;
       color: #ccc;
@@ -94,7 +94,7 @@
         color: #999;
       }
     }
-    &:hover .anticon-plus {
+    &:hover .rubixicon-plus {
       color: #999;
     }
   }
@@ -112,12 +112,12 @@
       padding: 0 4px;
       transition: background-color 0.3s ease;
 
-      .anticon-paper-clip {
+      .rubixicon-paper-clip {
         margin-right: 4px;
         font-size: 12px;
         color: #999;
       }
-      .anticon-cross {
+      .rubixicon-cross {
         .iconfont-size-under-12px(10px);
         transition: all 0.3s ease;
         opacity: 0;
@@ -135,16 +135,16 @@
       background-color: tint(@primary-color, 90%);
     }
 
-    &:hover .anticon-cross {
+    &:hover .rubixicon-cross {
       opacity: 1;
     }
 
     &-error,
-    &-error .anticon-paper-clip {
+    &-error .rubixicon-paper-clip {
       color: @error-color;
     }
 
-    &-error .anticon-cross {
+    &-error .rubixicon-cross {
       opacity: 1;
     }
 
@@ -198,7 +198,7 @@
       display: block;
     }
 
-    .@{upload-item}-thumbnail.anticon:before {
+    .@{upload-item}-thumbnail.rubixicon:before {
       line-height: 48px;
       font-size: 24px;
       color: #999;
@@ -227,7 +227,7 @@
       margin-top: 0;
     }
 
-    .anticon-cross {
+    .rubixicon-cross {
       position: absolute;
       right: 8px;
       top: 8px;
@@ -260,8 +260,8 @@
         height: 100%;
       }
 
-      .anticon-eye-o,
-      .anticon-delete {
+      .rubixicon-eye-o,
+      .rubixicon-delete {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -281,7 +281,7 @@
         }
       }
 
-      .anticon-delete {
+      .rubixicon-delete {
         left: 50%;
         margin-left: 6px;
       }
@@ -291,8 +291,8 @@
           opacity: .8;
         }
 
-        .anticon-eye-o,
-        .anticon-delete {
+        .rubixicon-eye-o,
+        .rubixicon-delete {
           opacity: 1;
         }
       }
@@ -317,8 +317,8 @@
 
       .@{upload-item}-info {
         &:before,
-        .anticon-eye-o,
-        .anticon-delete {
+        .rubixicon-eye-o,
+        .rubixicon-delete {
           display: none;
         }
       }

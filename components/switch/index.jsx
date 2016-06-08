@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 export default class Switch extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-switch',
+    prefixCls: 'rubix-switch',
   }
 
   render() {

@@ -8,7 +8,7 @@ import GregorianCalendar from 'gregorian-calendar';
 export default class TimePicker extends React.Component {
   static defaultProps = {
     format: 'HH:mm:ss',
-    prefixCls: 'rubyx-time-picker',
+    prefixCls: 'rubix-time-picker',
     onChange() {
     },
     locale: {},
@@ -38,9 +38,9 @@ export default class TimePicker extends React.Component {
   getSizeClass() {
     let sizeClass = '';
     if (this.props.size === 'large') {
-      sizeClass = ' rubyx-input-lg';
+      sizeClass = ' rubix-input-lg';
     } else if (this.props.size === 'small') {
-      sizeClass = ' rubyx-input-sm';
+      sizeClass = ' rubix-input-sm';
     }
     return sizeClass;
   }

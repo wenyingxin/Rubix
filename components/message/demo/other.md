@@ -28,7 +28,7 @@ ReactDOM.render(<div>
 ````
 
 <style>
-#components-message-demo-other .rubyx-btn {
+#components-message-demo-other .rubix-btn {
   margin-right: 8px;
 }
 </style>

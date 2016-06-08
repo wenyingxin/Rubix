@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 export default class Tag extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-tag',
+    prefixCls: 'rubix-tag',
     closable: false,
     onClose() {},
     afterClose() {},

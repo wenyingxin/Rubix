@@ -7,7 +7,7 @@ const placements = getPlacements();
 
 export default class Popover extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-popover',
+    prefixCls: 'rubix-popover',
     placement: 'top',
     transitionName: 'zoom-big',
     trigger: 'hover',

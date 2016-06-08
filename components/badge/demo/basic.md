@@ -16,7 +16,7 @@ ReactDOM.render(
 ````
 
 ````css
-.rubyx-badge {
+.rubix-badge {
   margin-right: 16px;
 }
 .head-example {

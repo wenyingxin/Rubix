@@ -26,7 +26,7 @@ english: Carousel
 | afterChange       | 切换面板的回调                              | function(current)  | 无
 
 <style>
-.rubyx-carousel .slick-slide {
+.rubix-carousel .slick-slide {
   text-align: center;
   height: 100px;
   line-height: 100px;
@@ -34,7 +34,7 @@ english: Carousel
   color: #fff;
   overflow: hidden;
 }
-#components-carousel-demo-vertical .rubyx-carousel {
+#components-carousel-demo-vertical .rubix-carousel {
   margin-right: 35px;
 }
 </style>

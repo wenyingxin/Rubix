@@ -667,7 +667,7 @@ declare namespace Antd {
   最终会渲染为：
 
   ```html
-  <i class="anticon anticon-${type}"></i>
+  <i class="rubixicon rubixicon-${type}"></i>
   ```*/
   export class Icon extends React.Component<IconProps, {}> {
   }

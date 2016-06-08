@@ -1,7 +1,7 @@
 import React from 'react';
 import Animate from 'rc-animate';
 import Icon from '../icon';
-const prefixCls = 'rubyx-upload';
+const prefixCls = 'rubix-upload';
 import Progress from '../progress';
 import classNames from 'classnames';
 

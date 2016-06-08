@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 export default class Badge extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-badge',
+    prefixCls: 'rubix-badge',
     count: null,
     dot: false,
     overflowCount: 99,

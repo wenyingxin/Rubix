@@ -62,7 +62,7 @@ ReactDOM.render(<App />, mountNode);
   justify-content: center;
 }
 
-.vertical-center-modal .rubyx-modal {
+.vertical-center-modal .rubix-modal {
   top: 0;
 }
 ````

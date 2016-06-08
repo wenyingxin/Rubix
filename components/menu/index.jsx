@@ -11,7 +11,7 @@ export default class Menu extends React.Component {
   static SubMenu = SubMenu;
   static ItemGroup = ItemGroup;
   static defaultProps = {
-    prefixCls: 'rubyx-menu',
+    prefixCls: 'rubix-menu',
     onClick: noop,
     onOpen: noop,
     onClose: noop,

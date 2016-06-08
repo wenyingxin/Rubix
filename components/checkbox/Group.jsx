@@ -58,13 +58,13 @@ export default class CheckboxGroup extends React.Component {
   render() {
     const options = this.getOptions();
     return (
-      <div className="rubyx-checkbox-group">
+      <div className="rubix-checkbox-group">
         {
           options.map(option =>
             <Checkbox disabled={'disabled' in option ? option.disabled : this.props.disabled}
               checked={this.state.value.indexOf(option.value) !== -1}
               onChange={() => this.toggleOption(option)}
-              className="rubyx-checkbox-group-item" key={option.value}>
+              className="rubix-checkbox-group-item" key={option.value}>
               {option.label}
             </Checkbox>
           )

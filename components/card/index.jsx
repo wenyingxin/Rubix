@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 export default props => {
-  let { prefixCls = 'rubyx-card', className, children, extra, bodyStyle,
+  let { prefixCls = 'rubix-card', className, children, extra, bodyStyle,
         title, loading, bordered = true, ...other } = props;
   const classString = classNames({
     [prefixCls]: true,

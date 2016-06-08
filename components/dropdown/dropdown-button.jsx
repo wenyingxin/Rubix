@@ -22,7 +22,7 @@ export default class DropdownButton extends React.Component {
   render() {
     const { type, overlay, trigger, align, children, className, onClick, ...restProps } = this.props;
     const cls = classNames({
-      'rubyx-dropdown-button': true,
+      'rubix-dropdown-button': true,
       className: !!className,
     });
     return (

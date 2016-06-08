@@ -34,4 +34,4 @@ API
 | hideDisabledOptions | 隐藏禁止选择的选项 | boolean | false |
 | locale              | 国际化配置 | Object |  |
 
-<style>.code-box-demo .rubyx-time-picker { margin: 0 8px 12px 0; }</style>
+<style>.code-box-demo .rubix-time-picker { margin: 0 8px 12px 0; }</style>

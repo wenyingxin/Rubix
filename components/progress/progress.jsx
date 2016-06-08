@@ -15,7 +15,7 @@ export default class Line extends React.Component {
     percent: 0,
     showInfo: true,
     trailColor: '#f3f3f3',
-    prefixCls: 'rubyx-progress',
+    prefixCls: 'rubix-progress',
   }
 
   static propTypes = {

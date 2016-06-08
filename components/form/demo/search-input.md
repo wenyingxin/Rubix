@@ -35,19 +35,19 @@ const SearchInput = React.createClass({
   render() {
     const { style, size, ...restProps } = this.props;
     const btnCls = classNames({
-      'rubyx-search-btn': true,
-      'rubyx-search-btn-noempty': !!this.state.value.trim(),
+      'rubix-search-btn': true,
+      'rubix-search-btn-noempty': !!this.state.value.trim(),
     });
     const searchCls = classNames({
-      'rubyx-search-input': true,
-      'rubyx-search-input-focus': this.state.focus,
+      'rubix-search-input': true,
+      'rubix-search-input-focus': this.state.focus,
     });
     return (
-      <div className="rubyx-search-input-wrapper" style={style}>
+      <div className="rubix-search-input-wrapper" style={style}>
         <InputGroup className={searchCls}>
           <Input {...restProps} value={this.state.value} onChange={this.handleInputChange}
             onFocus={this.handleFocusBlur} onBlur={this.handleFocusBlur} onPressEnter={this.handleSearch} />
-          <div className="rubyx-input-group-wrap">
+          <div className="rubix-input-group-wrap">
             <Button icon="search" className={btnCls} size={size} onClick={this.handleSearch} />
           </div>
         </InputGroup>

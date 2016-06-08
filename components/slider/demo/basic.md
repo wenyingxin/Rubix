@@ -17,10 +17,10 @@ ReactDOM.render(<div>
 ````
 
 <style>
-.code-box-demo .rubyx-slider {
+.code-box-demo .rubix-slider {
   margin-bottom: 50px;
 }
-.code-box-demo .rubyx-slider:last-child {
+.code-box-demo .rubix-slider:last-child {
   margin-bottom: 10px;
 }
 </style>

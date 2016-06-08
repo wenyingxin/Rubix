@@ -5,7 +5,7 @@ import Button from '../button';
 import getPlacements from '../popover/placements';
 
 const placements = getPlacements();
-const prefixCls = 'rubyx-popover';
+const prefixCls = 'rubix-popover';
 const noop = () => {};
 
 export default class Popconfirm extends React.Component {

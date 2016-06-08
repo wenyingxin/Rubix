@@ -3,21 +3,21 @@
 @import "../../button/style/mixin";
 @import "./mixin";
 
-.rubyx-search-input-wrapper {
+.rubix-search-input-wrapper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.rubyx-search-input {
-  &.rubyx-input-group .rubyx-input:first-child,
-  &.rubyx-input-group .rubyx-select:first-child {
+.rubix-search-input {
+  &.rubix-input-group .rubix-input:first-child,
+  &.rubix-input-group .rubix-select:first-child {
     border-radius: @border-radius-base;
     position: absolute;
     top: -1px;
     width: 100%;
   }
 
-  .rubyx-search-btn {
+  .rubix-search-btn {
     .btn-default;
     border-radius: 0 @border-radius-base - 1 @border-radius-base - 1 0;
     left: -1px;
@@ -34,8 +34,8 @@
       padding-bottom: 6px;
     }
   }
-  &&-focus .rubyx-search-btn-noempty,
-  &:hover .rubyx-search-btn-noempty {
+  &&-focus .rubix-search-btn-noempty,
+  &:hover .rubix-search-btn-noempty {
     .btn-primary;
   }
 }

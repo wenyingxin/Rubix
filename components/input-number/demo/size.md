@@ -22,7 +22,7 @@ ReactDOM.render(
 ````
 
 ````css
-.rubyx-input-number {
+.rubix-input-number {
   margin-right: 10px;
 }
 ````

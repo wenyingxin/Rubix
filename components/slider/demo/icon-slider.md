@@ -14,8 +14,8 @@ const IconSlider = React.createClass({
     const min = this.props.min;
     const mid = ((max - min) / 2).toFixed(5);
     return {
-      preIconClass: this.props.value >= mid ? '' : 'anticon-highlight',
-      nextIconClass: this.props.value >= mid ? 'anticon-highlight' : '',
+      preIconClass: this.props.value >= mid ? '' : 'rubixicon-highlight',
+      nextIconClass: this.props.value >= mid ? 'rubixicon-highlight' : '',
       mid,
       sliderValue: this.props.value,
     };
@@ -23,8 +23,8 @@ const IconSlider = React.createClass({
 
   handleChange(v) {
     this.setState({
-      preIconClass: v >= this.state.mid ? '' : 'anticon-highlight',
-      nextIconClass: v >= this.state.mid ? 'anticon-highlight' : '',
+      preIconClass: v >= this.state.mid ? '' : 'rubixicon-highlight',
+      nextIconClass: v >= this.state.mid ? 'rubixicon-highlight' : '',
       sliderValue: v,
     });
   },
@@ -51,7 +51,7 @@ ReactDOM.render(
   padding: 0px 30px;
 }
 
-.iconWrapper .anticon {
+.iconWrapper .rubixicon {
   position: absolute;
   top: -3px;
   width: 16px;
@@ -61,15 +61,15 @@ ReactDOM.render(
   color: #ccc;
 }
 
-.iconWrapper .anticon:first-child {
+.iconWrapper .rubixicon:first-child {
   left: 0;
 }
 
-.iconWrapper .anticon:last-child {
+.iconWrapper .rubixicon:last-child {
   right: 0;
 }
 
-.anticon.anticon-highlight {
+.rubixicon.rubixicon-highlight {
   color: #666;
 }
 ````

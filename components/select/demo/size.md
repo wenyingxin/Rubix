@@ -38,11 +38,11 @@ ReactDOM.render(
 ````
 
 ````css
-.code-box-demo .rubyx-select {
+.code-box-demo .rubix-select {
   margin: 0 8px 10px 0;
 }
 
-#components-select-demo-search-box .code-box-demo .rubyx-select {
+#components-select-demo-search-box .code-box-demo .rubix-select {
   margin: 0;
 }
 ````

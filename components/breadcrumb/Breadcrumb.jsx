@@ -3,7 +3,7 @@ import BreadcrumbItem from './BreadcrumbItem';
 
 export default class Breadcrumb extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-breadcrumb',
+    prefixCls: 'rubix-breadcrumb',
     separator: '/',
     linkRender: (href, name) => <a href={`#${href}`}>{name}</a>,
     nameRender: (name) => <span>{name}</span>,

@@ -125,7 +125,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
   display: inline-block;
 }
 
-.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .anticon {
+.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .rubixicon {
   transition: font-size .3s;
   vertical-align: middle;
 }
@@ -134,7 +134,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
   transition: all 0s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .anticon {
+.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .rubixicon {
   font-size: 16px;
   display: inline-block;
   vertical-align: middle;

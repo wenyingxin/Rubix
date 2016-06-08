@@ -23,7 +23,7 @@ const menu = (
 
 ReactDOM.render(
   <Dropdown overlay={menu}>
-    <a className="rubyx-dropdown-link" href="#">
+    <a className="rubix-dropdown-link" href="#">
       鼠标移入 <Icon type="down" />
     </a>
   </Dropdown>

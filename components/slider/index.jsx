@@ -3,7 +3,7 @@ import RcSlider from 'rc-slider';
 
 export default class Slider extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-slider',
+    prefixCls: 'rubix-slider',
     tipTransitionName: 'zoom-down',
   }
 

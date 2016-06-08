@@ -88,10 +88,10 @@ let Demo = React.createClass({
   renderPassStrengthBar(type) {
     const strength = type === 'pass' ? this.state.passStrength : this.state.rePassStrength;
     const classSet = classNames({
-      'rubyx-pwd-strength': true,
-      'rubyx-pwd-strength-low': strength === 'L',
-      'rubyx-pwd-strength-medium': strength === 'M',
-      'rubyx-pwd-strength-high': strength === 'H',
+      'rubix-pwd-strength': true,
+      'rubix-pwd-strength-low': strength === 'L',
+      'rubix-pwd-strength-medium': strength === 'M',
+      'rubix-pwd-strength-high': strength === 'H',
     });
     const level = {
       L: '低',
@@ -102,10 +102,10 @@ let Demo = React.createClass({
     return (
       <div>
         <ul className={classSet}>
-          <li className="rubyx-pwd-strength-item rubyx-pwd-strength-item-1"></li>
-          <li className="rubyx-pwd-strength-item rubyx-pwd-strength-item-2"></li>
-          <li className="rubyx-pwd-strength-item rubyx-pwd-strength-item-3"></li>
-          <span className="rubyx-form-text">
+          <li className="rubix-pwd-strength-item rubix-pwd-strength-item-1"></li>
+          <li className="rubix-pwd-strength-item rubix-pwd-strength-item-2"></li>
+          <li className="rubix-pwd-strength-item rubix-pwd-strength-item-3"></li>
+          <span className="rubix-form-text">
             {level[strength]}
           </span>
         </ul>
@@ -191,7 +191,7 @@ ReactDOM.render(<Demo />, mountNode);
 ````
 
 ````css
-.rubyx-pwd-strength {
+.rubix-pwd-strength {
   display: inline-block;
   margin-left: 8px;
   line-height: 32px;
@@ -199,7 +199,7 @@ ReactDOM.render(<Demo />, mountNode);
   vertical-align: middle;
 }
 
-.rubyx-pwd-strength-item {
+.rubix-pwd-strength-item {
   float: left;
   margin-right: 1px;
   margin-top: 12px;
@@ -211,31 +211,31 @@ ReactDOM.render(<Demo />, mountNode);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.rubyx-pwd-strength-item-1 {
+.rubix-pwd-strength-item-1 {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 
-.rubyx-pwd-strength-item-2 {
+.rubix-pwd-strength-item-2 {
   width: 20px;
 }
 
-.rubyx-pwd-strength-item-3 {
+.rubix-pwd-strength-item-3 {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   margin-right: 8px;
 }
 
-.rubyx-pwd-strength-low .rubyx-pwd-strength-item-1, .rubyx-pwd-strength-medium .rubyx-pwd-strength-item-1, .rubyx-pwd-strength-high .rubyx-pwd-strength-item-1 {
+.rubix-pwd-strength-low .rubix-pwd-strength-item-1, .rubix-pwd-strength-medium .rubix-pwd-strength-item-1, .rubix-pwd-strength-high .rubix-pwd-strength-item-1 {
   background-color: #FAC450;
 }
 
-.rubyx-pwd-strength-medium .rubyx-pwd-strength-item-2, .rubyx-pwd-strength-high .rubyx-pwd-strength-item-2 {
+.rubix-pwd-strength-medium .rubix-pwd-strength-item-2, .rubix-pwd-strength-high .rubix-pwd-strength-item-2 {
   background-color: rgba(135, 208, 104, .6);
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9987D068,endColorstr=#9987D068);
 }
 
-.rubyx-pwd-strength-high .rubyx-pwd-strength-item-3 {
+.rubix-pwd-strength-high .rubix-pwd-strength-item-3 {
   background-color: #87D068;
 }
 ````

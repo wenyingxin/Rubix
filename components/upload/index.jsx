@@ -3,7 +3,7 @@ import RcUpload from 'rc-upload';
 import UploadList from './uploadList';
 import getFileItem from './getFileItem';
 import classNames from 'classnames';
-const prefixCls = 'rubyx-upload';
+const prefixCls = 'rubix-upload';
 
 function noop() {
 }

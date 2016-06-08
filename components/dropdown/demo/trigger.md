@@ -23,7 +23,7 @@ const menu = (
 
 ReactDOM.render(<div>
   <Dropdown overlay={menu} trigger={['click']}>
-    <a className="rubyx-dropdown-link" href="#">
+    <a className="rubix-dropdown-link" href="#">
       点击触发 <Icon type="down" />
     </a>
   </Dropdown>

@@ -23,7 +23,7 @@ const Rater = React.createClass({
     return (
       <span>
         <Rate onChange={this.handleChange} value={value} />
-        {value && <span className="rubyx-rate-text">{value} 星</span>}
+        {value && <span className="rubix-rate-text">{value} 星</span>}
       </span>
     );
   },

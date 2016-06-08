@@ -1,1 +1,1 @@
-export const PREFIX_CLS = 'rubyx-fullcalendar';
+export const PREFIX_CLS = 'rubix-fullcalendar';

@@ -6,7 +6,7 @@ export default class Rate extends React.Component {
     prefixCls: PropTypes.string,
   };
   static defaultProps = {
-    prefixCls: 'rubyx-rate',
+    prefixCls: 'rubix-rate',
   };
   render() {
     return <RcRate {...this.props} />;

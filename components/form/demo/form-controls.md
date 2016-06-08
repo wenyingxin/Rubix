@@ -52,18 +52,18 @@ ReactDOM.render(
       label="Checkbox 多选框："
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 18 }} >
-      <Checkbox className="rubyx-checkbox-vertical">选项一</Checkbox>
-      <Checkbox className="rubyx-checkbox-vertical">选项二</Checkbox>
-      <Checkbox className="rubyx-checkbox-vertical" disabled>选项三（不可选）</Checkbox>
+      <Checkbox className="rubix-checkbox-vertical">选项一</Checkbox>
+      <Checkbox className="rubix-checkbox-vertical">选项二</Checkbox>
+      <Checkbox className="rubix-checkbox-vertical" disabled>选项三（不可选）</Checkbox>
     </FormItem>
 
     <FormItem
       label="Checkbox 多选框："
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 18 }} >
-      <Checkbox className="rubyx-checkbox-inline">选项一</Checkbox>
-      <Checkbox className="rubyx-checkbox-inline">选项二</Checkbox>
-      <Checkbox className="rubyx-checkbox-inline">选项三</Checkbox>
+      <Checkbox className="rubix-checkbox-inline">选项一</Checkbox>
+      <Checkbox className="rubix-checkbox-inline">选项二</Checkbox>
+      <Checkbox className="rubix-checkbox-inline">选项三</Checkbox>
     </FormItem>
 
     <FormItem

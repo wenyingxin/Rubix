@@ -77,17 +77,17 @@ export default function confirm(config) {
   }
 
   let body = (
-    <div className="rubyx-confirm-body">
+    <div className="rubix-confirm-body">
       <Icon type={props.iconType} />
-      <span className="rubyx-confirm-title">{props.title}</span>
-      <div className="rubyx-confirm-content">{props.content}</div>
+      <span className="rubix-confirm-title">{props.title}</span>
+      <div className="rubix-confirm-content">{props.content}</div>
     </div>
   );
 
   let footer = null;
   if (props.okCancel) {
     footer = (
-      <div className="rubyx-confirm-btns">
+      <div className="rubix-confirm-btns">
         <Button type="ghost" size="large" onClick={onCancel}>
           {props.cancelText}
         </Button>
@@ -98,7 +98,7 @@ export default function confirm(config) {
     );
   } else {
     footer = (
-      <div className="rubyx-confirm-btns">
+      <div className="rubix-confirm-btns">
         <Button type="primary" size="large" onClick={onOk}>
           {props.okText}
         </Button>
@@ -107,8 +107,8 @@ export default function confirm(config) {
   }
 
   const classString = classNames({
-    'rubyx-confirm': true,
-    [`rubyx-confirm-${props.type}`]: true,
+    'rubix-confirm': true,
+    [`rubix-confirm-${props.type}`]: true,
     [props.className]: !!props.className,
   });
 

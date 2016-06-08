@@ -5,7 +5,7 @@ export default class Collapse extends React.Component {
   static Panel = RcCollapse.Panel;
 
   static defaultProps = {
-    prefixCls: 'rubyx-collapse',
+    prefixCls: 'rubix-collapse',
   }
 
   render() {

@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@table-prefix-cls: rubyx-table;
+@table-prefix-cls: rubix-table;
 @table-head-background-color: #f7f7f7;
 
 .@{table-prefix-cls} {
@@ -31,7 +31,7 @@
     transition: background .3s ease;
     text-align: left;
 
-    .anticon-filter {
+    .rubixicon-filter {
       margin-left: 4px;
       .iconfont-size-under-12px(10px);
       cursor: pointer;
@@ -42,7 +42,7 @@
       }
     }
 
-    .@{table-prefix-cls}-filter-selected.anticon-filter {
+    .@{table-prefix-cls}-filter-selected.rubixicon-filter {
       color: @primary-color;
     }
   }
@@ -150,7 +150,7 @@
     td {
       padding: 6px 8px;
     }
-    .rubyx-table-row:last-child td {
+    .rubix-table-row:last-child td {
       border-bottom: 0;
     }
   }
@@ -169,18 +169,18 @@
       display: block;
       width: 12px;
       cursor: pointer;
-      &:hover .anticon {
+      &:hover .rubixicon {
         color: #666;
       }
       &.on {
-        .anticon-caret-up,
-        .anticon-caret-down {
+        .rubixicon-caret-up,
+        .rubixicon-caret-down {
           color: @primary-color;
         }
       }
     }
-    .anticon-caret-up,
-    .anticon-caret-down {
+    .rubixicon-caret-up,
+    .rubixicon-caret-down {
       .iconfont-size-under-12px(6px);
       line-height: 6px;
       height: 6px;
@@ -236,7 +236,7 @@
     top: 50px;
     left: 0;
     width: 100%;
-    .anticon {
+    .rubixicon {
       margin-right: 4px;
     }
   }
@@ -254,7 +254,7 @@
     border: 1px solid @border-color-base;
     box-shadow: @box-shadow-base;
 
-    .rubyx-dropdown-menu {
+    .rubix-dropdown-menu {
       border: 0;
       box-shadow: none;
       border-radius: @border-radius-base @border-radius-base 0 0;
@@ -265,8 +265,8 @@
         box-shadow: @box-shadow-base;
       }
 
-      .rubyx-dropdown-submenu-contain-selected {
-        .rubyx-dropdown-menu-submenu-title:after {
+      .rubix-dropdown-submenu-contain-selected {
+        .rubix-dropdown-menu-submenu-title:after {
           color: @primary-color;
           font-weight: bold;
           text-shadow: 0 0 2px tint(@primary-color, 80%);
@@ -274,12 +274,12 @@
       }
     }
 
-    .rubyx-dropdown-menu-item {
+    .rubix-dropdown-menu-item {
       overflow: hidden;
     }
 
-    > .rubyx-dropdown-menu > .rubyx-dropdown-menu-item:last-child,
-    > .rubyx-dropdown-menu > .rubyx-dropdown-menu-submenu:last-child .rubyx-dropdown-menu-submenu-title {
+    > .rubix-dropdown-menu > .rubix-dropdown-menu-item:last-child,
+    > .rubix-dropdown-menu > .rubix-dropdown-menu-submenu:last-child .rubix-dropdown-menu-submenu-title {
       border-radius: 0;
     }
 
@@ -443,7 +443,7 @@
       content: '\e601';
       .iconfont-size-under-12px(9px);
       font-weight: bold;
-      font-family: anticon;
+      font-family: rubixicon;
     }
   }
 
@@ -454,7 +454,7 @@
       content: '\e600';
       .iconfont-size-under-12px(9px);
       font-weight: bold;
-      font-family: anticon;
+      font-family: rubixicon;
     }
   }
 }

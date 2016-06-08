@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class BreadcrumbItem extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-breadcrumb',
+    prefixCls: 'rubix-breadcrumb',
     separator: '/',
   }
 

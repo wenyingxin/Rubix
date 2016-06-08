@@ -6,7 +6,7 @@ export default class Tree extends React.Component {
   static TreeNode = RcTree.TreeNode;
 
   static defaultProps = {
-    prefixCls: 'rubyx-tree',
+    prefixCls: 'rubix-tree',
     checkable: false,
     showIcon: false,
     openAnimation: animation,

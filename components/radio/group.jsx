@@ -17,7 +17,7 @@ function getCheckedValue(children) {
 
 export default class RadioGroup extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-radio-group',
+    prefixCls: 'rubix-radio-group',
     disabled: false,
     onChange() {
     },

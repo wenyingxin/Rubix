@@ -3,7 +3,7 @@ import Radio from './radio';
 
 export default class RadioButton extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-radio-button',
+    prefixCls: 'rubix-radio-button',
   }
   render() {
     return (

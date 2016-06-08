@@ -12,7 +12,7 @@ function getNotificationInstance() {
     return notificationInstance;
   }
   notificationInstance = Notification.newInstance({
-    prefixCls: 'rubyx-notification',
+    prefixCls: 'rubix-notification',
     style: {
       top: defaultTop,
       right: 0,
@@ -22,7 +22,7 @@ function getNotificationInstance() {
 }
 
 function notice(args) {
-  const prefixCls = args.prefixCls || 'rubyx-notification-notice';
+  const prefixCls = args.prefixCls || 'rubix-notification-notice';
 
   let duration;
   if (args.duration === undefined) {

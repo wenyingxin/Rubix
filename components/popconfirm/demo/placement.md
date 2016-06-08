@@ -63,10 +63,10 @@ ReactDOM.render(<div>
 ````
 
 <style>
-.code-box-demo .rubyx-popover-wrap > a {
+.code-box-demo .rubix-popover-wrap > a {
   margin-right: 1em;
 }
-.code-box-demo .rubyx-btn {
+.code-box-demo .rubix-btn {
   margin-right: 1em;
   margin-bottom: 1em;
 }

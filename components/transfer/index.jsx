@@ -13,7 +13,7 @@ export default class Transfer extends React.Component {
   static Search = Search;
 
   static defaultProps = {
-    prefixCls: 'rubyx-transfer',
+    prefixCls: 'rubix-transfer',
     dataSource: [],
     render: noop,
     targetKeys: [],

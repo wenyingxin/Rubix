@@ -12,7 +12,7 @@ export default class Input extends React.Component {
   static defaultProps = {
     defaultValue: '',
     disabled: false,
-    prefixCls: 'rubyx-input',
+    prefixCls: 'rubix-input',
     type: 'text',
     onPressEnter() {},
     onKeyDown() {},

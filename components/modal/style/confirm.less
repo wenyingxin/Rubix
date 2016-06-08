@@ -1,11 +1,11 @@
-@confirm-prefix-cls: rubyx-confirm;
+@confirm-prefix-cls: rubix-confirm;
 
 .@{confirm-prefix-cls} {
-  .rubyx-modal-header {
+  .rubix-modal-header {
     display: none;
   }
 
-  .rubyx-modal-body {
+  .rubix-modal-body {
     padding: 30px 40px;
   }
 
@@ -23,7 +23,7 @@
       margin-top: 8px;
     }
 
-    > .anticon {
+    > .rubixicon {
       font-size: 24px;
       margin-right: 10px;
       padding: 0 1px;
@@ -42,20 +42,20 @@
     }
   }
 
-  &-error &-body > .anticon {
+  &-error &-body > .rubixicon {
     color: @error-color;
   }
 
-  &-warning &-body > .anticon,
-  &-confirm &-body > .anticon {
+  &-warning &-body > .rubixicon,
+  &-confirm &-body > .rubixicon {
     color: @warning-color;
   }
 
-  &-info &-body > .anticon {
+  &-info &-body > .rubixicon {
     color: @primary-color;
   }
 
-  &-success &-body > .anticon {
+  &-success &-body > .rubixicon {
     color: @success-color;
   }
 }

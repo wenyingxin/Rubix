@@ -3,9 +3,9 @@ import classNames from 'classnames';
 
 export default function Group(props) {
   const className = classNames({
-    'rubyx-input-group': true,
-    'rubyx-input-group-lg': props.size === 'large',
-    'rubyx-input-group-sm': props.size === 'small',
+    'rubix-input-group': true,
+    'rubix-input-group-lg': props.size === 'large',
+    'rubix-input-group-sm': props.size === 'small',
     [props.className]: !!props.className,
   });
   return (

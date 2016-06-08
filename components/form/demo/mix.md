@@ -49,15 +49,15 @@ let Demo = React.createClass({
           wrapperCol={{ span: 10 }}>
           <InputNumber min={1} max={10} style={{ width: 100 }}
             {...getFieldProps('inputNumber', { initialValue: 3 })} />
-          <span className="rubyx-form-text"> 台机器</span>
+          <span className="rubix-form-text"> 台机器</span>
         </FormItem>
 
         <FormItem
           label="我是标题："
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 10 }}>
-          <p className="rubyx-form-text" id="static" name="static">唧唧复唧唧木兰当户织呀</p>
-          <p className="rubyx-form-text">
+          <p className="rubix-form-text" id="static" name="static">唧唧复唧唧木兰当户织呀</p>
+          <p className="rubix-form-text">
             <a href="#">链接文字</a>
           </p>
         </FormItem>
@@ -109,7 +109,7 @@ let Demo = React.createClass({
             <DatePicker {...getFieldProps('startDate')} />
           </Col>
           <Col span="1">
-            <p className="rubyx-form-split">-</p>
+            <p className="rubix-form-split">-</p>
           </Col>
           <Col span="6">
             <DatePicker {...getFieldProps('endDate')} />

@@ -27,7 +27,7 @@ let Demo = React.createClass({
         <FormItem
           {...formItemLayout}
           label="用户名：">
-          <p className="rubyx-form-text" id="userName" name="userName">大眼萌 minion</p>
+          <p className="rubix-form-text" id="userName" name="userName">大眼萌 minion</p>
         </FormItem>
         <FormItem
           {...formItemLayout}

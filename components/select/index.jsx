@@ -7,7 +7,7 @@ export default class Select extends React.Component {
   static OptGroup = OptGroup;
 
   static defaultProps = {
-    prefixCls: 'rubyx-select',
+    prefixCls: 'rubix-select',
     transitionName: 'slide-up',
     optionLabelProp: 'children',
     choiceTransitionName: 'zoom',

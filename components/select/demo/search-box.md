@@ -67,16 +67,16 @@ const SearchInput = React.createClass({
   },
   render() {
     const btnCls = classNames({
-      'rubyx-search-btn': true,
-      'rubyx-search-btn-noempty': !!this.state.value.trim(),
+      'rubix-search-btn': true,
+      'rubix-search-btn-noempty': !!this.state.value.trim(),
     });
     const searchCls = classNames({
-      'rubyx-search-input': true,
-      'rubyx-search-input-focus': this.state.focus,
+      'rubix-search-input': true,
+      'rubix-search-input-focus': this.state.focus,
     });
     const options = this.state.data.map(d => <Option key={d.value}>{d.text}</Option>);
     return (
-      <div className="rubyx-search-input-wrapper" style={this.props.style}>
+      <div className="rubix-search-input-wrapper" style={this.props.style}>
         <Input.Group className={searchCls}>
           <Select
             combobox
@@ -91,7 +91,7 @@ const SearchInput = React.createClass({
             onBlur={this.handleFocusBlur}>
             {options}
           </Select>
-          <div className="rubyx-input-group-wrap">
+          <div className="rubix-input-group-wrap">
             <Button className={btnCls} onClick={this.handleSubmit}>
               <Icon type="search" />
             </Button>

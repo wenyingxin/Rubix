@@ -5,7 +5,7 @@ export default class Steps extends React.Component {
   static Step = RcSteps.Step;
 
   static defaultProps = {
-    prefixCls: 'rubyx-steps',
+    prefixCls: 'rubix-steps',
     iconPrefix: 'ant',
     maxDescriptionWidth: 100,
     current: 0,

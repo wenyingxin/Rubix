@@ -6,7 +6,7 @@ import classNames from 'classnames';
 export default class Checkbox extends React.Component {
   static Group = CheckboxGroup;
   static defaultProps = {
-    prefixCls: 'rubyx-checkbox',
+    prefixCls: 'rubix-checkbox',
   }
   render() {
     const { prefixCls, style, children, className, ...restProps } = this.props;

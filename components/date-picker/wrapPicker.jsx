@@ -75,14 +75,14 @@ export default function wrapPicker(Picker, defaultFormat) {
       const props = this.props;
       const state = this.state;
       const pickerClass = classNames({
-        'rubyx-calendar-picker': true,
-        'rubyx-calendar-picker-open': state.open,
+        'rubix-calendar-picker': true,
+        'rubix-calendar-picker-open': state.open,
       });
       const pickerInputClass = classNames({
-        'rubyx-calendar-range-picker': true,
-        'rubyx-input': true,
-        'rubyx-input-lg': props.size === 'large',
-        'rubyx-input-sm': props.size === 'small',
+        'rubix-calendar-range-picker': true,
+        'rubix-input': true,
+        'rubix-input-lg': props.size === 'large',
+        'rubix-input-sm': props.size === 'small',
       });
 
       const locale = this.getLocale();
@@ -97,7 +97,7 @@ export default function wrapPicker(Picker, defaultFormat) {
         <TimePicker
           {...rcTimePickerProps}
           {...props.showTime}
-          prefixCls="rubyx-time-picker"
+          prefixCls="rubix-time-picker"
           placeholder={locale.timePickerLocale.placeholder}
           locale={locale.timePickerLocale}
           transitionName="slide-up"

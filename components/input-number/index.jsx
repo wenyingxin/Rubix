@@ -4,7 +4,7 @@ import RcInputNumber from 'rc-input-number';
 
 export default class InputNumber extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-input-number',
+    prefixCls: 'rubix-input-number',
     step: 1,
   }
 

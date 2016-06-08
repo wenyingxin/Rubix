@@ -67,7 +67,7 @@ english: DatePicker
 `disabled` `style` `popupStyle` `size` `locale` `showTime` `onOk` `getCalendarContainer` 属性与 DatePicker 的一致。
 
 <style>
-.code-box-demo .rubyx-calendar-picker {
+.code-box-demo .rubix-calendar-picker {
   margin: 0 8px 12px 0;
 }
 </style>

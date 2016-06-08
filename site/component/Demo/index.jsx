@@ -66,7 +66,7 @@ export default class Demo extends React.Component {
             </Link>
           </div>
           {introChildren}
-          <span className="collapse anticon anticon-circle-o-right"
+          <span className="collapse rubixicon rubixicon-circle-o-right"
             onClick={this.handleCodeExapnd}
             unselectable="none" />
         </section>

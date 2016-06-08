@@ -17,8 +17,8 @@ ReactDOM.render(
 ````
 
 <style>
-.rubyx-progress-circle,
-.rubyx-progress-line {
+.rubix-progress-circle,
+.rubix-progress-line {
   margin-right: 8px;
   margin-bottom: 8px;
 }

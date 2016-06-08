@@ -28,7 +28,7 @@ ReactDOM.render(
 ````
 
 <style>
-.code-box-demo .rubyx-btn {
+.code-box-demo .rubix-btn {
   margin-right: 1em;
 }
 </style>

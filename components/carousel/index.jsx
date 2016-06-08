@@ -30,9 +30,9 @@ export default class Carousel extends React.Component {
       props.draggable = false;
     }
 
-    let className = 'rubyx-carousel';
+    let className = 'rubix-carousel';
     if (props.vertical) {
-      className = `${className} rubyx-carousel-vertical`;
+      className = `${className} rubix-carousel-vertical`;
     }
 
     return (

@@ -7,7 +7,7 @@ let defaultDuration = 1.5;
 let defaultTop;
 let messageInstance;
 let key = 1;
-let prefixCls = 'rubyx-message';
+let prefixCls = 'rubix-message';
 
 function getMessageInstance() {
   messageInstance = messageInstance || Notification.newInstance({

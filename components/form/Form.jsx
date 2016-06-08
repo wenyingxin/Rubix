@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export default class Form extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-form',
+    prefixCls: 'rubix-form',
     onSubmit(e) {
       e.preventDefault();
     },

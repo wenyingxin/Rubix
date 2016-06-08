@@ -10,7 +10,7 @@ let mousePositionEventBinded;
 
 export default class Modal extends React.Component {
   static defaultProps = {
-    prefixCls: 'rubyx-modal',
+    prefixCls: 'rubix-modal',
     onOk: noop,
     onCancel: noop,
     width: 520,

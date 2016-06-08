@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@tab-prefix-cls: rubyx-tabs;
+@tab-prefix-cls: rubix-tabs;
 
 .@{tab-prefix-cls} {
   box-sizing: border-box;
@@ -83,7 +83,7 @@
 
       &:before {
         display: block;
-        font-family: "anticon" !important;
+        font-family: "rubixicon" !important;
       }
     }
   }
@@ -175,7 +175,7 @@
           transform: translateZ(0);
         }
 
-        .anticon {
+        .rubixicon {
           width: 14px;
           height: 14px;
           margin-right: 8px;
@@ -402,7 +402,7 @@
   &&-card > &-bar &-nav-wrap {
     margin-bottom: 0;
   }
-  &&-card > &-bar &-tab-inner .anticon-cross {
+  &&-card > &-bar &-tab-inner .rubixicon-cross {
     margin-right: 0;
     color: #999;
     transition: all 0.3s @ease-in-out;
@@ -423,8 +423,8 @@
     padding-right: 8px;
   }
 
-  &&-card > &-bar &-tab-active .anticon-cross,
-  &&-card > &-bar &-tab:hover .anticon-cross {
+  &&-card > &-bar &-tab-active .rubixicon-cross,
+  &&-card > &-bar &-tab:hover .rubixicon-cross {
     width: 16px;
     transform: translateZ(0);
   }

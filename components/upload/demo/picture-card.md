@@ -42,7 +42,7 @@ const ImageUploadList = React.createClass({
       <div className="clearfix">
         <Upload {...props}>
           <Icon type="plus" />
-          <div className="rubyx-upload-text">上传照片</div>
+          <div className="rubix-upload-text">上传照片</div>
         </Upload>
         <a href="https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png" target="_blank" className="upload-example">
           <img alt="example" src="https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png" />
@@ -61,12 +61,12 @@ ReactDOM.render(<ImageUploadList />, mountNode);
 
 ````css
 /* 配合样式可以做出上传按钮和示例效果 */
-.rubyx-upload-select-picture-card i {
+.rubix-upload-select-picture-card i {
   font-size: 28px;
   color: #999;
 }
 
-.rubyx-upload-select-picture-card .rubyx-upload-text {
+.rubix-upload-select-picture-card .rubix-upload-text {
   margin-top: 8px;
   font-size: 12px;
   color: #666;
