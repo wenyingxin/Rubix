@@ -3,7 +3,7 @@ order: 1
 english: 快速上手
 ---
 
-RubyX React 致力于提供给程序员**愉悦**的开发体验。
+Rubix React 致力于提供给程序员**愉悦**的开发体验。
 
 ---
 
@@ -42,7 +42,7 @@ $ npm run dist
 
 ## 兼容性
 
-Ruby X 支持所有的现代浏览器和 IE8+。
+Rubix 支持所有的现代浏览器和 IE8+。
 
 对于 IE8，需要提供 [es5-shim](http://facebook.github.io/react/docs/working-with-the-browser.html#browser-support-and-polyfills) 等 Polyfills 的支持。
 

@@ -9,9 +9,9 @@ english: Colors
 
 色彩在界面设计中的使用应同时具备品牌识别性以及界面设计功能性。众所周知色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。众所周知色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。
 
-## Ant Design Colors
+## Rubix Colors
 
-Ant Design 的色板由 9 种基本色彩组成，每种基本色又衍生出九宫格色板，在此基础上还可以通过黑白叠加的方式实现色彩明暗的效果。
+Rubix 的色板由 9 种基本色彩组成，每种基本色又衍生出九宫格色板，在此基础上还可以通过黑白叠加的方式实现色彩明暗的效果。
 
 `````__react
 const Palette = React.createClass({
@@ -146,9 +146,9 @@ ReactDOM.render(<ExtendPalettes key="palettes" />, mountNode);
 
 合适的色彩对比为信息传达加分，同时也应放考虑到有颜色识别障碍人群的需求。我们将每种主色衍生出来的颜色进行了打标，在考虑对比颜色的选择时建议两种颜色对应标签数值的差要大于等于 5。
 
-<img src="https://t.alipayobjects.com/images/rmsweb/T1hLphXgXcXXXXXXXX.png" width="100%">
+<img src="" width="100%">
 
-<img src="https://t.alipayobjects.com/images/rmsweb/T1v2phXj8bXXXXXXXX.png" width="100%">
+<img src="" width="100%">
 
 ## 色彩换算工具
 
@@ -234,6 +234,8 @@ const TintShadeTool = React.createClass({
 ReactDOM.render(<TintShadeTool key="tintShadeTool" />, mountNode);
 `````
 
-Ant Design 专用色彩换算工具，用于解析类似 `#2db7f5 tint 80%` 的色彩标注。
+Rubix 专用色彩换算工具，用于解析类似 `#2db7f5 tint 80%` 的色彩标注。
 
 less 或 scss 语言可以直接使用 `tint(#2db7f5, 80%)` 和  `shade(#2db7f5, 80%)` 的语法。
+
+

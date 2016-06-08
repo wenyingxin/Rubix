@@ -5,7 +5,7 @@ chinese: 组件动画
 english: Motion
 ---
 
-依据『巧用过渡』的设计原则，Ant Design 提供了一些预设的组件动画和缓动函数。
+依据『巧用过渡』的设计原则，Rubix 提供了一些预设的组件动画和缓动函数。
 
 > 示例延长了动画时长以便展示。
 
@@ -244,3 +244,5 @@ ReactDOM.render(<Test key="motion" />, mountNode);
 | @ease-out-quint    | `cubic-bezier(0.23, 1, 0.32, 1);`        | quint 后缓动         | `slide@enter`  |
 | @ease-in-quint     | `cubic-bezier(0.755, 0.05, 0.855, 0.06);`| quint 前缓动         | `slide@leave` |
 | @ease-in-out-quint | `cubic-bezier(0.86, 0, 0.07, 1);`        | quint 前后缓动       |             |
+
+

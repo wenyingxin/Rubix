@@ -1,7 +1,6 @@
 ---
-category: 十大原则
+category: 十六大原则
 order: 6
-subtitle: Stay on the Page
 english: 足不出户
 ---
 
@@ -98,3 +97,5 @@ english: 足不出户
 <img class="preview-img" align="right" alt="弹出框覆盖层示例" src="https://os.alipayobjects.com/rmsportal/xcYosQncDPuFxhS.png">
 
 弹出框覆盖层：虽然弹出框的出现会打断用户的心流，但是有时候在弹出框中使用『步骤条』来管理复杂流程也是可行的。
+
+

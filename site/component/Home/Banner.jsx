@@ -20,8 +20,8 @@ export default class Banner extends React.Component {
       <section id="banner">
         <ScrollElement scrollName="banner" className="page">
           <QueueAnim className="banner-text-wrapper" type={this.typeFunc} delay={300}>
-            <h2 key="h2">Ruby <p>X</p></h2>
-            <p key="content">一个 UI 设计语言</p>
+            <h2 key="h2">Rubix <p>Design</p></h2>
+            <p key="content">互联网金融 UI 前端设计语言</p>
             <span className="line" key="line" />
             <div key="button" className="start-button clearfix">
               <Link to="/docs/spec/introduce">

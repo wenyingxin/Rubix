@@ -131,7 +131,7 @@ export default class Header extends React.Component {
               type="menu" />
             <Link to="/" id="logo">
               <img alt="logo" src={logo} />
-              <span>Ruby X</span>
+              <span>Rubix</span>
             </Link>
           </Col>
           <Col className={`nav ${this.state.menuVisible ? 'nav-show' : 'nav-hide'}`}

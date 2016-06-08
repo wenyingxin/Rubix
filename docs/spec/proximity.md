@@ -1,17 +1,24 @@
 ---
-category: 十大原则
+category: 十六大原则
 order: 1
-subtitle: Proximity
 english: 亲密性
 ---
 
 如果信息之间关联性越高，它们之间的距离就应该越接近，也越像一个视觉单元；反之，则它们的距离就应该越远，也越像多个视觉单元。亲密性的根本目的是实现组织性，让用户对页面结构和信息层次一目了然。
 
+要避免以下问题：
+避免一个页面上有太多孤立的元素。
+不要在元素之间留出同样大小的空白，除非各组同属于一个子集。
+不同属一组的元素之间不要建立关系，如果元素彼此无关，要把它们分开。
+
+亲密性原则体现在间距的设计上，包括纵向间距和横向间距。
+
 ---
+
 
 ## 纵向间距关系
 
-<img class="preview-img" align="right" alt="纵向间距示例" description="在 Ant Design 中，这三种规格分别为：8px（小号间距）、16px（中号间距）、24px（大号间距）。" src="https://os.alipayobjects.com/rmsportal/blBCqHsUJhKxxAU.png">
+<img class="preview-img" align="right" alt="纵向间距示例" description="在 Ant Design 中，这三种规格分别为：10px（小号间距）、20px（中号间距）、30px（大号间距）。" src="https://os.alipayobjects.com/rmsportal/blBCqHsUJhKxxAU.png">
 
 通过『小号间距』、『中号间距』、『大号间距』这三种规格来划分信息层次。
 
@@ -21,7 +28,7 @@ english: 亲密性
 
 在这三种规格不适用的情况下，可以通过加减『基础间距』的倍数，或者增加元素来拉开信息层次。
 
-> 注：在 Ant Design 中，`y=8+8*n`。其中，`n>=0`，y 是纵向间距，8 是『基础间距』。
+> 注：在 Rubix 中，`y=10+10*n`。其中，`n>=0`，y 是纵向间距，10 是『基础间距』。
 
 ---
 
@@ -36,3 +43,9 @@ english: 亲密性
 <img class="preview-img" align="right" alt="复选框内示例" src="https://os.alipayobjects.com/rmsportal/DxzQXtIEnFcFxGY.png">
 
 在一个组件内部，元素的横向间距也应该有所不同。
+
+
+
+向间距也应该有所不向间距也应该有所不向间距也应该有所不向间距也应该有所不
+
+

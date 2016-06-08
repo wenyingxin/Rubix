@@ -1,7 +1,6 @@
 ---
-category: 十大原则
+category: 十六大原则
 order: 6
-subtitle: Keep it Lightweight
 english: 简化交互
 ---
 
@@ -75,3 +74,5 @@ english: 简化交互
 当需要增强按钮的响应性时，可以通过增加用户点击热区的范围，而不是增大按钮形状，从而增强响应性，又不缺失美感。
 
 >注：在移动端尤其适用。
+
+

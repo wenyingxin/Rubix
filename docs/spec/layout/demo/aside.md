@@ -14,9 +14,9 @@ const SubMenu = Menu.SubMenu;
 
 ReactDOM.render(
   <BrowserDemo>
-    <div className="ant-layout-aside">
-      <aside className="ant-layout-sider">
-        <div className="ant-layout-logo"></div>
+    <div className="rubix-layout-aside">
+      <aside className="rubix-layout-sider">
+        <div className="rubix-layout-logo"></div>
         <Menu mode="inline" theme="dark"
           defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']}>
           <SubMenu key="sub1" title={<span><Icon type="user" />导航一</span>}>
@@ -39,24 +39,24 @@ ReactDOM.render(
           </SubMenu>
         </Menu>
       </aside>
-      <div className="ant-layout-main">
-        <div className="ant-layout-header"></div>
-        <div className="ant-layout-breadcrumb">
+      <div className="rubix-layout-main">
+        <div className="rubix-layout-header"></div>
+        <div className="rubix-layout-breadcrumb">
           <Breadcrumb>
             <Breadcrumb.Item>首页</Breadcrumb.Item>
             <Breadcrumb.Item>应用列表</Breadcrumb.Item>
             <Breadcrumb.Item>某应用</Breadcrumb.Item>
           </Breadcrumb>
         </div>
-        <div className="ant-layout-container">
-          <div className="ant-layout-content">
+        <div className="rubix-layout-container">
+          <div className="rubix-layout-content">
             <div style={{ height: 590 }}>
               内容区域
             </div>
           </div>
         </div>
-        <div className="ant-layout-footer">
-        Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
+        <div className="rubix-layout-footer">
+        rubix Design 版权所有
         </div>
       </div>
     </div>
@@ -65,12 +65,12 @@ ReactDOM.render(
 ````
 
 ````css
-.ant-layout-aside {
+.rubix-layout-aside {
   position: relative;
   min-height: 100%;
 }
 
-.ant-layout-aside .ant-layout-logo {
+.rubix-layout-aside .rubix-layout-logo {
   width: 150px;
   height: 32px;
   background: #333;
@@ -78,7 +78,7 @@ ReactDOM.render(
   margin: 16px 24px 16px 28px;
 }
 
-.ant-layout-aside .ant-layout-sider {
+.rubix-layout-aside .rubix-layout-sider {
   width: 224px;
   background: #404040;
   position: absolute;
@@ -87,34 +87,34 @@ ReactDOM.render(
   height: 100%;
 }
 
-.ant-layout-aside .ant-layout-sider > .ant-menu {
+.rubix-layout-aside .rubix-layout-sider > .rubix-menu {
   margin-bottom: 20px;
 }
 
-.ant-layout-aside .ant-layout-header {
+.rubix-layout-aside .rubix-layout-header {
   background: #fff;
   height: 64px;
   border-bottom: 1px solid #e9e9e9;
 }
 
-.ant-layout-aside .ant-layout-breadcrumb {
+.rubix-layout-aside .rubix-layout-breadcrumb {
   margin: 7px 0 -17px 24px;
 }
 
-.ant-layout-aside .ant-layout-main {
+.rubix-layout-aside .rubix-layout-main {
   margin-left: 224px;
 }
 
-.ant-layout-aside .ant-layout-container {
+.rubix-layout-aside .rubix-layout-container {
   margin: 24px 16px;
 }
 
-.ant-layout-aside .ant-layout-content {
+.rubix-layout-aside .rubix-layout-content {
   background: #fff;
   padding: 24px;
 }
 
-.ant-layout-aside .ant-layout-footer {
+.rubix-layout-aside .rubix-layout-footer {
   height: 64px;
   line-height: 64px;
   text-align: center;

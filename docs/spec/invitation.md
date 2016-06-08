@@ -1,7 +1,6 @@
 ---
-category: 十大原则
+category: 十六大原则
 order: 8
-subtitle: Provide Invitation
 english: 提供邀请
 ---
 
@@ -76,8 +75,5 @@ english: 提供邀请
 
 <br>
 
-<p><span class="waiting">预期功能邀请 (敬请期待)</span></p>
 
-<br>
 
-<p><span class="waiting">拖放邀请 (敬请期待)</span></p>

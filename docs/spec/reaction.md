@@ -1,7 +1,6 @@
 ---
-category: 十大原则
+category: 十六大原则
 order: 10
-subtitle: React Immediately
 english: 即时反应
 ---
 
@@ -75,3 +74,5 @@ english: 即时反应
 <img class="preview-img" align="right" alt="定时示例"  description="新增的列表项『高亮』，持续几秒后恢复正常。" src="https://os.alipayobjects.com/rmsportal/guiuShsfpJzxZQx.png">
 
 定时刷新：无需用户介入，定时展示新内容。
+
+

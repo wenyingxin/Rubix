@@ -1,7 +1,6 @@
 ---
-category: 十大原则
+category: 十六大原则
 order: 9
-subtitle: Use Transition
 english: 巧用过渡
 ---
 
@@ -77,4 +76,5 @@ english: 巧用过渡
 
 ## 自然运动
 
-参加 [Ant Motion 动画语言](http://motion.ant.design/#/language/)。
+
+

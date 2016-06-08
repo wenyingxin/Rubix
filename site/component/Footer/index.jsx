@@ -68,7 +68,7 @@ export default class Footer extends React.Component {
           <li>
             <h2>GitLab</h2>
             <div>
-              <a target="_blank " href="https://github.com/ant-design/ant-design">仓库</a>
+              <a target="_blank " href="">仓库</a>
             </div>
           </li>
           <li>
