@@ -145,7 +145,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 }
 
 .rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item:hover {
-  background: #2db7f5;
+  background: #61c8a8;
   color: #fff;
   transition: all 0s ease;
 }
@@ -153,7 +153,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 .rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item:hover .nav-text {
   display: inline-block;
   vertical-align: top;
-  background: #2db7f5;
+  background: #61c8a8;
   color: #fff;
   padding-right: 16px;
   border-radius: 0 5px 5px 0;
