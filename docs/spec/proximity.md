@@ -18,7 +18,7 @@ english: 亲密性
 
 ## 纵向间距关系
 
-<img class="preview-img" align="right" alt="纵向间距示例" description="在 Ant Design 中，这三种规格分别为：10px（小号间距）、20px（中号间距）、30px（大号间距）。" src="https://os.alipayobjects.com/rmsportal/blBCqHsUJhKxxAU.png">
+<img class="preview-img" align="right" alt="纵向间距示例" description="在 Rubix Design 中，这三种规格分别为：10px（小号间距）、20px（中号间距）、30px（大号间距）。" src="https://os.alipayobjects.com/rmsportal/blBCqHsUJhKxxAU.png">
 
 通过『小号间距』、『中号间距』、『大号间距』这三种规格来划分信息层次。
 

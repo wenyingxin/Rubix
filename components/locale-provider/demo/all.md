@@ -3,7 +3,7 @@ order: 2
 title: 所有组件
 ---
 
-此处列出 Ant Design 中需要国际化支持的组件，你可以在演示里切换语言。
+此处列出 Rubix Design 中需要国际化支持的组件，你可以在演示里切换语言。
 
 ````jsx
 import { LocaleProvider, Pagination, DatePicker, TimePicker, Calendar,
