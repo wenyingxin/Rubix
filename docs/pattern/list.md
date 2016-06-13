@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 chinese: 列表
 english: List
 ---
@@ -99,4 +99,11 @@ english: List
 
 <br />
 
+## 规格
+标题栏：30x1120px; #f3f3f3
+分割线：1px；#f2f2f2
+正文栏：40x1120px; 深色：#f7f7f7 浅色：#fafafa
+
 <h2><span class="waiting">案例（敬请期待）</span></h2>
+
+
