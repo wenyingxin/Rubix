@@ -1,1 +1,1 @@
-module.exports = require('antd-tools/lib/getWebpackConfig');
+module.exports = require('rubix-tools/lib/getWebpackConfig');
