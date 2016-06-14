@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://git@github.com:wenyingxin/Rubix.git"
+    "url": "git+ssh://git@github.com/wenyingxin/Rubix.git"
   },
   "bugs": {
     "url": "https://git@github.com:wenyingxin/Rubix.git"
@@ -159,5 +159,5 @@
     "doc": "docs",
     "test": "tests"
   },
-  "author": ""
+  "author": "wenyingxin"
 }
