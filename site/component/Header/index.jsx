@@ -5,7 +5,7 @@ import enquire from 'enquire.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
 import { Select, Menu, Row, Col, Icon } from 'antd';
-import logo from './logo.svg';
+import logo from './logo-rubix.svg';
 const Option = Select.Option;
 
 import './index.less';

@@ -76,6 +76,7 @@ export default class Home extends React.Component {
         width: 100%;
         background: #fff;
       }
+      #logo span{color:#fff}
       #footer {
         background: #000;
       }

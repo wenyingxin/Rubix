@@ -4,7 +4,7 @@ english: Rubix
 ---
 
 <div style="text-align:center;background:#FBFBFB;margin:40px 0;">
-  <img align="middle" width="600" src="/docs/spec/RUBIX.png">
+  <img align="middle" width="600" src="/docs/spec/logo-rubix.svg">
 </div>
 
 
