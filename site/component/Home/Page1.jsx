@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
 import TweenOne from 'rc-tween-one';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Icon, Button } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 
 const clientHeight = document.documentElement.clientHeight;
@@ -26,14 +24,6 @@ export default function Page1() {
         hideProps={{ child: null }}>
         <h2 key="h2">最佳实践</h2>
         <p key="p" style={{ maxWidth: 310 }}>通过互联网银行、银讯通、开放平台设计实践，积累了大量的优秀案例。</p>
-        <div key="button">
-          <Link to="/docs/practice/cases">
-            <Button type="primary" size="large">
-              了解更多
-              <Icon type="right" />
-            </Button>
-          </Link>
-        </div>
       </QueueAnim>
     </ScrollOverPack>
   );
