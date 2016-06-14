@@ -10,7 +10,7 @@ export default class Article extends React.Component {
   }
   componentDidUpdate() {
     const { title, chinese, english } = this.props.content.meta;
-    utils.setTitle(`${title || chinese || english} - Ant Design`);
+    utils.setTitle(`${title || chinese || english} - Rubix Design`);
     const links = Array.apply(null, document.querySelectorAll('.outside-link.internal'));
     if (links.length === 0) {
       return;

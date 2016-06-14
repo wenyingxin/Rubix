@@ -24,7 +24,7 @@ export default class ComponentDoc extends React.Component {
   }
   componentDidUpdate() {
     const { title, subtitle, chinese, english } = this.props.doc.meta;
-    utils.setTitle(`${subtitle || chinese || ''} ${title || english} - Ant Design`);
+    utils.setTitle(`${subtitle || chinese || ''} ${title || english} - Rubix Design`);
   }
 
   handleExpandToggle = () => {
