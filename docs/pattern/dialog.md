@@ -1,7 +1,7 @@
 ---
 order: 9
 chinese: 对话框
-english: dialogbox
+english: Dialogbox
 ---
 ---
 
