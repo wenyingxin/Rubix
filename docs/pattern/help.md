@@ -1,7 +1,7 @@
 ---
-order: 8
-chinese: 布局
-english: Layout
+order: 10
+chinese: 帮助
+english: Help
 ---
 
 网站往往提供多种功能，这就要求设计过程中重视功能的空间布局。例如只显示用户当前需要的功能，保持界面的精简，将给为复杂的功能加以隐藏并按需要展示。

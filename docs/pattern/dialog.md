@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 9
 chinese: 对话框
 english: dialogbox
 ---
@@ -14,6 +14,16 @@ english: dialogbox
 
 特点：
 强制用户进行一些操作，如果对话框被页面隐藏，会使用户误认为站点无响应。
+
+<img class="preview-img" align="right" alt="规格示例" src="https://os.alipayobjects.com/rmsportal/fuPcwZCYiohhdSt.png">
+
+### 非模态对话框
+对话框被弹出后，一直保留在屏幕上，用户可以继续在对话框所在的应用程序中进行其他操作，当需要激活窗口时，直接单击对话框所在区域即可。
+
+<br>
+
+特点：
+不会垄断用户的输入，用户可以继续和其他功能交互。
 
 <img class="preview-img" align="right" alt="规格示例" src="https://os.alipayobjects.com/rmsportal/fuPcwZCYiohhdSt.png">
 
