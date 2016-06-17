@@ -19,7 +19,7 @@ english: 三大特性
   <div class="col-8 features">
     <img src="https://os.alipayobjects.com/rmsportal/uSOjjlCRjRIhtIY.png">
     <h5>幸福</h5>
-    <div>不苛求简单，但是力求让『用户』和『设计者』流畅的完成目标，并带着成功和满足离开。</div>
+    <div>不苛求简单，但是力求让『用户』和『设计者』流畅的完成目标，并带着成功和满足离开。 </div>
   </div>
 </div>
 
