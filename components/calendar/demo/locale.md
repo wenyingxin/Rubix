@@ -7,13 +7,12 @@ title: 国际化
 
 ````jsx
 import { Calendar } from 'antd';
-import enUS from 'antd/lib/calendar/locale/en_US';
 
 function onPanelChange(value, mode) {
   console.log(value, mode);
 }
 
 ReactDOM.render(
-  <Calendar onPanelChange={onPanelChange} locale={enUS} />
+  <Calendar onPanelChange={onPanelChange} />
 , mountNode);
 ````

@@ -7,7 +7,6 @@ title: 国际化
 
 ````jsx
 import { Pagination, LocaleProvider } from 'antd';
-import enUS from 'antd/lib/locale-provider/en_US';
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
 }
 
 ReactDOM.render(
-  <LocaleProvider locale={enUS}>
+  <LocaleProvider>
     <App />
   </LocaleProvider>
 , mountNode);

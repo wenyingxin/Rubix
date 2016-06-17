@@ -7,9 +7,7 @@ title: 所有组件
 
 ````jsx
 import { LocaleProvider, Pagination, DatePicker, TimePicker, Calendar,
-         Popconfirm, Table, Modal, Button, Select, Transfer, Radio } from 'antd';
-import enUS from 'antd/lib/locale-provider/en_US';
-import ruRU from 'antd/lib/locale-provider/ru_RU';
+         Popconfirm, Table, Modal, Button, Select, Transfer } from 'antd';
 const Option = Select.Option;
 const RangePicker = DatePicker.RangePicker;
 
@@ -97,7 +95,7 @@ const Page = React.createClass({
 const App = React.createClass({
   getInitialState() {
     return {
-      locale: enUS,
+      locale: 'enUs',
     };
   },
   changeLocale(e) {
@@ -108,13 +106,8 @@ const App = React.createClass({
       <div>
         <div className="change-locale">
           <span style={{ marginRight: 16 }}>Change locale of components: </span>
-          <Radio.Group defaultValue={enUS} onChange={this.changeLocale}>
-            <Radio.Button key="en" value={enUS}>English</Radio.Button>
-            <Radio.Button key="ru" value={ruRU}>русский язык</Radio.Button>
-            <Radio.Button key="cn">中文</Radio.Button>
-          </Radio.Group>
         </div>
-        <LocaleProvider locale={this.state.locale}><Page /></LocaleProvider>
+        <LocaleProvider><Page /></LocaleProvider>
       </div>
     );
   },
