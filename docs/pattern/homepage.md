@@ -1,7 +1,7 @@
 ---
 order: 1
 chinese: 首页
-english: homepage
+english: Homepage
 ---
 
 首页是应用的核心，会呈现给用户最重要元素、商业目标、产品特点的综合考量。作为金融类网站的首页需要注意一下几点考量：
