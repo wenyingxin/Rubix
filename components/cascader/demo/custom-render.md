@@ -6,7 +6,7 @@ title: 自定义已选项
 例如给最后一项加上邮编链接。
 
 ````jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'rubix';
 
 const options = [{
   value: 'beijing',

@@ -8,7 +8,7 @@ title: 动态添加和删除
 > 使用 `afterClose` 删除时有动画效果。
 
 ````jsx
-import { Tag, Button } from 'antd';
+import { Tag, Button } from 'rubix';
 
 let index = 2;
 const App = React.createClass({

@@ -6,7 +6,7 @@ title: 基本
 最简单的下拉菜单。
 
 ````jsx
-import { Menu, Dropdown, Icon } from 'antd';
+import { Menu, Dropdown, Icon } from 'rubix';
 
 const menu = (
   <Menu>

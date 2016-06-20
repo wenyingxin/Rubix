@@ -6,7 +6,7 @@ title: 无边框
 在灰色背景上使用无边框的卡片。
 
 ````jsx
-import { Card } from 'antd';
+import { Card } from 'rubix';
 
 ReactDOM.render(
   <div style={{ background: '#ECECEC', padding: '30px' }}>

@@ -6,7 +6,7 @@ title: 带搜索框
 带搜索框的穿梭框。
 
 ````jsx
-import { Transfer } from 'antd';
+import { Transfer } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

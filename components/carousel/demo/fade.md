@@ -6,7 +6,7 @@ title: 渐显
 切换效果为渐显。
 
 ````jsx
-import { Carousel } from 'antd';
+import { Carousel } from 'rubix';
 
 ReactDOM.render(
   <Carousel effect="fade">

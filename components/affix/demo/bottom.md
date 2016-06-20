@@ -6,7 +6,7 @@ title: 下方固定
 固定在屏幕下方
 
 ````jsx
-import { Affix, Button } from 'antd';
+import { Affix, Button } from 'rubix';
 
 ReactDOM.render(
   <Affix offsetBottom={20}>

@@ -6,7 +6,7 @@ title: 自动切换
 定时切换下一张。
 
 ````jsx
-import { Carousel } from 'antd';
+import { Carousel } from 'rubix';
 
 ReactDOM.render(
   <Carousel autoplay>

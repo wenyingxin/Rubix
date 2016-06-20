@@ -6,7 +6,7 @@ title: 条件触发
 可以判断是否需要弹出。
 
 ````jsx
-import { Popconfirm, Switch, message } from 'antd';
+import { Popconfirm, Switch, message } from 'rubix';
 
 let App = React.createClass({
   getInitialState() {

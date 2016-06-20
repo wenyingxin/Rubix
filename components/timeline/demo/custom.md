@@ -6,7 +6,7 @@ title: 自定义时间轴点
 可以设置为图标或其他自定义元素。
 
 ````jsx
-import { Timeline, Icon } from 'antd';
+import { Timeline, Icon } from 'rubix';
 
 ReactDOM.render(
   <Timeline>

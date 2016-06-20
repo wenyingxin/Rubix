@@ -6,7 +6,7 @@ title: 自定义描述文案
 自定义描述文案，指定的 tip 文案会直接代替 `...`。
 
 ````jsx
-import { Spin, Alert } from 'antd';
+import { Spin, Alert } from 'rubix';
 
 ReactDOM.render(
   <Spin tip="正在读取数据...">

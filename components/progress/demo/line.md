@@ -6,7 +6,7 @@ title: 进度条
 标准的进度条。
 
 ````jsx
-import { Progress } from 'antd';
+import { Progress } from 'rubix';
 
 ReactDOM.render(
   <div>

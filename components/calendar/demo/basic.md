@@ -6,7 +6,7 @@ title: 基本
 一个通用的日历面板，支持年/月切换。
 
 ````jsx
-import { Calendar } from 'antd';
+import { Calendar } from 'rubix';
 
 function onPanelChange(value, mode) {
   console.log(value, mode);

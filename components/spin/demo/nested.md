@@ -6,7 +6,7 @@ title: 卡片加载中
 可以直接把内容内嵌到 `Spin` 中，将现有容器变为加载状态。
 
 ````jsx
-import { Spin, Switch, Alert } from 'antd';
+import { Spin, Switch, Alert } from 'rubix';
 
 const Card = React.createClass({
   getInitialState() {

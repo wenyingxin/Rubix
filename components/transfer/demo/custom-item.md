@@ -6,7 +6,7 @@ title: 自定义渲染行数据
 自定义渲染每一个 Transfer Item，可用于渲染复杂数据。
 
 ````jsx
-import { Transfer, Icon } from 'antd';
+import { Transfer, Icon } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

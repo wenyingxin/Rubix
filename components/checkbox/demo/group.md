@@ -6,7 +6,7 @@ title: Checkbox 组
 方便的从数组生成 Checkbox 组。
 
 ````jsx
-import { Checkbox } from 'antd';
+import { Checkbox } from 'rubix';
 const CheckboxGroup = Checkbox.Group;
 
 function onChange(checkedValues) {

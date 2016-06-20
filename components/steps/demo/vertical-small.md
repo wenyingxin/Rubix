@@ -6,7 +6,7 @@ title: 竖直方向的小型步骤条
 简单的竖直方向的小型步骤条。
 
 ````jsx
-import { Steps } from 'antd';
+import { Steps } from 'rubix';
 const Step = Steps.Step;
 
 const steps = [{

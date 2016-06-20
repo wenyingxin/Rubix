@@ -7,7 +7,7 @@ import {
   Slider, QueueAnim, Radio, notification, Alert, Validation, Tree, TreeSelect, Upload,
   Badge, Menu, Timeline, Button, Icon, Row, Col, Spin, Form, Input, Calendar, TimePicker,
   Card, LocaleProvider, Transfer, Cascader,
-} from 'antd';
+} from 'rubix';
 
 // copy from above
 const antd = {

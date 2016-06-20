@@ -6,7 +6,7 @@ title: 含有辅助性文字介绍
 含有辅助性文字介绍的警告提示。
 
 ````jsx
-import { Alert } from 'antd';
+import { Alert } from 'rubix';
 
 ReactDOM.render(<div>
   <Alert message="成功提示的文案"

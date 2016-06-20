@@ -6,7 +6,7 @@ title: 四种样式
 共有四种样式 `success`、`info`、`warning`、`error`。
 
 ````jsx
-import { Alert } from 'antd';
+import { Alert } from 'rubix';
 
 ReactDOM.render(<div>
   <Alert message="成功提示的文案" type="success" />

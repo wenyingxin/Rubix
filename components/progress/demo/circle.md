@@ -6,7 +6,7 @@ title: 进度圈
 圈形的进度。
 
 ````jsx
-import { Progress } from 'antd';
+import { Progress } from 'rubix';
 
 ReactDOM.render(
   <div>

@@ -6,7 +6,7 @@ title: 响应式布局
 参照 Bootstrap 的 [响应式设计](http://getbootstrap.com/css/#grid-media-queries)，预设四个响应尺寸：`xs` `sm` `md` `lg`。
 
 ````jsx
-import { Row, Col } from 'antd';
+import { Row, Col } from 'rubix';
 
 ReactDOM.render(
   <Row>

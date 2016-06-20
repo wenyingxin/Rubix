@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { TreeSelect } from 'antd';
+import { TreeSelect } from 'rubix';
 const TreeNode = TreeSelect.TreeNode;
 
 const Demo = React.createClass({

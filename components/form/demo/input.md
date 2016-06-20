@@ -8,7 +8,7 @@ title: Input 输入框
 注意： 在表单里面，我们只使用**大尺寸**， 即高度为 **32px**，作为唯一的尺寸。
 
 ````jsx
-import { Row, Col, Input } from 'antd';
+import { Row, Col, Input } from 'rubix';
 const InputGroup = Input.Group;
 
 ReactDOM.render(

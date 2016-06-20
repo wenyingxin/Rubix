@@ -12,7 +12,7 @@ title: 切换到下一步
 ````
 
 ````jsx
-import { Steps, Button } from 'antd';
+import { Steps, Button } from 'rubix';
 const Step = Steps.Step;
 const array = Array.apply(null, Array(Math.floor(Math.random() * 3) + 3));
 const steps = array.map((item, i) => {

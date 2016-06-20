@@ -6,7 +6,7 @@ title: 禁用
 禁用某一项。
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

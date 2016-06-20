@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { Radio } from 'antd';
+import { Radio } from 'rubix';
 
 ReactDOM.render(<Radio>Radio</Radio>, mountNode);
 ````

@@ -8,7 +8,7 @@ title: 表单控件
 `注`： 输入框：只有正确设置了 type 属性的输入控件才能被赋予正确的样式。
 
 ````jsx
-import { Form, Input, Select, Checkbox, Radio } from 'antd';
+import { Form, Input, Select, Checkbox, Radio } from 'rubix';
 const FormItem = Form.Item;
 const Option = Select.Option;
 const RadioGroup = Radio.Group;

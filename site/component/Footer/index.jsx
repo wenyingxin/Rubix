@@ -1,6 +1,6 @@
 import React from 'react';
-// import Modal from 'antd';
-// import { Select, Modal } from 'antd';
+// import Modal from 'rubix';
+// import { Select, Modal } from 'rubix';
 // import { version as antdVersion } from '../../../package.json';
 // import { docVersions } from '../../website.config';
 // const Option = Select.Option;

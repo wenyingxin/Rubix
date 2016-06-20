@@ -8,7 +8,7 @@ title: 联动
 推荐使用 [Cascader](/components/cascader) 组件。
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 
 const provinceData = ['北京', '江苏'];

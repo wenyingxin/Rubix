@@ -6,7 +6,7 @@ title: 普通提示
 信息提醒反馈。
 
 ````jsx
-import { message, Button } from 'antd';
+import { message, Button } from 'rubix';
 
 const info = function () {
   message.info('这是一条普通的提醒');

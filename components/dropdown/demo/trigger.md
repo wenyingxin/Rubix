@@ -6,7 +6,7 @@ title: 触发方式
 默认是移入触发菜单，可以点击触发。
 
 ````jsx
-import { Menu, Dropdown, Icon } from 'antd';
+import { Menu, Dropdown, Icon } from 'rubix';
 
 const menu = (
   <Menu>

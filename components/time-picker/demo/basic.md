@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'rubix';
 
 function onChange(time, timeString) {
   console.log(time, timeString);

@@ -6,7 +6,7 @@ title: 基本
 省市区级联。
 
 ````jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'rubix';
 
 const options = [{
   value: 'beijing',

@@ -6,7 +6,7 @@ title: 滑动
 可以左右滑动，容纳更多标签。
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

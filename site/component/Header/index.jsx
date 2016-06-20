@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import enquire from 'enquire.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
-import { Select, Menu, Row, Col, Icon } from 'antd';
+import { Select, Menu, Row, Col, Icon } from 'rubix';
 import logo from './logo-rubix.svg';
 const Option = Select.Option;
 

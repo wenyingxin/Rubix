@@ -6,7 +6,7 @@ title: 带 icon 的滑块
 滑块左右可以设置图标来表达业务含义。
 
 ````jsx
-import { Slider, Icon } from 'antd';
+import { Slider, Icon } from 'rubix';
 
 const IconSlider = React.createClass({
   getInitialState() {

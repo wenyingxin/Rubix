@@ -2,7 +2,7 @@ import React, { Children, cloneElement } from 'react';
 import { Link } from 'react-router';
 import * as utils from '../utils';
 import { getTagName, getChildren } from 'jsonml.js/lib/utils';
-import { Timeline } from 'antd';
+import { Timeline } from 'rubix';
 
 export default class Article extends React.Component {
   componentDidMount() {

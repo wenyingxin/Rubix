@@ -6,7 +6,7 @@ title: 卡片式页签
 另一种样式的页签，不提供对应的垂直样式。
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

@@ -6,7 +6,7 @@ title: 分隔符
 使用 `separator=">"` 可以自定义分隔符。
 
 ````jsx
-import { Breadcrumb } from 'antd';
+import { Breadcrumb } from 'rubix';
 
 ReactDOM.render(
   <Breadcrumb separator=">">

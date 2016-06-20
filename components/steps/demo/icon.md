@@ -6,7 +6,7 @@ title: 带图标的步骤条
 通过设置 `Steps.Step` 的 `icon` 属性，可以启用自定义图标。
 
 ````jsx
-import { Steps } from 'antd';
+import { Steps } from 'rubix';
 const Step = Steps.Step;
 
 ReactDOM.render(<Steps>

@@ -6,7 +6,7 @@ title: 位置
 有四个位置，`tabPosition="left|right|top|bottom"`。
 
 ````jsx
-import { Tabs, Select } from 'antd';
+import { Tabs, Select } from 'rubix';
 const TabPane = Tabs.TabPane;
 const Option = Select.Option;
 

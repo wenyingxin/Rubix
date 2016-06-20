@@ -6,7 +6,7 @@ title: 菜单隐藏方式
 默认是点击关闭菜单，可以关闭此功能。
 
 ````jsx
-import { Menu, Dropdown, Icon } from 'antd';
+import { Menu, Dropdown, Icon } from 'rubix';
 
 const OverlayVisible = React.createClass({
   getInitialState() {

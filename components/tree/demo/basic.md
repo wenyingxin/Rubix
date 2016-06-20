@@ -6,7 +6,7 @@ title: 基本
 最简单的用法，展示可勾选，可选中，禁用，默认展开等功能。
 
 ````jsx
-import { Tree } from 'antd';
+import { Tree } from 'rubix';
 const TreeNode = Tree.TreeNode;
 
 const Demo = React.createClass({

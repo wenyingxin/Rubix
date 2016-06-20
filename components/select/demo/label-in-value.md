@@ -6,7 +6,7 @@ title: 获取 label
 使用 `labelInValue` 属性，Option 的每项 label 会被包装到 value 中传递给 onChange 等函数，此时 Select 的 value 是一个对象。
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 
 function handleChange(value) {

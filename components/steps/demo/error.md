@@ -6,7 +6,7 @@ title: 步骤运行错误
 使用 Steps 的 `status` 属性来指定当前步骤的状态。
 
 ````jsx
-import { Steps } from 'antd';
+import { Steps } from 'rubix';
 const Step = Steps.Step;
 
 const steps = [{

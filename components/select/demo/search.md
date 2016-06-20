@@ -6,7 +6,7 @@ title: 带搜索框
 展开后可对选项进行搜索。
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 
 function handleChange(value) {

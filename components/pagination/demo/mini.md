@@ -6,7 +6,7 @@ title: 迷你
 迷你版本。
 
 ````jsx
-import { Pagination } from 'antd';
+import { Pagination } from 'rubix';
 
 function showTotal(total) {
   return `共 ${total} 条`;

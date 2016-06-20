@@ -6,7 +6,7 @@ title: 选择即改变
 这种交互允许只选中父级选项。
 
 ````jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'rubix';
 
 const options = [{
   value: 'beijing',

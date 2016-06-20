@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'rubix';
 
 function onChange(value, dateString) {
   console.log(value, dateString);

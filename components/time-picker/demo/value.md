@@ -6,7 +6,7 @@ title: 受控组件
 value 和 onChange 需要配合使用。
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'rubix';
 
 const Test = React.createClass({
   getInitialState() {

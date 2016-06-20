@@ -6,7 +6,7 @@ title: 搜索框
 带有搜索按钮的自动补全输入框。
 
 ````jsx
-import { Input, Select, Button, Icon } from 'antd';
+import { Input, Select, Button, Icon } from 'rubix';
 import jsonp from 'jsonp';
 import querystring from 'querystring';
 import classNames from 'classnames';

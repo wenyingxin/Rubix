@@ -6,7 +6,7 @@ title: 跳转
 快速跳转到某一页。
 
 ````jsx
-import { Pagination } from 'antd';
+import { Pagination } from 'rubix';
 
 ReactDOM.render(
   <Pagination showQuickJumper defaultCurrent={2} total={500} />,

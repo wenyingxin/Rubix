@@ -6,7 +6,7 @@ title: 可点击
 用 a 标签进行包裹即可。
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'rubix';
 
 ReactDOM.render(
   <a href="#">

@@ -6,7 +6,7 @@ title: 基本用法
 基本的时间轴。
 
 ````jsx
-import { Timeline } from 'antd';
+import { Timeline } from 'rubix';
 
 ReactDOM.render(
   <Timeline>

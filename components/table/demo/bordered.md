@@ -6,7 +6,7 @@ title: 边框和页脚
 添加表格边框线和页脚。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'rubix';
 
 const columns = [{
   title: '姓名',

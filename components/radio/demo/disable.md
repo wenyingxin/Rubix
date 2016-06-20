@@ -6,7 +6,7 @@ title: 不可用
 Radio 不可用。
 
 ````jsx
-import { Radio, Button } from 'antd';
+import { Radio, Button } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

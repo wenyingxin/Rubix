@@ -6,7 +6,7 @@ title: 迷你版
 迷你版的步骤条，通过设置 `<Steps size="small">` 启用.
 
 ````jsx
-import { Steps } from 'antd';
+import { Steps } from 'rubix';
 const Step = Steps.Step;
 
 const steps = [{

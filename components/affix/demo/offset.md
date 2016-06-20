@@ -6,7 +6,7 @@ title: 偏移
 达到一定的偏移量才触发。
 
 ````jsx
-import { Affix, Button } from 'antd';
+import { Affix, Button } from 'rubix';
 
 ReactDOM.render(
   <Affix offsetTop={75}>

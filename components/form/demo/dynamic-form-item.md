@@ -6,7 +6,7 @@ title: 动态增减表单项
 动态增加、减少表单项。
 
 ````jsx
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button } from 'rubix';
 
 let uuid = 0;
 let Demo = React.createClass({

@@ -6,7 +6,7 @@ title: 异步数据加载
 点击展开节点，动态加载数据。
 
 ````jsx
-import { Tree } from 'antd';
+import { Tree } from 'rubix';
 const TreeNode = Tree.TreeNode;
 
 function generateTreeNodes(treeNode) {

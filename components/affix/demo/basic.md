@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { Affix, Button } from 'antd';
+import { Affix, Button } from 'rubix';
 
 ReactDOM.render(
   <Affix>

@@ -6,7 +6,7 @@ title: 受控
 受控制的页码。
 
 ````jsx
-import { Pagination } from 'antd';
+import { Pagination } from 'rubix';
 
 const Container = React.createClass({
   getInitialState() {

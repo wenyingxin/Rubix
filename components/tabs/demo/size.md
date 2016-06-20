@@ -6,7 +6,7 @@ title: 迷你型
 用在弹出框等较狭窄的容器内。
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

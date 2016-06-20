@@ -6,7 +6,7 @@ title: 拖拽上传
 可以把文件拖入指定区域，完成上传，同样支持点击上传。
 
 ````jsx
-import { Upload, Icon } from 'antd';
+import { Upload, Icon } from 'rubix';
 const Dragger = Upload.Dragger;
 
 const props = {

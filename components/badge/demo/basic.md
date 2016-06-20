@@ -6,7 +6,7 @@ title: 基本
 简单的徽章展示。
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'rubix';
 
 ReactDOM.render(
   <Badge count={5}>

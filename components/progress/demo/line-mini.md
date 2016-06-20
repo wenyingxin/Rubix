@@ -6,7 +6,7 @@ title: 小型进度条
 适合放在较狭窄的区域内。
 
 ````jsx
-import { Progress } from 'antd';
+import { Progress } from 'rubix';
 
 ReactDOM.render(
   <div style={{ width: 170 }}>

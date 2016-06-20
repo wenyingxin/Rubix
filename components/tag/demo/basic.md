@@ -6,7 +6,7 @@ title: 基本
 简单的标签展示，添加 closable 表示可关闭。
 
 ````jsx
-import { Tag } from 'antd';
+import { Tag } from 'rubix';
 
 function onClose(e) {
   console.log(e);

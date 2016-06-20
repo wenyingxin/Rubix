@@ -8,7 +8,7 @@ title: 固定头和列
 > 需要指定 scroll.x 为宽度，或者指定每列宽度 `width`，否则可能有错位问题。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'rubix';
 
 const columns = [
   { title: '姓名', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },

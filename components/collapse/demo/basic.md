@@ -6,7 +6,7 @@ title: 折叠面板
 可以同时展开多个面板，这个例子默认展开了第一个。
 
 ````jsx
-import { Collapse } from 'antd';
+import { Collapse } from 'rubix';
 const Panel = Collapse.Panel;
 
 function callback(key) {

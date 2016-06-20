@@ -6,7 +6,7 @@ title: 基本使用
 基本使用。
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 
 function handleChange(value) {

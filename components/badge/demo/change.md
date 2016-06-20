@@ -6,7 +6,7 @@ title: 动态
 展示动态变化的效果。
 
 ````jsx
-import { Badge, Button, Icon } from 'antd';
+import { Badge, Button, Icon } from 'rubix';
 const ButtonGroup = Button.Group;
 
 const Test = React.createClass({

@@ -6,7 +6,7 @@ title: 附加内容
 可以在页签右边添加附加操作。
 
 ````jsx
-import { Tabs, Button } from 'antd';
+import { Tabs, Button } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 const operations = <Button>额外操作</Button>;

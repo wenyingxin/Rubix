@@ -6,7 +6,7 @@ title: 图标
 有图标的标签。
 
 ````jsx
-import { Tabs, Icon } from 'antd';
+import { Tabs, Icon } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

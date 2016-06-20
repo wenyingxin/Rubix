@@ -6,7 +6,7 @@ title: 多选
 多选和勾选框功能。
 
 ````jsx
-import { TreeSelect } from 'antd';
+import { TreeSelect } from 'rubix';
 const SHOW_PARENT = TreeSelect.SHOW_PARENT;
 
 const treeData = [{

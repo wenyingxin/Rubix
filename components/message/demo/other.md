@@ -6,7 +6,7 @@ title: 其他提示类型
 包括成功、失败、警告。
 
 ````jsx
-import { message, Button } from 'antd';
+import { message, Button } from 'rubix';
 
 const success = function () {
   message.success('这是一条成功提示');

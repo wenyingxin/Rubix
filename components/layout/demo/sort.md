@@ -8,7 +8,7 @@ title: 布局排序
 通过使用 `push` 和 `pull` 类就可以很容易的改变列（column）的顺序。
 
 ````jsx
-import { Row, Col } from 'antd';
+import { Row, Col } from 'rubix';
 
 ReactDOM.render(
   <div>

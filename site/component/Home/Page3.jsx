@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import TweenOne from 'rc-tween-one';
 import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Icon, Button } from 'antd';
+import { Icon, Button } from 'rubix';
 import QueueAnim from 'rc-queue-anim';
 
 export default function Page3() {

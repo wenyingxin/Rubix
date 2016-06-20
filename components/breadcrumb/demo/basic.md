@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { Breadcrumb } from 'antd';
+import { Breadcrumb } from 'rubix';
 
 ReactDOM.render(
   <Breadcrumb>

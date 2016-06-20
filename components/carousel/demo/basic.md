@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { Carousel } from 'antd';
+import { Carousel } from 'rubix';
 
 function onChange(a, b, c) {
   console.log(a, b, c);

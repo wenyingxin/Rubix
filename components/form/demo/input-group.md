@@ -6,7 +6,7 @@ title: 输入框组合
 各类输入框的组合展现。
 
 ````jsx
-import { Form, Input, Select, Col } from 'antd';
+import { Form, Input, Select, Col } from 'rubix';
 const FormItem = Form.Item;
 const InputGroup = Input.Group;
 const Option = Select.Option;

@@ -8,7 +8,7 @@ title: 指定不可选择日期
 如上例：不可选择今天之后的日期。
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'rubix';
 
 const disabledDate = function (current) {
   // can not select days after today

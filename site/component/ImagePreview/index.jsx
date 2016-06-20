@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Modal, Carousel } from 'antd';
+import { Modal, Carousel } from 'rubix';
 
 function isGood(className) {
   return /\bgood\b/i.test(className);

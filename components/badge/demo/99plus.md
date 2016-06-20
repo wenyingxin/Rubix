@@ -6,7 +6,7 @@ title: 大数字
 超过 99 的会显示为 `99+`。
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'rubix';
 
 ReactDOM.render(<div>
   <Badge count={99}>

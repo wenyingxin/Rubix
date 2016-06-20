@@ -6,7 +6,7 @@ title: 基本
 默认选中第一项。
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

@@ -6,7 +6,7 @@ title: 带下拉框的按钮
 左边是按钮，右边是额外的相关功能菜单。
 
 ````jsx
-import { Menu, Dropdown } from 'antd';
+import { Menu, Dropdown } from 'rubix';
 const DropdownButton = Dropdown.Button;
 
 function handleButtonClick(e) {

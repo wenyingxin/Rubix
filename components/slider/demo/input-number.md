@@ -6,7 +6,7 @@ title: 带输入框的滑块
 和 [数字输入框](/components/input-number/) 组件保持同步。
 
 ````jsx
-import { Slider, InputNumber, Row, Col } from 'antd';
+import { Slider, InputNumber, Row, Col } from 'rubix';
 
 const IntegerStep = React.createClass({
   getInitialState() {

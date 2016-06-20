@@ -6,7 +6,7 @@ title: 改变
 改变每页显示条目数。
 
 ````jsx
-import { Pagination } from 'antd';
+import { Pagination } from 'rubix';
 
 function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);

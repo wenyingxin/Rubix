@@ -9,7 +9,7 @@ title: 路由
 ````jsx
 const ReactRouter = require('react-router');
 let { Router, Route, Link, hashHistory } = ReactRouter;
-import { Breadcrumb } from 'antd';
+import { Breadcrumb } from 'rubix';
 
 function Apps() {
   return (

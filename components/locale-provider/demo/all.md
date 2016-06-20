@@ -7,7 +7,7 @@ title: 所有组件
 
 ````jsx
 import { LocaleProvider, Pagination, DatePicker, TimePicker, Calendar,
-         Popconfirm, Table, Modal, Button, Select, Transfer } from 'antd';
+         Popconfirm, Table, Modal, Button, Select, Transfer } from 'rubix';
 const Option = Select.Option;
 const RangePicker = DatePicker.RangePicker;
 

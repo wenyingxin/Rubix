@@ -7,7 +7,7 @@ title: 日期时间选择二
 和 <a href="/components/time-picker">时间选择框</a> 配合使用。
 
 ````jsx
-import { DatePicker, TimePicker } from 'antd';
+import { DatePicker, TimePicker } from 'rubix';
 
 const DateTimePicker = React.createClass({
   handleChange(from, value) {

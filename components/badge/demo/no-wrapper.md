@@ -8,7 +8,7 @@ title: 独立使用
 > 在右上角的 badge 则限定为红色。
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'rubix';
 
 ReactDOM.render(<div>
   <Badge count={25} />

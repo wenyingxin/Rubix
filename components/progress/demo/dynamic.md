@@ -6,7 +6,7 @@ title: 动态展示
 会动的进度条才是好进度条。
 
 ````jsx
-import { Progress, Button } from 'antd';
+import { Progress, Button } from 'rubix';
 const ButtonGroup = Button.Group;
 
 const MyProgress = React.createClass({

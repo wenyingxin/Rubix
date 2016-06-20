@@ -6,7 +6,7 @@ title: 分组
 用 `OptGroup` 进行选项分组。
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 const OptGroup = Select.OptGroup;
 

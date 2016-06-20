@@ -6,7 +6,7 @@ title: 可关闭的警告提示
 显示关闭按钮，点击可关闭警告提示。
 
 ````jsx
-import { Alert } from 'antd';
+import { Alert } from 'rubix';
 
 const onClose = function (e) {
   console.log(e, '我要被关闭啦！');

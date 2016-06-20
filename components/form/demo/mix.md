@@ -7,7 +7,7 @@ title: 表单组合
 
 ````jsx
 import { Form, Select, InputNumber, DatePicker, TimePicker, Switch, Radio,
-         Cascader, Slider, Button, Col, Upload, Icon } from 'antd';
+         Cascader, Slider, Button, Col, Upload, Icon } from 'rubix';
 const FormItem = Form.Item;
 const Option = Select.Option;
 const RadioButton = Radio.Button;

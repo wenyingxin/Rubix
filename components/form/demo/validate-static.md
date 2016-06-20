@@ -12,7 +12,7 @@ validateStatus: 'success', 'warning', 'error', 'validating'。
 **注意**: 反馈图标只对 `<Input />` 有效。
 
 ````jsx
-import { Form, Input, DatePicker, Col } from 'antd';
+import { Form, Input, DatePicker, Col } from 'rubix';
 const FormItem = Form.Item;
 
 ReactDOM.render(

@@ -6,7 +6,7 @@ title: 封顶数字
 超过 `overflowCount` 的会显示为 `${overflowCount}+`。
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'rubix';
 
 ReactDOM.render(<div>
   <Badge count={99} overflowCount={10}>

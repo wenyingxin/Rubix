@@ -3,7 +3,7 @@ jest.unmock('../index');
 import React from 'react';
 import antd from '../index';
 
-describe('antd', function() {
+describe('rubix', function() {
   it('should has modules in antd', () => {
     expect('Affix' in antd).toBeTruthy();
     expect('Alert' in antd).toBeTruthy();

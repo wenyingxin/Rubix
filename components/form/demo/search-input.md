@@ -6,7 +6,7 @@ title: 搜索框
 带有搜索按钮。
 
 ````jsx
-import { Input, Button } from 'antd';
+import { Input, Button } from 'rubix';
 import classNames from 'classnames';
 const InputGroup = Input.Group;
 

@@ -8,7 +8,7 @@ title: 高级搜索
 有部分定制的样式代码，由于输入标签长度不确定，需要根据具体情况自行调整。
 
 ````jsx
-import { Form, Input, Row, Col, Button, DatePicker } from 'antd';
+import { Form, Input, Row, Col, Button, DatePicker } from 'rubix';
 const FormItem = Form.Item;
 
 ReactDOM.render(

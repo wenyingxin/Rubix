@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { Tooltip } from 'antd';
+import { Tooltip } from 'rubix';
 
 ReactDOM.render(
   <Tooltip title="提示文字">

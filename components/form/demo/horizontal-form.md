@@ -6,7 +6,7 @@ title: 典型表单
 示例展示了如何通过使用 `Form.create` 来获取和更新表单提交的数值。
 
 ````jsx
-import { Form, Input, Button, Checkbox, Radio, Tooltip, Icon } from 'antd';
+import { Form, Input, Button, Checkbox, Radio, Tooltip, Icon } from 'rubix';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 
