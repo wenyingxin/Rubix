@@ -6,8 +6,8 @@ title: 顶部导航 + 侧边栏
 顶级导航在头部，次级导航在侧边栏。
 
 ````jsx
-import { Menu, Breadcrumb, Icon } from 'rubix';
-import BrowserDemo from 'site/component/BrowserDemo';
+import { Menu, Breadcrumb, Icon } from 'antd';
+import BrowserDemo from 'site/theme/template/BrowserDemo';
 const SubMenu = Menu.SubMenu;
 
 ReactDOM.render(
@@ -72,7 +72,7 @@ ReactDOM.render(
           </div>
         </div>
         <div className="rubix-layout-footer">
-        rubix Design 版权所有
+        Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
         </div>
       </div>
     </div>

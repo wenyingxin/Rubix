@@ -18,13 +18,13 @@ english: Typography
     <h3>12px 段落</h3>
     <p>汉学家称这个空白字为「盘古之白」，因为它劈开了全角字和半角字之间的混沌。</p>
     <p>另有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，而其余三成的人最后只能把遗产留给自己的猫。毕竟爱情跟书写都需要适时地留白。</p>
-    
+    <p>文案来自 <a href="https://github.com/vinta/paranoid-auto-spacing#%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E5%80%91%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%83%BD%E5%8A%A0%E5%80%8B%E7%A9%BA%E6%A0%BC%E5%91%A2">此处</a>。</p>
   </div>
   <div class="col col-12 paragraph-14px">
     <h3>14px 段落</h3>
     <p>汉学家称这个空白字为「盘古之白」，因为它劈开了全角字和半角字之间的混沌。</p>
     <p>另有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，而其余三成的人最后只能把遗产留给自己的猫。毕竟爱情跟书写都需要适时地留白。</p>
-    
+    <p>文案来自 <a href="https://github.com/vinta/paranoid-auto-spacing#%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E5%80%91%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%83%BD%E5%8A%A0%E5%80%8B%E7%A9%BA%E6%A0%BC%E5%91%A2">此处</a>。</p>
   </div>
 </div>
 
@@ -98,7 +98,7 @@ english: Typography
 
 语言通常是越简单越明确，而提示性文字更需要简明扼要，让用户一目了然，减少操作失误。提示性句子长度视业务而定，建议一般不超过 16–18 个字。
 
-<img align="right" style="margin:30px 100px" src="" width="300">
+<img align="right" style="margin:30px 100px" src="https://t.alipayobjects.com/images/T17cthXgpbXXXXXXXX.png" width="300">
 
 保持简明准确的方法：
 
@@ -110,10 +110,10 @@ english: Typography
 
 我们通常使用对比的手法来区分出信息的层次感，信息主次分明能准确地将信息清晰地传达给用户，让用户第一眼获取所需资讯，提升阅读体验。
 
-<img src="" width="600">
+<img src="https://t.alipayobjects.com/images/T1GYBhXghjXXXXXXXX.png" width="600">
 
 ### Squint test
 
 我们可以采用 [模糊测试](https://chrome.google.com/webstore/detail/the-squint-test/gppnipfbappicilfniaimcnagbpfflpg) 的方法，即眯起眼睛从整体来检视结构上的合理与否。
 
-<img src="" width="600">
+<img src="https://t.alipayobjects.com/images/T1bY4hXkpfXXXXXXXX.png" width="600">

@@ -7,11 +7,11 @@ english: Colors
 
 ## 有意义的色彩
 
-色彩在界面设计中的使用应同时具备品牌识别性以及界面设计功能性。众所周知色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。众所周知色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。
+色彩在界面设计中的使用应同时具备品牌识别性以及界面设计功能性。色彩是相当感性的东西，设计中对色彩的运用首要应考虑到品牌层面的表达，另外很重要的一点是色彩的运用应达到信息传递，动作指引，交互反馈，或是强化和凸现某一个元素的目的。任何颜色的选取和使用应该是有意义的。
 
-## Rubix Colors
+## Ant Design Colors
 
-Rubix 的色板由 9 种基本色彩组成，每种基本色又衍生出九宫格色板，在此基础上还可以通过黑白叠加的方式实现色彩明暗的效果。
+Ant Design 的色板由 9 种基本色彩组成，每种基本色又衍生出九宫格色板，在此基础上还可以通过黑白叠加的方式实现色彩明暗的效果。
 
 `````__react
 const Palette = React.createClass({
@@ -70,11 +70,11 @@ const ExtendPalettes = React.createClass({
         ]
       },
       {
-        'title': 'Blue #00A0E8',
+        'title': 'Blue #00A0E9',
         'description': '这里的蓝色沿用的是蚂蚁金服的品牌色，深蓝色的运用可以传递出可靠和稳定的情绪，而浅蓝色系则更为友好和清新，同时还代表了科技感与想象力。在很多专业类、管理类的后台系统设计中蓝色系常常会被选择作为设计的主色来使用。',
         'colors': [
           "#CCE4F6", "#95CCF5", "#6AC2F5",
-          "#1D80D3", "#00A0E8", "#2DB7F5",
+          "#1D80D3", "#00A0E9", "#2DB7F5",
           "#1F5AA3", "#0B366A", "#08172F"
         ]
       },
@@ -146,9 +146,9 @@ ReactDOM.render(<ExtendPalettes key="palettes" />, mountNode);
 
 合适的色彩对比为信息传达加分，同时也应放考虑到有颜色识别障碍人群的需求。我们将每种主色衍生出来的颜色进行了打标，在考虑对比颜色的选择时建议两种颜色对应标签数值的差要大于等于 5。
 
-<img src="" width="100%">
+<img src="https://t.alipayobjects.com/images/rmsweb/T1hLphXgXcXXXXXXXX.png" width="100%">
 
-<img src="" width="100%">
+<img src="https://t.alipayobjects.com/images/rmsweb/T1v2phXj8bXXXXXXXX.png" width="100%">
 
 ## 色彩换算工具
 
@@ -157,6 +157,7 @@ ReactDOM.render(<ExtendPalettes key="palettes" />, mountNode);
 `````__react
 const Values = require('values.js');
 const CopyToClipboard = require('react-copy-to-clipboard');
+const antd = require('antd');
 const Button = antd.Button;
 const InputNumber = antd.InputNumber;
 const Slider = antd.Slider;
@@ -220,7 +221,7 @@ const TintShadeTool = React.createClass({
           </CopyToClipboard>
         </Tooltip>
         <span style={{width: 188, display: 'inline-block', fontFamily: 'Consolas'}}>{this.state.result}</span>
-        <input className="ant-input" style={{width: 80, color: this.state.color, marginRight: 8}} value={this.state.color} onChange={this.handleChangeColor} />
+        <input className="rubix-input" style={{width: 80, color: this.state.color, marginRight: 8}} value={this.state.color} onChange={this.handleChangeColor} />
         <InputNumber style={{width: 70}} value={this.state.value} onChange={this.handleChangeValue} min={-100} max={100} step={5} />
         <span style={{margin: '0 0 0 8px'}}>%</span>
       </div>
@@ -234,8 +235,6 @@ const TintShadeTool = React.createClass({
 ReactDOM.render(<TintShadeTool key="tintShadeTool" />, mountNode);
 `````
 
-Rubix 专用色彩换算工具，用于解析类似 `#2db7f5 tint 80%` 的色彩标注。
+Ant Design 专用色彩换算工具，用于解析类似 `#2db7f5 tint 80%` 的色彩标注。
 
 less 或 scss 语言可以直接使用 `tint(#2db7f5, 80%)` 和  `shade(#2db7f5, 80%)` 的语法。
-
-

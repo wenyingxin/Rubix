@@ -14,16 +14,16 @@ describe('Popover', function() {
       </Popover>
     );
 
-    expect(popover.getPopupDomNode()).toBe(undefined);
+    expect(popover.getPopupDomNode()).toBe(null);
 
     TestUtils.Simulate.click(
       TestUtils.findRenderedDOMComponentWithTag(popover, 'a')
     );
 
     const popup = popover.getPopupDomNode();
-    expect(popup).not.toBe(undefined);
-    expect(popup.className).toContain('ant-popover-placement-top');
-    expect(popup.innerHTML).toMatch(/<div class="ant-popover-title".*?>code<\/div>/);
-    expect(popup.innerHTML).toMatch(/<div class="ant-popover-inner-content".*?>console\.log\('hello world'\)<\/div>/);
+    expect(popup).not.toBe(null);
+    expect(popup.className).toContain('rubix-popover-placement-top');
+    expect(popup.innerHTML).toMatch(/<div class="rubix-popover-title".*?>code<\/div>/);
+    expect(popup.innerHTML).toMatch(/<div class="rubix-popover-inner-content".*?>console\.log\('hello world'\)<\/div>/);
   });
 });

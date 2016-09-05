@@ -1,11 +1,11 @@
 {
   "name": "rubix",
-  "version": "1.0.5",
-  "title": "Rubix",
-  "description": "一个 UI 设计语言",
+  "version": "1.0.6",
+  "title": "rubix",
+  "description": "An enterprise-class UI design language and React-based implementation",
   "homepage": "http://rubix.design/",
   "keywords": [
-    "ant",
+    "rubix",
     "design",
     "react",
     "react-component",
@@ -16,7 +16,7 @@
     "frontend"
   ],
   "contributors": [
-    "ant"
+    "rubix"
   ],
   "repository": {
     "type": "git",
@@ -28,10 +28,9 @@
   "main": "dist/rubix",
   "files": [
     "dist",
-    "lib",
-    "type-definitions"
+    "lib"
   ],
-  "typings": "type-definitions/antd.d.ts",
+  "typings": "lib/index.d.ts",
   "license": "MIT",
   "dependencies": {
     "array-tree-filter": "~1.0.0",
@@ -77,7 +76,7 @@
     "warning": "~3.0.0"
   },
   "devDependencies": {
-    "rubix-tools":"latest",
+    "rubix-tools": "^0.11.10",
     "babel-eslint": "^6.0.2",
     "babel-jest": "^13.2.2",
     "babel-plugin-antd": "^0.4.0",
@@ -136,12 +135,14 @@
     "pre-deploy": "mkdir -p _site && cp CNAME _site",
     "deploy": "npm run clean && npm run pre-deploy && bisheng gh-pages -c ./site/bisheng.config.js",
     "lint": "npm run tslint && tsc && npm run srclint && npm run demolint && npm run lesshint",
-    "srclint": "RUN_ENV=SRC eslint components test site scripts ./*.js --ext '.js,.jsx'",
+    "srclint": "RUN_ENV=SRC eslint test site scripts ./*.js --ext '.js,.jsx,.tsx'",
+    "tslint": "rubix-tools run ts-lint",
     "demolint": "RUN_ENV=DEMO eslint components/*/demo/*.md --ext '.md'",
     "lesshint": "lesshint components -r scripts/lesshint-report.js",
     "eslint-fix": "eslint --fix components test site scripts ./*.js --ext '.js,.jsx' && eslint-tinker ./components/*/demo/*.md",
-    "test": "npm run lint && npm run jest && npm run dist",
+    "test": "npm run lint && npm run dist",
     "jest": "jest",
+    "postinstall": "typings install",
     "pre-publish": "node ./scripts/prepub",
     "prepublish": "rubix-tools run guard",
     "pub": "rubix-tools run update-self && rubix-tools run pub",
@@ -168,9 +169,5 @@
   "pre-commit": [
     "lint"
   ],
-  "directories": {
-    "doc": "docs",
-    "test": "tests"
-  },
   "author": "wenyingxin"
 }

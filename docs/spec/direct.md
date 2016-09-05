@@ -1,6 +1,7 @@
 ---
-category: 十六大原则
+category: 十大原则
 order: 5
+subtitle: Make it Direct
 english: 直截了当
 ---
 
@@ -62,5 +63,4 @@ english: 直截了当
 
 ---
 
-
-
+<h2><span class="waiting">直接选择（敬请期待）</span></h2>

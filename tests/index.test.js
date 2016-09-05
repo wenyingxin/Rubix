@@ -1,9 +1,35 @@
-jest.unmock('../index');
-
+// Test dist files
 import React from 'react';
-import antd from '../index';
+import fs from 'fs';
+import path from 'path';
 
-describe('rubix', function() {
+describe('antd dist files', function() {
+  const distFilesExisted = fs.existsSync(path.join(process.cwd(), 'dist', 'antd.js'));
+  if (!distFilesExisted) {
+    it('empty test case placeholder', () => {});
+    return;
+  } else {
+    jest.unmock('../dist/antd');
+  }
+
+  // fixed jsdom miss
+  if (typeof window !== 'undefined') {
+    const matchMediaPolyfill = function matchMediaPolyfill() {
+      return {
+        matches: false,
+        addListener() {
+        },
+        removeListener() {
+        },
+      };
+    };
+    window.matchMedia = window.matchMedia || matchMediaPolyfill;
+  }
+
+  const antd = require('../dist/antd');
+
+  // https://github.com/rubix-design/rubix-design/issues/1638
+  // https://github.com/rubix-design/rubix-design/issues/1968
   it('should has modules in antd', () => {
     expect('Affix' in antd).toBeTruthy();
     expect('Alert' in antd).toBeTruthy();
@@ -52,5 +78,16 @@ describe('rubix', function() {
     expect('TreeSelect' in antd).toBeTruthy();
     expect('Upload' in antd).toBeTruthy();
     expect('Validation' in antd).toBeTruthy();
+    expect('BackTop' in antd).toBeTruthy();
   });
+
+  // https://github.com/rubix-design/rubix-design/issues/1970
+  // https://github.com/rubix-design/rubix-design/issues/1804
+  it('should be compatible in IE8', () => {
+    const antdJsContent = fs.readFileSync(path.join(process.cwd(), 'dist', 'antd.js'));
+    expect(
+      antdJsContent.toString()
+       .indexOf('function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }')
+    ).toBe(-1);
+  })
 });

@@ -10,8 +10,8 @@ title: 顶部导航
 > `<BrowserDemo />` 做演示用，无须复制。
 
 ````jsx
-import { Menu, Breadcrumb } from 'rubix';
-import BrowserDemo from 'site/component/BrowserDemo';
+import { Menu, Breadcrumb } from 'antd';
+import BrowserDemo from 'site/theme/template/BrowserDemo';
 
 ReactDOM.render(
   <BrowserDemo>
@@ -50,7 +50,7 @@ ReactDOM.render(
         </div>
       </div>
       <div className="rubix-layout-footer">
-      rubix Design 版权所有
+      Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
       </div>
     </div>
   </BrowserDemo>

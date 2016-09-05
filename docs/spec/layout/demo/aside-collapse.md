@@ -6,8 +6,8 @@ title: 可收起展开的侧边导航
 页面横向空间有限时使用。侧边导航默认收起，点击底部按钮时展开。
 
 ````jsx
-import { Menu, Breadcrumb, Icon } from 'rubix';
-import BrowserDemo from 'site/component/BrowserDemo';
+import { Menu, Breadcrumb, Icon } from 'antd';
+import BrowserDemo from 'site/theme/template/BrowserDemo';
 const SubMenu = Menu.SubMenu;
 
 const AsideCollapse = React.createClass({
@@ -65,7 +65,7 @@ const AsideCollapse = React.createClass({
             </div>
           </div>
           <div className="rubix-layout-footer">
-          rubix Design 版权所有
+          Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
           </div>
         </div>
       </div>
@@ -121,23 +121,21 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 }
 
 .rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item .nav-text {
-  vertical-align: middle;
+  vertical-align: baseline;
   display: inline-block;
 }
 
-.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .rubixicon {
+.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .anticon {
   transition: font-size .3s;
-  vertical-align: middle;
 }
 
 .rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item {
   transition: all 0s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .rubixicon {
+.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .anticon {
   font-size: 16px;
   display: inline-block;
-  vertical-align: middle;
 }
 
 .rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item .nav-text {
@@ -145,7 +143,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 }
 
 .rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item:hover {
-  background: #61c8a8;
+  background: #2db7f5;
   color: #fff;
   transition: all 0s ease;
 }
@@ -153,7 +151,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 .rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item:hover .nav-text {
   display: inline-block;
   vertical-align: top;
-  background: #61c8a8;
+  background: #2db7f5;
   color: #fff;
   padding-right: 16px;
   border-radius: 0 5px 5px 0;

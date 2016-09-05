@@ -4,7 +4,7 @@ chinese: 高级搜索
 english: Advanced Search
 ---
 
-借助『高级搜索』，用户可以缩小复杂列表／表格等的展示 范围。
+借助『高级搜索』，用户可以缩小复杂列表／表格等的展示范围。
 
 ---
 
@@ -14,7 +14,7 @@ english: Advanced Search
 
 <img class="preview-img" align="right" alt="交互示例" description="在收起状态时，用户点击『高级搜索』展开；如果此前用户已经输入过文案，需要将值带到对应的输入框中。" src="https://os.alipayobjects.com/rmsportal/NpRKspdYRDwsKnw.png">
 
-常规型常和表格搭配使用，适合在搜索条 件多以及搜索值个数不确定的场景中。
+常规型常和表格搭配使用，适合在搜索条件多以及搜索值个数不确定的场景中。
 
 『高级搜索』功能一般开放给中间用户／专家用户使用，一般通过点击『高级搜索』触发；如果非常高频使用，可以默认展开『高级搜索』。
 
@@ -36,7 +36,6 @@ english: Advanced Search
 
 <img class="preview-img" align="right" alt="规格示例" src="https://os.alipayobjects.com/rmsportal/bFLUSbwoNoakKYS.png">
 
-
 - 横向排版
 
   在一行不要放置 3 列以上的输入框；标签和输入框应该落在栅格上。
@@ -56,5 +55,3 @@ english: Advanced Search
 
 
 <h2><span class="waiting">案例（敬请期待）</span></h2>
-
-
