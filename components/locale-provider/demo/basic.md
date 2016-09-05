@@ -1,12 +1,21 @@
 ---
 order: 1
-title: 国际化
+title:
+  zh-CN: 国际化
+  en-US: Localization
 ---
+
+## zh-CN
 
 用 `LocaleProvider` 包裹你的应用，并引用对应的语言包。
 
+## en-US
+
+Wrap your app with `LocaleProvider`, and apply the corresponding language package.
+
 ````jsx
-import { Pagination, LocaleProvider } from 'rubix';
+import { Pagination, LocaleProvider } from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
 
 function App() {
   return (
@@ -17,7 +26,7 @@ function App() {
 }
 
 ReactDOM.render(
-  <LocaleProvider>
+  <LocaleProvider locale={enUS}>
     <App />
   </LocaleProvider>
 , mountNode);

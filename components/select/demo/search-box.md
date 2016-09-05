@@ -1,12 +1,21 @@
 ---
 order: 9
-title: 搜索框
+title: 
+  zh-CN: 搜索框
+  en-US: Search Box
 ---
+
+## zh-CN
 
 带有搜索按钮的自动补全输入框。
 
+## en-US
+
+Autocomplete select with search field.
+
+
 ````jsx
-import { Input, Select, Button, Icon } from 'rubix';
+import { Input, Select, Button, Icon } from 'antd';
 import jsonp from 'jsonp';
 import querystring from 'querystring';
 import classNames from 'classnames';
@@ -67,16 +76,16 @@ const SearchInput = React.createClass({
   },
   render() {
     const btnCls = classNames({
-      'rubix-search-btn': true,
-      'rubix-search-btn-noempty': !!this.state.value.trim(),
+      'ant-search-btn': true,
+      'ant-search-btn-noempty': !!this.state.value.trim(),
     });
     const searchCls = classNames({
-      'rubix-search-input': true,
-      'rubix-search-input-focus': this.state.focus,
+      'ant-search-input': true,
+      'ant-search-input-focus': this.state.focus,
     });
     const options = this.state.data.map(d => <Option key={d.value}>{d.text}</Option>);
     return (
-      <div className="rubix-search-input-wrapper" style={this.props.style}>
+      <div className="ant-search-input-wrapper" style={this.props.style}>
         <Input.Group className={searchCls}>
           <Select
             combobox
@@ -88,10 +97,11 @@ const SearchInput = React.createClass({
             filterOption={false}
             onChange={this.handleChange}
             onFocus={this.handleFocusBlur}
-            onBlur={this.handleFocusBlur}>
+            onBlur={this.handleFocusBlur}
+          >
             {options}
           </Select>
-          <div className="rubix-input-group-wrap">
+          <div className="ant-input-group-wrap">
             <Button className={btnCls} onClick={this.handleSubmit}>
               <Icon type="search" />
             </Button>

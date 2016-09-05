@@ -1,12 +1,20 @@
 ---
 order: 0
-title: 基本
+title:
+  zh-CN: 基本
+  en-US: Basic
 ---
+
+## zh-CN
 
 最简单的用法。
 
+## en-US
+
+The most basic usage.
+
 ````jsx
-import { TreeSelect } from 'rubix';
+import { TreeSelect } from 'antd';
 const TreeNode = TreeSelect.TreeNode;
 
 const Demo = React.createClass({
@@ -24,10 +32,11 @@ const Demo = React.createClass({
       <TreeSelect style={{ width: 300 }}
         value={this.state.value}
         dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-        placeholder="请选择"
+        placeholder="Please select"
         allowClear
         treeDefaultExpandAll
-        onChange={this.onChange}>
+        onChange={this.onChange}
+      >
         <TreeNode value="parent 1" title="parent 1" key="0-1">
           <TreeNode value="parent 1-0" title="parent 1-0" key="0-1-1">
             <TreeNode value="leaf1" title="my leaf" key="random" />

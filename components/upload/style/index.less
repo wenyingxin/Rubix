@@ -1,14 +1,14 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@upload-prefix-cls: rubix-upload;
-@upload-item: rubix-upload-list-item;
+@upload-prefix-cls: ant-upload;
+@upload-item: ant-upload-list-item;
 @upload-pictrue-card-size: 96px;
 
 .@{upload-prefix-cls} {
   font-size: @font-size-base;
 
-  > span {
+  &-btn {
     display: block;
     width: 100%;
     outline: none;
@@ -52,11 +52,15 @@
     height: 100%;
     position: relative;
 
-    &.@{upload-prefix-cls}-drag-hover {
+    &.@{upload-prefix-cls}-drag-hover:not(.@{upload-prefix-cls}-disabled) {
       border: 2px dashed tint(@primary-color, 20%);
     }
 
-    > span {
+    &.@{upload-prefix-cls}-disabled {
+      cursor: not-allowed;
+    }
+
+    .@{upload-prefix-cls}-btn {
       display: table;
       height: 100%;
     }
@@ -66,12 +70,12 @@
       vertical-align: middle;
     }
 
-    &:hover {
+    &:not(.@{upload-prefix-cls}-disabled):hover {
       border-color: tint(@primary-color, 20%);
     }
 
     p.@{upload-prefix-cls}-drag-icon {
-      .rubixicon {
+      .anticon {
         font-size: 80px;
         margin-top: -5px;
         color: tint(@primary-color, 20%);
@@ -86,7 +90,7 @@
       font-size: 12px;
       color: #999;
     }
-    .rubixicon-plus {
+    .anticon-plus {
       font-size: 30px;
       transition: all 0.3s ease;
       color: #ccc;
@@ -94,13 +98,14 @@
         color: #999;
       }
     }
-    &:hover .rubixicon-plus {
+    &:hover .anticon-plus {
       color: #999;
     }
   }
 }
 
 .@{upload-prefix-cls}-list {
+  overflow: hidden;
   &-item {
     overflow: hidden;
     margin-top: 8px;
@@ -112,12 +117,12 @@
       padding: 0 4px;
       transition: background-color 0.3s ease;
 
-      .rubixicon-paper-clip {
+      .anticon-paper-clip {
         margin-right: 4px;
         font-size: 12px;
         color: #999;
       }
-      .rubixicon-cross {
+      .anticon-cross {
         .iconfont-size-under-12px(10px);
         transition: all 0.3s ease;
         opacity: 0;
@@ -135,16 +140,16 @@
       background-color: tint(@primary-color, 90%);
     }
 
-    &:hover .rubixicon-cross {
+    &:hover .anticon-cross {
       opacity: 1;
     }
 
     &-error,
-    &-error .rubixicon-paper-clip {
+    &-error .anticon-paper-clip {
       color: @error-color;
     }
 
-    &-error .rubixicon-cross {
+    &-error .anticon-cross {
       opacity: 1;
     }
 
@@ -198,7 +203,7 @@
       display: block;
     }
 
-    .@{upload-item}-thumbnail.rubixicon:before {
+    .@{upload-item}-thumbnail.anticon:before {
       line-height: 48px;
       font-size: 24px;
       color: #999;
@@ -227,7 +232,7 @@
       margin-top: 0;
     }
 
-    .rubixicon-cross {
+    .anticon-cross {
       position: absolute;
       right: 8px;
       top: 8px;
@@ -236,7 +241,7 @@
   }
 
   &-picture-card {
-    display: inline-block;
+    display: inline;
 
     .@{upload-item} {
       display: inline-block;
@@ -260,8 +265,8 @@
         height: 100%;
       }
 
-      .rubixicon-eye-o,
-      .rubixicon-delete {
+      .anticon-eye-o,
+      .anticon-delete {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -281,7 +286,7 @@
         }
       }
 
-      .rubixicon-delete {
+      .anticon-delete {
         left: 50%;
         margin-left: 6px;
       }
@@ -291,8 +296,8 @@
           opacity: .8;
         }
 
-        .rubixicon-eye-o,
-        .rubixicon-delete {
+        .anticon-eye-o,
+        .anticon-delete {
           opacity: 1;
         }
       }
@@ -316,9 +321,10 @@
       }
 
       .@{upload-item}-info {
+        height: auto;
         &:before,
-        .rubixicon-eye-o,
-        .rubixicon-delete {
+        .anticon-eye-o,
+        .anticon-delete {
           display: none;
         }
       }

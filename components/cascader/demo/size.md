@@ -1,22 +1,30 @@
 ---
 order: 7
-title: 大小
+title:
+  zh-CN: 大小
+  en-US: Size
 ---
+
+## zh-CN
 
 不同大小的级联选择器。
 
+## en-US
+
+Cascade selection box of different sizes.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
+    value: 'hangzhou',
+    label: '杭州',
     children: [{
-      value: 'beiqinglu',
-      label: '北清路',
+      value: 'xihu',
+      label: '西湖',
     }],
   }],
 }, {

@@ -37,7 +37,30 @@
   > input {
     outline: none;
   }
+  &-clear {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    right: 7px;
+    background: #fff;
+    top: 50%;
+    font-size: 12px;
+    color: #ccc;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    line-height: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease, opacity 0.15s ease;
+    &:hover {
+      color: #999;
+    }
+  }
 
+  &:hover &-clear {
+    opacity: 1;
+    z-index: 1;
+  }
   &-icon {
     position: absolute;
     user-select: none;
@@ -51,7 +74,7 @@
     margin-top: -6px;
     &:after {
       content: "\e654";
-      font-family: "rubixicon";
+      font-family: "anticon";
       font-size: 12px;
       color: #999;
       display: inline-block;

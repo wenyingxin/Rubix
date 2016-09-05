@@ -1,12 +1,20 @@
 ---
 order: 0
-title: 顶部导航
+title: 
+  zh-CN: 顶部导航
+  en-US: Top Navigation
 ---
+
+## zh-CN
 
 水平的顶部导航菜单。
 
+## en-US
+
+Horizontal top navigation menu.
+
 ````jsx
-import { Menu, Icon } from 'rubix';
+import { Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -26,7 +34,8 @@ const App = React.createClass({
     return (
       <Menu onClick={this.handleClick}
         selectedKeys={[this.state.current]}
-        mode="horizontal">
+        mode="horizontal"
+      >
         <Menu.Item key="mail">
           <Icon type="mail" />导航一
         </Menu.Item>
@@ -44,7 +53,7 @@ const App = React.createClass({
           </MenuItemGroup>
         </SubMenu>
         <Menu.Item key="alipay">
-          <a href="http://www.alipay.com/" target="_blank">导航四 - 链接</a>
+          <a href="http://www.alipay.com/" target="_blank" rel="noopener noreferrer">导航四 - 链接</a>
         </Menu.Item>
       </Menu>
     );

@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@switch-prefix-cls: rubix-switch;
+@switch-prefix-cls: ant-switch;
 @switch-duration: .3s;
 
 .@{switch-prefix-cls} {
@@ -32,11 +32,15 @@
     height: 18px;
     left: 2px;
     top: 1px;
-    border-radius: 100%;
+    border-radius: 18px;
     background-color: #fff;
     content: " ";
     cursor: pointer;
-    transition: left @switch-duration @ease-in-out-circ;
+    transition: left @switch-duration @ease-in-out-circ, width @switch-duration @ease-in-out-circ;
+  }
+
+  &:active:after {
+    width: 24px;
   }
 
   &:focus {
@@ -58,14 +62,21 @@
       top: 0;
       left: 0;
     }
+    &:active:after {
+      width: 16px;
+    }
   }
 
   &-small&-checked:after {
     left: 14px;
   }
 
+  &-small:active&-checked:after {
+    left: 10px;
+  }
+
   &-checked {
-    border: 1px solid @primary-color;
+    border-color: @primary-color;
     background-color: @primary-color;
 
     .@{switch-prefix-cls}-inner {
@@ -75,19 +86,23 @@
     &:after {
       left: 22px;
     }
+
+    &:active:after {
+      left: 16px;
+    }
   }
 
   &-disabled {
     cursor: not-allowed;
-    background: #f7f7f7;
-    border-color: #f7f7f7;
+    background: #f4f4f4;
+    border-color: #f4f4f4;
 
     &:after {
       background: #ccc;
       cursor: not-allowed;
     }
 
-    &-inner {
+    .@{switch-prefix-cls}-inner {
       color: #ccc;
     }
   }

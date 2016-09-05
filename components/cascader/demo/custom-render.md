@@ -1,23 +1,31 @@
 ---
 order: 8
-title: 自定义已选项
+title:
+  zh-CN: 自定义已选项
+  en-US: Custom render
 ---
+
+## zh-CN
 
 例如给最后一项加上邮编链接。
 
+## en-US
+
+For instance, add an external link after the selected value.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
+    value: 'hangzhou',
+    label: '杭州',
     children: [{
-      value: 'beiqinglu',
-      label: '北清路',
-      code: 10086,
+      value: 'xihu',
+      label: '西湖',
+      code: 752100,
     }],
   }],
 }, {
@@ -54,8 +62,9 @@ const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
 ReactDOM.render(
   <Cascader
     options={options}
-    defaultValue={['beijing', 'haidian', 'beiqinglu']}
+    defaultValue={['zhejiang', 'hangzhou', 'xihu']}
     displayRender={displayRender}
-    style={{ width: 200 }} />
+    style={{ width: 200 }}
+  />
 , mountNode);
 ````

@@ -1,12 +1,20 @@
 ---
 order: 5
-title: 多级菜单
+title:
+  zh-CN: 多级菜单
+  en-US: Cascading menu
 ---
+
+## zh-CN
 
 传入的菜单里有多个层级。
 
+## en-US
+
+The menu has multiple levels.
+
 ````jsx
-import { Menu, Dropdown, Icon } from 'rubix';
+import { Menu, Dropdown, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 
 const menu = (
@@ -22,7 +30,7 @@ const menu = (
 
 ReactDOM.render(
   <Dropdown overlay={menu}>
-    <a className="rubix-dropdown-link" href="#">
+    <a className="ant-dropdown-link" href="#">
       多级菜单 <Icon type="down" />
     </a>
   </Dropdown>

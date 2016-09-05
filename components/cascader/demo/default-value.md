@@ -1,22 +1,30 @@
 ---
 order: 0
-title: 默认值
+title:
+  zh-CN: 默认值
+  en-US: Default value
 ---
+
+## zh-CN
 
 默认值通过数组的方式指定。
 
+## en-US
+
+Specifies default value by an array.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
+    value: 'hangzhou',
+    label: '杭州',
     children: [{
-      value: 'beiqinglu',
-      label: '北清路',
+      value: 'xihu',
+      label: '西湖',
     }],
   }],
 }, {
@@ -37,6 +45,6 @@ function onChange(value) {
 }
 
 ReactDOM.render(
-  <Cascader defaultValue={['beijing', 'haidian', 'beiqinglu']} options={options} onChange={onChange} />
+  <Cascader defaultValue={['zhejiang', 'hangzhou', 'xihu']} options={options} onChange={onChange} />
 , mountNode);
 ````

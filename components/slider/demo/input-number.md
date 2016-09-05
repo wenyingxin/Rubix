@@ -1,12 +1,20 @@
 ---
 order: 1
-title: 带输入框的滑块
+title: 
+  zh-CN: 带输入框的滑块
+  en-US: Slider with input field
 ---
+
+## zh-CN
 
 和 [数字输入框](/components/input-number/) 组件保持同步。
 
+## en-US
+
+Synchronize with [InptNumber](/components/input-number/) component.
+
 ````jsx
-import { Slider, InputNumber, Row, Col } from 'rubix';
+import { Slider, InputNumber, Row, Col } from 'antd';
 
 const IntegerStep = React.createClass({
   getInitialState() {
@@ -27,7 +35,8 @@ const IntegerStep = React.createClass({
         </Col>
         <Col span={4}>
           <InputNumber min={1} max={20} style={{ marginLeft: '16px' }}
-            value={this.state.inputValue} onChange={this.onChange} />
+            value={this.state.inputValue} onChange={this.onChange}
+          />
         </Col>
       </Row>
     );
@@ -53,7 +62,8 @@ const DecimalStep = React.createClass({
         </Col>
         <Col span={4}>
           <InputNumber min={0} max={1} style={{ marginLeft: '16px' }} step={0.01}
-            value={this.state.inputValue} onChange={this.onChange} />
+            value={this.state.inputValue} onChange={this.onChange}
+          />
         </Col>
       </Row>
     );

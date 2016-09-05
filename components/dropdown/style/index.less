@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@dropdown-prefix-cls: rubix-dropdown;
+@dropdown-prefix-cls: ant-dropdown;
 
 .@{dropdown-prefix-cls} {
   position: absolute;
@@ -16,17 +16,17 @@
   &-wrap {
     position: relative;
 
-    .rubix-btn > .@{iconfont-css-prefix}-down {
+    .ant-btn > .@{iconfont-css-prefix}-down {
       .iconfont-size-under-12px(10px);
     }
 
-    .rubixicon-down:before {
+    .anticon-down:before {
       transition: transform 0.2s ease;
     }
   }
 
   &-wrap-open {
-    .rubixicon-down:before {
+    .anticon-down:before {
       transform: rotate(180deg);
     }
   }
@@ -105,7 +105,7 @@
     }
 
     &-submenu-title:after {
-      font-family: "rubixicon" !important;
+      font-family: "anticon" !important;
       position: absolute;
       content: "\e600";
       right: 15px;
@@ -156,17 +156,17 @@
 
 .@{dropdown-prefix-cls}-link {
   font-size: 12px;
-  .rubixicon-down {
+  .anticon-down {
     .iconfont-size-under-12px(8px);
     font-weight: bold;
   }
 }
 
 .@{dropdown-prefix-cls}-button {
-  &.rubix-btn-group > .rubix-btn:last-child:not(:first-child) {
+  &.ant-btn-group > .ant-btn:last-child:not(:first-child) {
     padding-right: 7px;
   }
-  .rubixicon-down {
+  .anticon-down {
     .iconfont-size-under-12px(10px);
   }
 }

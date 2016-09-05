@@ -1,30 +1,38 @@
 ---
 order: 0
-title: 基本
+title:
+  zh-CN: 基本
+  en-US: Basic
 ---
+
+## zh-CN
 
 省市区级联。
 
+## en-US
+
+Cascade selection box for selecting province/city/district.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
+    value: 'hangzhou',
+    label: '杭州',
     children: [{
-      value: 'wudaokou',
-      label: '五道口',
+      value: 'xihu',
+      label: '西湖',
     }],
   }],
 }, {
-  value: 'hebei',
-  label: '河北',
+  value: 'jiangsu',
+  label: '江苏',
   children: [{
-    value: 'shijiazhuang',
-    label: '石家庄',
+    value: 'nanjing',
+    label: '南京',
     children: [{
       value: 'zhonghuamen',
       label: '中华门',

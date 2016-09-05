@@ -1,12 +1,20 @@
 ---
 order: 2
-title: 通知事项日历演示
+title:
+  zh-CN: 通知事项日历演示
+  en-US: A demo of Notice Calendar
 ---
 
-一个复杂的应用实例。
+## zh-CN
+
+一个复杂的应用示例。
+
+## en-US
+
+A complex application.
 
 ````jsx
-import { Calendar } from 'rubix';
+import { Calendar } from 'antd';
 
 function getListData(value) {
   let listData;
@@ -37,7 +45,7 @@ function getListData(value) {
 }
 
 function dateCellRender(value) {
-  let listData = getListData(value);
+  const listData = getListData(value);
   return (
     <ul className="events">
       {
@@ -59,7 +67,7 @@ function getMonthData(value) {
 }
 
 function monthCellRender(value) {
-  let num = getMonthData(value);
+  const num = getMonthData(value);
   return num ? <div className="notes-month">
     <section>{num}</section>
     <span>待办事项数</span>

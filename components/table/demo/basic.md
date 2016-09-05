@@ -1,12 +1,20 @@
 ---
 order: 0
-title: 基本用法
+title:
+  en-US: Basic Usage
+  zh-CN: 基本用法
 ---
+
+## zh-CN
 
 简单的表格，最后一列是各种操作。
 
+## en-US
+
+Simple table with operations.
+
 ````jsx
-import { Table, Icon } from 'rubix';
+import { Table, Icon } from 'antd';
 
 const columns = [{
   title: '姓名',
@@ -27,10 +35,10 @@ const columns = [{
   render: (text, record) => (
     <span>
       <a href="#">操作一{record.name}</a>
-      <span className="rubix-divider"></span>
+      <span className="ant-divider" />
       <a href="#">操作二</a>
-      <span className="rubix-divider"></span>
-      <a href="#" className="rubix-dropdown-link">
+      <span className="ant-divider" />
+      <a href="#" className="ant-dropdown-link">
         更多 <Icon type="down" />
       </a>
     </span>

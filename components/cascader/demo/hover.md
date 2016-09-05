@@ -1,22 +1,30 @@
 ---
 order: 2
-title: 移入展开
+title:
+  zh-CN: 移入展开
+  en-US: Hover
 ---
+
+## zh-CN
 
 通过移入展开下级菜单，点击完成选择。
 
+## en-US
+
+Hover to expand sub menu, click to select option.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
+    value: 'hangzhou',
+    label: '杭州',
     children: [{
-      value: 'beiqinglu',
-      label: '北清路',
+      value: 'xihu',
+      label: '西湖',
     }],
   }],
 }, {
@@ -43,6 +51,7 @@ function displayRender(label) {
 
 ReactDOM.render(
   <Cascader options={options} expandTrigger="hover"
-    displayRender={displayRender} onChange={onChange} />
+    displayRender={displayRender} onChange={onChange}
+  />
 , mountNode);
 ````

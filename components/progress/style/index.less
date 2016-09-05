@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@progress-prefix-cls: rubix-progress;
+@progress-prefix-cls: ant-progress;
 
 .@{progress-prefix-cls} {
   display: inline-block;
@@ -34,7 +34,7 @@
   &-bg {
     border-radius: 100px;
     background-color: @info-color;
-    transition: all 0.3s linear 0s;
+    transition: all .4s @ease-out-circ 0s;
     position: relative;
   }
 
@@ -46,7 +46,7 @@
     vertical-align: middle;
     display: inline-block;
     font-family: tahoma;
-    .rubixicon {
+    .anticon {
       font-size: 12px;
     }
   }
@@ -102,7 +102,7 @@
     font-family: tahoma;
     margin: 0;
 
-    .rubixicon {
+    .anticon {
       font-size: 14 / 12em;
     }
   }

@@ -1,19 +1,25 @@
 ---
 order: 1
-title: 可选择
+title:
+  en-US: selection
+  zh-CN: 可选择
 ---
+
+## zh-CN
 
 第一列是联动的选择框。
 
+## en-US
+
+Rows can be selectable by making fisrt column as a selectable column.
+
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 
 const columns = [{
   title: '姓名',
   dataIndex: 'name',
-  render(text) {
-    return <a href="#">{text}</a>;
-  },
+  render: text => <a href="#">{text}</a>,
 }, {
   title: '年龄',
   dataIndex: 'age',
@@ -51,6 +57,7 @@ const rowSelection = {
   },
 };
 
-ReactDOM.render(<Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+ReactDOM.render(
+  <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
 , mountNode);
 ````

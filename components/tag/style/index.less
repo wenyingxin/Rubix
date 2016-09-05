@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@tag-prefix-cls: rubix-tag;
+@tag-prefix-cls: ant-tag;
 
 .@{tag-prefix-cls} {
   display: inline-block;
@@ -9,16 +9,18 @@
   height: 22px;
   padding: 0 8px;
   border-radius: @border-radius-base;
-  background: #f3f3f3;
+  border: 1px solid @border-color-split;
+  background: @background-color-base;
   font-size: @font-size-base;
   transition: all 0.3s @ease-in-out-circ;
   vertical-align: middle;
-  opacity: 0.85;
+  opacity: 1;
   overflow: hidden;
   margin: 2px 4px 2px 0;
+  cursor: pointer;
 
   &:hover {
-    opacity: 1;
+    opacity: 0.85;
   }
 
   &,
@@ -29,13 +31,13 @@
 
   &-text {
     a:first-child:last-child {
-      display: block;
+      display: inline-block;
       margin: 0 -8px;
       padding: 0 8px;
     }
   }
 
-  .rubixicon-cross {
+  .anticon-cross {
     .iconfont-size-under-12px(10px);
     cursor: pointer;
     font-weight: bold;
@@ -53,11 +55,12 @@
   &-green,
   &-yellow,
   &-red {
+    border: 0;
     &,
     a,
     a:hover,
-    .rubixicon-cross,
-    .rubixicon-cross:hover {
+    .anticon-cross,
+    .anticon-cross:hover {
       color: #fff;
     }
   }
@@ -91,7 +94,7 @@
   }
 
   &-zoom-leave {
-    animation: antZoomOut .2s @ease-in-out-circ;
+    animation: antZoomOut .3s @ease-in-out-circ;
     animation-fill-mode: both;
   }
 }

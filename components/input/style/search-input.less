@@ -3,21 +3,21 @@
 @import "../../button/style/mixin";
 @import "./mixin";
 
-.rubix-search-input-wrapper {
+.ant-search-input-wrapper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.rubix-search-input {
-  &.rubix-input-group .rubix-input:first-child,
-  &.rubix-input-group .rubix-select:first-child {
+.ant-search-input {
+  &.ant-input-group .ant-input:first-child,
+  &.ant-input-group .ant-select:first-child {
     border-radius: @border-radius-base;
     position: absolute;
     top: -1px;
     width: 100%;
   }
 
-  .rubix-search-btn {
+  .ant-search-btn {
     .btn-default;
     border-radius: 0 @border-radius-base - 1 @border-radius-base - 1 0;
     left: -1px;
@@ -34,8 +34,13 @@
       padding-bottom: 6px;
     }
   }
-  &&-focus .rubix-search-btn-noempty,
-  &:hover .rubix-search-btn-noempty {
+  &&-focus .ant-search-btn-noempty,
+  &:hover .ant-search-btn-noempty {
     .btn-primary;
+  }
+  .ant-select-combobox {
+    .ant-select-selection__rendered {
+      right: 29px;
+    }
   }
 }

@@ -1,22 +1,30 @@
 ---
 order: 4
-title: 禁用选项
+title:
+  zh-CN: 禁用选项
+  en-US: Disabled option
 ---
+
+## zh-CN
 
 通过指定 options 里的 `disabled` 字段。
 
+## en-US
+
+Disable option by specifying the `disabled` property in `options`.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
+    value: 'hangzhou',
+    label: '杭州',
     children: [{
-      value: 'beiqinglu',
-      label: '北清路',
+      value: 'xihu',
+      label: '西湖',
     }],
   }],
 }, {

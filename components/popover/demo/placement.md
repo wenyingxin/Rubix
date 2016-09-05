@@ -1,12 +1,20 @@
 ---
 order: 1
-title: 位置
+title:
+  zh-CN: 位置
+  en-US: Placement
 ---
+
+## zh-CN
 
 位置有十二个方向。
 
+## en-US
+
+There are 12 `placement` options available.
+
 ````jsx
-import { Popover, Button } from 'rubix';
+import { Popover, Button } from 'antd';
 
 const text = <span>标题</span>;
 const content = (
@@ -67,7 +75,7 @@ ReactDOM.render(
 ````
 
 <style>
-.code-box-demo .rubix-btn {
+.code-box-demo .ant-btn {
   margin-right: 1em;
   margin-bottom: 1em;
 }

@@ -1,12 +1,20 @@
 ---
 order: 1
-title: 位置
+title:
+  zh-CN: 位置
+  en-US: Placement
 ---
 
-位置有十二个方向。
+## zh-CN
+
+位置有十二个方向。如需箭头指向目标元素中心，可以设置 `arrowPointAtCenter`。
+
+## en-US
+
+There are 12 `placement` options available. Use `arrowPointAtCenter` if you want arrow point at the center of target.
 
 ````jsx
-import { Popconfirm, message, Button } from 'rubix';
+import { Popconfirm, message, Button } from 'antd';
 
 const text = '确定要删除这个任务吗？';
 
@@ -63,10 +71,10 @@ ReactDOM.render(<div>
 ````
 
 <style>
-.code-box-demo .rubix-popover-wrap > a {
+.code-box-demo .ant-popover-wrap > a {
   margin-right: 1em;
 }
-.code-box-demo .rubix-btn {
+.code-box-demo .ant-btn {
   margin-right: 1em;
   margin-bottom: 1em;
 }

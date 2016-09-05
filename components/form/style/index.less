@@ -5,7 +5,7 @@
 @import "../../layout/style/mixin";
 @import "./mixin";
 
-@form-prefix-cls: rubix-form;
+@form-prefix-cls: ant-form;
 
 .reset-form();
 
@@ -27,11 +27,6 @@ label {
   color: @label-required-color;
 }
 
-//== Style for input-group: input with label, with button or dropdown...
-.rubix-input-group {
-  .input-group(~"rubix-input");
-}
-
 // Radio && Checkbox
 input[type="radio"],
 input[type="checkbox"] {
@@ -41,19 +36,21 @@ input[type="checkbox"] {
     cursor: @cursor-disabled;
   }
 }
+
 // These classes are used directly on <label>s
-.rubix-radio-inline,
-.rubix-radio-vertical,
-.rubix-checkbox-inline,
-.rubix-checkbox-vertical {
+.ant-radio-inline,
+.ant-radio-vertical,
+.ant-checkbox-inline,
+.ant-checkbox-vertical {
   &.disabled,
   fieldset[disabled] & {
     cursor: @cursor-disabled;
   }
 }
+
 // These classes are used on elements with <label> descendants
-.rubix-radio,
-.rubix-checkbox {
+.ant-radio,
+.ant-checkbox {
   &.disabled,
   fieldset[disabled] & {
     label {
@@ -69,29 +66,46 @@ input[type="checkbox"] {
   margin-bottom: @form-item-margin-bottom;
   color: #666;
 
+  // nested FormItem
+  & > &,
+  & :not(.@{form-prefix-cls}) > & {
+    margin-bottom: -@form-item-margin-bottom;
+  }
+
   &-control {
     line-height: 32px;
     position: relative;
+    .clearfix;
   }
 
-  &.@{form-prefix-cls}-item-with-help {
+  &-with-help {
     margin-bottom: @form-item-margin-bottom - @font-size-base * @line-height-base - 3;
   }
 
-  > label {
-    color: @label-color;
+  &-label {
     text-align: right;
     vertical-align: middle;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px 0;
+    display: inline-block;
 
-    &:lang(en) {
-      padding-right: 8px;
+    label {
+      color: @label-color;
+
+      &:after {
+        content: ":";
+        margin: 0 8px 0 2px;
+        position: relative;
+        top: -0.5px;
+      }
     }
   }
 
-  .rubix-switch {
+  .ant-switch {
     margin: 4px 0;
+  }
+
+  &-no-colon &-label label:after {
+    content: " ";
   }
 }
 
@@ -118,17 +132,17 @@ input[type="checkbox"] {
 // 表单下的输入框尺寸唯一: 大尺寸
 form {
   .has-feedback {
-    .rubix-input {
+    .ant-input {
       padding-right: 24px;
     }
   }
 
-  textarea.rubix-input {
+  textarea.ant-input {
     height: auto;
   }
 
   // input[type=file]
-  .rubix-upload {
+  .ant-upload {
     background: transparent;
   }
 
@@ -139,8 +153,8 @@ form {
   }
 
   // Radios and checkboxes on same line
-  .rubix-radio-inline,
-  .rubix-checkbox-inline {
+  .ant-radio-inline,
+  .ant-checkbox-inline {
     display: inline-block;
     vertical-align: middle;
     font-weight: normal;
@@ -152,25 +166,30 @@ form {
     }
   }
 
-  .rubix-checkbox-vertical,
-  .rubix-radio-vertical {
+  .ant-checkbox-vertical,
+  .ant-radio-vertical {
     display: block;
   }
 
-  .rubix-input-number {
+  .ant-checkbox-vertical + .ant-checkbox-vertical,
+  .ant-radio-vertical + .ant-radio-vertical {
+    margin-left: 0;
+  }
+
+  .ant-input-number {
     margin-top: -1px;
     margin-right: 8px;
   }
 
-  .rubix-select,
-  .rubix-cascader-picker {
+  .ant-select,
+  .ant-cascader-picker {
     width: 100%;
   }
 }
 
 // Input combined with select
-.rubix-input-group-wrap {
-  .rubix-select-selection {
+.ant-input-group-wrap {
+  .ant-select-selection {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     &:hover {
@@ -178,54 +197,20 @@ form {
     }
   }
 
-  .rubix-select-selection--single {
+  .ant-select-selection--single {
     margin-left: -1px;
     height: @input-height-lg;
     background-color: #eee;
-    .rubix-select-selection__rendered {
+    .ant-select-selection__rendered {
       padding-left: 8px;
       padding-right: 25px;
       line-height: 30px;
     }
   }
 
-  .rubix-select-open .rubix-select-selection {
+  .ant-select-open .ant-select-selection {
     border-color: @border-color-base;
     box-shadow: none;
-  }
-}
-
-.rubix-search-input-wrapper {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.rubix-search-input {
-  &.rubix-input-group .rubix-input:first-child {
-    border-radius: @border-radius-base;
-    position: absolute;
-    top: -1px;
-  }
-  .rubix-search-btn {
-    .btn-default;
-    border-radius: 0 @border-radius-base - 1 @border-radius-base - 1 0;
-    left: -1px;
-    position: relative;
-    border-width: 0 0 0 1px;
-    z-index: 2;
-    padding-left: 8px;
-    padding-right: 8px;
-    &:hover {
-      border-color: @border-color-base;
-    }
-    form & {
-      padding-top: 6px;
-      padding-bottom: 6px;
-    }
-  }
-  &&-focus .rubix-search-btn-noempty,
-  &:hover .rubix-search-btn-noempty {
-    .btn-primary;
   }
 }
 
@@ -236,10 +221,21 @@ form {
     .make-row;
   }
 
-  .rubix-radio-inline,
-  .rubix-checkbox-inline,
-  .rubix-input {
+  .ant-radio-inline,
+  .ant-checkbox-inline {
     vertical-align: baseline;
+  }
+}
+
+// Form layout
+//== Vertical Form
+.@{form-prefix-cls}-vertical {
+  .@{form-prefix-cls}-item-label {
+    padding: 0 0 8px;
+
+    label:after {
+      content: '';
+    }
   }
 }
 
@@ -257,11 +253,6 @@ form {
     > div {
       display: inline-block;
     }
-  }
-
-  .rubix-input {
-    display: inline-block;
-    vertical-align: middle;
   }
 
   .@{form-prefix-cls}-text {
@@ -297,12 +288,13 @@ form {
     position: absolute;
     top: 0;
     right: 0;
-    font-family: "rubixicon" !important;
+    visibility: visible;
     .square(@input-height-lg);
     line-height: @input-height-lg;
     text-align: center;
     font-size: 14px;
     animation: zoomIn .3s @ease-out-back;
+    .iconfont-font("");
   }
 }
 
@@ -325,8 +317,7 @@ form {
 }
 
 .has-success {
-  .form-control-validation(@success-color; @input-hover-border-color;);
-  .rubix-input {
+  .ant-input {
     border-color: @input-border-color;
     box-shadow: none;
   }
@@ -346,10 +337,10 @@ form {
   }
 
   //select
-  .rubix-select {
+  .ant-select {
     &-selection {
       border-color: @warning-color;
-      box-shadow: 0 0 0 2px fade(@warning-color, 20%);
+      .active(@warning-color);
     }
     &-arrow {
       color: @warning-color;
@@ -357,19 +348,19 @@ form {
   }
 
   //datepicker
-  .rubix-calendar-picker-icon:after {
+  .ant-calendar-picker-icon:after {
     color: @warning-color;
   }
 
   //timepicker
-  .rubix-time-picker-icon:after {
+  .ant-time-picker-icon:after {
     color: @warning-color;
   }
 
   //input-number
-  .rubix-input-number {
+  .ant-input-number {
     border-color: @warning-color;
-    box-shadow: 0 0 0 2px fade(@warning-color, 20%);
+    .active(@warning-color);
     &:not([disabled]):hover {
       border-color: @warning-color;
     }
@@ -385,10 +376,10 @@ form {
   }
 
   //select
-  .rubix-select {
+  .ant-select {
     &-selection {
       border-color: @error-color;
-      box-shadow: 0 0 0 2px fade(@error-color, 20%);
+      .active(@error-color);
     }
 
     &-arrow {
@@ -397,21 +388,33 @@ form {
   }
 
   //datepicker
-  .rubix-calendar-picker-icon:after {
+  .ant-calendar-picker-icon:after {
     color: @error-color;
   }
 
   //timepicker
-  .rubix-time-picker-picker-icon:after {
+  .ant-time-picker-picker-icon:after {
     color: @error-color;
   }
 
   //input-number
-  .rubix-input-number {
+  .ant-input-number {
     border-color: @error-color;
-    box-shadow: 0 0 0 2px fade(@error-color, 20%);
+    .active(@error-color);
     &:not([disabled]):hover {
       border-color: @error-color;
+    }
+  }
+  .ant-mention-wrapper,
+  .ant-mention-wrapper.active {
+    .ant-mention-editor {
+      border-color: @error-color;
+      .active(@error-color);
+      &:not([disabled]):hover,
+      &:not([disabled]):focus {
+        border-color: @error-color;
+        .active(@error-color);
+      }
     }
   }
 }
@@ -425,13 +428,13 @@ form {
   }
 }
 
-.advanced-search-form {
+.ant-advanced-search-form {
   .@{form-prefix-cls}-item {
     margin-bottom: 16px;
   }
-  .rubix-input,
-  .rubix-input-group .rubix-input,
-  .rubix-input-group .rubix-input-group-addon {
+  .ant-input,
+  .ant-input-group .ant-input,
+  .ant-input-group .ant-input-group-addon {
     height: 28px;
   }
 }

@@ -1,12 +1,20 @@
 ---
 order: 1
-title: 受控操作示例
+title:
+  zh-CN: 受控操作示例
+  en-US: basic controlled example
 ---
+
+## zh-CN
 
 受控操作示例
 
+## en-US
+
+basic controlled example
+
 ````jsx
-import { Tree } from 'rubix';
+import { Tree } from 'antd';
 const TreeNode = Tree.TreeNode;
 
 const x = 3;
@@ -38,11 +46,6 @@ const generateData = (_level, _preKey, _tns) => {
 generateData(z);
 
 const Demo = React.createClass({
-  getDefaultProps() {
-    return {
-      multiple: true,
-    };
-  },
   getInitialState() {
     return {
       expandedKeys: ['0-0-0', '0-0-1'],
@@ -54,7 +57,7 @@ const Demo = React.createClass({
   onExpand(expandedKeys) {
     console.log('onExpand', arguments);
     // if not set autoExpandParent to false, if children expanded, parent can not collapse.
-    // or, you can remove all expanded chilren keys.
+    // or, you can remove all expanded children keys.
     this.setState({
       expandedKeys,
       autoExpandParent: false,
@@ -82,11 +85,13 @@ const Demo = React.createClass({
       return <TreeNode key={item.key} title={item.key} />;
     });
     return (
-      <Tree checkable multiple={this.props.multiple}
+      <Tree
+        checkable
         onExpand={this.onExpand} expandedKeys={this.state.expandedKeys}
         autoExpandParent={this.state.autoExpandParent}
         onCheck={this.onCheck} checkedKeys={this.state.checkedKeys}
-        onSelect={this.onSelect} selectedKeys={this.state.selectedKeys}>
+        onSelect={this.onSelect} selectedKeys={this.state.selectedKeys}
+      >
         {loop(gData)}
       </Tree>
     );

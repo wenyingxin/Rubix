@@ -1,12 +1,21 @@
 ---
 order: 2
-title: 选择和操作
+title:
+  en-US: Selection and operation
+  zh-CN: 选择和操作
 ---
+
+## zh-CN
 
 选择后进行操作，完成后清空选择，通过 `rowSelection.selectedRowKeys` 来控制选中项。
 
+## en-US
+
+To perform operations and clear selections after selecting some rows, use `rowSelection.selectedRowKeys` to control selected rows.
+
+
 ````jsx
-import { Table, Button } from 'rubix';
+import { Table, Button } from 'antd';
 
 const columns = [{
   title: '姓名',
@@ -61,7 +70,8 @@ const App = React.createClass({
       <div>
         <div style={{ marginBottom: 16 }}>
           <Button type="primary" onClick={this.start}
-            disabled={!hasSelected} loading={loading}>操作</Button>
+            disabled={!hasSelected} loading={loading}
+          >操作</Button>
           <span style={{ marginLeft: 8 }}>{hasSelected ? `选择了 ${selectedRowKeys.length} 个对象` : ''}</span>
         </div>
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />

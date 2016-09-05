@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@tab-prefix-cls: rubix-tabs;
+@tab-prefix-cls: ant-tabs;
 
 .@{tab-prefix-cls} {
   box-sizing: border-box;
@@ -83,7 +83,7 @@
 
       &:before {
         display: block;
-        font-family: "rubixicon" !important;
+        font-family: "anticon" !important;
       }
     }
   }
@@ -120,14 +120,14 @@
   }
 
   &-nav-scroll {
-    width: 99999px;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   &-nav {
     box-sizing: border-box;
     padding-left: 0;
-    transition: left 0.5s @ease-in-out;
+    transition: transform 0.5s @ease-in-out;
     position: relative;
     margin: 0;
     list-style: none;
@@ -153,7 +153,7 @@
     }
 
     .@{tab-prefix-cls}-tab {
-      float: left;
+      display: inline-block;
       height: 100%;
       margin-right: 24px;
       box-sizing: border-box;
@@ -172,10 +172,9 @@
 
         &:active {
           color: shade(@primary-color, 5%);
-          transform: translateZ(0);
         }
 
-        .rubixicon {
+        .anticon {
           width: 14px;
           height: 14px;
           margin-right: 8px;
@@ -185,7 +184,6 @@
 
     .@{tab-prefix-cls}-tab-active .@{tab-prefix-cls}-tab-inner {
       color: @primary-color;
-      transform: translateZ(0);
     }
   }
 
@@ -281,6 +279,7 @@
         float: none;
         margin-right: 0;
         margin-bottom: 16px;
+        display: block;
         &:last-child {
           margin-bottom: 0;
         }
@@ -378,7 +377,7 @@
   }
   &&-card > &-bar &-tab {
     margin: 0;
-    border: 1px solid transparent;
+    border: 1px solid @border-color-base;
     border-bottom: 0;
     border-radius: 6px 6px 0 0;
     transition: all 0.3s @ease-in-out;
@@ -402,7 +401,7 @@
   &&-card > &-bar &-nav-wrap {
     margin-bottom: 0;
   }
-  &&-card > &-bar &-tab-inner .rubixicon-cross {
+  &&-card > &-bar &-tab-inner .anticon-cross {
     margin-right: 0;
     color: #999;
     transition: all 0.3s @ease-in-out;
@@ -423,8 +422,8 @@
     padding-right: 8px;
   }
 
-  &&-card > &-bar &-tab-active .rubixicon-cross,
-  &&-card > &-bar &-tab:hover .rubixicon-cross {
+  &&-card > &-bar &-tab-active .anticon-cross,
+  &&-card > &-bar &-tab:hover .anticon-cross {
     width: 16px;
     transform: translateZ(0);
   }

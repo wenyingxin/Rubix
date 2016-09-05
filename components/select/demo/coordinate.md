@@ -1,19 +1,30 @@
 ---
 order: 6
-title: 联动
+title: 
+  zh-CN: 联动
+  en-US: coordinate
 ---
+
+## zh-CN
 
 省市联动是典型的例子。
 
-推荐使用 [Cascader](/components/cascader) 组件。
+推荐使用 [Cascader](/components/cascader/) 组件。
+
+## en-US
+
+Coordinating the selection of provinces and cities is a common use case and demonstrates how selection can be coordinated.
+
+Using the [Cascader](/components/cascader) component is strongly recommended instead as it is more flexible and capable.
+
 
 ````jsx
-import { Select } from 'rubix';
+import { Select } from 'antd';
 const Option = Select.Option;
 
-const provinceData = ['北京', '江苏'];
+const provinceData = ['浙江', '江苏'];
 const cityData = {
-  北京: ['海淀', '朝阳', '丰台'],
+  浙江: ['杭州', '宁波', '温州'],
   江苏: ['南京', '苏州', '镇江'],
 };
 

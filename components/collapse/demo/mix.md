@@ -1,12 +1,20 @@
 ---
 order: 2
-title: 面板嵌套
+title: 
+  zh-CN: 面板嵌套
+  en-US: Nested panel
 ---
+
+## zh-CN
 
 手风琴嵌套折叠面板。
 
+## en-US
+
+`Collapse` is nested inside the `Accordion`.
+
 ````jsx
-import { Collapse } from 'rubix';
+import { Collapse } from 'antd';
 const Panel = Collapse.Panel;
 
 function callback(key) {

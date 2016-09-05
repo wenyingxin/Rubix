@@ -1,12 +1,20 @@
 ---
 order: 5
-title: 切换菜单类型
+title:
+  zh-CN: 切换菜单类型
+  en-US: Switch the menu type
 ---
+
+## zh-CN
 
 展示动态切换模式。
 
+## en-US
+
+Show the dynamic switching mode (between 'inline' and 'vertical').
+
 ````jsx
-import { Menu, Icon, Switch } from 'rubix';
+import { Menu, Icon, Switch } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -30,7 +38,8 @@ const Sider = React.createClass({
         <Menu
           style={{ width: 240 }}
           defaultOpenKeys={['sub1']}
-          mode={this.state.mode}>
+          mode={this.state.mode}
+        >
           <SubMenu key="sub1" title={<span><Icon type="mail" /><span>导航一</span></span>}>
             <MenuItemGroup title="分组1">
               <Menu.Item key="1">选项1</Menu.Item>

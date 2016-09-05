@@ -1,23 +1,27 @@
 ---
 order: 1
-title: 可以自定义显示
+title:
+  zh-CN: 可以自定义显示
+  en-US: Custom trigger
 ---
+
+## zh-CN
 
 切换按钮和结果分开。
 
+## en-US
+
+Separate trigger button and result.
+
 ````jsx
-import { Cascader } from 'rubix';
+import { Cascader } from 'antd';
 
 const options = [{
-  value: 'beijing',
-  label: '北京',
+  value: 'zhejiang',
+  label: '浙江',
   children: [{
-    value: 'haidian',
-    label: '海淀',
-    children: [{
-      value: 'beiqinglu',
-      label: '北清路',
-    }],
+    value: 'hangzhou',
+    label: '杭州',
   }],
 }, {
   value: 'jiangsu',

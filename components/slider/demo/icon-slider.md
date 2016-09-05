@@ -1,12 +1,20 @@
 ---
 order: 2
-title: 带 icon 的滑块
+title: 
+  zh-CN: 带 icon 的滑块
+  en-US: Slider with icon
 ---
+
+## zh-CN
 
 滑块左右可以设置图标来表达业务含义。
 
+## en-US
+
+You can add an icon beside the slider to make it meaningful.
+
 ````jsx
-import { Slider, Icon } from 'rubix';
+import { Slider, Icon } from 'antd';
 
 const IconSlider = React.createClass({
   getInitialState() {
@@ -14,8 +22,8 @@ const IconSlider = React.createClass({
     const min = this.props.min;
     const mid = ((max - min) / 2).toFixed(5);
     return {
-      preIconClass: this.props.value >= mid ? '' : 'rubixicon-highlight',
-      nextIconClass: this.props.value >= mid ? 'rubixicon-highlight' : '',
+      preIconClass: this.props.value >= mid ? '' : 'anticon-highlight',
+      nextIconClass: this.props.value >= mid ? 'anticon-highlight' : '',
       mid,
       sliderValue: this.props.value,
     };
@@ -23,8 +31,8 @@ const IconSlider = React.createClass({
 
   handleChange(v) {
     this.setState({
-      preIconClass: v >= this.state.mid ? '' : 'rubixicon-highlight',
-      nextIconClass: v >= this.state.mid ? 'rubixicon-highlight' : '',
+      preIconClass: v >= this.state.mid ? '' : 'anticon-highlight',
+      nextIconClass: v >= this.state.mid ? 'anticon-highlight' : '',
       sliderValue: v,
     });
   },
@@ -51,7 +59,7 @@ ReactDOM.render(
   padding: 0px 30px;
 }
 
-.iconWrapper .rubixicon {
+.iconWrapper .anticon {
   position: absolute;
   top: -3px;
   width: 16px;
@@ -61,15 +69,15 @@ ReactDOM.render(
   color: #ccc;
 }
 
-.iconWrapper .rubixicon:first-child {
+.iconWrapper .anticon:first-child {
   left: 0;
 }
 
-.iconWrapper .rubixicon:last-child {
+.iconWrapper .anticon:last-child {
   right: 0;
 }
 
-.rubixicon.rubixicon-highlight {
+.anticon.anticon-highlight {
   color: #666;
 }
 ````

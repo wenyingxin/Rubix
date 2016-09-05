@@ -2,11 +2,12 @@
 @import "../../style/mixins/index";
 @import "../../checkbox/style/mixin";
 
-@transfer-prefix-cls: rubix-transfer;
-.antCheckboxFn(@checkbox-prefix-cls: rubix-transfer-checkbox);
+@transfer-prefix-cls: ant-transfer;
+.antCheckboxFn(@checkbox-prefix-cls: ant-transfer-checkbox);
 
 .@{transfer-prefix-cls} {
   position: relative;
+  line-height: @line-height-base;
 
   &-list {
     font-size: 12px;
@@ -34,6 +35,14 @@
         line-height: 32px;
         text-align: center;
         font-size: 14px;
+        .anticon {
+          transition: all .3s;
+          font-size: 12px;
+          color: #ccc;
+          &:hover {
+            color: #999;
+          }
+        }
       }
     }
 
@@ -56,7 +65,6 @@
 
     &-body {
       font-size: 12px;
-      line-height: 1.5;
       position: relative;
       height: 100%;
 
@@ -118,7 +126,7 @@
     margin: 0 8px;
     vertical-align: middle;
 
-    .rubix-btn {
+    .ant-btn {
       float: left;
       clear: both;
 
@@ -126,7 +134,7 @@
         margin-bottom: 4px;
       }
 
-      .rubixicon {
+      .anticon {
         .iconfont-size-under-12px(8px);
       }
     }

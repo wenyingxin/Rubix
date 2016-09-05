@@ -1,12 +1,20 @@
 ---
 order: 5
-title: 分组
+title: 
+  zh-CN: 分组
+  en-US: Option Group
 ---
+
+## zh-CN
 
 用 `OptGroup` 进行选项分组。
 
+## en-US
+
+Using `OptGroup` to group the options.
+
 ````jsx
-import { Select } from 'rubix';
+import { Select } from 'antd';
 const Option = Select.Option;
 const OptGroup = Select.OptGroup;
 
@@ -18,7 +26,8 @@ ReactDOM.render(
   <Select defaultValue="lucy"
     style={{ width: 200 }}
     showSearch={false}
-    onChange={handleChange}>
+    onChange={handleChange}
+  >
     <OptGroup label="Manager">
       <Option value="jack">jack</Option>
       <Option value="lucy">lucy</Option>

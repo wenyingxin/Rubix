@@ -18,7 +18,7 @@ Buttons can be grouped by placing multiple `Button` components into a `Button.Gr
 The `size` can be set to `large`, `small` or left unset resulting in a default size.
 
 ````jsx
-import { Button, Icon } from 'rubix';
+import { Button, Icon } from 'antd';
 const ButtonGroup = Button.Group;
 
 ReactDOM.render(
@@ -82,10 +82,10 @@ ReactDOM.render(
 #components-button-demo-button-group h4:first-child {
   margin-top: 0;
 }
-#components-button-demo-button-group .rubix-btn-group {
+#components-button-demo-button-group .ant-btn-group {
   margin-right: 8px;
 }
-#components-button-demo-button-group .rubix-btn {
+#components-button-demo-button-group .ant-btn {
   margin-bottom: 12px;
   margin-right: 0;
 }

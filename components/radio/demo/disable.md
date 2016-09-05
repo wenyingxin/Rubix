@@ -1,12 +1,20 @@
 ---
 order: 1
-title: 不可用
+title:
+  zh-CN: 不可用
+  en-US: disabled
 ---
+
+## zh-CN
 
 Radio 不可用。
 
-````jsx
-import { Radio, Button } from 'rubix';
+## en-US
+
+Radio unavailable.
+
+```jsx
+import { Radio, Button } from 'antd';
 
 const App = React.createClass({
   getInitialState() {
@@ -36,4 +44,4 @@ const App = React.createClass({
 });
 
 ReactDOM.render(<App />, mountNode);
-````
+```
