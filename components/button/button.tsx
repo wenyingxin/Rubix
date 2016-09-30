@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { findDOMNode } from 'react-dom';
 import Icon from '../icon';
@@ -24,11 +24,11 @@ function insertSpace(child) {
   return child;
 }
 
-type ButtonType = 'primary' | 'ghost' | 'dashed'
-type ButtonShape = 'circle' | 'circle-outline'
-type ButtonSize = 'small' | 'large'
+export type ButtonType = 'primary' | 'ghost' | 'dashed'
+export type ButtonShape = 'circle' | 'circle-outline'
+export type ButtonSize = 'small' | 'large'
 
-interface ButtonProps {
+export interface ButtonProps {
   type?: ButtonType;
   htmlType?: string;
   icon?: string;
@@ -40,6 +40,7 @@ interface ButtonProps {
   disabled?: boolean;
   style?: React.CSSProperties;
   prefixCls?: string;
+  className?: string;
 }
 
 export default class Button extends React.Component<ButtonProps, any> {

@@ -1,24 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import classNames from 'classnames';
-import warning from 'warning';
-import assign from 'object-assign';
 import shallowequal from 'shallowequal';
-
-function getScroll(target, top) {
-  const prop = top ? 'pageYOffset' : 'pageXOffset';
-  const method = top ? 'scrollTop' : 'scrollLeft';
-  const isWindow = target === window;
-
-  let ret = isWindow ? target[prop] : target[method];
-  // ie6,7,8 standard mode
-  if (isWindow && typeof ret !== 'number') {
-    ret = window.document.documentElement[method];
-  }
-
-  return ret;
-}
+import omit from 'omit.js';
+import getScroll from '../_util/getScroll';
 
 function getTargetRect(target): any {
   return target !== window ?
@@ -52,10 +38,14 @@ export interface AffixProps {
    */
   offsetTop?: number;
   offset?: number;
+  /** 距离窗口底部达到指定偏移量后触发 */
   offsetBottom?: number;
   style?: React.CSSProperties;
+  /** 固定状态改变时触发的回调函数 */
   onChange?: (affixed?: boolean) => any;
+  /** 设置 Affix 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数 */
   target?: () => Window | HTMLElement;
+  prefixCls?: string;
 }
 
 export default class Affix extends React.Component<AffixProps, any> {
@@ -70,6 +60,7 @@ export default class Affix extends React.Component<AffixProps, any> {
       return window;
     },
     onChange() {},
+    prefixCls: 'rubix-affix',
   };
 
   scrollEvent: any;
@@ -182,8 +173,6 @@ export default class Affix extends React.Component<AffixProps, any> {
   }
 
   componentDidMount() {
-    warning(!('offset' in this.props), '`offset` prop of Affix is deprecated, use `offsetTop` instead.');
-
     const target = this.props.target;
     this.setTargetEventListeners(target);
   }
@@ -218,13 +207,10 @@ export default class Affix extends React.Component<AffixProps, any> {
 
   render() {
     const className = classNames({
-      'rubix-affix': this.state.affixStyle,
+      [this.props.prefixCls]: this.state.affixStyle,
     });
 
-    const props = assign({}, this.props);
-    delete props.offsetTop;
-    delete props.offsetBottom;
-    delete props.target;
+    const props = omit(this.props, ['prefixCls', 'offsetTop', 'offsetBottom', 'target']);
 
     return (
       <div {...props} style={this.state.placeholderStyle}>

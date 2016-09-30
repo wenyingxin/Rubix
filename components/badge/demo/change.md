@@ -14,7 +14,7 @@ title:
 The count will be animated as it changes.
 
 ````jsx
-import { Badge, Button, Icon } from 'rubix';
+import { Badge, Button, Icon } from 'antd';
 const ButtonGroup = Button.Group;
 
 const Test = React.createClass({
@@ -59,7 +59,7 @@ const Test = React.createClass({
             </Button>
           </ButtonGroup>
           <Button type="ghost" onClick={this.onClick} style={{ marginLeft: 8 }}>
-            切换红点显隐
+            Switch state
           </Button>
         </div>
       </div>

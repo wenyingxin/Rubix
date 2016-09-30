@@ -1,14 +1,13 @@
 ---
 category: Components
-chinese: 自动完成
 type: Form Controls
 cols: 1
-english: AutoComplete
+title: AutoComplete
 ---
 
 Autocomplete function of input field.
 
-## When to use
+## When To Use
 
 When need to use autocomplete function.
 

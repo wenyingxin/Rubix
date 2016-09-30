@@ -1,6 +1,8 @@
 ---
 order: 3
-title: 受控模式
+title:
+  zh-CN: 受控模式
+  en-US: Controlled
 ---
 
 ## zh-CN
@@ -9,10 +11,10 @@ title: 受控模式
 
 ## en-US
 
-Controlled mode, for example, work with `Form` .
+Controlled mode, for example, to work with `Form` .
 
 ````jsx
-import { Mention, Form, Button } from 'rubix';
+import { Mention, Form, Button } from 'antd';
 const { toEditorState, getMentions } = Mention;
 const FormItem = Form.Item;
 
@@ -47,26 +49,26 @@ let App = React.createClass({
     }
   },
   render() {
-    const { getFieldProps, getFieldValue } = this.props.form;
-    const mentionProps = getFieldProps('mention', {
-      rules: [
-        { validator: this.checkMention },
-      ],
-      initialValue: this.state.initValue,
-    });
+    const { getFieldDecorator, getFieldValue } = this.props.form;
     console.log('>> render', getFieldValue('mention') === this.state.initValue);
     return (
-      <Form horizontal form={this.props.form}>
+      <Form horizontal>
         <FormItem
           id="control-mention"
           label="最帅的码农"
           labelCol={{ span: 6 }}
           wrapperCol={{ span: 14 }}
         >
-          <Mention
-            {...mentionProps}
-            suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
-          />
+          {getFieldDecorator('mention', {
+            rules: [
+              { validator: this.checkMention },
+            ],
+            initialValue: this.state.initValue,
+          })(
+            <Mention
+              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+            />
+          )}
         </FormItem>
         <FormItem wrapperCol={{ span: 14, offset: 6 }}>
           <Button type="primary" onClick={this.handleSubmit}>确定</Button>

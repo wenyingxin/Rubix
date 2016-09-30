@@ -14,7 +14,7 @@ title:
 Should be used at the top of container, needs to override styles.
 
 ````jsx
-import { Tabs } from 'rubix';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(
@@ -36,10 +36,13 @@ ReactDOM.render(
 }
 
 .card-container > .rubix-tabs-card > .rubix-tabs-content {
-  background: #fff;
-  padding: 16px;
   height: 120px;
   margin-top: -16px;
+}
+
+.card-container > .rubix-tabs-card > .rubix-tabs-content > .rubix-tabs-tabpane {
+  background: #fff;
+  padding: 16px;
 }
 
 .card-container > .rubix-tabs-card > .rubix-tabs-bar .rubix-tabs-tab {

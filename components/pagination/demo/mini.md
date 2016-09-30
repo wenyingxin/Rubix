@@ -14,7 +14,7 @@ title:
 Mini size pagination.
 
 ````jsx
-import { Pagination } from 'rubix';
+import { Pagination } from 'antd';
 
 function showTotal(total) {
   return `共 ${total} 条`;

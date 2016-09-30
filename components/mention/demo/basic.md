@@ -1,6 +1,8 @@
 ---
 order: 0
-title: 基本使用
+title:
+  zh-CN: 基本使用
+  en-US: Basic
 ---
 
 ## zh-CN
@@ -12,7 +14,7 @@ title: 基本使用
 Basic usage.
 
 ````jsx
-import { Mention } from 'rubix';
+import { Mention } from 'antd';
 const { toString, toEditorState } = Mention;
 
 function onChange(editorState) {

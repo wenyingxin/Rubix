@@ -15,7 +15,7 @@ Customizing default width and margin.
 
 
 ````jsx
-import { Card } from 'rubix';
+import { Card } from 'antd';
 
 ReactDOM.render(
   <Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>

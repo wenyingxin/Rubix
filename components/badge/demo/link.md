@@ -14,7 +14,7 @@ title:
 The badge can be wrapped with `a` tag to make it linkable.
 
 ````jsx
-import { Badge } from 'rubix';
+import { Badge } from 'antd';
 
 ReactDOM.render(
   <a href="#">

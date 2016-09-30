@@ -53,18 +53,18 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 以下两种方法都可以达到按需加载的目的：
 
 - `import DatePicker from 'antd/lib/date-picker'`
-- 配合插件 [babel-plugin-antd](https://github.com/rubix-design/babel-plugin-antd) 使用 `import { DatePicker } from 'antd';`
+- 配合插件 [babel-plugin-import](https://github.com/rubix-design/babel-plugin-import) 使用 `import { DatePicker } from 'antd';`
 
-> babel-plugin-antd 支持 js 和 css 同时按需加载。
+> babel-plugin-import 支持 js 和 css 同时按需加载。
 
 ## 版本
 
-- 稳定版：[![npm package](http://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
+- 稳定版：[![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
 - 开发版：[![](https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm)](https://www.npmjs.org/package/antd)
 
 ## 浏览器支持
 
-现代浏览器和 IE8 及以上。
+现代浏览器和 IE9 及以上。
 
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 
@@ -81,7 +81,7 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 - [设计规范速查手册](https://os.alipayobjects.com/rmsportal/HTXUgPGkyyxEivE.png)
 - [社区贡献脚手架和范例](https://github.com/rubix-design/rubix-design/issues/129)
 - [常见问题](https://github.com/rubix-design/rubix-design/wiki/FAQ)
-- [CodePen 模板](http://codepen.io/anon/pen/wGOWGW?editors=001)
+- [CodePen 模板](http://codepen.io/benjycui/pen/KgPZrE?editors=001)
 - [Awesome Ant Design](https://github.com/websemantics/awesome-rubix-design)
 
 ## 谁在使用

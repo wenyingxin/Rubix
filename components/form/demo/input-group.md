@@ -14,7 +14,7 @@ title:
 Input group of different type input controls.
 
 ````jsx
-import { Form, Input, Select, Col } from 'rubix';
+import { Form, Input, Select, Col } from 'antd';
 const FormItem = Form.Item;
 const InputGroup = Input.Group;
 const Option = Select.Option;
@@ -56,7 +56,7 @@ ReactDOM.render(
     </FormItem>
 
     <FormItem
-      label="Please input your identity number"
+      label="Identity number"
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 16 }}
     >

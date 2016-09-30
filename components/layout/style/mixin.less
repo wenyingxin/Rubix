@@ -12,11 +12,11 @@
 
 .make-grid-columns() {
   .col(@index) {
-    @item: ~".rubix-col-@{index}, .rubix-col-xs-@{index}, .rubix-col-sm-@{index}, .rubix-col-md-@{index}, .rubix-col-lg-@{index}";
+    @item: ~".@{rubix-prefix}-col-@{index}, .@{rubix-prefix}-col-xs-@{index}, .@{rubix-prefix}-col-sm-@{index}, .@{rubix-prefix}-col-md-@{index}, .@{rubix-prefix}-col-lg-@{index}";
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) {
-    @item: ~".rubix-col-@{index}, .rubix-col-xs-@{index}, .rubix-col-sm-@{index}, .rubix-col-md-@{index}, .rubix-col-lg-@{index}";
+    @item: ~".@{rubix-prefix}-col-@{index}, .@{rubix-prefix}-col-xs-@{index}, .@{rubix-prefix}-col-sm-@{index}, .@{rubix-prefix}-col-md-@{index}, .@{rubix-prefix}-col-lg-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) {
@@ -33,11 +33,11 @@
 
 .float-grid-columns(@class) {
   .col(@index) { // initial
-    @item: ~".rubix-col@{class}-@{index}";
+    @item: ~".@{rubix-prefix}-col@{class}-@{index}";
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) { // general
-    @item: ~".rubix-col@{class}-@{index}";
+    @item: ~".@{rubix-prefix}-col@{class}-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) { // terminal
@@ -51,33 +51,33 @@
 
 // lesshint false
 .loop-grid-columns(@index, @class) when (@index > 0) {
-  .rubix-col@{class}-@{index} {
+  .@{rubix-prefix}-col@{class}-@{index} {
     display: block;
     width: percentage((@index / @grid-columns));
   }
-  .rubix-col@{class}-push-@{index} {
+  .@{rubix-prefix}-col@{class}-push-@{index} {
     left: percentage((@index / @grid-columns));
   }
-  .rubix-col@{class}-pull-@{index} {
+  .@{rubix-prefix}-col@{class}-pull-@{index} {
     right: percentage((@index / @grid-columns));
   }
-  .rubix-col@{class}-offset-@{index} {
+  .@{rubix-prefix}-col@{class}-offset-@{index} {
     margin-left: percentage((@index / @grid-columns));
   }
-  .rubix-col@{class}-order-@{index} {
+  .@{rubix-prefix}-col@{class}-order-@{index} {
     order: @index;
   }
   .loop-grid-columns((@index - 1), @class);
 }
 
 .loop-grid-columns(@index, @class) when (@index = 0) {
-  .rubix-col@{class}-@{index} {
+  .@{rubix-prefix}-col@{class}-@{index} {
     display: none;
   }
-  .rubix-col-push-@{index} {
+  .@{rubix-prefix}-col-push-@{index} {
     left: auto;
   }
-  .rubix-col-pull-@{index} {
+  .@{rubix-prefix}-col-pull-@{index} {
     right: auto;
   }
 }

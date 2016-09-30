@@ -14,7 +14,7 @@ title:
 Tab can be slide to left or right, which is used for a lot of tabs. 
 
 ````jsx
-import { Tabs } from 'rubix';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

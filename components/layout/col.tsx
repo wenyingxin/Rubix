@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { PropTypes } from 'react';
 import classNames from 'classnames';
 import assign from 'object-assign';
@@ -7,7 +7,7 @@ import splitObject from '../_util/splitObject';
 const stringOrNumber = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
 const objectOrNumber = PropTypes.oneOfType([PropTypes.object, PropTypes.number]);
 
-interface ColSize {
+export interface ColSize {
   span?: number;
   order?: number;
   offset?: number;
@@ -22,15 +22,17 @@ export interface ColProps {
   offset?: number;
   push?: number;
   pull?: number;
-  xs?: ColSize;
-  sm?: ColSize;
-  md?: ColSize;
-  lg?: ColSize;
+  xs?: number | ColSize;
+  sm?: number | ColSize;
+  md?: number | ColSize;
+  lg?: number | ColSize;
+  prefixCls?: string;
+  style?: React.CSSProperties;
 }
 
 const Col: React.StatelessComponent<ColProps> = (props) => {
-  const [{ span, order, offset, push, pull, className, children }, others] = splitObject(props,
-    ['span', 'order', 'offset', 'push', 'pull', 'className', 'children']);
+  const [{ span, order, offset, push, pull, className, children, prefixCls = 'rubix-col' }, others] = splitObject(props,
+    ['span', 'order', 'offset', 'push', 'pull', 'className', 'children', 'prefixCls']);
   let sizeClassObj = {};
   ['xs', 'sm', 'md', 'lg'].forEach(size => {
     let sizeProps: ColSize = {};
@@ -43,19 +45,19 @@ const Col: React.StatelessComponent<ColProps> = (props) => {
     delete others[size];
 
     sizeClassObj = assign({}, sizeClassObj, {
-      [`rubix-col-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
-      [`rubix-col-${size}-order-${sizeProps.order}`]: sizeProps.order,
-      [`rubix-col-${size}-offset-${sizeProps.offset}`]: sizeProps.offset,
-      [`rubix-col-${size}-push-${sizeProps.push}`]: sizeProps.push,
-      [`rubix-col-${size}-pull-${sizeProps.pull}`]: sizeProps.pull,
+      [`${prefixCls}-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
+      [`${prefixCls}-${size}-order-${sizeProps.order}`]: sizeProps.order,
+      [`${prefixCls}-${size}-offset-${sizeProps.offset}`]: sizeProps.offset,
+      [`${prefixCls}-${size}-push-${sizeProps.push}`]: sizeProps.push,
+      [`${prefixCls}-${size}-pull-${sizeProps.pull}`]: sizeProps.pull,
     });
   });
   const classes = classNames(assign({}, {
-    [`rubix-col-${span}`]: span !== undefined,
-    [`rubix-col-order-${order}`]: order,
-    [`rubix-col-offset-${offset}`]: offset,
-    [`rubix-col-push-${push}`]: push,
-    [`rubix-col-pull-${pull}`]: pull,
+    [`${prefixCls}-${span}`]: span !== undefined,
+    [`${prefixCls}-order-${order}`]: order,
+    [`${prefixCls}-offset-${offset}`]: offset,
+    [`${prefixCls}-push-${push}`]: push,
+    [`${prefixCls}-pull-${pull}`]: pull,
     [className]: !!className,
   }, sizeClassObj));
 

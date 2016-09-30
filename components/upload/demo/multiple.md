@@ -15,7 +15,7 @@ title:
 You can select multiple files with CTRL holding down. `IE10+` supported.
 
 ````jsx
-import { Upload, message, Button, Icon } from 'rubix';
+import { Upload, message, Button, Icon } from 'antd';
 
 const props = {
   action: '/upload.do',

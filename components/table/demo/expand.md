@@ -14,7 +14,7 @@ title:
 When there's too much information to show and the table can't display all at once.
 
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 
 const columns = [
   { title: '姓名', dataIndex: 'name', key: 'name' },
@@ -30,7 +30,8 @@ const data = [
 ];
 
 ReactDOM.render(
-  <Table columns={columns}
+  <Table
+    columns={columns}
     expandedRowRender={record => <p>{record.description}</p>}
     dataSource={data}
     className="table"

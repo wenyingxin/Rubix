@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import splitObject from '../_util/splitObject';
 
-interface CardProps {
+export interface CardProps {
   title?: React.ReactNode;
   extra?: React.ReactNode;
   bordered?: boolean;
@@ -10,6 +10,7 @@ interface CardProps {
   style?: React.CSSProperties;
   loading?: boolean;
   children?: any;
+  id?: string;
 }
 
 export default (props: CardProps) => {

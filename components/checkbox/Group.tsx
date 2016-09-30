@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Checkbox from './index';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
@@ -19,6 +19,7 @@ export interface CheckboxGroupProps {
   onChange?: (checkedValue: Array<string>) => void;
   disabled?: boolean;
   style?: React.CSSProperties;
+  prefixCls?: string;
 }
 
 export interface CheckboxGroupState {
@@ -28,8 +29,8 @@ export interface CheckboxGroupState {
 export default class CheckboxGroup extends React.Component<CheckboxGroupProps, CheckboxGroupState> {
   static defaultProps = {
     options: [],
-    defaultValue: [],
     onChange() {},
+    prefixCls: 'rubix-checkbox-group',
   };
   static propTypes = {
     defaultValue: React.PropTypes.array,
@@ -39,13 +40,9 @@ export default class CheckboxGroup extends React.Component<CheckboxGroupProps, C
   };
   constructor(props) {
     super(props);
-    let value;
-    if ('value' in props) {
-      value = props.value || [];
-    } else if ('defaultValue' in props) {
-      value = props.defaultValue || [];
-    }
-    this.state = { value };
+    this.state = {
+      value: props.value || props.defaultValue || [],
+     };
   }
   componentWillReceiveProps(nextProps) {
     if ('value' in nextProps) {
@@ -84,15 +81,16 @@ export default class CheckboxGroup extends React.Component<CheckboxGroupProps, C
     this.props.onChange(value);
   }
   render() {
+    const { prefixCls } = this.props;
     const options = this.getOptions();
     return (
-      <div className="rubix-checkbox-group">
+      <div className={prefixCls}>
         {
           options.map(option =>
             <Checkbox disabled={'disabled' in option ? option.disabled : this.props.disabled}
               checked={this.state.value.indexOf(option.value) !== -1}
               onChange={() => this.toggleOption(option)}
-              className="rubix-checkbox-group-item" key={option.value}
+              className={`${prefixCls}-item`} key={option.value}
             >
               {option.label}
             </Checkbox>

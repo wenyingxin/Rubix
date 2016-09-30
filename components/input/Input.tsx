@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import calculateNodeHeight from './calculateNodeHeight';
 import assign from 'object-assign';
-import omit from 'object.omit';
+import omit from 'omit.js';
 
 function fixControlledValue(value) {
   if (typeof value === 'undefined' || value === null) {
@@ -27,7 +27,7 @@ function clearNextFrameAction(nextFrameId) {
   }
 }
 
-interface AutoSizeType {
+export interface AutoSizeType {
   minRows?: number;
   maxRows?: number;
 };
@@ -35,7 +35,7 @@ interface AutoSizeType {
 export interface InputProps {
   prefixCls?: string;
   className?: string;
-  type: string;
+  type?: string;
   id?: number | string;
   value?: any;
   defaultValue?: any;
@@ -51,6 +51,8 @@ export interface InputProps {
   onClick?: React.FormEventHandler;
   onBlur?: React.FormEventHandler;
   autosize?: boolean | AutoSizeType;
+  autoComplete?: 'on' | 'off';
+  style?: React.CSSProperties;
 }
 
 export default class Input extends Component<InputProps, any> {

@@ -3,8 +3,8 @@
 @import "../../checkbox/style/mixin";
 @import "./mixin";
 
-@tree-prefix-cls: rubix-tree;
-.antCheckboxFn(@checkbox-prefix-cls: rubix-tree-checkbox);
+@tree-prefix-cls: ~"@{rubix-prefix}-tree";
+.antCheckboxFn(@checkbox-prefix-cls: ~"@{rubix-prefix}-tree-checkbox");
 
 .@{tree-prefix-cls} {
   margin: 0;

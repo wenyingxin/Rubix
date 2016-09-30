@@ -1,29 +1,30 @@
+import React from 'react';
 import { PropTypes } from 'react';
-import * as React from 'react';
-import TimePickerPanel from 'rc-time-picker/lib/module/Panel';
-import DateTimeFormat from 'gregorian-calendar-format';
-import GregorianCalendar from 'gregorian-calendar';
+import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import classNames from 'classnames';
 import defaultLocale from './locale/zh_CN';
 import assign from 'object-assign';
+import warning from 'warning';
 
 export default function wrapPicker(Picker, defaultFormat?) {
   const PickerWrapper = React.createClass({
     getDefaultProps() {
       return {
-        format: defaultFormat || 'yyyy-MM-dd',
+        format: defaultFormat || 'YYYY-MM-DD',
         transitionName: 'slide-up',
         popupStyle: {},
         onChange() {
         },
         onOk() {
         },
-        toggleOpen() {
+        onOpenChange() {
         },
         locale: {},
         align: {
           offset: [0, -9],
         },
+        prefixCls: 'rubix-calendar',
+        inputPrefixCls: 'rubix-input',
       };
     },
 
@@ -33,8 +34,8 @@ export default function wrapPicker(Picker, defaultFormat?) {
 
     getLocale() {
       const props = this.props;
-      let locale = defaultLocale;
       const context = this.context;
+      let locale = defaultLocale;
       if (context.antLocale && context.antLocale.DatePicker) {
         locale = context.antLocale.DatePicker;
       }
@@ -44,56 +45,52 @@ export default function wrapPicker(Picker, defaultFormat?) {
       return result;
     },
 
-    getFormatter() {
-      const format = this.props.format;
-      const formatter = new DateTimeFormat(format as string, this.getLocale().lang.format);
-      return formatter;
-    },
+    handleOpenChange(open) {
+      const { onOpenChange, toggleOpen } = this.props;
+      onOpenChange(open);
 
-    parseDateFromValue(value) {
-      if (value) {
-        if (typeof value === 'string') {
-          return this.getFormatter().parse(value, {locale: this.getLocale()});
-        } else if (value instanceof Date) {
-          let date = new GregorianCalendar(this.getLocale());
-          date.setTime(+value);
-          return date;
-        }
+      if (toggleOpen) {
+        warning(
+          false,
+          '`toggleOpen` is deprecated and will be removed in the future, ' +
+          'please use `onOpenChange` instead'
+        );
+        toggleOpen({open});
       }
-      return value;
-    },
-
-    toggleOpen ({open}) {
-      this.props.toggleOpen({open});
     },
 
     render() {
       const props = this.props;
+      const { prefixCls, inputPrefixCls } = props;
       const pickerClass = classNames({
-        'rubix-calendar-picker': true,
+        [`${prefixCls}-picker`]: true,
       });
       const pickerInputClass = classNames({
-        'rubix-calendar-range-picker': true,
-        'rubix-input': true,
-        'rubix-input-lg': props.size === 'large',
-        'rubix-input-sm': props.size === 'small',
+        [`${prefixCls}-range-picker`]: true,
+        [inputPrefixCls]: true,
+        [`${inputPrefixCls}-lg`]: props.size === 'large',
+        [`${inputPrefixCls}-sm`]: props.size === 'small',
       });
 
       const locale = this.getLocale();
 
-      const timeFormat = props.showTime && props.showTime.format;
+      const timeFormat = (props.showTime && props.showTime.format) || 'HH:mm:ss';
       const rcTimePickerProps = {
-        formatter: new DateTimeFormat(timeFormat || 'HH:mm:ss', locale.timePickerLocale.format),
-        showSecond: timeFormat && timeFormat.indexOf('ss') >= 0,
-        showHour: timeFormat && timeFormat.indexOf('HH') >= 0,
+        format: timeFormat,
+        showSecond: timeFormat.indexOf('ss') >= 0,
+        showHour: timeFormat.indexOf('HH') >= 0,
       };
+      const timePickerCls = classNames({
+        [`${prefixCls}-time-picker-1-column`]: !(rcTimePickerProps.showSecond || rcTimePickerProps.showHour),
+        [`${prefixCls}-time-picker-2-columns`]: rcTimePickerProps.showSecond !== rcTimePickerProps.showHour,
+      });
       const timePicker = props.showTime ? (
         <TimePickerPanel
           {...rcTimePickerProps}
           {...props.showTime}
-          prefixCls="rubix-calendar-time-picker"
+          prefixCls={`${prefixCls}-time-picker`}
+          className={timePickerCls}
           placeholder={locale.timePickerLocale.placeholder}
-          locale={locale.timePickerLocale}
           transitionName="slide-up"
         />
       ) : null;
@@ -105,9 +102,7 @@ export default function wrapPicker(Picker, defaultFormat?) {
           pickerInputClass={pickerInputClass}
           locale={locale}
           timePicker={timePicker}
-          toggleOpen={this.toggleOpen}
-          getFormatter={this.getFormatter}
-          parseDateFromValue={this.parseDateFromValue}
+          onOpenChange={this.handleOpenChange}
         />
       );
     },

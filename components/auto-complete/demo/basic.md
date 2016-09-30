@@ -14,7 +14,7 @@ title:
 Basic Usage, set datasource of autocomplete with `dataSource` property.
 
 ````jsx
-import { AutoComplete } from 'rubix';
+import { AutoComplete } from 'antd';
 
 const Complete = React.createClass({
   getInitialState() {
@@ -24,7 +24,7 @@ const Complete = React.createClass({
   },
   handleChange(value) {
     this.setState({
-      dataSource: [
+      dataSource: !value ? [] : [
         value,
         value + value,
         value + value + value,
@@ -33,11 +33,13 @@ const Complete = React.createClass({
   },
   render() {
     const { dataSource } = this.state;
-    return (<AutoComplete
-      dataSource={dataSource}
-      style={{ width: 200 }}
-      onChange={this.handleChange}
-    />);
+    return (
+      <AutoComplete
+        dataSource={dataSource}
+        style={{ width: 200 }}
+        onChange={this.handleChange}
+      />
+    );
   },
 });
 

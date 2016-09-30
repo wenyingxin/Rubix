@@ -14,7 +14,7 @@ title:
 Basic validation for form.
 
 ````jsx
-import { Button, Form, Input } from 'rubix';
+import { Button, Form, Input } from 'antd';
 const createForm = Form.create;
 const FormItem = Form.Item;
 
@@ -78,7 +78,7 @@ let BasicDemo = React.createClass({
       wrapperCol: { span: 12 },
     };
     return (
-      <Form horizontal form={this.props.form}>
+      <Form horizontal>
         <FormItem
           {...formItemLayout}
           label="User name"

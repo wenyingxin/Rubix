@@ -1,12 +1,12 @@
 ---
 category: Components
 type: Views
-english: Badge
+title: Badge
 ---
 
 Small numerical value or status descriptors for UI elements.
 
-## When to use
+## When To Use
 
 Badge normally appears in proximity to notification or head picture with eye-catching appeal, typically displaying unread messages count.
 

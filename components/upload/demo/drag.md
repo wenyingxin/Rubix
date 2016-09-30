@@ -1,6 +1,6 @@
 ---
 order: 3
-title: 
+title:
   zh-CN: 拖拽上传
   en-US: Upload files by dragging and dropping
 ---
@@ -15,7 +15,7 @@ You can drag files to a specific area, to upload. Meanwhile you can also upload 
 
 
 ````jsx
-import { Upload, Icon, message } from 'rubix';
+import { Upload, Icon, message } from 'antd';
 const Dragger = Upload.Dragger;
 
 const props = {
@@ -27,9 +27,9 @@ const props = {
       console.log(info.file, info.fileList);
     }
     if (info.file.status === 'done') {
-      message.success(`${info.file.name} 上传成功。`);
+      message.success(`${info.file.name} file uploaded successfully.`);
     } else if (info.file.status === 'error') {
-      message.error(`${info.file.name} 上传失败。`);
+      message.error(`${info.file.name} file upload failed.`);
     }
   },
 };

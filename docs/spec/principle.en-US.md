@@ -1,5 +1,5 @@
 ---
-category: 十大原则
+category: Principles
 order: 0
 title: Introduction
 ---
@@ -13,34 +13,34 @@ After referring to the summary and reasoning of design principles from The Non-D
 ---
 
 <div class="resource-cards">
-<a target="_blank" href="http://book.douban.com/subject/3323633/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/SNdJVyZaZwdwJmr.png">
+<a target="_blank" href="http://www.peachpit.com/store/non-designers-design-book-9780133966152" class="resource-card">
+  <img src="http://www.peachpit.com/ShowCover.aspx?isbn=9780133966152&type=f">
   <span class="resource-card-content">
-    <span class="resource-card-title">写给大家看的设计书</span>
-    <span class="resource-card-description">作者: Robin Williams</span>
-    <span class="resource-card-description">出版社: 人民邮电出版社</span>
+    <span class="resource-card-title">Non-Designer's Design Book</span>
+    <span class="resource-card-description">Author: Robin Williams</span>
+    <span class="resource-card-description">Publisher: Peachpit Press</span>
   </span>
 </a>
-<a target="_blank" href="http://book.douban.com/subject/3821157/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/CoojVXLtoWrUSmI.png">
+<a target="_blank" href="http://shop.oreilly.com/product/9780596516253.do" class="resource-card">
+  <img src="http://akamaicovers.oreilly.com/images/9780596516253/cat.gif">
   <span class="resource-card-content">
-    <span class="resource-card-title">Web 界面设计</span>
-    <span class="resource-card-description">作者: Bill Scott / Theresa Neil</span>
-    <span class="resource-card-description">出版社: 电子工业出版社</span>
+    <span class="resource-card-title">Designing Web Interfaces</span>
+    <span class="resource-card-description">Author: Bill Scott, Theresa Neil</span>
+    <span class="resource-card-description">Publisher: O'Reilly Media</span>
   </span>
 </a>
 </div>
 
-#### Ant Design 十大设计原则
+#### Ant Design Principles
 
-- [亲密性 Proximity](/docs/spec/proximity)
-- [对齐 Alignment](/docs/spec/alignment)
-- [对比 Contrast](/docs/spec/contrast)
-- [重复 Repetition](/docs/spec/repetition)
-- [直截了当 Make it Direct](/docs/spec/direct)
-- [简化交互 Keep it Lightweight](/docs/spec/lightweight)
-- [足不出户 Stay on the Page](/docs/spec/stay)
-- [提供邀请 Provide Invitation](/docs/spec/invitation)
-- [巧用过渡 Use Transition](/docs/spec/transition)
-- [即时反应 React Immediately](/docs/spec/reaction)
+- [Proximity](/docs/spec/proximity)
+- [Alignment](/docs/spec/alignment)
+- [Contrast](/docs/spec/contrast)
+- [Repetition](/docs/spec/repetition)
+- [Make it Direct](/docs/spec/direct)
+- [Keep it Lightweight](/docs/spec/lightweight)
+- [Stay on the Page](/docs/spec/stay)
+- [Provide Invitation](/docs/spec/invitation)
+- [Use Transition](/docs/spec/transition)
+- [React Immediately](/docs/spec/reaction)
 

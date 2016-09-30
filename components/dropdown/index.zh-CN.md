@@ -1,8 +1,8 @@
 ---
 category: Components
-chinese: 下拉菜单
+subtitle: 下拉菜单
 type: Views
-english: Dropdown
+title: Dropdown
 ---
 
 向下弹出的列表。
@@ -27,7 +27,7 @@ english: Dropdown
 
 > 注意： Menu.Item 必须设置唯一的 key 属性。
 
-### DropdownButton
+### Dropdown.Button
 
 | 参数        | 说明             | 类型               | 默认值       |
 |-------------|------------------|--------------------|--------------|

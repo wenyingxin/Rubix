@@ -14,7 +14,7 @@ title:
 Set props to Checkbox or Radio.
 
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 
 const columns = [{
   title: '姓名',

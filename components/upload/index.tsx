@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import RcUpload from 'rc-upload';
 import UploadList from './uploadList';
 import getFileItem from './getFileItem';
 import classNames from 'classnames';
-const prefixCls = 'rubix-upload';
 import assign from 'object-assign';
 import { UploadProps } from './interface';
 
@@ -65,7 +64,7 @@ export default class Upload extends React.Component<UploadProps, any> {
   static Dragger = Dragger;
 
   static defaultProps = {
-    prefixCls: 'rubix-upload-btn',
+    prefixCls: 'rubix-upload',
     type: 'select',
     // do not set
     // name: '',
@@ -97,10 +96,6 @@ export default class Upload extends React.Component<UploadProps, any> {
   }
 
   onStart = (file) => {
-    if (this.recentUploadStatus === false) {
-      return;
-    }
-
     let targetItem;
     let nextFileList = this.state.fileList.concat();
     if (file.length > 0) {
@@ -198,11 +193,6 @@ export default class Upload extends React.Component<UploadProps, any> {
     this.handleRemove(targetItem);
   }
 
-  beforeUpload = (file) => {
-    this.recentUploadStatus = this.props.beforeUpload(file);
-    return this.recentUploadStatus;
-  }
-
   handleRemove(file) {
     let fileList = this.removeFile(file);
     if (fileList) {
@@ -249,13 +239,14 @@ export default class Upload extends React.Component<UploadProps, any> {
   }
 
   render() {
+    const { prefixCls } = this.props;
     let type = this.props.type || 'select';
     let props = assign({}, this.props, {
       onStart: this.onStart,
       onError: this.onError,
       onProgress: this.onProgress,
       onSuccess: this.onSuccess,
-      beforeUpload: this.beforeUpload,
+      beforeUpload: this.props.beforeUpload,
     });
     let uploadList;
     if (this.props.showUploadList) {
@@ -283,7 +274,7 @@ export default class Upload extends React.Component<UploadProps, any> {
             onDragOver={this.onFileDrop}
             onDragLeave={this.onFileDrop}
           >
-            <RcUpload {...props} ref="upload">
+            <RcUpload {...props} ref="upload" className={`${prefixCls}-btn`}>
               <div className={`${prefixCls}-drag-container`}>
                 {this.props.children}
               </div>

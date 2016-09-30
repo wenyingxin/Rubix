@@ -5,7 +5,7 @@
 @import "../../layout/style/mixin";
 @import "./mixin";
 
-@form-prefix-cls: rubix-form;
+@form-prefix-cls: ~"@{rubix-prefix}-form";
 
 .reset-form();
 
@@ -38,10 +38,10 @@ input[type="checkbox"] {
 }
 
 // These classes are used directly on <label>s
-.rubix-radio-inline,
-.rubix-radio-vertical,
-.rubix-checkbox-inline,
-.rubix-checkbox-vertical {
+.@{rubix-prefix}-radio-inline,
+.@{rubix-prefix}-radio-vertical,
+.@{rubix-prefix}-checkbox-inline,
+.@{rubix-prefix}-checkbox-vertical {
   &.disabled,
   fieldset[disabled] & {
     cursor: @cursor-disabled;
@@ -49,8 +49,8 @@ input[type="checkbox"] {
 }
 
 // These classes are used on elements with <label> descendants
-.rubix-radio,
-.rubix-checkbox {
+.@{rubix-prefix}-radio,
+.@{rubix-prefix}-checkbox {
   &.disabled,
   fieldset[disabled] & {
     label {
@@ -79,7 +79,7 @@ input[type="checkbox"] {
   }
 
   &-with-help {
-    margin-bottom: @form-item-margin-bottom - @font-size-base * @line-height-base - 3;
+    margin-bottom: @form-item-margin-bottom - @font-size-base * @line-height-base;
   }
 
   &-label {
@@ -100,7 +100,7 @@ input[type="checkbox"] {
     }
   }
 
-  .rubix-switch {
+  .@{rubix-prefix}-switch {
     margin: 4px 0;
   }
 
@@ -111,7 +111,6 @@ input[type="checkbox"] {
 
 .@{form-prefix-cls}-explain {
   line-height: 1.5;
-  margin-top: 3px;
 }
 
 .@{form-prefix-cls}-explain,
@@ -132,17 +131,17 @@ input[type="checkbox"] {
 // 表单下的输入框尺寸唯一: 大尺寸
 form {
   .has-feedback {
-    .rubix-input {
+    .@{rubix-prefix}-input {
       padding-right: 24px;
     }
   }
 
-  textarea.rubix-input {
+  textarea.@{rubix-prefix}-input {
     height: auto;
   }
 
   // input[type=file]
-  .rubix-upload {
+  .@{rubix-prefix}-upload {
     background: transparent;
   }
 
@@ -153,8 +152,8 @@ form {
   }
 
   // Radios and checkboxes on same line
-  .rubix-radio-inline,
-  .rubix-checkbox-inline {
+  .@{rubix-prefix}-radio-inline,
+  .@{rubix-prefix}-checkbox-inline {
     display: inline-block;
     vertical-align: middle;
     font-weight: normal;
@@ -166,30 +165,30 @@ form {
     }
   }
 
-  .rubix-checkbox-vertical,
-  .rubix-radio-vertical {
+  .@{rubix-prefix}-checkbox-vertical,
+  .@{rubix-prefix}-radio-vertical {
     display: block;
   }
 
-  .rubix-checkbox-vertical + .rubix-checkbox-vertical,
-  .rubix-radio-vertical + .rubix-radio-vertical {
+  .@{rubix-prefix}-checkbox-vertical + .@{rubix-prefix}-checkbox-vertical,
+  .@{rubix-prefix}-radio-vertical + .@{rubix-prefix}-radio-vertical {
     margin-left: 0;
   }
 
-  .rubix-input-number {
+  .@{rubix-prefix}-input-number {
     margin-top: -1px;
     margin-right: 8px;
   }
 
-  .rubix-select,
-  .rubix-cascader-picker {
+  .@{rubix-prefix}-select,
+  .@{rubix-prefix}-cascader-picker {
     width: 100%;
   }
 }
 
 // Input combined with select
-.rubix-input-group-wrap {
-  .rubix-select-selection {
+.@{rubix-prefix}-input-group-wrap {
+  .@{rubix-prefix}-select-selection {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     &:hover {
@@ -197,18 +196,18 @@ form {
     }
   }
 
-  .rubix-select-selection--single {
+  .@{rubix-prefix}-select-selection--single {
     margin-left: -1px;
     height: @input-height-lg;
     background-color: #eee;
-    .rubix-select-selection__rendered {
+    .@{rubix-prefix}-select-selection__rendered {
       padding-left: 8px;
       padding-right: 25px;
       line-height: 30px;
     }
   }
 
-  .rubix-select-open .rubix-select-selection {
+  .@{rubix-prefix}-select-open .@{rubix-prefix}-select-selection {
     border-color: @border-color-base;
     box-shadow: none;
   }
@@ -221,8 +220,8 @@ form {
     .make-row;
   }
 
-  .rubix-radio-inline,
-  .rubix-checkbox-inline {
+  .@{rubix-prefix}-radio-inline,
+  .@{rubix-prefix}-checkbox-inline {
     vertical-align: baseline;
   }
 }
@@ -317,13 +316,13 @@ form {
 }
 
 .has-success {
-  .rubix-input {
+  .@{rubix-prefix}-input {
     border-color: @input-border-color;
     box-shadow: none;
   }
 
   &.has-feedback:after {
-    content: '\e62f';
+    content: '\e630';
     color: @success-color;
   }
 }
@@ -332,12 +331,12 @@ form {
   .form-control-validation(@warning-color; @warning-color;);
 
   &.has-feedback:after {
-    content: '\e634';
+    content: '\e62c';
     color: @warning-color;
   }
 
   //select
-  .rubix-select {
+  .@{rubix-prefix}-select {
     &-selection {
       border-color: @warning-color;
       .active(@warning-color);
@@ -348,17 +347,18 @@ form {
   }
 
   //datepicker
-  .rubix-calendar-picker-icon:after {
+  .@{rubix-prefix}-calendar-picker-icon:after {
     color: @warning-color;
   }
 
   //timepicker
-  .rubix-time-picker-icon:after {
+  .@{rubix-prefix}-time-picker-icon:after {
     color: @warning-color;
   }
 
-  //input-number
-  .rubix-input-number {
+  //input-number, timepicker
+  .@{rubix-prefix}-input-number,
+  .@{rubix-prefix}-time-picker-input {
     border-color: @warning-color;
     .active(@warning-color);
     &:not([disabled]):hover {
@@ -371,12 +371,12 @@ form {
   .form-control-validation(@error-color; @error-color;);
 
   &.has-feedback:after {
-    content: '\e631';
+    content: '\e62e';
     color: @error-color;
   }
 
   //select
-  .rubix-select {
+  .@{rubix-prefix}-select {
     &-selection {
       border-color: @error-color;
       .active(@error-color);
@@ -388,26 +388,27 @@ form {
   }
 
   //datepicker
-  .rubix-calendar-picker-icon:after {
+  .@{rubix-prefix}-calendar-picker-icon:after {
     color: @error-color;
   }
 
   //timepicker
-  .rubix-time-picker-picker-icon:after {
+  .@{rubix-prefix}-picker-icon:after {
     color: @error-color;
   }
 
-  //input-number
-  .rubix-input-number {
+  //input-number, timepicker
+  .@{rubix-prefix}-input-number,
+  .@{rubix-prefix}-time-picker-input {
     border-color: @error-color;
     .active(@error-color);
     &:not([disabled]):hover {
       border-color: @error-color;
     }
   }
-  .rubix-mention-wrapper,
-  .rubix-mention-wrapper.active {
-    .rubix-mention-editor {
+  .@{rubix-prefix}-mention-wrapper,
+  .@{rubix-prefix}-mention-wrapper.active {
+    .@{rubix-prefix}-mention-editor {
       border-color: @error-color;
       .active(@error-color);
       &:not([disabled]):hover,
@@ -423,18 +424,18 @@ form {
   &.has-feedback:after {
     display: inline-block;
     animation: loadingCircle 1s infinite linear;
-    content: "\e6a1";
+    content: "\e6ae";
     color: #999;
   }
 }
 
-.rubix-advanced-search-form {
+.@{rubix-prefix}-advanced-search-form {
   .@{form-prefix-cls}-item {
     margin-bottom: 16px;
   }
-  .rubix-input,
-  .rubix-input-group .rubix-input,
-  .rubix-input-group .rubix-input-group-addon {
+  .@{rubix-prefix}-input,
+  .@{rubix-prefix}-input-group .@{rubix-prefix}-input,
+  .@{rubix-prefix}-input-group .@{rubix-prefix}-input-group-addon {
     height: 28px;
   }
 }

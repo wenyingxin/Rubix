@@ -1,7 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import Tooltip from '../tooltip';
 import getPlacements from './placements';
-import warning from 'warning';
 const placements = getPlacements();
 export default class Popover extends React.Component {
     render() {
@@ -12,19 +11,12 @@ export default class Popover extends React.Component {
     getPopupDomNode() {
         return this.refs.tooltip.getPopupDomNode();
     }
-    componentDidMount() {
-        if ('overlay' in this.props) {
-            warning(false, '`overlay` prop of Popover is deprecated, use `content` instead.');
-        }
-    }
     getOverlay() {
-        // use content replace overlay
-        // keep overlay for compatibility
-        const { title, prefixCls, overlay, content } = this.props;
+        const { title, prefixCls, content } = this.props;
         return (<div>
         {title && <div className={`${prefixCls}-title`}>{title}</div>}
         <div className={`${prefixCls}-inner-content`}>
-          {content || overlay}
+          {content}
         </div>
       </div>);
     }

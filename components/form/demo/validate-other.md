@@ -14,7 +14,7 @@ title:
 Provide validation for following input filed: `Select` `Radio` `DatePicker` `InputNumber` `Cascader`. To use `validateFieldsAndScroll` with form validation, it will scroll the form to the failed input field which is not in visible area.
 
 ````jsx
-import { Select, Radio, Checkbox, Button, DatePicker, TimePicker, InputNumber, Form, Cascader, Icon } from 'rubix';
+import { Select, Radio, Checkbox, Button, DatePicker, TimePicker, InputNumber, Form, Cascader, Icon } from 'antd';
 const Option = Select.Option;
 const RadioGroup = Radio.Group;
 const createForm = Form.create;
@@ -47,7 +47,7 @@ let Demo = React.createClass({
   },
 
   checkBirthday(rule, value, callback) {
-    if (value && value.getTime() >= Date.now()) {
+    if (value && value.valueOf() >= Date.now()) {
       callback(new Error("You can't be born in the future!"));
     } else {
       callback();
@@ -77,7 +77,7 @@ let Demo = React.createClass({
       wrapperCol: { span: 12 },
     };
     return (
-      <Form horizontal form={this.props.form}>
+      <Form horizontal>
         <FormItem
           {...formItemLayout}
           label="Country"
@@ -130,7 +130,7 @@ let Demo = React.createClass({
               <Radio value="female">female</Radio>
             </RadioGroup>
           )}
-          <span><Icon type="info-circle-o" /> Temporarily no other gender</span>
+          <span><Icon type="info-circle-o" /> No other gender</span>
         </FormItem>
 
         <FormItem
@@ -162,7 +162,7 @@ let Demo = React.createClass({
             rules: [
               {
                 required: true,
-                type: 'date',
+                type: 'object',
                 message: 'When is your birthday?',
               }, {
                 validator: this.checkBirthday,
@@ -178,9 +178,12 @@ let Demo = React.createClass({
           label="Select the time"
         >
           {getFieldDecorator('time', {
-            getValueFromEvent: (value, timeString) => timeString,
             rules: [
-              { required: true, message: 'Please select the time' },
+              {
+                required: true,
+                type: 'object',
+                message: 'Please select the time',
+              },
             ],
           })(
             <TimePicker />

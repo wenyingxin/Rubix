@@ -14,7 +14,7 @@ title:
 Support select half star.
 
 ````jsx
-import { Rate } from 'rubix';
+import { Rate } from 'antd';
 
 ReactDOM.render(<Rate allowHalf defaultValue={2.5} />, mountNode);
 ````

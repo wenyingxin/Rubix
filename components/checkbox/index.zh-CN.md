@@ -1,8 +1,8 @@
 ---
 category: Components
-chinese: 多选框
+subtitle: 多选框
 type: Form Controls
-english: Checkbox
+title: Checkbox
 ---
 
 多选框。
@@ -21,6 +21,7 @@ english: Checkbox
 | checked | 指定当前是否选中 | Boolean  | false |
 | defaultChecked | 初始是否选中 | Boolean | false |
 | onChange | 变化时回调函数 | Function(e:Event) | - |
+| indeterminate | 设置 indeterminate 状态，只负责样式控制 | Boolean | false |
 
 ### Checkbox Group
 

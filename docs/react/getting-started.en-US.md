@@ -45,7 +45,7 @@ A new project can be created using CLI tools.
 
 ```bash
 $ mkdir antd-demo && cd antd-demo
-$ antd-init --type plain-react
+$ antd-init
 ```
 
 `antd-init` will run `npm install` after a project is created. If it fails, you can run `npm install` by yourself.
@@ -55,7 +55,7 @@ $ antd-init --type plain-react
 By default, besides the scaffolding needed to start the development, a fully working Todo application is created.
 You may study this example later. For now, just follow this guide in order to get some experience working with the result of `antd-init`.
 
-Replace the content of `src/entries/index.js` with the following code.
+Replace the content of `index.js` with the following code.
 As you can see, there is no difference between antd's components and usual React components.
 
 ```jsx
@@ -91,7 +91,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 4. Development & Debugging
 
-Run your project and visit http://127.0.0.1:8989
+Run your project and visit http://127.0.0.1:8000
 
 ```bash
 $ npm start
@@ -110,7 +110,7 @@ Entry files will be built and generated in `dist` directory, then we can deploy 
 
 ## Compatibility
 
-Ant Design React supports all the modern browsers and IE8+.
+Ant Design React supports all the modern browsers and IE9+.
 
 But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) and other polyfills for IE8/9, and [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) is a better choice. What's more, use [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) to support IE8.
 
@@ -157,13 +157,13 @@ If we import a component like this `import { Button } from 'antd';`, then all th
 import Button from 'antd/lib/button';
 ```
 
-If you use `babel`, we recommend to use [babel-plugin-antd](https://github.com/rubix-design/babel-plugin-antd). This plugin will convert the following code to the above form:
+If you use `babel`, we recommend to use [babel-plugin-import](https://github.com/rubix-design/babel-plugin-import). This plugin will convert the following code to the above form:
 
 ```jsx
 import { Button } from 'antd';
 ```
 
-And this plugin can also load styles on demand. See the [usage](https://github.com/rubix-design/babel-plugin-antd#usage) for further details.
+And this plugin can also load styles on demand. See the [usage](https://github.com/rubix-design/babel-plugin-import#usage) for further details.
 
 ## Customization
 

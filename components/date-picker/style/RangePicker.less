@@ -1,6 +1,6 @@
 @input-box-height: 34px;
 
-.@{calendar-prefix-cls}-range-picker.rubix-input {
+.@{calendar-prefix-cls}-range-picker.@{rubix-prefix}-input {
   padding-right: 26px;
 }
 
@@ -75,11 +75,11 @@
   }
 
   &.@{calendar-prefix-cls}-time &-middle {
-    margin-left: -29px;
+    margin-left: -12px;
   }
 
   &.@{calendar-prefix-cls}-time &-right .@{calendar-prefix-cls}-date-input-wrap {
-    margin-left: -15px;
+    margin-left: 0;
   }
 
   .@{calendar-prefix-cls}-input-wrap {
@@ -104,13 +104,6 @@
   }
   .@{timepicker-prefix-cls}-icon {
     display: none;
-  }
-
-  .@{calendar-prefix-cls}-calendar-body,
-  .@{calendar-prefix-cls}-decade-panel-body,
-  .@{calendar-prefix-cls}-year-panel-body,
-  .@{calendar-prefix-cls}-month-panel-body {
-    border-bottom: 1px solid @border-color-split;
   }
 
   &.@{calendar-prefix-cls}-week-number {
@@ -159,7 +152,9 @@
     text-align: right;
   }
 
-  .@{calendar-prefix-cls} {
+  .@{calendar-prefix-cls},
+  .@{calendar-prefix-cls}-month-panel,
+  .@{calendar-prefix-cls}-year-panel {
     &-header {
       border-bottom: 0;
     }
@@ -172,7 +167,7 @@
     .@{timepicker-prefix-cls} {
       height: 207px;
       top: 68px;
-      z-index: 2; // in order to cover .rubix-calendar-range .rubix-calendar-in-range-cell > div (z-index: 1)
+      z-index: 2; // cover .rubix-calendar-range .rubix-calendar-in-range-cell > div (z-index: 1)
       &-panel {
         height: 241px;
         margin-top: -34px;

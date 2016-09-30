@@ -14,7 +14,7 @@ title:
 Basic Usage.
 
 ````jsx
-import { Select } from 'rubix';
+import { Select } from 'antd';
 const Option = Select.Option;
 
 function handleChange(value) {

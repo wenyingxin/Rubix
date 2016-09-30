@@ -1,6 +1,8 @@
 ---
 order: 1
-title: 异步加载
+title: 
+  zh-CN: 异步加载
+  en-US: Asynchronous loading
 ---
 
 ## zh-CN
@@ -12,7 +14,7 @@ title: 异步加载
 async
 
 ````jsx
-import { Mention } from 'rubix';
+import { Mention } from 'antd';
 
 const users = ['afc163', 'benjycui', 'yiminghe', 'jljsj33', 'dqaria', 'RaoHai'];
 const AsyncMention = React.createClass({

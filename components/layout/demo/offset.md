@@ -19,7 +19,7 @@ Column offset.
 
 
 ````jsx
-import { Row, Col } from 'rubix';
+import { Row, Col } from 'antd';
 
 ReactDOM.render(
   <div>

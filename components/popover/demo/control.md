@@ -14,7 +14,7 @@ title:
 Use `visible` prop to control the display of the card.
 
 ````jsx
-import { Popover, Button } from 'rubix';
+import { Popover, Button } from 'antd';
 
 const App = React.createClass({
   getInitialState() {
@@ -33,14 +33,14 @@ const App = React.createClass({
   render() {
     const content = (
       <div>
-        <a onClick={this.hide}>关闭卡片</a>
+        <a onClick={this.hide}>Close</a>
       </div>
     );
     return (
-      <Popover content={content} title="标题" trigger="click"
+      <Popover content={content} title="Title" trigger="click"
         visible={this.state.visible} onVisibleChange={this.handleVisibleChange}
       >
-        <Button type="primary">点击弹出卡片</Button>
+        <Button type="primary">Cilck me</Button>
       </Popover>
     );
   },

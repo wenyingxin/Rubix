@@ -1,6 +1,8 @@
 ---
 order: 2
-title: 自定义建议
+title: 
+  zh-CN: 自定义建议
+  en-US: Customize Suggestion
 ---
 
 ## zh-CN
@@ -14,7 +16,7 @@ title: 自定义建议
 Customize suggestions.
 
 ````jsx
-import { Mention } from 'rubix';
+import { Mention } from 'antd';
 const Nav = Mention.Nav;
 
 const webFrameworks = [

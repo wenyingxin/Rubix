@@ -2,12 +2,12 @@
 category: Components
 type: Views
 noinstant: true
-english: -tification
+title: Notification
 ---
 
 To display a notification message globally.
 
-## When to use
+## When To Use
 To display a notification message at the top right of the view port. Typically it can be
 used in the following cases:
 

@@ -3,9 +3,9 @@
 @import "../../tree/style/mixin";
 @import "../../checkbox/style/mixin";
 
-@select-tree-prefix-cls: rubix-select-tree;
+@select-tree-prefix-cls: ~"@{rubix-prefix}-select-tree";
 
-.antCheckboxFn(@checkbox-prefix-cls: rubix-select-tree-checkbox);
+.antCheckboxFn(@checkbox-prefix-cls: ~"@{rubix-prefix}-select-tree-checkbox");
 
 .@{select-tree-prefix-cls} {
   margin: 0;
@@ -115,14 +115,14 @@
   }
 }
 
-.@{select-tree-prefix-cls}-dropdown .rubix-select-dropdown-search + span {
+.@{select-tree-prefix-cls}-dropdown .@{rubix-prefix}-select-dropdown-search + span {
   padding: 7px 15px;
   color: #ccc;
   cursor: not-allowed;
   display: block;
 }
 
-.rubix-select-not-found {
+.@{rubix-prefix}-select-not-found {
   cursor: not-allowed;
   color: #ccc;
   padding: 7px 15px;

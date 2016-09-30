@@ -14,7 +14,7 @@ title:
 Small size can be used in Modal.
 
 ````jsx
-import { Tabs } from 'rubix';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

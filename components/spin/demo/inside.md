@@ -14,7 +14,7 @@ title:
 Spin in a container.
 
 ````jsx
-import { Spin } from 'rubix';
+import { Spin } from 'antd';
 
 ReactDOM.render(
   <div className="example">

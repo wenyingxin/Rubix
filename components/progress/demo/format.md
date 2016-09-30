@@ -14,12 +14,12 @@ title:
 You can custom text format by setting `format`.
 
 ````jsx
-import { Progress } from 'rubix';
+import { Progress } from 'antd';
 
 ReactDOM.render(
   <div>
-    <Progress type="circle" percent={75} format={percent => `${percent / 10.0}折`} />
-    <Progress type="circle" percent={100} format={() => '成功'} />
+    <Progress type="circle" percent={75} format={percent => `${percent}% Discount`} />
+    <Progress type="circle" percent={100} format={() => 'Complete'} />
   </div>
 , mountNode);
 ````

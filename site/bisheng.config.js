@@ -1,12 +1,12 @@
 const path = require('path');
+const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 
 function pickerGenerator(module) {
   const tester = new RegExp(`^docs/${module}`);
   return (markdownData) => {
     const filename = markdownData.meta.filename;
     if (tester.test(filename) &&
-        !/\/demo$/.test(path.dirname(filename)) &&
-        !/\.en-US\.md/.test(filename)) {
+        !/\/demo$/.test(path.dirname(filename))) {
       return {
         meta: markdownData.meta,
       };
@@ -19,7 +19,8 @@ module.exports = {
   source: [
     './components',
     './docs',
-    'CHANGELOG.md', // TODO: fix it in bisheng
+    'CHANGELOG.zh-CN.md', // TODO: fix it in bisheng
+    'CHANGELOG.en-US.md',
   ],
   lazyLoad(nodePath, nodeValue) {
     if (typeof nodeValue === 'string') {
@@ -31,15 +32,14 @@ module.exports = {
     components(markdownData) {
       const filename = markdownData.meta.filename;
       if (!/^components/.test(filename) ||
-          /\/demo$/.test(path.dirname(filename)) ||
-          /\.en-US\.md/.test(filename)) return;
+          /\/demo$/.test(path.dirname(filename))) return;
 
       return {
         meta: markdownData.meta,
       };
     },
     changelog(markdownData) {
-      if (markdownData.meta.filename === 'CHANGELOG.md') {
+      if (/CHANGELOG/.test(markdownData.meta.filename)) {
         return {
           meta: markdownData.meta,
         };
@@ -65,18 +65,27 @@ module.exports = {
   },
   webpackConfig(config) {
     config.resolve.alias = {
-      'rubix/lib': path.join(process.cwd(), 'components'),
-      rubix: process.cwd(),
+      'antd/lib': path.join(process.cwd(), 'components'),
+      antd: process.cwd(),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };
+    config.plugins.push(new CSSSplitWebpackPlugin({ preserve: true }));
 
     config.babel.plugins.push([
-      require.resolve('babel-plugin-antd'),
+      require.resolve('babel-plugin-transform-runtime'),
+      {
+        polyfill: false,
+        regenerator: true,
+      },
+    ]);
+
+    config.babel.plugins.push([
+      require.resolve('babel-plugin-import'),
       {
         style: true,
-        libraryName: 'rubix',
-        libDir: 'components',
+        libraryName: 'antd',
+        libraryDirectory: 'components',
       },
     ]);
 

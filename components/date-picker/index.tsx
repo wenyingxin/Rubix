@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import moment from 'moment';
 import assign from 'object-assign';
 import RcCalendar from 'rc-calendar';
 import MonthCalendar from 'rc-calendar/lib/MonthCalendar';
@@ -8,7 +9,7 @@ import RangePicker from './RangePicker';
 import Calendar from './Calendar';
 import { TimePickerProps } from '../time-picker';
 
-interface PickerProps {
+export interface PickerProps {
   format?: string;
   disabled?: boolean;
   style?: React.CSSProperties;
@@ -16,28 +17,34 @@ interface PickerProps {
   locale?: any;
   size?: 'large' | 'small' | 'default';
   getCalendarContainer?: (trigger) => React.ReactNode;
+  prefixCls?: string;
+  inputPrefixCls?: string;
 }
 
-interface SinglePickerProps {
-  value?: string | Date;
-  defaultValue?: string | Date;
-  onChange?: (date: Date, dateString: string) => void;
+export interface SinglePickerProps {
+  value?: moment.Moment;
+  defaultValue?: moment.Moment;
+  defaultPickerValue?: moment.Moment;
+  onChange?: (date: moment.Moment, dateString: string) => void;
 }
 
 export interface DatePickerProps extends PickerProps, SinglePickerProps {
-  showTime?: TimePickerProps;
+  showTime?: TimePickerProps | boolean;
+  open?: boolean;
+  toggleOpen?: (e: {open: boolean}) => void;
 }
 const DatePicker = wrapPicker(createPicker(RcCalendar)) as React.ClassicComponentClass<DatePickerProps>;
 
 export interface MonthPickerProps extends PickerProps, SinglePickerProps {
 }
-const MonthPicker = wrapPicker(createPicker(MonthCalendar), 'yyyy-MM') as React.ClassicComponentClass<MonthPickerProps>;
+const MonthPicker = wrapPicker(createPicker(MonthCalendar), 'YYYY-MM') as React.ClassicComponentClass<MonthPickerProps>;
 
 export interface RangePickerProps extends PickerProps {
-  value?: [string | Date, string | Date];
-  defaultValue?: [string | Date, string | Date];
-  onChange?: (dates: [Date, Date], dateStrings: [String, String]) => void;
-  showTime?: TimePickerProps;
+  value?: [moment.Moment, moment.Moment];
+  defaultValue?: [moment.Moment, moment.Moment];
+  defaultPickerValue?: [moment.Moment, moment.Moment];
+  onChange?: (dates: [moment.Moment, moment.Moment], dateStrings: [string, string]) => void;
+  showTime?: TimePickerProps | boolean;
 }
 
 assign(DatePicker, {

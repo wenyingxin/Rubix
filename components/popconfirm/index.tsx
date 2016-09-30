@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Tooltip from '../tooltip';
 import Icon from '../icon';
 import Button from '../button';
@@ -11,9 +11,10 @@ export interface PopconfirmProps {
   /**
    * Position of popup-container, options:`top`, `left`, `right`, `bottom`
    */
-  placement?: 'top' | 'left' | 'right' | 'bottom';
+  placement?: 'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' |
+   'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom';
   /** Description of Popconfirm */
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   /** Callback when confirm */
   onConfirm?: () => void;
   /** Callback when cancel */
@@ -30,6 +31,8 @@ export interface PopconfirmProps {
   /** Style of overlay */
   overlayStyle?: React.CSSProperties;
   prefixCls?: string;
+  openClassName?: string;
+  arrowPointAtCenter?: boolean;
 }
 
 export interface PopconfirmContext {

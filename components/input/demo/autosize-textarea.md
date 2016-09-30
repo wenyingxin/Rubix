@@ -16,7 +16,7 @@ An options object can be provided to `autosize` to specify the minimum and maxim
 
 
 ````jsx
-import { Input } from 'rubix';
+import { Input } from 'antd';
 
 ReactDOM.render(
   <div>

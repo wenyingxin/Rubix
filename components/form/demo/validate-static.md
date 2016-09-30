@@ -26,7 +26,7 @@ To set `hasFeedback` property to `true` enable to display feed icon of input con
 **PS**: Feed icon is just available for `<Input />`.
 
 ````jsx
-import { Form, Input, DatePicker, Col } from 'rubix';
+import { Form, Input, DatePicker, Col } from 'antd';
 const FormItem = Form.Item;
 
 ReactDOM.render(
@@ -36,7 +36,7 @@ ReactDOM.render(
       labelCol={{ span: 5 }}
       wrapperCol={{ span: 12 }}
       validateStatus="error"
-      help="Please enter a combination of numbers and alphabets"
+      help="Should be combination of numbers & alphabets"
     >
       <Input defaultValue="unavailable choice" id="error" />
     </FormItem>
@@ -87,7 +87,7 @@ ReactDOM.render(
       wrapperCol={{ span: 12 }}
       hasFeedback
       validateStatus="error"
-      help="Please enter a combination of numbers and alphabets"
+      help="Should be combination of numbers & alphabets"
     >
       <Input defaultValue="unavailable choice" id="error" />
     </FormItem>

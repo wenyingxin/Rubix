@@ -1,14 +1,14 @@
-import * as React from 'react';
+import React from 'react';
 import Notification from 'rc-notification';
 import Icon from '../icon';
 import assign from 'object-assign';
 let defaultTop = 24;
 let notificationInstance;
-let defaultDuration = 45;
+let defaultDuration = 4.5;
 
 export interface ArgsProps {
-  message: React.ReactNode;
-  description: React.ReactNode;
+  message: React.ReactNode | string;
+  description: React.ReactNode | string;
   btn?: React.ReactNode;
   key?: string;
   onClose?: () => void;
@@ -16,12 +16,17 @@ export interface ArgsProps {
   icon?: React.ReactNode;
 }
 
-function getNotificationInstance() {
+export interface ConfigProps {
+  top?: number;
+  duration?: number;
+}
+
+function getNotificationInstance(prefixCls) {
   if (notificationInstance) {
     return notificationInstance;
   }
   notificationInstance = (Notification as any).newInstance({
-    prefixCls: 'rubix-notification',
+    prefixCls: prefixCls,
     style: {
       top: defaultTop,
       right: 0,
@@ -31,7 +36,8 @@ function getNotificationInstance() {
 }
 
 function notice(args) {
-  const prefixCls = args.prefixCls || 'rubix-notification-notice';
+  const outerPrefixCls = args.prefixCls || 'rubix-notification';
+  const prefixCls = `${outerPrefixCls}-notice`;
 
   let duration;
   if (args.duration === undefined) {
@@ -69,7 +75,7 @@ function notice(args) {
     iconNode = <Icon className={`${prefixCls}-icon ${prefixCls}-icon-${args.type}`} type={iconType} />;
   }
 
-  getNotificationInstance().notice({
+  getNotificationInstance(outerPrefixCls).notice({
     content: (
       <div className={`${prefixCls}-content ${iconNode ? `${prefixCls}-with-icon` : ''}`}>
         {iconNode}
@@ -95,7 +101,7 @@ const api = {
       notificationInstance.removeNotice(key);
     }
   },
-  config(options) {
+  config(options: ConfigProps) {
     if ('top' in options) {
       defaultTop = options.top;
     }

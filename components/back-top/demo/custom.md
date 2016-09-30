@@ -15,7 +15,7 @@ You can customize the style of the button, just note the size limit: no more tha
 
 
 ````jsx
-import { BackTop } from 'rubix';
+import { BackTop } from 'antd';
 
 const style = {
   height: 40,
@@ -33,7 +33,7 @@ ReactDOM.render(
     <BackTop style={{ bottom: 100 }}>
       <div style={style}>UP</div>
     </BackTop>
-    向下滚动后，见右下角蓝色按钮
+    Scroll down to see the bottom right blue button.
   </div>
 , mountNode);
 ````

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Menu, { SubMenu, Item as MenuItem } from 'rc-menu';
 import Dropdown from '../dropdown';
 import Icon from '../icon';
@@ -8,10 +8,11 @@ import Radio from '../radio';
 export interface FilterDropdownMenuWrapperProps {
   onClick?: Function;
   children?: any;
+  className?: string;
 }
-const FilterDropdownMenuWrapper: React.StatelessComponent<FilterDropdownMenuWrapperProps> = ({ onClick, children }) => (
-  <div className="rubix-table-filter-dropdown" onClick={onClick}>{children}</div>
-);
+const FilterDropdownMenuWrapper: React.StatelessComponent<FilterDropdownMenuWrapperProps> =
+  ({ onClick, children, className }) =>
+    <div className={className} onClick={onClick}>{children}</div>;
 
 export interface FilterMenuProps {
   locale: any;
@@ -22,6 +23,8 @@ export interface FilterMenuProps {
     filters?: string[]
   };
   confirmFilter: (column: Object, selectedKeys: string[]) => any;
+  prefixCls: string;
+  dropdownPrefixCls: string;
 }
 
 export default class FilterMenu extends React.Component<FilterMenuProps, any> {
@@ -100,7 +103,7 @@ export default class FilterMenu extends React.Component<FilterMenuProps, any> {
         const containSelected = Object.keys(keyPathOfSelectedItem).some(
           key => keyPathOfSelectedItem[key].indexOf(item.value) >= 0
         );
-        const subMenuCls = containSelected ? 'rubix-dropdown-submenu-contain-selected' : '';
+        const subMenuCls = containSelected ? `${this.props.dropdownPrefixCls}-submenu-contain-selected` : '';
         return (
           <SubMenu title={item.text} className={subMenuCls} key={item.value.toString()}>
             {item.children.map(child => this.renderMenuItem(child))}
@@ -127,31 +130,30 @@ export default class FilterMenu extends React.Component<FilterMenuProps, any> {
   }
 
   render() {
-    const { column, locale } = this.props;
+    const { column, locale, prefixCls, dropdownPrefixCls } = this.props;
     // default multiple selection in filter dropdown
     const multiple = ('filterMultiple' in column) ? column.filterMultiple : true;
-
     const menus = column.filterDropdown ? column.filterDropdown : (
-      <FilterDropdownMenuWrapper>
+      <FilterDropdownMenuWrapper className={`${prefixCls}-dropdown`}>
         <Menu
           multiple={multiple}
           onClick={this.handleMenuItemClick}
-          prefixCls="rubix-dropdown-menu"
+          prefixCls={`${dropdownPrefixCls}-menu`}
           onSelect={this.setSelectedKeys}
           onDeselect={this.setSelectedKeys}
           selectedKeys={this.state.selectedKeys}
         >
           {this.renderMenus(column.filters)}
         </Menu>
-        <div className="rubix-table-filter-dropdown-btns">
+        <div className={`${prefixCls}-dropdown-btns`}>
           <a
-            className="rubix-table-filter-dropdown-link confirm"
+            className={`${prefixCls}-dropdown-link confirm`}
             onClick={this.handleConfirm}
           >
             {locale.filterConfirm}
           </a>
           <a
-            className="rubix-table-filter-dropdown-link clear"
+            className={`${prefixCls}-dropdown-link clear`}
             onClick={this.handleClearFilters}
           >
             {locale.filterReset}
@@ -161,7 +163,7 @@ export default class FilterMenu extends React.Component<FilterMenuProps, any> {
     );
 
     const dropdownSelectedClass = (this.props.selectedKeys.length > 0)
-      ? 'rubix-table-filter-selected' : '';
+      ? `${prefixCls}-selected` : '';
 
     return (
       <Dropdown

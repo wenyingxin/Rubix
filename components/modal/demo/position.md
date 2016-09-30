@@ -15,7 +15,7 @@ After release `1.0`,  Modal's `align` prop was removed. You can use `style.top` 
 set position of modal dialog.
 
 ````jsx
-import { Modal, Button } from 'rubix';
+import { Modal, Button } from 'antd';
 
 const App = React.createClass({
   getInitialState() {

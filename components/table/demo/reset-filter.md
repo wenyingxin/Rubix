@@ -26,7 +26,7 @@ Control filters and sorters by `fileredValue` and `sortOrder`.
 > 3. `column.key` is required.
 
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 
 const data = [{
   key: '1',

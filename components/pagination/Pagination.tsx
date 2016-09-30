@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import RcPagination from 'rc-pagination';
 import Select from '../select';
 import MiniSelect from './MiniSelect';
@@ -34,6 +34,8 @@ export interface PaginationProps {
   style?: React.CSSProperties;
   className?: string;
   locale?: Object;
+  prefixCls?: string;
+  selectPrefixCls?: string;
 }
 
 export interface PaginationContext {
@@ -47,6 +49,7 @@ export default class Pagination extends React.Component<PaginationProps, any> {
     locale: zhCN,
     className: '',
     prefixCls: 'rubix-pagination',
+    selectPrefixCls: 'rubix-select',
   };
 
   static contextTypes = {
@@ -73,7 +76,7 @@ export default class Pagination extends React.Component<PaginationProps, any> {
 
     return (
       <RcPagination selectComponentClass={selectComponentClass}
-        selectPrefixCls="rubix-select"
+        selectPrefixCls={this.props.selectPrefixCls}
         {...this.props}
         locale={locale}
         className={className}

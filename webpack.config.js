@@ -1,4 +1,4 @@
-const getWebpackConfig = require('rubix-tools/lib/getWebpackConfig');
+const getWebpackConfig = require('antd-tools/lib/getWebpackConfig');
 
 module.exports = function (webpackConfig) {
   webpackConfig = getWebpackConfig(webpackConfig);

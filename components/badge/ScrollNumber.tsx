@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { createElement, Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import isCssAnimationSupported from '../_util/isCssAnimationSupported';
 import assign from 'object-assign';
-import omit from 'object.omit';
+import omit from 'omit.js';
 
 function getNumberArray(num) {
   return num ?

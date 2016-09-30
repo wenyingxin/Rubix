@@ -14,7 +14,7 @@ title:
 To show close button.
 
 ````jsx
-import { Alert } from 'rubix';
+import { Alert } from 'antd';
 
 const onClose = function (e) {
   console.log(e, 'I was closed.');

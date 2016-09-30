@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import Row from '../row';
@@ -8,7 +8,7 @@ import { FIELD_META_PROP } from './constants';
 
 export interface FormItemLabelColOption {
   span: number;
-  offset: number;
+  offset?: number;
 }
 
 export interface FormItemProps {
@@ -120,7 +120,7 @@ export default class FormItem extends React.Component<FormItemProps, any> {
       return 'validating';
     } else if (!!getFieldError(field)) {
       return 'error';
-    } else if (getFieldValue(field) !== undefined) {
+    } else if (getFieldValue(field) !== undefined && getFieldValue(field) !== null) {
       return 'success';
     }
     return '';

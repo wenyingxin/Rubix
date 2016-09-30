@@ -14,7 +14,7 @@ title:
 Multiple and checkable.
 
 ````jsx
-import { TreeSelect } from 'rubix';
+import { TreeSelect } from 'antd';
 const SHOW_PARENT = TreeSelect.SHOW_PARENT;
 
 const treeData = [{

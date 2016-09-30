@@ -14,7 +14,7 @@ title:
 Default activate first tab.
 
 ````jsx
-import { Tabs } from 'rubix';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

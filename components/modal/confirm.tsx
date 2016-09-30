@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Dialog from './Modal';
 import Icon from '../icon';
 import Button from '../button';
@@ -11,15 +11,25 @@ export interface ActionButtonProps {
   type: 'primary' | 'ghost' | 'dashed';
   actionFn: Function;
   closeModal: Function;
+  autoFocus?: Boolean;
 }
 class ActionButton extends React.Component<ActionButtonProps, any> {
+  timeoutId: number;
   constructor(props) {
     super(props);
     this.state = {
       loading: false,
     };
   }
-
+  componentDidMount () {
+    if (this.props.autoFocus) {
+      const $this = ReactDOM.findDOMNode(this) as HTMLInputElement;
+      this.timeoutId = setTimeout(() => $this.focus());
+    }
+  }
+  componentWillUnmount () {
+    clearTimeout(this.timeoutId);
+  }
   onClick = () => {
     const { actionFn, closeModal } = this.props;
     if (actionFn) {
@@ -58,6 +68,7 @@ class ActionButton extends React.Component<ActionButtonProps, any> {
 
 export default function confirm(config) {
   const props = assign({ iconType: 'question-circle' }, config);
+  const prefixCls = props.prefixCls || 'rubix-confirm';
   let div = document.createElement('div');
   document.body.appendChild(div);
 
@@ -83,29 +94,29 @@ export default function confirm(config) {
   }
 
   let body = (
-    <div className="rubix-confirm-body">
+    <div className={`${prefixCls}-body`}>
       <Icon type={props.iconType} />
-      <span className="rubix-confirm-title">{props.title}</span>
-      <div className="rubix-confirm-content">{props.content}</div>
+      <span className={`${prefixCls}-title`}>{props.title}</span>
+      <div className={`${prefixCls}-content`}>{props.content}</div>
     </div>
   );
 
   let footer = null;
   if (props.okCancel) {
     footer = (
-      <div className="rubix-confirm-btns">
+      <div className={`${prefixCls}-btns`}>
         <ActionButton type="ghost" actionFn={props.onCancel} closeModal={close}>
           {props.cancelText}
         </ActionButton>
-        <ActionButton type="primary" actionFn={props.onOk} closeModal={close}>
+        <ActionButton type="primary" actionFn={props.onOk} closeModal={close} autoFocus>
           {props.okText}
         </ActionButton>
       </div>
     );
   } else {
     footer = (
-      <div className="rubix-confirm-btns">
-        <ActionButton type="primary" actionFn={props.onOk} closeModal={close}>
+      <div className={`${prefixCls}-btns`}>
+        <ActionButton type="primary" actionFn={props.onOk} closeModal={close} autoFocus>
           {props.okText}
         </ActionButton>
       </div>
@@ -113,20 +124,21 @@ export default function confirm(config) {
   }
 
   const classString = classNames({
-    'rubix-confirm': true,
-    [`rubix-confirm-${props.type}`]: true,
+    [prefixCls]: true,
+    [`${prefixCls}-${props.type}`]: true,
     [props.className]: !!props.className,
   });
 
   ReactDOM.render(
     <Dialog
       className={classString}
+      onCancel={close}
       visible
-      closable={false}
       title=""
       transitionName="zoom"
       footer=""
       maskTransitionName="fade"
+      maskClosable={false}
       style={style}
       width={width}
     >

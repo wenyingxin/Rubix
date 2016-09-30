@@ -14,7 +14,7 @@ title:
 when use pagination in table.
 
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 
 const columns = [{
   title: '姓名',

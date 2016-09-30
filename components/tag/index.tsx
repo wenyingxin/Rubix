@@ -1,10 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Animate from 'rc-animate';
 import Icon from '../icon';
 import classNames from 'classnames';
 import splitObject from '../_util/splitObject';
-import omit from 'object.omit';
+import omit from 'omit.js';
 
 export interface TagProps {
   /** 标签是否可以关闭 */

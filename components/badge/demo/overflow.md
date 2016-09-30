@@ -14,7 +14,7 @@ title:
 `${overflowCount}+` is displayed when count is larger than `overflowCount`.
 
 ````jsx
-import { Badge } from 'rubix';
+import { Badge } from 'antd';
 
 ReactDOM.render(<div>
   <Badge count={99} overflowCount={10}>

@@ -7,7 +7,7 @@ title: Menu
 
 Menu list of Navigation.
 
-## When to use
+## When To Use
 
 Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.
 
@@ -34,8 +34,7 @@ More layout and samples: [layout](/docs/spec/layout).
 | defaultSelectedKeys | array with the keys of default selected menu items | Array |      |
 | openKeys | array with the keys of currently opened sub menus | Array |  |
 | defaultOpenKeys | array with the keys of default opened sub menus |  |      |
-| onOpen | callback of the opened sub menu | Function({ key, item, keyPath }) |  |
-| onClose | callback of the closed sub menu | Function({ key, item, keyPath }) |  |
+| onOpenChange | called when open/close sub menu | Function(openKeys: string[]) | noop |
 | onSelect | callback of the selected item | Function({ item, key, selectedKeys }) | none   |
 | onDeselect | callback of the deselected item, only supported for multiple mode | Function({ item, key, selectedKeys }) | - |
 | onClick | callback of the clicked menu item, params: {item, key, keyPath} | function | - |

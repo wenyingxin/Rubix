@@ -1,12 +1,12 @@
 ---
 category: Components
 type: Views
-english: Alert
+title: Alert
 ---
 
 Alert component for feedback.
 
-## When to use
+## When To Use
 
 - When you need to show alert messages for users.
 - When you need a persist static container, and closable by user actions.

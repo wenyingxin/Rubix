@@ -2,7 +2,7 @@
 order: 14
 title:
   zh-CN: 与 Modal 配合使用
-  en-US: To use with modal
+  en-US: With Modal
 ---
 
 ## zh-CN
@@ -14,7 +14,7 @@ title:
 If you use Form in Modal, when you click the Modal, it could invoke `this.props.form.getFieldsValue` to get values of form.
 
 ````jsx
-import { Button, Form, Input, Modal } from 'rubix';
+import { Button, Form, Input, Modal } from 'antd';
 const createForm = Form.create;
 const FormItem = Form.Item;
 
@@ -45,9 +45,9 @@ let Demo = React.createClass({
     };
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>点击有惊喜</Button>
+        <Button type="primary" onClick={this.showModal}>Surprise</Button>
         <Modal title="login" visible={this.state.visible} onOk={this.handleSubmit} onCancel={this.hideModal}>
-          <Form horizontal form={this.props.form}>
+          <Form horizontal>
             <FormItem
               {...formItemLayout}
               label="User name"

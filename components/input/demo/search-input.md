@@ -14,7 +14,7 @@ title:
 Example of creating a search box by grouping a standard input with a search button.
 
 ````jsx
-import { Input, Button } from 'rubix';
+import { Input, Button } from 'antd';
 import classNames from 'classnames';
 const InputGroup = Input.Group;
 

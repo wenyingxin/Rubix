@@ -14,7 +14,7 @@ Hide default plus icon, and bind event for customized trigger.
 
 
 ````jsx
-import { Tabs, Button } from 'rubix';
+import { Tabs, Button } from 'antd';
 const TabPane = Tabs.TabPane;
 
 const Demo = React.createClass({
@@ -68,7 +68,7 @@ const Demo = React.createClass({
           type="editable-card"
           onEdit={this.onEdit}
         >
-        {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
+          {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
         </Tabs>
       </div>
     );

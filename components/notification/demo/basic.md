@@ -14,7 +14,7 @@ title:
 The simplest usage that close the notification box after 4.5s.
 
 ````jsx
-import { Button, notification } from 'rubix';
+import { Button, notification } from 'antd';
 
 const openNotification = function () {
   notification.open({

@@ -14,7 +14,7 @@ title:
 Generate a group of checkboxes from an array.
 
 ````jsx
-import { Checkbox } from 'rubix';
+import { Checkbox } from 'antd';
 const CheckboxGroup = Checkbox.Group;
 
 function onChange(checkedValues) {

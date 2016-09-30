@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tooltip, Icon } from 'antd';
 
-const branchUrl = 'https://github.com/rubix-design/rubix-design/blob/1.x-stable/';
+const branchUrl = 'https://github.com/rubix-design/rubix-design/blob/master/';
 
 export default function EditButton({ title, filename }) {
   return (

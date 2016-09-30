@@ -1,6 +1,6 @@
 ---
 order: 8
-title: 
+title:
   zh-CN: 图片卡片样式
   en-US: Pictures with card tyle
 ---
@@ -14,7 +14,7 @@ title:
 If uploade file is picture, a thumbnail can be shown.
 
 ````jsx
-import { Upload, Icon, Modal } from 'rubix';
+import { Upload, Icon, Modal } from 'antd';
 
 const ImageUploadList = React.createClass({
   getInitialState() {
@@ -50,7 +50,7 @@ const ImageUploadList = React.createClass({
       <div className="clearfix">
         <Upload {...props}>
           <Icon type="plus" />
-          <div className="rubix-upload-text">upload pictures</div>
+          <div className="rubix-upload-text">Upload</div>
         </Upload>
         <a href="https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png" target="_blank" rel="noopener noreferrer" className="upload-example">
           <img alt="example" src="https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png" />

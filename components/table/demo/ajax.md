@@ -20,7 +20,7 @@ This example shows how to fetch and present data from remote server, and how to 
 **Note, this example use [Mock API](https://randomuser.me) that you can look up in Network Console.**
 
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 import reqwest from 'reqwest';
 
 const columns = [{
@@ -75,7 +75,7 @@ const Test = React.createClass({
         ...params,
       },
       type: 'json',
-    }).then(data => {
+    }).then((data) => {
       const pagination = this.state.pagination;
       // Read total count from server
       // pagination.total = data.totalCount;

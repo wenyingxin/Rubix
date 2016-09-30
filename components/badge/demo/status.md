@@ -14,11 +14,11 @@ title:
 Standalone badge with status.
 
 ````jsx
-import { Badge } from 'rubix';
+import { Badge } from 'antd';
 
 ReactDOM.render(
   <div>
-    <div>Status: &nbsp;</div>
+    <span>Status: &nbsp;</span>
     <Badge status="success" />
     <Badge status="error" />
     <Badge status="default" />

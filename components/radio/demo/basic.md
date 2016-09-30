@@ -14,7 +14,7 @@ title:
 The simplest use.
 
 ```jsx
-import { Radio } from 'rubix';
+import { Radio } from 'antd';
 
 ReactDOM.render(<Radio>Radio</Radio>, mountNode);
 ```

@@ -14,10 +14,11 @@ title:
 With text and icon.
 
 ````jsx
-import { Switch, Icon } from 'rubix';
+import { Switch, Icon } from 'antd';
 
 ReactDOM.render(<div>
-  <Switch checkedChildren="开" unCheckedChildren="关" />
+  <Switch checkedChildren={'开'} unCheckedChildren={'关'} />
+  <Switch checkedChildren="1" unCheckedChildren="0" />
   <Switch checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="cross" />} />
 </div>, mountNode);
 ````

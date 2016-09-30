@@ -1,6 +1,8 @@
 ---
 order: 3
-title: 头像
+title: 
+  zh-CN: 头像
+  en-US: Icon Image
 ---
 
 ## zh-CN
@@ -14,7 +16,7 @@ title: 头像
 Customize suggestions
 
 ````jsx
-import { Mention } from 'rubix';
+import { Mention } from 'antd';
 const Nav = Mention.Nav;
 
 const webFrameworks = [

@@ -1,12 +1,12 @@
 ---
 type: Views
 category: Components
-english: Modal
+title: Modal
 ---
 
 Modal dialogs.
 
-## When to use
+## When To Use
 
 When requiring users to interact with application, but without jumping to a new page to interrupt
 the user's workflow, you can use `Modal` to create a new floating layer over the current page for user

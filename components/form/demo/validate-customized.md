@@ -18,7 +18,7 @@ Customized validation for Password.
 To use `this.props.form.validateFields` method, when validating first password you enter will trigger the second password validation.
 
 ````jsx
-import { Button, Form, Input, Row, Col } from 'rubix';
+import { Button, Form, Input, Row, Col } from 'antd';
 import classNames from 'classnames';
 const createForm = Form.create;
 const FormItem = Form.Item;
@@ -125,7 +125,7 @@ let Demo = React.createClass({
     const { getFieldDecorator } = this.props.form;
     return (
       <div>
-        <Form vertical style={{ maxWidth: 600 }} form={this.props.form}>
+        <Form vertical style={{ maxWidth: 600 }}>
           <Row type="flex" align="middle">
             <Col span={12}>
               <FormItem label="Password">
@@ -156,20 +156,20 @@ let Demo = React.createClass({
           <Row type="flex" align="middle">
             <Col span={12}>
               <FormItem label="Confirm">
-               {getFieldDecorator('rePass', {
-                 rules: [{
-                   required: true,
-                   whitespace: true,
-                   message: 'Please confirm your password',
-                 }, {
-                   validator: this.checkPass2,
-                 }],
-               })(
-                 <Input type="password"
-                   onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop}
-                   autoComplete="off" id="rePass"
-                 />
-               )}
+                {getFieldDecorator('rePass', {
+                  rules: [{
+                    required: true,
+                    whitespace: true,
+                    message: 'Please confirm your password',
+                  }, {
+                    validator: this.checkPass2,
+                  }],
+                })(
+                  <Input type="password"
+                    onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop}
+                    autoComplete="off" id="rePass"
+                  />
+                )}
               </FormItem>
             </Col>
             <Col span={12}>

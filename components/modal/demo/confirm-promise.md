@@ -15,7 +15,7 @@ To use `confirm()` to popup confirmation modal dialog. Let onCancel/onOk functio
 delay closing the dialog.
 
 ````jsx
-import { Modal, Button } from 'rubix';
+import { Modal, Button } from 'antd';
 const confirm = Modal.confirm;
 
 function showConfirm() {
@@ -23,9 +23,9 @@ function showConfirm() {
     title: 'Are you sure you want to delete this item ?',
     content: 'When clicked the OK button, this dialog will be closed after 1 second',
     onOk() {
-      return new Promise((resolve) => {
-        setTimeout(resolve, 1000);
-      });
+      return new Promise((resolve, reject) => {
+        setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+      }).catch(() => console.log('Oops errors!'));
     },
     onCancel() {},
   });

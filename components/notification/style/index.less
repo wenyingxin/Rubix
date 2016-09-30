@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@notification-prefix-cls: rubix-notification;
+@notification-prefix-cls: ~"@{rubix-prefix}-notification";
 @notification-width: 335px;
 @notification-padding: 16px;
 @notification-margin-bottom: 10px;
@@ -75,7 +75,7 @@
 
     &-close-x:after {
       font-size: @font-size-base;
-      content: "\e62d";
+      content: "\e633";
       font-family: "anticon";
       cursor: pointer;
     }

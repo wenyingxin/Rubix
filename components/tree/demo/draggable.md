@@ -14,7 +14,7 @@ title:
 Drag treeNode to insert after the other treeNode or insert into the other parent TreeNode.
 
 ````jsx
-import { Tree } from 'rubix';
+import { Tree } from 'antd';
 const TreeNode = Tree.TreeNode;
 
 const x = 3;

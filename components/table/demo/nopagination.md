@@ -14,7 +14,7 @@ title:
 Set `pagination={false}`, then no data paging and pagination will be shown.
 
 ````jsx
-import { Table } from 'rubix';
+import { Table } from 'antd';
 
 const columns = [{
   title: '姓名',

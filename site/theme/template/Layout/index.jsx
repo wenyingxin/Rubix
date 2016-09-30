@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import Header from './Header';
 import Footer from './Footer';
-import enLocale from '../../en-US.js';
-import cnLocale from '../../zh-CN.js';
+import enLocale from '../../en-US';
+import cnLocale from '../../zh-CN';
 import '../../static/style';
 
 // Expose to iframe
@@ -12,9 +12,9 @@ window.react = React;
 window['react-dom'] = ReactDOM;
 window.antd = require('antd');
 
-const isZhCN = (typeof localStorage !== 'undefined' && localStorage.getItem('locale') !== 'en-US');
-  // (typeof localStorage !== 'undefined' && localStorage.getItem('locale') === 'zh-CN') ||
-  // (navigator.language === 'zh-CN');
+const language = (typeof localStorage === 'undefined' || !localStorage.getItem('locale')) ?
+        navigator.language : localStorage.getItem('locale');
+const isZhCN = language === 'zh-CN';
 
 const appLocale = isZhCN ? cnLocale : enLocale;
 addLocaleData(appLocale.data);

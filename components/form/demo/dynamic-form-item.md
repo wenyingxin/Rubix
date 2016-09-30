@@ -14,7 +14,7 @@ title:
 Add or remove form items dynamically.
 
 ````jsx
-import { Form, Input, Button } from 'rubix';
+import { Form, Input, Button } from 'antd';
 
 let uuid = 0;
 let Demo = React.createClass({
@@ -74,14 +74,14 @@ let Demo = React.createClass({
               message: "Your good friend's name",
             }],
           })(
-            <Input style={{ width: '80%', marginRight: 8 }} />
+            <Input style={{ width: '60%', marginRight: 8 }} />
           )}
           <Button onClick={() => this.remove(k)}>remove</Button>
         </Form.Item>
       );
     });
     return (
-      <Form horizontal form={this.props.form}>
+      <Form horizontal>
         {formItems}
         <Form.Item wrapperCol={{ span: 18, offset: 6 }}>
           <Button onClick={this.add} style={{ marginRight: 8 }}>add good friend</Button>

@@ -16,7 +16,7 @@ if (typeof window !== 'undefined') {
 }
 
 import SlickCarousel from 'react-slick';
-import * as React from 'react';
+import React from 'react';
 
 export type CarouselEffect = 'scrollx' | 'fade'
 // Carousel
@@ -37,12 +37,14 @@ export interface CarouselProps {
   afterChange?: (current: number) => void;
   /** 行内样式 */
   style?: React.CSSProperties;
+  prefixCls?: string;
 }
 
 export default class Carousel extends React.Component<CarouselProps, any> {
   static defaultProps = {
     dots: true,
     arrows: false,
+    prefixCls: 'rubix-carousel',
   };
 
   render() {
@@ -53,14 +55,14 @@ export default class Carousel extends React.Component<CarouselProps, any> {
       props.draggable = false;
     }
 
-    let className = 'rubix-carousel';
+    let className = props.prefixCls;
     if (props.vertical) {
-      className = `${className} rubix-carousel-vertical`;
+      className = `${className} ${className}-vertical`;
     }
 
     return (
       <div className={className}>
-        <SlickCarousel {...props} />
+        <SlickCarousel ref="slick" {...props} />
       </div>
     );
   }

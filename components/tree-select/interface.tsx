@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 
-interface TreeData {
+export interface TreeData {
   key: string;
   value: string;
   label: React.ReactNode;
@@ -27,16 +27,19 @@ export interface TreeSelectProps {
   disabled?: boolean;
   treeDefaultExpandAll?: boolean;
   treeCheckable?: boolean | React.ReactNode;
-  filterTreeNode?: (treeNode: any) => boolean;
+  filterTreeNode?: (inputValue: string, treeNode: any) => boolean | boolean;
   treeNodeFilterProp?: string;
   treeNodeLabelProp?: string;
   treeData?: Array<TreeData>;
-  treeDataSimpleMode?: boolean;
+  treeDataSimpleMode?: boolean | Object;
   loadData?: (node: any) => void;
   showCheckedStrategy?: 'SHOW_ALL' | 'SHOW_PARENT' | 'SHOW_CHILD';
   className?: string;
   prefixCls?: string;
   notFoundContent?: React.ReactNode;
+  labelInValue?: boolean;
+  treeCheckStrictly?: boolean;
+  getPopupContainer?: (triggerNode: React.ReactNode) => HTMLElement;
 }
 
 export interface TreeSelectContext {

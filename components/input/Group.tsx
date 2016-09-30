@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 export interface GroupProps {
@@ -6,13 +6,14 @@ export interface GroupProps {
   size?: 'large' | 'small' | 'default';
   children?: any;
   style?: React.CSSProperties;
+  prefixCls?: string;
 }
 
 const Group: React.StatelessComponent<GroupProps> = (props) => {
   const className = classNames({
-    'rubix-input-group': true,
-    'rubix-input-group-lg': props.size === 'large',
-    'rubix-input-group-sm': props.size === 'small',
+    [props.prefixCls]: true,
+    [`${props.prefixCls}-lg`]: props.size === 'large',
+    [`${props.prefixCls}-sm`]: props.size === 'small',
     [props.className]: !!props.className,
   });
   return (
@@ -24,6 +25,10 @@ const Group: React.StatelessComponent<GroupProps> = (props) => {
 
 Group.propTypes = {
   children: React.PropTypes.any,
+};
+
+Group.defaultProps = {
+  prefixCls: 'rubix-input-group',
 };
 
 export default Group;

@@ -14,7 +14,7 @@ title:
 Controll loading states by `loading` property.
 
 ````jsx
-import { Table, Button } from 'rubix';
+import { Table, Button } from 'antd';
 
 const columns = [{
   title: '姓名',

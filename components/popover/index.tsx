@@ -1,7 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import Tooltip from '../tooltip';
 import getPlacements from './placements';
-import warning from 'warning';
 
 const placements = getPlacements();
 
@@ -15,7 +14,7 @@ export interface PopoverProps {
    placement?: 'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' |
    'bottomLeft' | 'bottomRight' | 'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom';
    /** title of popup-container */
-   title?: React.ReactNode;
+   title?: React.ReactNode | string;
    /** classname of popup-container */
    overlayClassName?: string;
    /** Style of overlay */
@@ -26,13 +25,13 @@ export interface PopoverProps {
    /** callback when visible change */
    onVisibleChange?: (visible: boolean) => void;
    /** specify wrapper of popup-container */
-   getTooltipContainer?: (triggerNode: React.ReactNode) => React.ReactNode;
+   getTooltipContainer?: (triggerNode: React.ReactNode) => HTMLElement;
    /** content of popup-container */
-   content?: React.ReactNode;
-   /** keep overlay for compatibility */
-   overlay?: React.ReactNode;
+   content?: React.ReactNode | string;
    style?: React.CSSProperties;
    transitionName?: string;
+   openClassName?: string;
+   arrowPointAtCenter?: boolean;
 }
 
 export default class Popover extends React.Component<PopoverProps, any> {
@@ -63,22 +62,14 @@ export default class Popover extends React.Component<PopoverProps, any> {
     return (this.refs as any).tooltip.getPopupDomNode();
   }
 
-  componentDidMount() {
-    if ('overlay' in this.props) {
-      warning(false, '`overlay` prop of Popover is deprecated, use `content` instead.');
-    }
-  }
-
   getOverlay() {
-    // use content replace overlay
-    // keep overlay for compatibility
-    const { title, prefixCls, overlay, content } = this.props;
+    const { title, prefixCls, content } = this.props;
 
     return (
       <div>
         {title && <div className={`${prefixCls}-title`}>{title}</div>}
         <div className={`${prefixCls}-inner-content`}>
-          {content || overlay}
+          {content}
         </div>
       </div>
     );

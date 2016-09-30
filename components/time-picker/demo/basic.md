@@ -14,7 +14,7 @@ title:
 The most basic usage. 
 
 ````jsx
-import { TimePicker } from 'rubix';
+import { TimePicker } from 'antd';
 
 function onChange(time, timeString) {
   console.log(time, timeString);

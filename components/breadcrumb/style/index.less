@@ -1,6 +1,6 @@
 @import "../../style/themes/default";
 
-@breadcrumb-prefix-cls: rubix-breadcrumb;
+@breadcrumb-prefix-cls: ~"@{rubix-prefix}-breadcrumb";
 
 .@{breadcrumb-prefix-cls} {
   color: #999;
@@ -29,7 +29,7 @@
   }
 
   &-link {
-    > .anticon + span {
+    > .@{iconfont-css-prefix} + span {
       margin-left: 4px;
     }
   }

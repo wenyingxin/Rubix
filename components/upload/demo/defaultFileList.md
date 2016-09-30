@@ -15,7 +15,7 @@ Edit uploaded files
 
 
 ````jsx
-import { Upload, Button, Icon } from 'rubix';
+import { Upload, Button, Icon } from 'antd';
 
 const props = {
   action: '/upload.do',

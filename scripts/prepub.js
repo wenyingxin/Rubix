@@ -3,12 +3,12 @@
 /* eslint-disable */
 'use strict';
 
-// Build a entry less file to dist/rubix.less
+// Build a entry less file to dist/antd.less
 var fs = require('fs');
 var path = require('path');
 
 if(fs.existsSync(path.join(__dirname,'../dist'))) {
-  console.log('Building a entry less file to dist/rubix.less');
+  console.log('Building a entry less file to dist/antd.less');
   var componentsPath = path.join(process.cwd(), 'components');
   var componentsLessContent = '';
 
@@ -21,9 +21,9 @@ if(fs.existsSync(path.join(__dirname,'../dist'))) {
     });
     fs.writeFileSync(path.join(process.cwd(), 'lib', 'style', 'components.less'), componentsLessContent);
 
-    // Build less entry file: dist/rubix.less
+    // Build less entry file: dist/antd.less
     fs.writeFileSync(
-      path.join(process.cwd(), 'dist', 'rubix.less'),
+      path.join(process.cwd(), 'dist', 'antd.less'),
       '@import "../lib/style/index.less";\n@import "../lib/style/components.less";'
     );
   });

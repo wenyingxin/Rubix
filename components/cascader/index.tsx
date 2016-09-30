@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import RcCascader from 'rc-cascader';
 import Input from '../input';
 import Icon from '../icon';
 import arrayTreeFilter from 'array-tree-filter';
 import classNames from 'classnames';
 import splitObject from '../_util/splitObject';
-import omit from 'object.omit';
+import omit from 'omit.js';
 
 export interface CascaderOptionType {
   value: string;
@@ -18,7 +18,7 @@ export type CascaderExpandTrigger = 'click' | 'hover'
 
 export interface ShowSearchType {
   filter?: (inputValue: string, path: CascaderOptionType[]) => boolean;
-  render?: (inputValue: string, path: CascaderOptionType[]) => React.ReactNode;
+  render?: (inputValue: string, path: CascaderOptionType[], prefixCls: string) => React.ReactNode;
   sort?: (a: CascaderOptionType[], b: CascaderOptionType[], inputValue: string) => number;
   matchInputWidth?: boolean;
 }
@@ -58,12 +58,14 @@ export interface CascaderProps {
   changeOnSelect?: boolean;
   /** 浮层可见变化时回调 */
   onPopupVisibleChange?: (popupVisible: boolean) => void;
+  prefixCls?: string;
+  inputPrefixCls?: string;
 }
 
-function highlightKeyword(str: string, keyword: string) {
+function highlightKeyword(str: string, keyword: string, prefixCls: string) {
   return str.split(keyword)
     .map((node: string, index: number) => index === 0 ? node : [
-      <span className="rubix-cascader-menu-item-keyword" key="seperator">{keyword}</span>,
+      <span className={`${prefixCls}-menu-item-keyword`} key="seperator">{keyword}</span>,
       node,
     ]);
 }
@@ -72,9 +74,9 @@ function defaultFilterOption(inputValue, path) {
   return path.some(option => option.label.indexOf(inputValue) > -1);
 }
 
-function defaultRenderFilteredOption(inputValue, path) {
+function defaultRenderFilteredOption(inputValue, path, prefixCls) {
   return path.map(({ label }, index) => {
-    const node = label.indexOf(inputValue) > -1 ? highlightKeyword(label, inputValue) : label;
+    const node = label.indexOf(inputValue) > -1 ? highlightKeyword(label, inputValue, prefixCls) : label;
     return index === 0 ? node : [' / ', node];
   });
 }
@@ -90,6 +92,7 @@ function defaultSortFilteredOption(a, b, inputValue) {
 export default class Cascader extends React.Component<CascaderProps, any> {
   static defaultProps = {
     prefixCls: 'rubix-cascader',
+    inputPrefixCls: 'rubix-input',
     placeholder: 'Please select',
     transitionName: 'slide-up',
     popupPlacement: 'bottomLeft',
@@ -206,7 +209,7 @@ export default class Cascader extends React.Component<CascaderProps, any> {
     return flattenOptions;
   }
 
-  generateFilteredOptions() {
+  generateFilteredOptions(prefixCls) {
     const { showSearch, notFoundContent } = this.props;
     const {
       filter = defaultFilterOption,
@@ -220,7 +223,7 @@ export default class Cascader extends React.Component<CascaderProps, any> {
     if (filtered.length > 0) {
       return filtered.map((path) => {
         return {
-          label: render(inputValue, path),
+          label: render(inputValue, path, prefixCls),
           value: path.map(o => o.value),
         };
       });
@@ -231,15 +234,15 @@ export default class Cascader extends React.Component<CascaderProps, any> {
   render() {
     const props = this.props;
     const state = this.state;
-    const [{ prefixCls, children, placeholder, size, disabled,
+    const [{ prefixCls, inputPrefixCls, children, placeholder, size, disabled,
       className, style, allowClear, showSearch }, otherProps] = splitObject(props,
-      ['prefixCls', 'children', 'placeholder', 'size', 'disabled', 'className',
-       'style', 'allowClear', 'showSearch']);
+      ['prefixCls', 'inputPrefixCls', 'children', 'placeholder', 'size', 'disabled',
+        'className', 'style', 'allowClear', 'showSearch']);
     const value = state.value;
 
     const sizeCls = classNames({
-      'rubix-input-lg': size === 'large',
-      'rubix-input-sm': size === 'small',
+      [`${inputPrefixCls}-lg`]: size === 'large',
+      [`${inputPrefixCls}-sm`]: size === 'small',
     });
     const clearIcon = (allowClear && !disabled && value.length > 0) || state.inputValue ?
       <Icon type="cross-circle"
@@ -279,7 +282,7 @@ export default class Cascader extends React.Component<CascaderProps, any> {
 
     let options = props.options;
     if (state.inputValue) {
-      options = this.generateFilteredOptions();
+      options = this.generateFilteredOptions(prefixCls);
     }
     // Dropdown menu should keep previous status until it is fully closed.
     if (!state.popupVisible) {

@@ -3,21 +3,25 @@
 @import "../../button/style/mixin";
 @import "./mixin";
 
-.rubix-search-input-wrapper {
+.@{rubix-prefix}-search-input-wrapper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.rubix-search-input {
-  &.rubix-input-group .rubix-input:first-child,
-  &.rubix-input-group .rubix-select:first-child {
+.@{rubix-prefix}-search-input {
+  &.@{rubix-prefix}-input-group .@{rubix-prefix}-input:first-child,
+  &.@{rubix-prefix}-input-group .@{rubix-prefix}-select:first-child {
     border-radius: @border-radius-base;
     position: absolute;
     top: -1px;
     width: 100%;
   }
 
-  .rubix-search-btn {
+  &.@{rubix-prefix}-input-group .@{rubix-prefix}-input:first-child {
+    padding-right: 36px;
+  }
+
+  .@{rubix-prefix}-search-btn {
     .btn-default;
     border-radius: 0 @border-radius-base - 1 @border-radius-base - 1 0;
     left: -1px;
@@ -34,12 +38,12 @@
       padding-bottom: 6px;
     }
   }
-  &&-focus .rubix-search-btn-noempty,
-  &:hover .rubix-search-btn-noempty {
+  &&-focus .@{rubix-prefix}-search-btn-noempty,
+  &:hover .@{rubix-prefix}-search-btn-noempty {
     .btn-primary;
   }
-  .rubix-select-combobox {
-    .rubix-select-selection__rendered {
+  .@{rubix-prefix}-select-combobox {
+    .@{rubix-prefix}-select-selection__rendered {
       right: 29px;
     }
   }

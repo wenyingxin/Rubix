@@ -3,7 +3,7 @@ order: 0
 title: Ant Design of React
 ---
 
-antd is a set of React components which follow the Ant Design specification. It is designed to help developing RIA such as dashboards or other enterprise-like complex UI needs.
+We supply a react implementation `antd` following Ant Design specification, which designed to help developing RIA such as dashboards or other enterprise-like complex UI needs.
 
 <div class="pic-plus">
   <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
@@ -27,7 +27,7 @@ antd is a set of React components which follow the Ant Design specification. It 
 
 ## Features
 
-- Using Ant Design, a design language for creating user friendly and beautiful websites.
+- Following Ant Design, a design language for creating user friendly and beautiful websites.
 - It is a set of high quality UI components and based on [React Component](http://react-component.github.io/badgeboard/).
 - Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript.
 
@@ -53,18 +53,18 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 You can use:
 
 - `import DatePicker from 'antd/lib/date-picker';`
-- `import { DatePicker } from 'antd';` when [babel-plugin-antd](https://github.com/rubix-design/babel-plugin-antd) is also used.
+- `import { DatePicker } from 'antd';` when [babel-plugin-import](https://github.com/rubix-design/babel-plugin-import) is also used.
 
-> babel-plugin-antd supports importing components and styles on demand.
+> babel-plugin-import supports importing components and styles on demand.
 
 ## Version
 
-- Stable: [![npm package](http://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
+- Stable: [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
 - Beta: [![](https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm)](https://www.npmjs.org/package/antd)
 
 ## Compatibility
 
-Modern browsers and IE8+.
+Modern browsers and IE9+.
 
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 

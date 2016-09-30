@@ -2,7 +2,7 @@
 category: Components
 type: Form Controls
 cols: 1
-english: Form
+title: Form
 ---
 
 Forms are used to collect, validate, and submit the user input. They contain one or more form items.
@@ -66,7 +66,7 @@ If the form has been decorated by `Form.create` then it has `this.props.form` pr
 |-----------|------------------------------------------|------------|
 | getFieldsValue | Get the specified fields' values. If you don't specify a parameter, you will get all fields' values. | Function([fieldNames: string[]]) |
 | getFieldValue | Get the value of a field. | Function(fieldName: string) |
-| setFieldsValue | Set the value of a field. | Function(obj: object) |
+| setFieldsValue | Set the value of a field.(Note: please don't use it in `componentWillReceiveProps`, otherwise, it will cause an endless loop, [more](https://github.com/rubix-design/rubix-design/issues/2985)) | Function({ [fieldName]: value } |
 | setFields | Set the value and error of a field. | Function(obj: object) |
 | validateFields | Validate the specified fields and get theirs values and errors. | Function([fieldNames: string[]], [options: object], callback: Function(errors, values)) |
 | validateFieldsAndScroll | This function is similar to `validateFields`, but after validation, if the target field is not in visible area of form, form will be automatically scrolled to the target field area. | same as `validateFields` |

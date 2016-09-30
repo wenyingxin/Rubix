@@ -1,13 +1,12 @@
 ---
 category: Components
-chinese: 数字输入框
 type: Form Controls
-english: InputNumber
+title: InputNumber
 ---
 
 Enter a number within certain range with the mouse or keyboard.
 
-## When to use
+## When To Use
 
 When a numeric value needs to be provided.
 

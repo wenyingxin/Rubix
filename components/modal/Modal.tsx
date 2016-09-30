@@ -1,5 +1,5 @@
 import { PropTypes } from 'react';
-import * as React from 'react';
+import React from 'react';
 import Dialog from 'rc-dialog';
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import Button from '../button';
@@ -15,12 +15,12 @@ export interface ModalProps {
   /** 确定按钮 loading*/
   confirmLoading?: boolean;
   /** 标题*/
-  title?: React.ReactNode;
+  title?: React.ReactNode | string;
   /** 是否显示右上角的关闭按钮*/
   closable?: boolean;
   /** 点击确定回调*/
   onOk?: () => void;
-  /** 点击遮罩层或右上角叉或取消按钮的回调*/
+  /** 点击模态框右上角叉、取消按钮、Props.maskClosable 值为 true 时的遮罩层或键盘按下 Esc 时的回调*/
   onCancel?: (e: React.MouseEvent) => void;
   /** 宽度*/
   width?: string | number;

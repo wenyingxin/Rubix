@@ -7,7 +7,7 @@ title: Steps
 
 `Steps` is a navigation bar that guides users through the steps of a task. 
 
-## When to use
+## When To Use
 
 When the task is complicated or has a certain sequence in the series of subtasks, we can decompose it into several steps to make things easier.
 
@@ -39,6 +39,6 @@ A single step in the step bar.
 Property | Description | Type | Default
 -----|-----|-----|------
 status | to specify the status. It will be automatically set by `current` of `Steps` if not configured. Optional values are: `wait` `process` `finish` `error` | String | wait
-title | title of the step | React.Element | -
-description | detail of the step, optional property | React.Element | -
-icon | icon of the step, optional property | React.Element | -
+title | title of the step | React.ReactNode | -
+description | detail of the step, optional property | React.ReactNode | -
+icon | icon of the step, optional property | string or React.ReactNode | -

@@ -1,15 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import RcTable from 'rc-table';
 import Checkbox from '../checkbox';
 import Radio from '../radio';
 import FilterDropdown from './filterDropdown';
-import Pagination from '../pagination';
+import Pagination, { PaginationProps } from '../pagination';
 import Icon from '../icon';
 import Spin from '../spin';
 import classNames from 'classnames';
-import { flatArray } from './util';
+import { flatArray, treeMap } from './util';
 import assign from 'object-assign';
 import splitObject from '../_util/splitObject';
+import warning from 'warning';
 
 function noop() {
 }
@@ -25,7 +26,7 @@ const defaultLocale = {
   filterTitle: '筛选',
   filterConfirm: '确定',
   filterReset: '重置',
-  emptyText: <span><Icon type="frown" />暂无数据</span>,
+  emptyText: <span><Icon type="frown-o" />暂无数据</span>,
 };
 
 const defaultPagination = {
@@ -33,7 +34,7 @@ const defaultPagination = {
   onShowSizeChange: noop,
 };
 
-interface TableRowSelection {
+export interface TableRowSelection {
   type?: 'checkbox' | 'radio';
   selectedRowKeys?: string[];
   onChange?: (selectedRowKeys: string[], selectedRows: Object[]) => any;
@@ -42,12 +43,12 @@ interface TableRowSelection {
   onSelectAll?: (selected: boolean, selectedRows: Object[], changeRows: Object[]) => any;
 }
 
-interface TableColumnConfig {
+export interface TableColumnConfig {
   title?: React.ReactNode;
   key?: string;
   dataIndex?: string;
   render?: (text: any, record: Object, index: number) => React.ReactNode;
-  filters?: string[];
+  filters?: { text: string; value: string }[];
   onFilter?: (value: any, record: Object) => boolean;
   filterMultiple?: boolean;
   filterDropdown?: React.ReactNode;
@@ -62,8 +63,9 @@ interface TableColumnConfig {
 
 export interface TableProps {
   prefixCls?: string;
+  dropdownPrefixCls?: string;
   rowSelection?: TableRowSelection;
-  pagination?: any; // 等 Pagination 的 interface，以便直接引用
+  pagination?: PaginationProps | boolean;
   size?: 'default' | 'small';
   dataSource?: Object[];
   columns?: TableColumnConfig[];
@@ -73,7 +75,8 @@ export interface TableProps {
   defaultExpandedRowKeys?: string[];
   expandedRowKeys?: string[];
   expandIconAsCell?: boolean;
-  onChange?: (pagination: any, filters: string[], sorter: Object) => any;
+  expandIconColumnIndex?: number;
+  onChange?: (pagination: PaginationProps | boolean, filters: string[], sorter: Object) => any;
   loading?: boolean;
   locale?: Object;
   indentSize?: number;
@@ -85,9 +88,10 @@ export interface TableProps {
   title?: (currentPageData: Object[]) => React.ReactNode;
   scroll?: { x?: boolean | number, y?: boolean | number};
   childrenColumnName?: 'string';
+  bodyStyle?: React.CSSProperties;
 }
 
-interface TableContext {
+export interface TableContext {
   antLocale?: {
     Table?: any,
   };
@@ -106,11 +110,13 @@ export default class Table extends React.Component<TableProps, any> {
     bordered: React.PropTypes.bool,
     onChange: React.PropTypes.func,
     locale: React.PropTypes.object,
+    dropdownPrefixCls: React.PropTypes.string,
   };
 
   static defaultProps = {
     dataSource: [],
     prefixCls: 'rubix-table',
+    dropdownPrefixCls: 'rubix-dropdown',
     useFixedHeader: false,
     rowSelection: null,
     className: '',
@@ -133,6 +139,13 @@ export default class Table extends React.Component<TableProps, any> {
 
   constructor(props) {
     super(props);
+
+    warning(
+      !('columnsPageRange' in props || 'columnsPageSize' in props),
+      '`columnsPageRange` and `columnsPageSize` are removed, please use ' +
+      '[fixed columns](http://ant.design/components/table/#components-table-demo-fixed-columns) ' +
+      'instead.'
+    );
 
     const pagination = props.pagination || {};
 
@@ -280,7 +293,7 @@ export default class Table extends React.Component<TableProps, any> {
   }
 
   getFilteredValueColumns(columns?) {
-    return (columns || this.props.columns || []).filter(column => 'filteredValue' in column);
+    return (columns || this.props.columns || []).filter(column => column.filteredValue);
   }
 
   getFiltersFromColumns(columns?) {
@@ -373,7 +386,7 @@ export default class Table extends React.Component<TableProps, any> {
     const newState = {
       selectionDirty: false,
       pagination,
-      filters: null,
+      filters: {},
     };
     const filtersToSetState = assign({}, filters);
     // Remove filters which is controlled
@@ -388,7 +401,7 @@ export default class Table extends React.Component<TableProps, any> {
     }
 
     // Controlled current prop will not respond user interaction
-    if (props.pagination && 'current' in props.pagination) {
+    if (props.pagination && 'current' in (props.pagination as Object)) {
       newState.pagination = assign({}, pagination, {
         current: this.state.pagination.current,
       });
@@ -490,7 +503,7 @@ export default class Table extends React.Component<TableProps, any> {
       pagination,
     };
     // Controlled current prop will not respond user interaction
-    if (props.pagination && 'current' in props.pagination) {
+    if (props.pagination && 'current' in (props.pagination as Object)) {
       newState.pagination = assign({}, pagination, {
         current: this.state.pagination.current,
       });
@@ -549,10 +562,28 @@ export default class Table extends React.Component<TableProps, any> {
     if (typeof rowKey === 'function') {
       return rowKey(record, index);
     }
-    return record[rowKey as string] || index;
+    let recordKey = record[rowKey as string] !== undefined ? record[rowKey as string] : index;
+    warning(recordKey !== undefined,
+      'Each record in table should have a unique `key` prop, or set `rowKey` to an unique primary key.'
+    );
+    return recordKey;
+  }
+
+  checkSelection(data, type, byDefaultChecked) {
+    // type should be 'every' | 'some'
+    if (type === 'every' || type === 'some') {
+      return (
+        byDefaultChecked
+        ? data[type](item => this.getCheckboxPropsByItem(item).defaultChecked)
+        : data[type]((item, i) =>
+              this.state.selectedRowKeys.indexOf(this.getRecordKey(item, i)) >= 0)
+      );
+    }
+    return false;
   }
 
   renderRowSelection() {
+    const prefixCls = this.props.prefixCls;
     const columns = this.props.columns.concat();
     if (this.props.rowSelection) {
       const data = this.getFlatCurrentPageData().filter((item) => {
@@ -562,16 +593,26 @@ export default class Table extends React.Component<TableProps, any> {
         return true;
       });
       let checked;
+      let indeterminate;
       if (!data.length) {
         checked = false;
+        indeterminate = false;
       } else {
         checked = this.state.selectionDirty
-          ? data.every((item, i) =>
-              this.state.selectedRowKeys.indexOf(this.getRecordKey(item, i)) >= 0)
+          ? this.checkSelection(data, 'every', false)
           : (
-            data.every((item, i) =>
-              this.state.selectedRowKeys.indexOf(this.getRecordKey(item, i)) >= 0) ||
-            data.every(item => this.getCheckboxPropsByItem(item).defaultChecked)
+            this.checkSelection(data, 'every', false) ||
+            this.checkSelection(data, 'every', true)
+          );
+        indeterminate = this.state.selectionDirty
+          ? (
+            this.checkSelection(data, 'some', false) &&
+            !this.checkSelection(data, 'every', false)
+            )
+          : ((this.checkSelection(data, 'some', false) &&
+            !this.checkSelection(data, 'every', false)) ||
+            (this.checkSelection(data, 'some', true) &&
+            !this.checkSelection(data, 'every', true))
           );
       }
       let selectionColumn;
@@ -579,12 +620,13 @@ export default class Table extends React.Component<TableProps, any> {
         selectionColumn = {
           key: 'selection-column',
           render: this.renderSelectionRadio,
-          className: 'rubix-table-selection-column',
+          className: `${prefixCls}-selection-column`,
         };
       } else {
         const checkboxAllDisabled = data.every(item => this.getCheckboxPropsByItem(item).disabled);
         const checkboxAll = (
           <Checkbox checked={checked}
+            indeterminate={indeterminate}
             disabled={checkboxAllDisabled}
             onChange={this.handleSelectAllRow}
           />
@@ -593,7 +635,7 @@ export default class Table extends React.Component<TableProps, any> {
           key: 'selection-column',
           title: checkboxAll,
           render: this.renderSelectionCheckBox,
-          className: 'rubix-table-selection-column',
+          className: `${prefixCls}-selection-column`,
         };
       }
       if (columns.some(column => column.fixed === 'left' || column.fixed === true)) {
@@ -629,9 +671,10 @@ export default class Table extends React.Component<TableProps, any> {
   }
 
   renderColumnsDropdown(columns) {
+    const { prefixCls, dropdownPrefixCls } = this.props;
     const { sortOrder } = this.state;
     const locale = this.getLocale();
-    return columns.map((originColumn, i) => {
+    return treeMap(columns, (originColumn, i) => {
       let column = assign({}, originColumn);
       let key = this.getColumnKey(column, i);
       let filterDropdown;
@@ -644,6 +687,8 @@ export default class Table extends React.Component<TableProps, any> {
             column={column}
             selectedKeys={colFilters}
             confirmFilter={this.handleFilter}
+            prefixCls={`${prefixCls}-filter`}
+            dropdownPrefixCls={dropdownPrefixCls}
           />
         );
       }
@@ -652,20 +697,20 @@ export default class Table extends React.Component<TableProps, any> {
         if (isSortColumn) {
           column.className = column.className || '';
           if (sortOrder) {
-            column.className += ' rubix-table-column-sort';
+            column.className += ` ${prefixCls}-column-sort`;
           }
         }
         const isAscend = isSortColumn && sortOrder === 'ascend';
         const isDescend = isSortColumn && sortOrder === 'descend';
         sortButton = (
-          <div className="rubix-table-column-sorter">
-            <span className={`rubix-table-column-sorter-up ${isAscend ? 'on' : 'off'}`}
+          <div className={`${prefixCls}-column-sorter`}>
+            <span className={`${prefixCls}-column-sorter-up ${isAscend ? 'on' : 'off'}`}
               title="↑"
               onClick={() => this.toggleSortOrder('ascend', column)}
             >
               <Icon type="caret-up" />
             </span>
-            <span className={`rubix-table-column-sorter-down ${isDescend ? 'on' : 'off'}`}
+            <span className={`${prefixCls}-column-sorter-down ${isDescend ? 'on' : 'off'}`}
               title="↓"
               onClick={() => this.toggleSortOrder('descend', column)}
             >
@@ -813,17 +858,17 @@ export default class Table extends React.Component<TableProps, any> {
 
   render() {
     const [{
-      style, className,
-    }, restProps] = splitObject(this.props, ['style', 'className']);
+      style, className, prefixCls,
+    }, restProps] = splitObject(this.props, ['style', 'className', 'prefixCls']);
     const data = this.getCurrentPageData();
     let columns = this.renderRowSelection();
     const expandIconAsCell = this.props.expandedRowRender && this.props.expandIconAsCell !== false;
     const locale = this.getLocale();
 
     const classString = classNames({
-      [`rubix-table-${this.props.size}`]: true,
-      'rubix-table-bordered': this.props.bordered,
-      'rubix-table-empty': !data.length,
+      [`${prefixCls}-${this.props.size}`]: true,
+      [`${prefixCls}-bordered`]: this.props.bordered,
+      [`${prefixCls}-empty`]: !data.length,
     });
 
     columns = this.renderColumnsDropdown(columns);
@@ -833,12 +878,19 @@ export default class Table extends React.Component<TableProps, any> {
       return newColumn;
     });
 
+    let expandIconColumnIndex = (columns[0] && columns[0].key === 'selection-column') ? 1 : 0;
+    if ('expandIconColumnIndex' in restProps) {
+      expandIconColumnIndex = restProps.expandIconColumnIndex;
+    }
+
     let table = (
-      <RcTable {...restProps}
+      <RcTable
+        {...restProps}
+        prefixCls={prefixCls}
         data={data}
         columns={columns}
         className={classString}
-        expandIconColumnIndex={(columns[0] && columns[0].key === 'selection-column') ? 1 : 0}
+        expandIconColumnIndex={expandIconColumnIndex}
         expandIconAsCell={expandIconAsCell}
         emptyText={() => locale.emptyText}
       />
@@ -846,9 +898,9 @@ export default class Table extends React.Component<TableProps, any> {
     // if there is no pagination or no data,
     // the height of spin should decrease by half of pagination
     const paginationPatchClass = (this.hasPagination() && data && data.length !== 0)
-            ? 'rubix-table-with-pagination'
-            : 'rubix-table-without-pagination';
-    const spinClassName = this.props.loading ? `${paginationPatchClass} rubix-table-spin-holder` : '';
+            ? `${prefixCls}-with-pagination`
+            : `${prefixCls}-without-pagination`;
+    const spinClassName = this.props.loading ? `${paginationPatchClass} ${prefixCls}-spin-holder` : '';
     table = <Spin className={spinClassName} spinning={this.props.loading}>{table}</Spin>;
     return (
       <div className={`${className} clearfix`} style={style}>

@@ -1,16 +1,18 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@cascader-prefix-cls: rubix-cascader;
+@cascader-prefix-cls: ~"@{rubix-prefix}-cascader";
 
 .@{cascader-prefix-cls} {
   font-size: @font-size-base;
-  &-input.rubix-input {
+  &-input.@{rubix-prefix}-input {
     background-color: transparent;
     display: block;
     cursor: pointer;
     width: 100%;
     z-index: 1;
+    background: transparent;
+    color: transparent;
   }
   &-picker {
     position: relative;
@@ -78,7 +80,7 @@
       margin-top: -6px;
       line-height: 12px;
       color: #999;
-      .iconfont-size-under-12px(8px);
+      .iconfont-size-under-12px(9px);
       &:before {
         transition: transform 0.2s ease;
       }
@@ -168,7 +170,7 @@
     &-expand {
       position: relative;
       &:after {
-        .iconfont-font("\e600");
+        .iconfont-font("\e61f");
         .iconfont-size-under-12px(8px);
         color: #999;
         position: absolute;

@@ -15,7 +15,7 @@ Autocomplete select with search field.
 
 
 ````jsx
-import { Input, Select, Button, Icon } from 'rubix';
+import { Input, Select, Button, Icon } from 'antd';
 import jsonp from 'jsonp';
 import querystring from 'querystring';
 import classNames from 'classnames';
@@ -64,7 +64,7 @@ const SearchInput = React.createClass({
   },
   handleChange(value) {
     this.setState({ value });
-    fetch(value, (data) => this.setState({ data }));
+    fetch(value, data => this.setState({ data }));
   },
   handleSubmit() {
     console.log('输入框内容是: ', this.state.value);

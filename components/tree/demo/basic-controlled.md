@@ -14,7 +14,7 @@ title:
 basic controlled example
 
 ````jsx
-import { Tree } from 'rubix';
+import { Tree } from 'antd';
 const TreeNode = Tree.TreeNode;
 
 const x = 3;

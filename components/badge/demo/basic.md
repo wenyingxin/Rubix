@@ -14,7 +14,7 @@ title:
 Simplest Usage.
 
 ````jsx
-import { Badge } from 'rubix';
+import { Badge } from 'antd';
 
 ReactDOM.render(
   <Badge count={5}>

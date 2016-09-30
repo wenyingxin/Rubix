@@ -1,8 +1,8 @@
 ---
 category: Components
-chinese: 上传
+subtitle: 上传
 type: Form Controls
-english: Upload
+title: Upload
 ---
 
 文件选择上传和拖拽上传控件。
@@ -17,9 +17,11 @@ english: Upload
 
 ## API
 
+> 服务端上传接口实现可以参考 [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload/wiki)。
+
 | 参数       | 说明                                                         | 类型        | 默认值|
 |------------|--------------------------------------------------------------| ----------- |-------|
- | name       | 可选参数, 上传的文件                                         | String      | file  |
+| name       | 可选参数, 上传的文件                                         | String      | file  |
 | defaultFileList | 可选参数，默认已经上传的文件列表                           | Array[Object] | 无  |
 | fileList   | 可选参数，已经上传的文件列表                                   | Array[Object] | 无 |
 | action     | 必选参数, 上传的地址                                         | String      | 无    |
@@ -60,8 +62,7 @@ english: Upload
       response: '{"status": "success"}',  // 服务端响应内容
    }
    ```
-
-   如果上传控件是 multiple 时，此参数将为一个对象数组 `[file, ...]`。
+   > `antd@1.9.0` 之前，multiple 模式下，此参数为一个对象数组 `[file, ...]`，`antd@1.9.0` 开始无论是否多选，均为一个对象。
 
 2. `fileList` 当前的文件列表。
 3. `event` 上传中的服务端响应内容，包含了上传进度等信息，高级浏览器支持。

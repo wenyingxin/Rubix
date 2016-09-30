@@ -2,20 +2,20 @@
 @import "../../style/mixins/index";
 @import '../../input/style/mixin.less';
 
-.rubix-mention-wrapper {
+.@{rubix-prefix}-mention-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
   vertical-align: middle;
-  &.active .rubix-mention-editor {
+  &.active .@{rubix-prefix}-mention-editor {
     .active;
   }
-  .rubix-mention-editor {
+  .@{rubix-prefix}-mention-editor {
    .input;
    padding: 0;
    display: block;
   }
-  .rubix-mention-editor-wrapper {
+  .@{rubix-prefix}-mention-editor-wrapper {
     overflow-y: auto;
     height: auto;
   }
@@ -25,7 +25,7 @@
     padding: 4px 7px;
   }
 
-  .rubix-mention-dropdown {
+  .@{rubix-prefix}-mention-dropdown {
     margin-top: 1.5em;
     max-height: 250px;
     min-width: 120px;
@@ -42,10 +42,10 @@
     overflow-x: hidden;
     overflow-y: auto;
     font-size: @font-size-base;
-    &-notfound.rubix-mention-dropdown-item {
+    &-notfound.@{rubix-prefix}-mention-dropdown-item {
       color: #ccc;
 
-      .anticon-loading {
+      .@{iconfont-css-prefix}-loading {
         color: @primary-color;
       }
     }

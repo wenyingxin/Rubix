@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import { cloneElement } from 'react';
 import RcTooltip from 'rc-tooltip';
 import getPlacements from '../popover/placements';
 import classNames from 'classnames';
 
-type PopoverPlacement =
+export type PopoverPlacement =
   'top' | 'left' | 'right' | 'bottom' | 'topLeft' |
   'topRight' | 'bottomLeft' | 'bottomRight' | 'leftTop' |
   'leftBottom' | 'rightTop' | 'rightBottom'
@@ -31,6 +31,7 @@ export interface TooltipProps {
   overlay?: React.ReactNode;
   openClassName?: string;
   arrowPointAtCenter?: boolean;
+  getTooltipContainer?: (triggerNode: React.ReactNode) => HTMLElement;
 }
 
 export default class Tooltip extends React.Component<TooltipProps, any> {

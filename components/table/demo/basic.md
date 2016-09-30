@@ -14,13 +14,13 @@ title:
 Simple table with operations.
 
 ````jsx
-import { Table, Icon } from 'rubix';
+import { Table, Icon } from 'antd';
 
 const columns = [{
   title: '姓名',
   dataIndex: 'name',
   key: 'name',
-  render: (text) => <a href="#">{text}</a>,
+  render: text => <a href="#">{text}</a>,
 }, {
   title: '年龄',
   dataIndex: 'age',

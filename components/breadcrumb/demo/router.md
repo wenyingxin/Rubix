@@ -16,7 +16,7 @@ Used together with `react-router@2.x`.
 
 ````jsx
 import { Router, Route, Link, hashHistory } from 'react-router';
-import { Breadcrumb } from 'rubix';
+import { Breadcrumb } from 'antd';
 
 const Apps = () => (
   <ul className="app-list">
@@ -29,7 +29,7 @@ const Apps = () => (
   </ul>
 );
 
-const Home = (props) => (
+const Home = props => (
   <div>
     <div className="demo-nav">
       <Link to="/">Home</Link>

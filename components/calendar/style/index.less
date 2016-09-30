@@ -1,6 +1,6 @@
 @import "../../style/themes/default";
 
-@full-calendar-prefix-cls: rubix-fullcalendar;
+@full-calendar-prefix-cls: ~"@{rubix-prefix}-fullcalendar";
 
 .@{full-calendar-prefix-cls} {
   font-size: @font-size-base;
@@ -14,16 +14,16 @@
     padding: 11px 16px 11px 0;
     text-align: right;
 
-    .rubix-select {
+    .@{rubix-prefix}-select {
       text-align: left;
     }
 
-    .rubix-radio-group {
+    .@{rubix-prefix}-radio-group {
       margin-left: 8px;
       text-align: left;
     }
 
-    label.rubix-radio-button {
+    label.@{rubix-prefix}-radio-button {
       height: 22px;
       line-height: 20px;
       padding: 0 10px;
@@ -162,10 +162,10 @@
   }
 
   &-fullscreen &-header {
-    .rubix-radio-group {
+    .@{rubix-prefix}-radio-group {
       margin-left: 16px;
     }
-    label.rubix-radio-button {
+    label.@{rubix-prefix}-radio-button {
       height: 28px;
       line-height: 26px;
     }
