@@ -1,5 +1,4 @@
 ---
-category: 十大原则
 order: 0
 title: 引言
 ---
@@ -12,26 +11,7 @@ title: 引言
 
 ---
 
-<div class="resource-cards">
-<a target="_blank" href="http://book.douban.com/subject/3323633/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/SNdJVyZaZwdwJmr.png">
-  <span class="resource-card-content">
-    <span class="resource-card-title">写给大家看的设计书</span>
-    <span class="resource-card-description">作者: Robin Williams</span>
-    <span class="resource-card-description">出版社: 人民邮电出版社</span>
-  </span>
-</a>
-<a target="_blank" href="http://book.douban.com/subject/3821157/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/CoojVXLtoWrUSmI.png">
-  <span class="resource-card-content">
-    <span class="resource-card-title">Web 界面设计</span>
-    <span class="resource-card-description">作者: Bill Scott / Theresa Neil</span>
-    <span class="resource-card-description">出版社: 电子工业出版社</span>
-  </span>
-</a>
-</div>
-
-#### Ant Design 十大设计原则
+#### Rubix Design 十六大设计原则
 
 - [亲密性 Proximity](/docs/spec/proximity)
 - [对齐 Alignment](/docs/spec/alignment)
@@ -42,4 +22,10 @@ title: 引言
 - [足不出户 Stay on the Page](/docs/spec/stay)
 - [提供邀请 Provide Invitation](/docs/spec/invitation)
 - [巧用过渡 Use Transition](/docs/spec/transition)
+- [即时反应 React Immediately](/docs/spec/reaction)
+- [即时反应 React Immediately](/docs/spec/reaction)
+- [即时反应 React Immediately](/docs/spec/reaction)
+- [即时反应 React Immediately](/docs/spec/reaction)
+- [即时反应 React Immediately](/docs/spec/reaction)
+- [即时反应 React Immediately](/docs/spec/reaction)
 - [即时反应 React Immediately](/docs/spec/reaction)
