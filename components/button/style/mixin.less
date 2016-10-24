@@ -94,7 +94,7 @@
   // outline: none;
   white-space: nowrap;
   line-height: @line-height-base;
-  .button-size(@btn-padding-base; @font-size-base; @btn-border-radius-base);
+  .button-size(@btn-padding-base; @btn-font-size-lg; @btn-border-radius-base);
   user-select: none;
   transition: all .3s @ease-in-out;
   position: relative;
@@ -137,10 +137,13 @@
 
 // primary button style
 .btn-primary() {
-  .button-variant(@btn-primary-color; @btn-primary-bg; @primary-color);
+  .button-variant(@btn-primary-color; @btn-primary-bg; @secondary-color);
 
   &:hover,
-  &:focus,
+  &:focus {
+    .button-color(@btn-primary-color; @btn-hover-color; @btn-hover-color);
+  }
+
   &:active,
   &.active {
     color: @btn-primary-color;
@@ -153,11 +156,11 @@
 
   &:hover,
   &:focus {
-    .button-color(tint(@primary-color, 20%); white; tint(@primary-color, 20%));
+    .button-color(shade(@btn-default-color, 20%); @btn-default-hover-color; btn-default-border);
   }
   &:active,
   &.active {
-    .button-color(shade(@primary-color, 5%); white; shade(@primary-color, 5%));
+    .button-color(shade(@btn-default-color, 5%); @btn-default-hover-color; btn-default-border);
   }
 }
 
@@ -167,11 +170,11 @@
 
   &:hover,
   &:focus {
-    .button-color(tint(@primary-color, 20%); @btn-ghost-bg; tint(@primary-color, 20%));
+    .button-color(@btn-hover-color; @btn-ghost-bg; @btn-hover-color);
   }
   &:active,
   &.active {
-    .button-color(shade(@primary-color, 5%); @btn-ghost-bg; shade(@primary-color, 5%));
+    .button-color(shade(@btn-ghost-color, 5%); @btn-ghost-bg; shade(@btn-ghost-border, 5%));
   }
 }
 
@@ -181,8 +184,9 @@
   border-style: dashed;
 
   &:hover,
+
   &:focus {
-    .button-color(tint(@primary-color, 20%); @btn-ghost-bg; tint(@primary-color, 20%));
+    .button-color(@btn-hover-color; @btn-ghost-bg; btn-hover-color);
   }
   &:active,
   &.active {

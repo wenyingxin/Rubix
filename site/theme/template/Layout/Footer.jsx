@@ -45,16 +45,16 @@ class Footer extends React.Component {
           <img src="https://os.alipayobjects.com/rmsportal/nyqBompsynAQCpJ.svg" alt="Ant Design" />
           <p>
             {messages['app.publish.greeting']}
-            <a target="_blank" rel="noopener noreferrer" href="/changelog">antd@2.0.0</a>
+            <a target="_blank" rel="noopener noreferrer" href="/changelog">Rubixd@2.0.0</a>
             {messages['app.publish.intro']}
             {messages['app.publish.old-version-guide']}
-            <a target="_blank" rel="noopener noreferrer" href="http://1x.ant.design">1x.ant.design</a>
+            <a target="_blank" rel="noopener noreferrer" href="http://1x.ant.design">1x.Rubix.design</a>
             {messages['app.publish.old-version-tips']}
           </p>
         </div>
       ),
       okText: 'OK',
-      onOk: () => localStorage.setItem('antd@2.0.0-notification-sent', 'true'),
+      onOk: () => localStorage.setItem('Rubixd@2.0.0-notification-sent', 'true'),
       className: 'new-version-info-modal',
       width: 470,
     });

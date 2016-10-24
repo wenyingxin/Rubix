@@ -3,17 +3,12 @@ order: 1
 title: 快速上手
 ---
 
-Ant Design React 致力于提供给程序员**愉悦**的开发体验。
+Rubix Design React 致力于提供给程序员**愉悦**的开发体验。
 
 ---
 
 在开始之前，推荐先学习 [React](http://facebook.github.io/react/) 和 [ES2015](http://babeljs.io/docs/learn-es2015/)。
 
-## 第一个例子
-
-最简单的使用方式参照以下 CodePen 演示，也推荐 Fork 本例来进行 `Bug Report`，注意不要在实际项目中这样使用。
-
-- [antd CodePen](http://codepen.io/benjycui/pen/KgPZrE?editors=001)
 
 ## 标准开发
 

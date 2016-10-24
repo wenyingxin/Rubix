@@ -2,7 +2,8 @@
 @rubix-prefix             : rubix;
 
 // Color
-@primary-color          : #61c8a8;
+@primary-color          : #00c3ac;
+@secondary-color        : #ffa900;
 @info-color             : #2db7f5;
 @success-color          : #87d068;
 @error-color            : #f50;
@@ -15,7 +16,7 @@
 @code-family            : Consolas,Menlo,Courier,monospace;
 @text-color             : #666;
 @heading-color          : #404040;
-@font-size-base         : 12px;
+@font-size-base         : 14px;
 @line-height-base       : 1.5;
 @line-height-computed   : floor((@font-size-base * @line-height-base));
 @border-radius-base     : 6px;
@@ -26,7 +27,7 @@
 @icon-url               : "https://at.alicdn.com/t/font_1473840929_824008";
 
 // LINK
-@link-color             : #2db7f5;
+@link-color             : #ffa900;
 @link-hover-color       : tint(@link-color, 20%);
 @link-active-color      : shade(@link-color, 5%);
 @link-hover-decoration  : none;
@@ -58,7 +59,7 @@
 @outline-color          : @primary-color;
 
 // Background color
-@background-color-base  : #f7f7f7;        // basic gray background
+@background-color-base  : #e6e6e6;        // basic gray background
 
 // Shadow
 @shadow-color           : rgba(100, 100, 100, .2);
@@ -73,27 +74,29 @@
 @btn-font-weight        : 500;
 @btn-border-radius-base : @border-radius-base;
 @btn-border-radius-sm   : @border-radius-sm;
+@btn-hover-color        : #fc9401;
 
 @btn-primary-color      : #fff;
-@btn-primary-bg         : @primary-color;
-@btn-group-border       : shade(@primary-color, 5%);
+@btn-primary-bg         : @secondary-color;
+@btn-group-border       : shade(@secondary-color, 5%);
 
-@btn-default-color      : @text-color;
+@btn-default-color      : #484848;
 @btn-default-bg         : @background-color-base;
-@btn-default-border     : @border-color-base;
+@btn-default-border     : transparent;
+@btn-default-hover-color: #dadada;
 
-@btn-ghost-color        : @text-color;
+@btn-ghost-color        : @secondary-color;
 @btn-ghost-bg           : transparent;
-@btn-ghost-border       : @border-color-base;
+@btn-ghost-border       : @secondary-color;
 
-@btn-disable-color      : #ccc;
-@btn-disable-bg         : @background-color-base;
-@btn-disable-border     : @border-color-base;
+@btn-disable-color      : #a3a3a3;
+@btn-disable-bg         : #dadada;
+@btn-disable-border     : transparent;
 
-@btn-padding-base       : 4px 15px;
+@btn-padding-base       : 8px 30px;
 
-@btn-font-size-lg       : 14px;
-@btn-padding-lg         : 4px 15px 5px 15px;
+@btn-font-size-lg       : 16px;
+@btn-padding-lg         : 8px 30px 9px 30px;
 
 @btn-padding-sm         : 1px 7px;
 

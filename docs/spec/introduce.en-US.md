@@ -20,7 +20,7 @@ Ant Design, created specially for middleware design, is committed to improving t
 - China Internet Plus
 - Didi
 
-> If your company or products use Ant Design, welcome to click [here](https://github.com/rubix-design/rubix-design/issues/477) to leave a message.
+> If your company or products use Ant Design, welcome to click [here](https://github.com/ant-design/ant-design/issues/477) to leave a message.
 
 ## Front-end Implementation
 
@@ -34,4 +34,4 @@ Ant Design, created specially for middleware design, is committed to improving t
 
 ## How to Contribute
 
-Welcome to contribute to Ant Design on Github. If you have any suggestions for improvement, questions,or concerns, do not hesitate to create [Pull Request](https://github.com/rubix-design/rubix-design/pulls) or advice us [here](https://github.com/rubix-design/rubix-design/issues).
+Welcome to contribute to Ant Design on Github. If you have any suggestions for improvement, questions,or concerns, do not hesitate to create [Pull Request](https://github.com/ant-design/ant-design/pulls) or advice us [here](https://github.com/ant-design/ant-design/issues).

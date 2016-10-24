@@ -21,20 +21,14 @@ export default function Banner() {
     <section id="banner">
       <ScrollElement scrollName="banner" className="page">
         <QueueAnim className="banner-text-wrapper" type={typeFunc} delay={300}>
-          <h2 key="h2">Rubix <p>DESIGN</p></h2>
+          <h2 key="h2">Rubix <p>Design</p></h2>
           <p key="content"><FormattedMessage id="app.home.slogan" /></p>
           <span className="line" key="line" />
           <div key="button1" className="start-button clearfix">
-            <Link to="/docs/spec/introduce">
-              <FormattedMessage id="app.home.introduce" />
-            </Link>
             <Link to="/docs/react/introduce">
               <FormattedMessage id="app.home.start" />
             </Link>
-          </div>
-          <GitHubButton key="github-button" type="stargazers"
-            namespace="rubix-design" repo="rubix-design"
-          />
+          </div> 
         </QueueAnim>
         <Icon type="down" className="down" />
       </ScrollElement>

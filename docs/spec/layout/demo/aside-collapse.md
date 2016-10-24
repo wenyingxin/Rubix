@@ -24,9 +24,9 @@ const AsideCollapse = React.createClass({
   render() {
     const collapse = this.state.collapse;
     return (
-      <div className={collapse ? "rubix-layout-aside rubix-layout-aside-collapse" : "rubix-layout-aside"}>
-        <aside className="rubix-layout-sider">
-          <div className="rubix-layout-logo"></div>
+      <div className={collapse ? "ant-layout-aside ant-layout-aside-collapse" : "ant-layout-aside"}>
+        <aside className="ant-layout-sider">
+          <div className="ant-layout-logo"></div>
           <Menu mode="inline" theme="dark" defaultSelectedKeys={['user']}>
             <Menu.Item key="user">
               <Icon type="user" /><span className="nav-text">导航一</span>
@@ -44,27 +44,27 @@ const AsideCollapse = React.createClass({
               <Icon type="folder" /><span className="nav-text">导航五</span>
             </Menu.Item>
           </Menu>
-          <div className="rubix-aside-action" onClick={this.onCollapseChange}>
+          <div className="ant-aside-action" onClick={this.onCollapseChange}>
             {collapse ? <Icon type="right" /> : <Icon type="left" />}
           </div>
         </aside>
-        <div className="rubix-layout-main">
-          <div className="rubix-layout-header"></div>
-          <div className="rubix-layout-breadcrumb">
+        <div className="ant-layout-main">
+          <div className="ant-layout-header"></div>
+          <div className="ant-layout-breadcrumb">
             <Breadcrumb>
               <Breadcrumb.Item>首页</Breadcrumb.Item>
               <Breadcrumb.Item>应用列表</Breadcrumb.Item>
               <Breadcrumb.Item>某应用</Breadcrumb.Item>
             </Breadcrumb>
           </div>
-          <div className="rubix-layout-container">
-            <div className="rubix-layout-content">
+          <div className="ant-layout-container">
+            <div className="ant-layout-content">
               <div style={{ height: 220 }}>
                 内容区域
               </div>
             </div>
           </div>
-          <div className="rubix-layout-footer">
+          <div className="ant-layout-footer">
           Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
           </div>
         </div>
@@ -77,12 +77,12 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 ````
 
 ````css
-.rubix-layout-aside {
+.ant-layout-aside {
   position: relative;
   min-height: 100%;
 }
 
-.rubix-layout-aside .rubix-layout-logo {
+.ant-layout-aside .ant-layout-logo {
   width: 150px;
   height: 32px;
   background: #333;
@@ -91,13 +91,13 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-logo {
+.ant-layout-aside-collapse .ant-layout-logo {
   width: 32px;
   margin: 16px;
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside .rubix-layout-sider {
+.ant-layout-aside .ant-layout-sider {
   width: 224px;
   background: #404040;
   position: absolute;
@@ -107,48 +107,48 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider {
+.ant-layout-aside-collapse .ant-layout-sider {
   width: 64px;
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside .rubix-layout-sider > .rubix-menu {
+.ant-layout-aside .ant-layout-sider > .ant-menu {
   margin-bottom: 20px;
 }
 
-.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item {
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item {
   margin: 16px 0;
 }
 
-.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item .nav-text {
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item .nav-text {
   vertical-align: baseline;
   display: inline-block;
 }
 
-.rubix-layout-aside .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .anticon {
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item > .anticon {
   transition: font-size .3s;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item {
   transition: all 0s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item > .anticon {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item > .anticon {
   font-size: 16px;
   display: inline-block;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item .nav-text {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item .nav-text {
   display: none;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item:hover {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item:hover {
   background: #2db7f5;
   color: #fff;
   transition: all 0s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-sider > .rubix-menu > .rubix-menu-item:hover .nav-text {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item:hover .nav-text {
   display: inline-block;
   vertical-align: top;
   background: #2db7f5;
@@ -158,7 +158,7 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
 }
 
 /* 实际使用中需要改成 position: fixed */
-.rubix-layout-aside .rubix-aside-action {
+.ant-layout-aside .ant-aside-action {
   height: 42px;
   width: 224px;
   position: absolute;
@@ -171,41 +171,41 @@ ReactDOM.render(<BrowserDemo><AsideCollapse /></BrowserDemo>, mountNode);
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-aside-action {
+.ant-layout-aside-collapse .ant-aside-action {
   width: 64px;
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside .rubix-layout-header {
+.ant-layout-aside .ant-layout-header {
   background: #fff;
   height: 64px;
   border-bottom: 1px solid #e9e9e9;
 }
 
-.rubix-layout-aside .rubix-layout-breadcrumb {
+.ant-layout-aside .ant-layout-breadcrumb {
   margin: 7px 0 -17px 24px;
 }
 
-.rubix-layout-aside .rubix-layout-main {
+.ant-layout-aside .ant-layout-main {
   margin-left: 224px;
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside-collapse .rubix-layout-main {
+.ant-layout-aside-collapse .ant-layout-main {
   margin-left: 64px;
   transition: all 0.3s ease;
 }
 
-.rubix-layout-aside .rubix-layout-container {
+.ant-layout-aside .ant-layout-container {
   margin: 24px 16px;
 }
 
-.rubix-layout-aside .rubix-layout-content {
+.ant-layout-aside .ant-layout-content {
   background: #fff;
   padding: 24px;
 }
 
-.rubix-layout-aside .rubix-layout-footer {
+.ant-layout-aside .ant-layout-footer {
   height: 64px;
   line-height: 64px;
   text-align: center;

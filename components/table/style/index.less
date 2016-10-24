@@ -2,7 +2,7 @@
 @import "../../style/mixins/index";
 
 @table-prefix-cls: ~"@{rubix-prefix}-table";
-@table-head-background-color: @background-color-base;
+@table-head-background-color: #f3f3f3;
 
 .@{table-prefix-cls} {
   font-size: @font-size-base;
@@ -56,7 +56,7 @@
     transition: all .3s ease;
     &.@{table-prefix-cls}-row-hover,
     &:hover {
-      background: tint(@primary-color, 90%);
+      background: #f8f8f8;
     }
   }
 

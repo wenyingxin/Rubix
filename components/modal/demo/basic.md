@@ -41,9 +41,9 @@ const App = React.createClass({
     return (
       <div>
         <Button type="primary" onClick={this.showModal}>Open a modal dialog</Button>
-        <Modal title="Basic Modal" visible={this.state.visible}
+       <Modal title=" " visible={this.state.visible}
           onOk={this.handleOk} onCancel={this.handleCancel}
-        >
+        > 
           <p>some contents...</p>
           <p>some contents...</p>
           <p>some contents...</p>

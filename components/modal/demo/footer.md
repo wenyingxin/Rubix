@@ -47,11 +47,11 @@ const Test = React.createClass({
         </Button>
         <Modal
           visible={this.state.visible}
-          title="Title"
+          title="  "
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key="back" type="ghost" size="large" onClick={this.handleCancel}>Return</Button>,
+            <Button key="back" type="default" size="large" onClick={this.handleCancel}>Return</Button>,
             <Button key="submit" type="primary" size="large" loading={this.state.loading} onClick={this.handleOk}>
               Submit
             </Button>,

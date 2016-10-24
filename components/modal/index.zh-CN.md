@@ -59,5 +59,6 @@ title: Modal
 <style>
 .code-box-demo .rubix-btn {
   margin-right: 8px;
+  margin-bottom: 12px;
 }
 </style>

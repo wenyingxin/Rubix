@@ -106,29 +106,29 @@ export default class Header extends React.Component {
             <FormattedMessage id="app.header.menu.home" />
           </Link>
         </Menu.Item>
-        <Menu.Item key="docs/practice">
-          <Link to="/docs/practice/cases">
-            <FormattedMessage id="app.header.menu.practice" />
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="docs/pattern">
-          <Link to="/docs/pattern/navigation">
-            <FormattedMessage id="app.header.menu.pattern" />
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="docs/react">
-          <Link to="/docs/react/introduce">
-            <FormattedMessage id="app.header.menu.components" />
-          </Link>
-        </Menu.Item>
         <Menu.Item key="docs/spec">
           <Link to="/docs/spec/introduce">
             <FormattedMessage id="app.header.menu.spec" />
           </Link>
         </Menu.Item>
+          <Menu.Item key="docs/pattern">
+          <Link to="/docs/pattern/navigation">
+            <FormattedMessage id="app.header.menu.pattern" />
+          </Link>
+        </Menu.Item>
+         <Menu.Item key="docs/react">
+          <Link to="/docs/react/introduce">
+            <FormattedMessage id="app.header.menu.components" />
+          </Link>
+        </Menu.Item>
         <Menu.Item key="docs/resource">
           <Link to="/docs/resource/download">
             <FormattedMessage id="app.header.menu.resource" />
+          </Link>
+        </Menu.Item>
+         <Menu.Item key="docs/practice">
+          <Link to="/docs/practice/cases">
+            <FormattedMessage id="app.header.menu.practice" />
           </Link>
         </Menu.Item>
       </Menu>,
@@ -152,7 +152,7 @@ export default class Header extends React.Component {
           <Col lg={4} md={6} sm={7} xs={24}>
             <Link to="/" id="logo">
               <img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
-              <span>Rubix Design</span>
+              <span>Rubix</span>
             </Link>
           </Col>
           <Col lg={20} md={18} sm={17} xs={0} style={{ display: 'block' }}>

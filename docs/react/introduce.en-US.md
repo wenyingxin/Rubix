@@ -1,6 +1,6 @@
 ---
 order: 0
-title: Ant Design of React
+title: Rubix Design of React
 ---
 
 We supply a react implementation `antd` following Ant Design specification, which designed to help developing RIA such as dashboards or other enterprise-like complex UI needs.

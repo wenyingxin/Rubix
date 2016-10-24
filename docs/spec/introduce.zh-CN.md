@@ -1,6 +1,6 @@
 ---
 order: 0
-title: Ant Design
+title: 介绍
 ---
 
 <div style="text-align:center;background:#FBFBFB;margin:40px 0;">
@@ -21,7 +21,7 @@ Ant Design 是一个致力于提升『用户』和『设计者』使用体验的
 - 新美大
 - 滴滴
 
-> 如果你的公司和产品使用了 Ant Design，欢迎到 [这里](https://github.com/rubix-design/rubix-design/issues/477) 留言。
+> 如果你的公司和产品使用了 Ant Design，欢迎到 [这里](https://github.com/ant-design/ant-design/issues/477) 留言。
 
 ## 前端实现
 
@@ -35,4 +35,4 @@ Ant Design 是一个致力于提升『用户』和『设计者』使用体验的
 
 ## 如何贡献
 
-我们欢迎任何形式的贡献，有任何建议或意见您可以进行 [Pull Request](https://github.com/rubix-design/rubix-design/pulls)，或者给我们 [提问](https://github.com/rubix-design/rubix-design/issues)。
+我们欢迎任何形式的贡献，有任何建议或意见您可以进行 [Pull Request](https://github.com/ant-design/ant-design/pulls)，或者给我们 [提问](https://github.com/ant-design/ant-design/issues)。

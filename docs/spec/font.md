@@ -30,8 +30,8 @@ font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Micros
 
 ## 字体使用规范
 
-<div class="rubix-row">
-  <div class="rubix-col rubix-col-12">
+<div class="ant-row">
+  <div class="ant-col ant-col-12">
     <div class="font-type">
       <div class="font-title">主标题</div>
       <h1>
@@ -94,7 +94,7 @@ font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Micros
       </p>
     </div>
   </div>
-  <div class="rubix-col rubix-col-12">
+  <div class="ant-col ant-col-12">
     <div class="font-type">
       <div class="font-title">Main Head</div>
       <h1>
