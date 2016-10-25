@@ -1,5 +1,5 @@
 ---
-order: 4
+order: 5
 title:
   zh-CN: 表格
   en-US: Table
@@ -11,7 +11,7 @@ title:
 
 ## 内容
 
-<img class="preview-img" align="right" alt="结构示例" src="https://os.alipayobjects.com/rmsportal/zFqqEqKKAylKkxv.png">
+<img class="preview-img" align="right" alt="结构示例" src="/site/common/images/table/table1.png">
 
 通常表格的组成元素以及相关元素会有，这几部分组成。
 
@@ -25,25 +25,25 @@ title:
 
 ### 筛选
 
-<img class="preview-img" align="right" alt="筛选示例" src="https://os.alipayobjects.com/rmsportal/YRcnmAFUvcfMlpN.png">
+<img class="preview-img" align="right" alt="筛选示例" src="/site/common/images/table/table2.png">
 
 当该列选项有限，用户又希望只查看一个或者多个值时，可考虑使用。
 
 ### 状态点
 
-<img class="preview-img" align="right" alt="状态示例" src="https://os.alipayobjects.com/rmsportal/EYmtSshUxKydwns.png">
+<img class="preview-img" align="right" alt="状态示例" src="/site/common/images/table/table25.png">
 
 一般用四种颜色来表明系统的不同状态。
 
 ### 更多操作
 
-<img class="preview-img" align="right" alt="更多操作示例" description="依次分别为：完整内容、暂时不可用、没有该权限。" src="https://os.alipayobjects.com/rmsportal/ZlcZDOZNZpYQcMM.png">
+<img class="preview-img" align="right" alt="更多操作示例" description="依次分别为：完整内容、暂时不可用、没有该权限。" src="/site/common/images/table/table3.png">
 
 该项暂时不可用时，直接灰化该操作；用户没有该权限时，直接隐藏该操作。
 
 ### 跳转至详情
 
-<img class="preview-img" align="right" alt="名称跳转示例" src="https://os.alipayobjects.com/rmsportal/tfJiUmrUJRzBlzt.png">
+<img class="preview-img" align="right" alt="名称跳转示例" src="/site/common/images/table/table4.png">
 
 把 ID、名称等唯一性的表格项处理成文字链，点击后跳转至详情。
 
@@ -52,7 +52,7 @@ title:
 
 <br>
 
-<img class="preview-img" align="right" alt="查看跳转示例" src="https://os.alipayobjects.com/rmsportal/zjDqNVTzSrzXaWg.png">
+<img class="preview-img" align="right" alt="查看跳转示例" src="/site/common/images/table/table5.png">
 
 在操作中增加一列『查看』，点击后进行跳转至详情。
 
@@ -71,57 +71,57 @@ title:
 
 ### 全选数据
 
-<img class="preview-img" align="right" alt="状态一" src="https://os.alipayobjects.com/rmsportal/QqafGErOPnuDKyy.png">
+<img class="preview-img" align="right" alt="状态一" src="/site/common/images/table/table6.png">
 
-<img class="preview-img" align="right" alt="状态二：点击 Table 顶部的复选框，出现『Alert』" src="https://os.alipayobjects.com/rmsportal/qwRSMFNilVCNoym.png">
+<img class="preview-img" align="right" alt="状态二：点击 Table 顶部的复选框，出现『Alert』" src="/site/common/images/table/table7.png">
 
-<img class="preview-img" align="right" alt="状态三：点击『选择全部』后" src="https://os.alipayobjects.com/rmsportal/POvEJGjMYAexGut.png">
+<img class="preview-img" align="right" alt="状态三：点击『选择全部』后" src="/site/common/images/table/table8.png">
 
 当使用了分页器，又想实现全选数据的功能，可以结合『Alert』来实现。
 
 ### 跨页选数据
 
-<img class="preview-img" align="right" alt="状态一：选中一行数据" src="https://os.alipayobjects.com/rmsportal/OcIWSystreURrPV.png">
+<img class="preview-img" align="right" alt="状态一：选中一行数据" src="/site/common/images/table/table9.png">
 
-<img class="preview-img" align="right" alt="状态二：切换分页后，记录所选的项目" src="https://os.alipayobjects.com/rmsportal/HuzwUWDzXszOkEI.png">
+<img class="preview-img" align="right" alt="状态二：切换分页后，记录所选的项目" src="/site/common/images/table/table10.png">
 
-<img class="preview-img" align="right" alt="状态三：在其他页中再选择一项，多记录一项选择" src="https://os.alipayobjects.com/rmsportal/yCjrxTSElzNUsFn.png">
+<img class="preview-img" align="right" alt="状态三：在其他页中再选择一项，多记录一项选择" src="/site/common/images/table/table11.png">
 
-<img class="preview-img" align="right" alt="状态四：用户可以在记录条直接取消选择" src="https://os.alipayobjects.com/rmsportal/jtepHsDPApPnQlD.png">
+<img class="preview-img" align="right" alt="状态四：用户可以在记录条直接取消选择" src="/site/common/images/table/table12.png">
 
-<img class="preview-img" align="right" alt="状态五：表格选择框同步取消选择" src="https://os.alipayobjects.com/rmsportal/OAVQZqxPyuAWvTh.png">
+<img class="preview-img" align="right" alt="状态五：表格选择框同步取消选择" src="/site/common/images/table/table13.png">
 
 当需要对表格／列表的数据进行跨分页器选择时，结合『Alert』来实现。
 
 ### 固定按钮组
 
-<img class="preview-img" align="right" alt="顶部固定示例" src="https://os.alipayobjects.com/rmsportal/AhgnVIhTIvtHpok.png">
+<img class="preview-img" align="right" alt="顶部固定示例" src="/site/common/images/table/table14.png">
 
-<img class="preview-img" align="right" alt="底部固定示例" src="https://os.alipayobjects.com/rmsportal/hUHidNAJczLRVCg.png">
+<img class="preview-img" align="right" alt="底部固定示例" src="/site/common/images/table/table15.png">
 
 用在表格行数很多时（一般多于 20 行），又想对表格数据进行频繁的操作时，尤其适用在无限加载的表格中。
 
 ### 某一项内容过长
 
-<img class="preview-img" align="right" alt="气泡显示示例" description="当过长信息可以被隐藏时，用户悬浮／点击该项时，用『Tooltip／Popover』来显示完整内容。" src="https://os.alipayobjects.com/rmsportal/vgNHOYAiuQbXCOi.png">
+<img class="preview-img" align="right" alt="气泡显示示例" description="当过长信息可以被隐藏时，用户悬浮／点击该项时，用『Tooltip／Popover』来显示完整内容。" src="/site/common/images/table/table16.png">
 
 某一项内容过长／不确定长度，既不希望用户在列表和详情之间来回跳转，又不希望不确定的数据撑爆表格时。
 
 ### 模块编辑
 
-<img class="preview-img" align="right" alt="模块编辑示例" description="启动和禁用要尽可能相似（对称性交互）；保证启用和禁用切换时，页面不在水平方向不错位。" src="https://os.alipayobjects.com/rmsportal/mUhSLOTjzGYTQaE.png">
+<img class="preview-img" align="right" alt="模块编辑示例" description="启动和禁用要尽可能相似（对称性交互）；保证启用和禁用切换时，页面不在水平方向不错位。" src="/site/common/images/table/table17.png">
 
 适用在易读性高于易编辑性时；适用在有一定数量的项需要编辑时。
 
 ### 直接编辑
 
-<img class="preview-img" align="right" alt="直接编辑示例" description="用户输入后，系统需要及时保存数据。" src="https://os.alipayobjects.com/rmsportal/VgvZjqTZBuAfGuO.png">
+<img class="preview-img" align="right" alt="直接编辑示例" description="用户输入后，系统需要及时保存数据。" src="/site/common/images/table/table18.png">
 
 适用在易编辑性高于易读性时。
 
 ### 悬浮层编辑
 
-<img class="preview-img" align="right" alt="悬浮层编辑示例" src="https://os.alipayobjects.com/rmsportal/QhIyXeNxAZEaLjT.png">
+<img class="preview-img" align="right" alt="悬浮层编辑示例" src="/site/common/images/table/table19.png">
 
 悬浮层会遮挡部分页面，适用在上下文对编辑任务不那么重要时。
 
@@ -130,19 +130,19 @@ title:
 
 ### 行高
 
-<img class="preview-img" align="right" alt="标准" src="https://os.alipayobjects.com/rmsportal/OXTCkOkAtaWtzNA.png">
+<img class="preview-img" align="right" alt="标准" src="/site/common/images/table/table20.png">
 
-<img class="preview-img" align="right" alt="适中" src="https://os.alipayobjects.com/rmsportal/irjamuwZFdQLYWJ.png">
+<img class="preview-img" align="right" alt="适中" src="/site/common/images/table/table21.png">
 
-<img class="preview-img" align="right" alt="紧凑" src="https://os.alipayobjects.com/rmsportal/SdlTVIAoxickNMM.png">
+<img class="preview-img" align="right" alt="紧凑" src="/site/common/images/table/table26.png">
 
 提供了多种规格的行高，适用在页面、弹出框等场景中。
 
 ### 列宽
 
-<img class="preview-img bad" align="right" alt="错误示例" src="https://os.alipayobjects.com/rmsportal/TbuuZNfOTrSflVg.png" >
+<img class="preview-img bad" align="right" alt="错误示例" src="/site/common/images/table/table22.png" >
 
-<img class="preview-img good" align="right" alt="正确示例" src="https://os.alipayobjects.com/rmsportal/cSSSfNrFMioHDBJ.png">
+<img class="preview-img good" align="right" alt="正确示例" src="/site/common/images/table/table23.png">
 
 一般是根据栅格来排版，通过设定每一列的宽度比列，来保证一定尺寸之上（eg：1366px）有好的浏览效果。需要注意：
 
@@ -151,9 +151,11 @@ title:
 
 ### 对齐方式
 
-<img class="preview-img" align="right" alt="对齐示例" src="https://os.alipayobjects.com/rmsportal/RWCMGdnGSZXYULc.png">
+<img class="preview-img" align="right" alt="对齐示例" src="/site/common/images/table/table24.png">
 
 数值右对齐（带小数则按小数点对齐），其余左对齐。
 
 
 <h2><span class="waiting">案例（敬请期待）</span></h2>
+
+
