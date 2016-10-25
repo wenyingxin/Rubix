@@ -31,8 +31,9 @@ For more info on the parameters, refer to the https://github.com/akiran/react-sl
   text-align: center;
   height: 100px;
   line-height: 100px;
-  background: #71B5DE;
-  color: #fff;
+  background: #fff;
+  border: #61c8a8;
+  color: #000;
   overflow: hidden;
 }
 #components-carousel-demo-vertical .rubix-carousel {
