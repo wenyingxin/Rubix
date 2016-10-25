@@ -74,7 +74,7 @@ const MyUpload = React.createClass({
     return (
       <Upload {...props} fileList={this.state.fileList}>
         <Button type="ghost">
-          <Icon type="upload" /> upload
+          <Icon type="upload" /> 点击上传
         </Button>
       </Upload>
     );

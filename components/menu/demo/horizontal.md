@@ -37,23 +37,23 @@ const App = React.createClass({
         mode="horizontal"
       >
         <Menu.Item key="mail">
-          <Icon type="mail" />Navigation One
+          <Icon type="mail" />导航一
         </Menu.Item>
         <Menu.Item key="app" disabled>
-          <Icon type="appstore" />Navigation Two
+          <Icon type="appstore" />导航二
         </Menu.Item>
-        <SubMenu title={<span><Icon type="setting" />Navigation Three - Submenu</span>}>
+        <SubMenu title={<span><Icon type="setting" />导航三 - 子菜单</span>}>
           <MenuItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
+            <Menu.Item key="setting:1">选项 1</Menu.Item>
+            <Menu.Item key="setting:2">选项 2</Menu.Item>
           </MenuItemGroup>
           <MenuItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
+            <Menu.Item key="setting:3">选项 3</Menu.Item>
+            <Menu.Item key="setting:4">选项 4</Menu.Item>
           </MenuItemGroup>
         </SubMenu>
         <Menu.Item key="alipay">
-          <a href="http://www.alipay.com/" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
+          <a href="http://www.alipay.com/" target="_blank" rel="noopener noreferrer">导航四 - 链接</a>
         </Menu.Item>
       </Menu>
     );

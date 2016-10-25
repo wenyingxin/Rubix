@@ -23,7 +23,7 @@ const props = {
   beforeUpload(file) {
     const isJPG = file.type === 'image/jpeg';
     if (!isJPG) {
-      message.error('you can only upload JPG file~');
+      message.error('您只能上传 JPG 文件~');
     }
     return isJPG;
   },
@@ -32,7 +32,7 @@ const props = {
 ReactDOM.render(
   <Upload {...props}>
     <Button type="ghost">
-      <Icon type="upload" /> upload
+      <Icon type="upload" /> 点击上传
     </Button>
   </Upload>
 , mountNode);

@@ -39,14 +39,14 @@ ReactDOM.render(
   <div>
     <Upload {...props}>
       <Button type="ghost">
-        <Icon type="upload" /> upload
+        <Icon type="upload" /> 点击上传
       </Button>
     </Upload>
     <br />
     <br />
     <Upload {...props} className="upload-list-inline">
       <Button type="ghost">
-        <Icon type="upload" /> upload
+        <Icon type="upload" /> 点击上传
       </Button>
     </Upload>
   </div>

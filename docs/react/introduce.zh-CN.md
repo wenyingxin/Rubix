@@ -1,6 +1,6 @@
 ---
 order: 0
-title: Rubix Design of React
+title: Rubix of React
 ---
 
 这里是 Rubix 的 React 实现，开发和服务于互联网前端产品。

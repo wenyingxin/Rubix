@@ -46,8 +46,8 @@ ReactDOM.render(
         <p className="rubix-upload-drag-icon">
           <Icon type="inbox" />
         </p>
-        <p className="rubix-upload-text">Click or drag file to this area to upload</p>
-        <p className="rubix-upload-hint">Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files</p>
+        <p className="rubix-upload-text">点击或拖拽文件到此区域上传</p>
+        <p className="rubix-upload-hint">支持单个或批量上传，严禁上传公司内部资料及其他违禁文件</p>
       </Dragger>
     </div>
   </div>

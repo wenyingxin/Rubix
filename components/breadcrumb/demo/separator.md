@@ -18,10 +18,10 @@ import { Breadcrumb } from 'antd';
 
 ReactDOM.render(
   <Breadcrumb separator=">">
-    <Breadcrumb.Item>Home</Breadcrumb.Item>
-    <Breadcrumb.Item href="">Application Center</Breadcrumb.Item>
-    <Breadcrumb.Item href="">Application List</Breadcrumb.Item>
-    <Breadcrumb.Item>An Application</Breadcrumb.Item>
+    <Breadcrumb.Item>首页</Breadcrumb.Item>
+    <Breadcrumb.Item href="">应用中心</Breadcrumb.Item>
+    <Breadcrumb.Item href="">应用列表</Breadcrumb.Item>
+    <Breadcrumb.Item>某应用</Breadcrumb.Item>
   </Breadcrumb>
 , mountNode);
 ````

@@ -23,10 +23,10 @@ ReactDOM.render(
     </Breadcrumb.Item>
     <Breadcrumb.Item href="">
       <Icon type="user" />
-      <span>Application List</span>
+      <span>应用列表</span>
     </Breadcrumb.Item>
     <Breadcrumb.Item>
-      Application
+      应用
     </Breadcrumb.Item>
   </Breadcrumb>
 , mountNode);

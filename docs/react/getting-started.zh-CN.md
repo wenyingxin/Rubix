@@ -134,32 +134,6 @@ Ant Design React 支持所有的现代浏览器和 IE9+。
 
 > 更多 IE8 下使用 React 的相关问题可以参考：https://github.com/xcatliu/react-ie8
 
-## 自行构建
-
-如果想自己维护工作流，我们推荐使用 [webpack](http://webpack.github.io/) 进行构建和调试。理论上你可以利用 React 生态圈中的 [各种脚手架](https://github.com/enaqx/awesome-react#boilerplates) 进行开发，如果遇到问题可参考我们所使用的 [webpack 配置](https://github.com/rubix-tool/atool-build/blob/master/src/getWebpackCommonConfig.js) 进行 [定制](http://rubix-tool.github.io/webpack-config.html)。
-
-目前社区也有很多基于 antd 定制的 [脚手架](https://github.com/rubix-design/rubix-design/issues/129)，欢迎进行试用和贡献。
-
-## 按需加载
-
-通过 `import { Button } from 'antd';` 引入会加载 antd 下所有的模块，如果要按需加载可以通过以下的写法来引用。
-
-```jsx
-import Button from 'antd/lib/button';
-```
-
-如果你使用 babel，我们推荐使用 [babel-plugin-import](https://github.com/rubix-design/babel-plugin-import) 来进行按需加载，加入这个插件后。你可以仍然这么写：
-
-```jsx
-import { Button } from 'antd';
-```
-
-插件会帮你转换成上面的写法。另外此插件配合 [style](https://github.com/rubix-design/babel-plugin-import#usage) 属性可以做到模块样式的按需自动加载。
-
-## 配置案例
-
-- [改变主色系](https://github.com/rubix-design/antd-init/tree/master/examples/customize-antd-theme)
-- [使用本地字体](https://github.com/rubix-design/antd-init/tree/master/examples/local-iconfont)
 
 ## 小甜点
 

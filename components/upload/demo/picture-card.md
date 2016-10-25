@@ -50,11 +50,11 @@ const ImageUploadList = React.createClass({
       <div className="clearfix">
         <Upload {...props}>
           <Icon type="plus" />
-          <div className="rubix-upload-text">Upload</div>
+          <div className="rubix-upload-text">点击上传</div>
         </Upload>
         <a href="https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png" target="_blank" rel="noopener noreferrer" className="upload-example">
           <img alt="example" src="https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png" />
-          <span>sample</span>
+          <span>示例</span>
         </a>
         <Modal visible={this.state.previewVisible} footer={null} onCancel={this.handleCancel}>
           <img alt="example" src={this.state.previewImage} />
