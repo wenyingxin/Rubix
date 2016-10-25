@@ -1,6 +1,6 @@
 ---
 category:
-  zh-CN: 十大原则
+  zh-CN: 设计原则
   en-US: Principles
 order: 5
 title:

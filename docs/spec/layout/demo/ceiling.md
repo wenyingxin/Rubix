@@ -13,9 +13,9 @@ import BrowserDemo from 'site/theme/template/BrowserDemo';
 
 ReactDOM.render(
   <BrowserDemo>
-    <div className="ant-layout-ceiling-demo">
-      <div className="ant-layout-ceiling">
-        <div className="ant-layout-wrapper">
+    <div className="rubix-layout-ceiling-demo">
+      <div className="rubix-layout-ceiling">
+        <div className="rubix-layout-wrapper">
           <ul className="right">
             <li>xxx@example.com</li>
             <li>|</li>
@@ -25,9 +25,9 @@ ReactDOM.render(
           </ul>
         </div>
       </div>
-      <div className="ant-layout-header">
-        <div className="ant-layout-wrapper">
-          <div className="ant-layout-logo"></div>
+      <div className="rubix-layout-header">
+        <div className="rubix-layout-wrapper">
+          <div className="rubix-layout-logo"></div>
         </div>
       </div>
     </div>
@@ -36,11 +36,11 @@ ReactDOM.render(
 ````
 
 ````css
-.ant-layout-ceiling-demo {
+.rubix-layout-ceiling-demo {
   height: 100%;
 }
 
-.ant-layout-ceiling {
+.rubix-layout-ceiling {
   font-size: 12px;
   height: 30px;
   line-height: 30px;
@@ -48,26 +48,26 @@ ReactDOM.render(
   color: #ddd;
 }
 
-.ant-layout-ceiling .right {
+.rubix-layout-ceiling .right {
   float: right;
 }
 
-.ant-layout-ceiling ul li {
+.rubix-layout-ceiling ul li {
   display: inline-block;
   margin: 0 4px;
 }
 
-.ant-layout-ceiling-demo .ant-layout-wrapper {
+.rubix-layout-ceiling-demo .rubix-layout-wrapper {
   padding: 0 50px;
 }
 
-.ant-layout-ceiling-demo .ant-layout-header {
+.rubix-layout-ceiling-demo .rubix-layout-header {
   background: #fff;
   height: 64px;
   border-bottom: 1px solid #d9d9d9;
 }
 
-.ant-layout-ceiling-demo .ant-layout-logo {
+.rubix-layout-ceiling-demo .rubix-layout-logo {
   width: 120px;
   height: 32px;
   background: #eee;

@@ -1,5 +1,5 @@
 ---
-category: 十大原则
+category: 设计原则
 order: 9
 title: 巧用过渡
 ---
@@ -75,5 +75,3 @@ title: 巧用过渡
 ---
 
 ## 自然运动
-
-参见 [Ant Motion 动画语言](http://motion.ant.design/language/time)。
