@@ -137,8 +137,6 @@ class Footer extends React.Component {
           <li>
             <div>©2016 <FormattedMessage id="app.footer.author" /></div>
             
-            {/*
-              <div>Powered by <a href="https://github.com/benjycui/bisheng">BiSheng</a></div>
               <div style={{ marginTop: 10 }}>
               <FormattedMessage id="app.footer.version" />
               <Select
@@ -150,7 +148,7 @@ class Footer extends React.Component {
                 {options}
               </Select>
             </div>
-            */}
+            
             
           </li>
         </ul>
