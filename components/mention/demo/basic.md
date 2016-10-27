@@ -14,7 +14,7 @@ title:
 Basic usage.
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'rubix';
 const { toString, toEditorState } = Mention;
 
 function onChange(editorState) {

@@ -14,7 +14,7 @@ title:
 The most basic usage.
 
 ````jsx
-import { TreeSelect } from 'antd';
+import { TreeSelect } from 'rubix';
 const TreeNode = TreeSelect.TreeNode;
 
 const Demo = React.createClass({

@@ -14,7 +14,7 @@ title:
 Numeric-only input box.
 
 ````jsx
-import { InputNumber } from 'antd';
+import { InputNumber } from 'rubix';
 
 function onChange(value) {
   console.log('changed', value);

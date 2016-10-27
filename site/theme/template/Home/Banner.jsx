@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import ScrollElement from 'rc-scroll-anim/lib/ScrollElement';
 import GitHubButton from 'react-github-button';
 import 'react-github-button/assets/style.css';
-import { Icon } from 'antd';
+import { Icon } from 'rubix';
 import QueueAnim from 'rc-queue-anim';
 
 function typeFunc(a) {

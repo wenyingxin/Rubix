@@ -14,7 +14,7 @@ title:
 Communicated with other components.
 
 ````jsx
-import { Checkbox, Button } from 'antd';
+import { Checkbox, Button } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

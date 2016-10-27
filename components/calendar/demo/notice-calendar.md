@@ -14,7 +14,7 @@ title:
 A complex application.
 
 ````jsx
-import { Calendar } from 'antd';
+import { Calendar } from 'rubix';
 
 function getListData(value) {
   let listData;

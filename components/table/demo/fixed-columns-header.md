@@ -22,7 +22,7 @@ Suitable for large amounts of data with long columns.
 > A fixed width for `scroll.x` is recommended.
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'rubix';
 
 const columns = [
   { title: '姓名', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },

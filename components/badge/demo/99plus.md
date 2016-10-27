@@ -14,7 +14,7 @@ title:
 `99+` is displayed when count is larger than `99`.
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'rubix';
 
 ReactDOM.render(<div>
   <Badge count={99}>

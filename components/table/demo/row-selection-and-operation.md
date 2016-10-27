@@ -15,7 +15,7 @@ To perform operations and clear selections after selecting some rows, use `rowSe
 
 
 ````jsx
-import { Table, Button } from 'antd';
+import { Table, Button } from 'rubix';
 
 const columns = [{
   title: '姓名',

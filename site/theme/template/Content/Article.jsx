@@ -2,7 +2,7 @@ import React, { PropTypes, Children, cloneElement } from 'react';
 import { FormattedMessage } from 'react-intl';
 import DocumentTitle from 'react-document-title';
 import { getChildren } from 'jsonml.js/lib/utils';
-import { Timeline } from 'antd';
+import { Timeline } from 'rubix';
 import EditButton from './EditButton';
 import * as utils from '../utils';
 

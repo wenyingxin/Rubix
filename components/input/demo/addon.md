@@ -14,7 +14,7 @@ title:
 Using pre & post tabs example.
 
 ````jsx
-import { Input, Select } from 'antd';
+import { Input, Select } from 'rubix';
 const Option = Select.Option;
 
 const selectBefore = (

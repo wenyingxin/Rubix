@@ -14,7 +14,7 @@ title:
 By using `format`, you can customize the format(such as `YYYY/MM/DD`) the date is displayed in.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'rubix';
 import moment from 'moment';
 
 const format = 'YYYY/MM/DD';

@@ -15,7 +15,7 @@ A disabled state of the `TimePicker`.
 
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'rubix';
 import moment from 'moment';
 
 ReactDOM.render(

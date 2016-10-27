@@ -14,7 +14,7 @@ title:
 Using `OptGroup` to group the options.
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 const OptGroup = Select.OptGroup;
 

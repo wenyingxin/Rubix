@@ -13,7 +13,7 @@ title:
 Colorful tags.
 
 ````jsx
-import { Tag } from 'antd';
+import { Tag } from 'rubix';
 
 ReactDOM.render(<div>
   <Tag closable color="blue">Blue</Tag>

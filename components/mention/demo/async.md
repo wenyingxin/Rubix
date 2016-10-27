@@ -14,7 +14,7 @@ title:
 async
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'rubix';
 
 const users = ['afc163', 'benjycui', 'yiminghe', 'jljsj33', 'dqaria', 'RaoHai'];
 const AsyncMention = React.createClass({

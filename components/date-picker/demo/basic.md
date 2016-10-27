@@ -14,7 +14,7 @@ title:
 The most basic usage.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'rubix';
 
 function onChange(date, dateString) {
   console.log(date, dateString);

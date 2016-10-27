@@ -14,7 +14,7 @@ title:
 Vertical pagination.
 
 ````jsx
-import { Carousel } from 'antd';
+import { Carousel } from 'rubix';
 
 ReactDOM.render(
   <Carousel vertical="true">

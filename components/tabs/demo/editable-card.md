@@ -14,7 +14,7 @@ title:
 Only card type Tabs support adding & closeable.
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'rubix';
 const TabPane = Tabs.TabPane;
 
 const Demo = React.createClass({

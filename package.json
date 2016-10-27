@@ -77,7 +77,6 @@
     "warning": "~3.0.0"
   },
   "devDependencies": {
-    "antd-tools": "^0.12.0",
     "babel-eslint": "^6.0.2",
     "babel-jest": "^13.2.2",
     "babel-plugin-import": "^1.0.0",
@@ -124,28 +123,29 @@
     "react-stateless-wrapper": "^1.0.2",
     "react-sublime-video": "^0.2.0",
     "reqwest": "^2.0.5",
+    "rubix-tools": "^0.13.4",
     "typescript-babel-jest": "^0.1.5",
     "typings": "^1.3.2",
     "values.js": "^1.0.3"
   },
   "scripts": {
-    "dist": "antd-tools run dist",
-    "compile": "antd-tools run compile",
-    "clean": "antd-tools run clean",
+    "dist": "rubix-tools run dist",
+    "compile": "rubix-tools run compile",
+    "clean": "rubix-tools run clean",
     "start": "bisheng start -c ./site/bisheng.config.js",
     "site": "bisheng build -c ./site/bisheng.config.js",
     "deploy": "npm run clean && bisheng gh-pages -c ./site/bisheng.config.js",
     "lint": "npm run tslint && tsc && npm run srclint && npm run demolint && npm run lesshint",
     "srclint": "RUN_ENV=SRC eslint test site scripts ./.eslintrc.js ./webpack.config.js --ext '.js,.jsx,.tsx' --ignore-pattern '!.eslintrc.js'",
-    "tslint": "antd-tools run ts-lint",
+    "tslint": "rubix-tools run ts-lint",
     "demolint": "RUN_ENV=DEMO eslint components/*/demo/*.md --ext '.md'",
     "lesshint": "lesshint components -r scripts/lesshint-report.js",
     "eslint-fix": "eslint --fix test site scripts ./.eslintrc.js ./webpack.config.js --ext '.js,.jsx,.tsx' --ignore-pattern '!.eslintrc.js' && eslint-tinker ./components/*/demo/*.md",
     "test": "npm run lint && npm run dist && npm run jest",
     "jest": "jest --no-cache",
     "pre-publish": "node ./scripts/prepub",
-    "prepublish": "antd-tools run guard",
-    "pub": "antd-tools run update-self && antd-tools run pub",
+    "prepublish": "rubix-tools run guard",
+    "pub": "rubix-tools run update-self && rubix-tools run pub",
     "authors": "git log --format='%aN <%aE>' | sort -u | grep -v 'users.noreply.github.com' | grep -v 'gitter.im' | grep -v '.local>' | grep -v 'alibaba-inc.com' | grep -v 'alipay.com' | grep -v 'taobao.com' > AUTHORS.txt"
   },
   "jest": {

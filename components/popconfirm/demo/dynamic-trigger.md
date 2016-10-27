@@ -14,7 +14,7 @@ title:
 Make it pop up under some conditions.
 
 ````jsx
-import { Popconfirm, Switch, message } from 'antd';
+import { Popconfirm, Switch, message } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

@@ -14,7 +14,7 @@ title:
 The simplest usage.
 
 ````jsx
-import { Affix, Button } from 'antd';
+import { Affix, Button } from 'rubix';
 
 ReactDOM.render(
   <Affix>

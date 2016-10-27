@@ -14,7 +14,7 @@ title:
 A standard progress bar.
 
 ````jsx
-import { Progress } from 'antd';
+import { Progress } from 'rubix';
 
 ReactDOM.render(
   <div>

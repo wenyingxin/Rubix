@@ -14,7 +14,7 @@ title:
 The most basic usage.
 
 ````jsx
-import { BackTop } from 'antd';
+import { BackTop } from 'rubix';
 
 ReactDOM.render(
   <div>

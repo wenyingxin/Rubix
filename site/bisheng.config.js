@@ -65,8 +65,8 @@ module.exports = {
   },
   webpackConfig(config) {
     config.resolve.alias = {
-      'antd/lib': path.join(process.cwd(), 'components'),
-      antd: process.cwd(),
+      'rubix/lib': path.join(process.cwd(), 'components'),
+      rubix: process.cwd(),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };
@@ -84,7 +84,7 @@ module.exports = {
       require.resolve('babel-plugin-import'),
       {
         style: true,
-        libraryName: 'antd',
+        libraryName: 'rubix',
         libraryDirectory: 'components',
       },
     ]);

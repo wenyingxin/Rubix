@@ -14,7 +14,7 @@ title:
 Basic modal dialog.
 
 ````jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

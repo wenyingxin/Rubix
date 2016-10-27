@@ -14,7 +14,7 @@ title:
 The `seconds` options are hidden and cannot be selected.
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'rubix';
 import moment from 'moment';
 
 const format = 'HH:mm';

@@ -14,7 +14,7 @@ title:
 The ToolTip has 12 placements choice.
 
 ````jsx
-import { Tooltip } from 'antd';
+import { Tooltip } from 'rubix';
 const text = <span>prompt text</span>;
 
 ReactDOM.render(

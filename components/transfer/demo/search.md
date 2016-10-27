@@ -14,7 +14,7 @@ title:
 Transfer with a search box.
 
 ````jsx
-import { Transfer } from 'antd';
+import { Transfer } from 'rubix';
 
 const App = React.createClass({
   getInitialState() {

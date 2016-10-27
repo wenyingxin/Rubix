@@ -15,7 +15,7 @@ You can use the `disabledDate` property to limit the start and end dates.
 
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'rubix';
 
 const DateRange = React.createClass({
   getInitialState() {

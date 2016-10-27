@@ -14,7 +14,7 @@ title:
 Basic usage example
 
 ````jsx
-import { Input } from 'antd';
+import { Input } from 'rubix';
 
 ReactDOM.render(<Input placeholder="Basic usage" />, mountNode);
 ````

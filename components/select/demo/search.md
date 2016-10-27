@@ -12,7 +12,7 @@ title:
 Search the options while expanded.
 
 ````jsx
-import { Select } from 'antd';
+import { Select } from 'rubix';
 const Option = Select.Option;
 
 function handleChange(value) {

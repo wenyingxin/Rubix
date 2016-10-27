@@ -14,7 +14,7 @@ title:
 Simple table with operations.
 
 ````jsx
-import { Table, Icon } from 'antd';
+import { Table, Icon } from 'rubix';
 
 const columns = [{
   title: '姓名',

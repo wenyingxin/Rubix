@@ -14,7 +14,7 @@ title:
 Basic validation for form.
 
 ````jsx
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input } from 'rubix';
 const createForm = Form.create;
 const FormItem = Form.Item;
 

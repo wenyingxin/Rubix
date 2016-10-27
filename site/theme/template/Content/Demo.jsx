@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { Icon } from 'antd';
+import { Icon } from 'rubix';
 import EditButton from './EditButton';
 
 export default class Demo extends React.Component {
