@@ -6,17 +6,17 @@ title: 三大特性
 
 <div style="margin-left:-40px;margin-right:-40px;overflow:hidden;margin-top:30px;">
   <div class="rubix-col-8 features">
-    <img src="https://os.alipayobjects.com/rmsportal/OVirOHTeAdzDBuQ.png">
+    
     <h5>微小</h5>
     <div>致力于微小而美好的改变，力求在细节上精益求精，不仅让业务产品更加实用和可靠，而且还能让『用户』感到小惊喜。</div>
   </div>
   <div class="rubix-col-8 features">
-    <img src="https://os.alipayobjects.com/rmsportal/iJbUiLYpuPBXUhV.png">
+    
     <h5>确定</h5>
     <div>制定通俗而科学的设计原则、运用面向对象的方法、使用一致的文档沟通机制，给予研发团队一种高确定性、低熵值的研发状态。</div>
   </div>
   <div class="rubix-col-8 features">
-    <img src="https://os.alipayobjects.com/rmsportal/uSOjjlCRjRIhtIY.png">
+    
     <h5>幸福</h5>
     <div>不苛求简单，但是力求让『用户』和『设计者』流畅的完成目标，并带着成功和满足离开。</div>
   </div>

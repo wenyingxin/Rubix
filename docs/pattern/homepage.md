@@ -15,7 +15,7 @@ title:
 
 ## 内容
 
-<img class="preview-img" align="right" alt="结构示例" src="/site/common/images/homepage/homepage.png">
+<img class="preview-img" align="right" alt="结构示例" src="http://10.230.135.97:8000/homepage/homepage.png">
 
 通常金融类首页会有以下几部分内容：
 

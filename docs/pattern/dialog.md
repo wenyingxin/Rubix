@@ -16,7 +16,7 @@ title:
 特点：
 强制用户进行一些操作，如果对话框被页面隐藏，会使用户误认为站点无响应。
 
-<img class="preview-img" align="right" alt="规格示例" src="/site/common/images/dialogbox/dialogbox1.png">
+<img class="preview-img" align="right" alt="规格示例" src="http://10.230.135.97:8000/dialogbox/dialogbox1.png">
 
 ### 非模态对话框
 对话框被弹出后，一直保留在屏幕上，用户可以继续在对话框所在的应用程序中进行其他操作，当需要激活窗口时，直接单击对话框所在区域即可。
@@ -33,7 +33,7 @@ title:
 
 特点：选项按钮突出，通常点击面积很大。引导用户点击，但同时也可能引起用户的恐慌，会直接选择关闭对话框，适用于目的极其明确的对话框，希望引导用户进入特定操作。
 
-<img class="preview-img" align="right" alt="规格示例" src="/site/common/images/dialogbox/dialogbox2.png">
+<img class="preview-img" align="right" alt="规格示例" src="http://10.230.135.97:8000/dialogbox/dialogbox2.png">
 
 ## 内容
 
@@ -45,7 +45,7 @@ title:
 ## 规格
 ### 间距
 
-<img class="preview-img" align="right" alt="间隔示例" src="/site/common/images/dialogbox/dialogbox3.png">
+<img class="preview-img" align="right" alt="间隔示例" src="http://10.230.135.97:8000/dialogbox/dialogbox3.png">
 
 典型表单的间隔、颜色规范
 

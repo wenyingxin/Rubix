@@ -13,43 +13,43 @@ title:
 
 ### 多列数据
 
-<img class="preview-img" align="right" alt="多列数据示例" src="/site/common/images/Complex_Table/ct1.png">
+<img class="preview-img" align="right" alt="多列数据示例" src="http://10.230.135.97:8000/Complex_Table/ct1.png">
 
 通过按钮，可实现更多列数据的加载以及左右切换。
 
 <br>
 
-<img class="preview-img" align="right" alt="自定义列示例" src="/site/common/images/Complex_Table/ct2.png">
+<img class="preview-img" align="right" alt="自定义列示例" src="http://10.230.135.97:8000/Complex_Table/ct2.png">
 
 提供用户自定义列的功能，方便用户查看需要的列。
 
 <br>
 
-<img class="preview-img" align="right" alt="横向滚动示例" src="/site/common/images/Complex_Table/ct3.png">
+<img class="preview-img" align="right" alt="横向滚动示例" src="http://10.230.135.97:8000/Complex_Table/ct3.png">
 
 固定表头列，通过横向滚动条来查看剩余内容。
 
 ### 带图标的表格
 
-<img class="preview-img" align="right" alt="带图标表格示例" src="/site/common/images/Complex_Table/ct4.png">
+<img class="preview-img" align="right" alt="带图标表格示例" src="http://10.230.135.97:8000/Complex_Table/ct4.png">
 
 通过图标强化信息的传递，适用在表达数据变化趋势。
 
 ### 带图表的表格
 
-<img class="preview-img" align="right" alt="带图表表格示例" src="/site/common/images/Complex_Table/ct7.png">
+<img class="preview-img" align="right" alt="带图表表格示例" src="http://10.230.135.97:8000/Complex_Table/ct7.png">
 
 通过图表来强化信息的传递，适用在表达数据变化趋势。
 
 ### 二维表格
 
-<img class="preview-img" align="right" alt="二维表格示例" src="/site/common/images/Complex_Table/ct6.png">
+<img class="preview-img" align="right" alt="二维表格示例" src="http://10.230.135.97:8000/Complex_Table/ct6.png">
 
 横向和纵向各一个标题来展现数据。
 
 ### 小表格
 
-<img class="preview-img" align="right" alt="小表格示例" src="/site/common/images/Complex_Table/ct5.png">
+<img class="preview-img" align="right" alt="小表格示例" src="http://10.230.135.97:8000/Complex_Table/ct5.png">
 
 适用在卡片、弹出框等空间较小的场景中。
 

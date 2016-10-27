@@ -35,7 +35,7 @@ title:
 >    - 优点：当用户输入数据的时候，他们的眼睛固定在纵轴输入框左侧的交叉点上，是的表单的浏览填写更顺畅。
 >    - 缺点：当需要填写的内容过多时，无法一屏载入需要添加滑动条或者分页。
 
-<img class="preview-img" align="right" alt="结构示例" src="/site/common/images/form/form1.png">
+<img class="preview-img" align="right" alt="结构示例" src="http://10.230.135.97:8000/form/form1.png">
 
 <br>
 
@@ -65,19 +65,19 @@ title:
 
 ### 填空
 
-<img class="preview-img" align="right" alt="填空示例" src="/site/common/images/form/form2.png">
+<img class="preview-img" align="right" alt="填空示例" src="http://10.230.135.97:8000/form/form2.png">
 
 在一种描述性的上下文中出现输入项，可以帮助用户理解当前的状况，以及需要提供什么数据。
 
 ### 组合输入框
 
-<img class="preview-img" align="right" alt="组合输入框示例" src="/site/common/images/form/form3.png">
+<img class="preview-img" align="right" alt="组合输入框示例" src="http://10.230.135.97:8000/form/form3.png">
 
 当两个输入框关联性很强时，可以前后拼接，减少页面空间。
 
 ### 对齐方式
 
-<img class="preview-img" align="right" alt="对齐方式示例" src="/site/common/images/form/form4.png">
+<img class="preview-img" align="right" alt="对齐方式示例" src="http://10.230.135.97:8000/form/form4.png">
 
 在页面设计表单时，按钮组必须和输入框左对齐。
 
@@ -87,28 +87,28 @@ title:
 
 <br>
 
-<img class="preview-img" align="right" alt="未达字符标准时，主按钮禁用状态" src="/site/common/images/form/form5.png">
+<img class="preview-img" align="right" alt="未达字符标准时，主按钮禁用状态" src="http://10.230.135.97:8000/form/form5.png">
 
-<img class="preview-img" align="right" alt="达到字符标准时，主按钮可用状态" src="/site/common/images/form/form6.png">
+<img class="preview-img" align="right" alt="达到字符标准时，主按钮可用状态" src="http://10.230.135.97:8000/form/form6.png">
 
 当输入框非常少时，用户一输入就会有反馈，因而主按钮的禁用规则非常清晰，容易被用户理解。
 
 <br>
 
-<img class="preview-img" align="right" alt="不禁用示例" src="/site/common/images/form/form7.png">
+<img class="preview-img" align="right" alt="不禁用示例" src="http://10.230.135.97:8000/form/form7.png">
 
 当输入框非常多时（尤其是输入项中交叉了必填项和非必填项），整个反馈链路冗长又复杂，禁用规则难以被识别，容易引起困惑。
 
 ### 结构化的格式
 
-<img class="preview-img" align="right" alt="结构化的格式示例" src="/site/common/images/form/form8.png">
+<img class="preview-img" align="right" alt="结构化的格式示例" src="http://10.230.135.97:8000/form/form8.png">
 
 用户对输入的内容很熟悉，且系统不希望接受任何偏离期望的格式。
 
 ### 输入提示 & 输入提醒
 
-<img class="preview-img" align="right" alt="输入提示示例" description="在输入框激活后，输入提示一直出现至该输入框失去焦点。" src="/site/common/images/form/form9.png">
-<img class="preview-img" align="right" alt="输入提醒示例" description="在输入框激活后，输入提醒不要马上消失，等用户完成第一个词输入后再消失。" src="/site/common/images/form/form10.png">
+<img class="preview-img" align="right" alt="输入提示示例" description="在输入框激活后，输入提示一直出现至该输入框失去焦点。" src="http://10.230.135.97:8000/form/form9.png">
+<img class="preview-img" align="right" alt="输入提醒示例" description="在输入框激活后，输入提醒不要马上消失，等用户完成第一个词输入后再消失。" src="http://10.230.135.97:8000/form/form10.png">
 
 输入提示：不希望在标签上放置太多文字进行解释，同时只有标签又会引起误解。
 
@@ -116,22 +116,22 @@ title:
 
 ### 密码加强计
 
-<img class="preview-img" align="right" alt="密码强度示例" src="/site/common/images/form/form11.png">
+<img class="preview-img" align="right" alt="密码强度示例" src="http://10.230.135.97:8000/form/form11.png">
 
 提供关于密码强度和有效性的及时反馈，适用在注册页面时的密码输入框。
 
 ### 校验
 
-<img class="preview-img" align="right" description="输入时的实时校验。" src="/site/common/images/form/form12.png">
-<img class="preview-img" align="right" description="输入框失去焦点后的校验。" src="/site/common/images/form/form13.png">
+<img class="preview-img" align="right" description="输入时的实时校验。" src="http://10.230.135.97:8000/form/form12.png">
+<img class="preview-img" align="right" description="输入框失去焦点后的校验。" src="http://10.230.135.97:8000/form/form13.png">
 
-<img class="preview-img" align="right" description="点击『提交』后，系统将处理结果直接在页面上进行反馈（统计错误数量和标记错误内容）。" src="/site/common/images/form/form14.png">
+<img class="preview-img" align="right" description="点击『提交』后，系统将处理结果直接在页面上进行反馈（统计错误数量和标记错误内容）。" src="http://10.230.135.97:8000/form/form14.png">
 
 通过不同的『校验』规则和形式进行反馈，避免用户在点击提交后才刚刚开始『校验』，让用户提前纠正错误。
 
 ### 字数校验框
 
-<img class="preview-img" align="right" alt="字数校验框示例" src="/site/common/images/form/form15.png">
+<img class="preview-img" align="right" alt="字数校验框示例" src="http://10.230.135.97:8000/form/form15.png">
 
 用于统计当前输入长度，以及是否超过系统阈值。
 
@@ -140,14 +140,14 @@ title:
 
 ### 间距
 
-<img class="preview-img" align="right" alt="间隔示例" src="/site/common/images/form/form16.png">
+<img class="preview-img" align="right" alt="间隔示例" src="http://10.230.135.97:8000/form/form16.png">
 
 典型表单的间隔规范。
 
 ### 输入框宽度
 
-<img class="preview-img good" align="right" alt="正确示例" src="/site/common/images/form/form17.png">
-<img class="preview-img bad" align="right" alt="错误示例" src="/site/common/images/form/form18.png">
+<img class="preview-img good" align="right" alt="正确示例" src="http://10.230.135.97:8000/form/form17.png">
+<img class="preview-img bad" align="right" alt="错误示例" src="http://10.230.135.97:8000/form/form18.png">
 
 当内容可预知，可以根据内容长短进行定义其落在多少个栅格上。
 
@@ -159,7 +159,7 @@ title:
 
 <br>
 
-<img class="preview-img" align="right" alt="右对齐（推荐）" src="/site/common/images/form/form19.png">
+<img class="preview-img" align="right" alt="右对齐（推荐）" src="http://10.230.135.97:8000/form/form19.png">
 
 右对齐（推荐）。
 
@@ -169,7 +169,7 @@ title:
 
 <br>
 
-<img class="preview-img" align="right" alt="顶部对齐" src="/site/common/images/form/form20.png">
+<img class="preview-img" align="right" alt="顶部对齐" src="http://10.230.135.97:8000/form/form20.png">
 
 顶部对齐。
 
@@ -179,7 +179,7 @@ title:
 
 <br>
 
-<img class="preview-img" align="right" alt="左对齐" src="/site/common/images/form/form21.png">
+<img class="preview-img" align="right" alt="左对齐" src="http://10.230.135.97:8000/form/form21.png">
 
 左对齐。
 

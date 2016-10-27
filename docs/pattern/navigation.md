@@ -47,7 +47,7 @@ title:
 
 ---
 
-<img class="preview-img no-padding" align="right" alt="结构示例" src="/site/common/images/navigation/navigation1.png">
+<img class="preview-img no-padding" align="right" alt="结构示例" src="http://10.230.135.97:8000/navigation/navigation1.png">
 
 导航的结构由以下几部分组成。
 
@@ -68,11 +68,11 @@ title:
 
 <br>
 
-<img class="preview-img no-padding" align="right" alt="一级类目" src="/site/common/images/navigation/navigation2.png">
+<img class="preview-img no-padding" align="right" alt="一级类目" src="http://10.230.135.97:8000/navigation/navigation2.png">
 
-<img class="preview-img no-padding" align="right" alt="二级类目" src="/site/common/images/navigation/navigation2.png">
+<img class="preview-img no-padding" align="right" alt="二级类目" src="http://10.230.135.97:8000/navigation/navigation3.png">
 
-<img class="preview-img no-padding" align="right" alt="三级类目及以上" src="/site/common/images/navigation/navigation3.png">
+<img class="preview-img no-padding" align="right" alt="三级类目及以上" src="http://10.230.135.97:8000/navigation/navigation4.png">
 
 我们定义了不同类目层级所对应的导航样式。
 
@@ -85,7 +85,7 @@ title:
 
 <br>
 
-<img class="preview-img no-padding" align="right" alt="选项卡" src="/site/common/images/navigation/navigation9.png">
+<img class="preview-img no-padding" align="right" alt="选项卡" src="http://10.230.135.97:8000/navigation/navigation9.png">
 
 
 
@@ -94,7 +94,7 @@ title:
 
 ---
 
-<img class="preview-img no-padding" align="right" alt="结构示例" src="/site/common/images/navigation/navigation5.png">
+<img class="preview-img no-padding" align="right" alt="结构示例" src="http://10.230.135.97:8000/navigation/navigation5.png">
 
 导航的结构由以下几部分组成。
 
@@ -108,11 +108,11 @@ title:
 
 描述：通常出现在页面的顶部，位置比较固定。可以容纳给用户渠道网站的主要栏目，一般控制在一行以内，又是配有下拉菜单，可以让用户进一步看到导航隐藏的内容，显示较为清晰的层级结构。
 
-<img class="preview-img no-padding" align="right" alt="一级类目" src="/site/common/images/navigation/navigation6.png">
+<img class="preview-img no-padding" align="right" alt="一级类目" src="http://10.230.135.97:8000/navigation/navigation6.png">
 
-<img class="preview-img no-padding" align="right" alt="二级类目" src="/site/common/images/navigation/navigation7.png">
+<img class="preview-img no-padding" align="right" alt="二级类目" src="http://10.230.135.97:8000/navigation/navigation7.png">
 
-<img class="preview-img no-padding" align="right" alt="三级类目及以上" src="/site/common/images/navigation/navigation8.png">
+<img class="preview-img no-padding" align="right" alt="三级类目及以上" src="http://10.230.135.97:8000/navigation/navigation8.png">
 
 不同类目层级。
 
