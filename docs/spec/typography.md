@@ -51,7 +51,7 @@ title:
 
 ## 标点和空格
 
-<img style="float: right; width: 200px;" src="https://t.alipayobjects.com/images/T1KrXhXlxnXXXXXXXX.png" />
+<img style="float: right; width: 200px;" src="http://10.230.135.97:8000/typography/typo0.png" />
 
 1. 使用全角中文标点。
 2. 遇到完整的英文整句、特殊名词，其内容使用半角标点。
@@ -73,7 +73,7 @@ title:
 方法：若彩色背景，可先将色彩去色转为黑白，分别吸取并查看背景和文字的 `HSV` 色值。
 两者的 V 值的差额便是明暗对比差。这个明暗对比差建议不小于 40。
 
-<img src="https://t.alipayobjects.com/images/T1UYphXe8lXXXXXXXX.png" width="90%">
+<img src="http://10.230.135.97:8000/typography/typo1.png" width="90%">
 
 
 ## 对齐
@@ -82,18 +82,18 @@ title:
 
 中文和英文均采用左对齐的方式，是因为文字的阅读顺序一般是从左到右的。
 
-<img src="https://t.alipayobjects.com/images/T1nHhhXl4mXXXXXXXX.png" width="100%">
+<img src="http://10.230.135.97:8000/typography/typo2.png" width="100%">
 
 ### 数字/小数点对齐
 
-<img style="float: right; width: 400px;" src="https://t.alipayobjects.com/images/T1YbthXhRkXXXXXXXX.png" />
+<img style="float: right; width: 400px;" src="http://10.230.135.97:8000/typography/typo3.png" />
 
 <p style="height:220px;width:380px;">数字通常采用右对齐或小数点对齐，这样便于对个十百千位上的数字进行对比。</p>
 
 
 ### 冒号对齐
 
-<img style="float: right; width: 400px;" src="https://t.alipayobjects.com/images/T1hcJhXnlXXXXXXXXX.png" />
+<img style="float: right; width: 400px;" src="http://10.230.135.97:8000/typography/typo4.png" />
 
 <p style="height:220px;width:380px;">以冒号对齐的方式在表单中尤其常见。主要是为了区分标题和内容区块，除了美观简洁外，让用户能迅速看清标题减少出错概率。</p>
 
@@ -101,7 +101,7 @@ title:
 
 语言通常是越简单越明确，而提示性文字更需要简明扼要，让用户一目了然，减少操作失误。提示性句子长度视业务而定，建议一般不超过 16–18 个字。
 
-<img style="float: right; width: 300px; margin:30px 100px;" src="https://t.alipayobjects.com/images/T17cthXgpbXXXXXXXX.png" />
+<img style="float: right; width: 300px; margin:30px 100px;" src="http://10.230.135.97:8000/typography/typo5.png" />
 
 保持简明准确的方法：
 
@@ -113,10 +113,10 @@ title:
 
 我们通常使用对比的手法来区分出信息的层次感，信息主次分明能准确地将信息清晰地传达给用户，让用户第一眼获取所需资讯，提升阅读体验。
 
-<img src="https://t.alipayobjects.com/images/T1GYBhXghjXXXXXXXX.png" width="600">
+<img src="http://10.230.135.97:8000/typography/typo6.png" width="600">
 
 ### Squint test
 
 我们可以采用 [模糊测试](https://chrome.google.com/webstore/detail/the-squint-test/gppnipfbappicilfniaimcnagbpfflpg) 的方法，即眯起眼睛从整体来检视结构上的合理与否。
 
-<img src="https://t.alipayobjects.com/images/T1bY4hXkpfXXXXXXXX.png" width="600">
+<img src="http://10.230.135.97:8000/typography/typo7.png" width="600">

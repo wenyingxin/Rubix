@@ -141,17 +141,17 @@ ReactDOM.render(<ExtendPalettes key="palettes" />, mountNode);
 
 设计元素本身由于交互行为会引发一系列细微的视觉变化，而元素本身的颜色变化有时也能很好的实现这一目的。在进行这类设计的同时，建议采取在颜色上添加黑色或者白色并按照 `n+5%` 的规律递增的方式来实现。以下图为例，当鼠标 hover 某个特定元素，就视为浮起，对应颜色就相应增加白色叠加，相反点击的行为可以理解为按下去，在颜色上就相应的增加黑色的叠加。
 
-<img src="https://t.alipayobjects.com/images/T1ZHxhXdNmXXXXXXXX.png" width="100%">
+<img src="http://10.230.135.97:8000/color/color1.png" width="100%">
 
-<img src="https://t.alipayobjects.com/images/T1fZJhXahgXXXXXXXX.png" width="100%">
+<img src="http://10.230.135.97:8000/color/color2.png" width="100%">
 
 ## 色彩识别
 
 合适的色彩对比为信息传达加分，同时也应放考虑到有颜色识别障碍人群的需求。我们将每种主色衍生出来的颜色进行了打标，在考虑对比颜色的选择时建议两种颜色对应标签数值的差要大于等于 5。
 
-<img src="https://t.alipayobjects.com/images/rmsweb/T1hLphXgXcXXXXXXXX.png" width="100%">
+<img src="http://10.230.135.97:8000/color/color3.png" width="100%">
 
-<img src="https://t.alipayobjects.com/images/rmsweb/T1v2phXj8bXXXXXXXX.png" width="100%">
+<img src="http://10.230.135.97:8000/color/color4.png" width="100%">
 
 ## 色彩换算工具
 

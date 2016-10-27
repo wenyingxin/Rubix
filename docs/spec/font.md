@@ -16,11 +16,11 @@ title:
 
 - 中文字体族：
 
-   <img src="https://os.alipayobjects.com/rmsportal/OKbesWXtRMCNGmO.png" width="100%">
+   <img src="http://10.230.135.97:8888/site/common/images/fontCN.png" width="100%">
 
 - 英文文字体族：
 
-   <img src="https://t.alipayobjects.com/images/T1bcXhXfNeXXXXXXXX.png" width="100%">
+   <img src="http://10.230.135.97:8000/fontEN.png" width="100%">
 
 字体家族 css 代码如下：
 
