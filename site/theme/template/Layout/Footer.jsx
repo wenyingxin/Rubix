@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import { Select, Modal } from 'antd';
-import { version as antdVersion } from 'antd/package.json';
+import { Select, Modal } from 'rubix';
+import { version as antdVersion } from 'rubix/package.json';
 import { docVersions } from '../../';
 
 const Option = Select.Option;

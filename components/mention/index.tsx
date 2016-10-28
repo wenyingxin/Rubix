@@ -83,7 +83,7 @@ export default class Mention extends React.Component<MentionProps, MentionState>
     });
 
     if (this.props.loading) {
-      notFoundContent = <i className="anticon anticon-loading"></i>;
+      notFoundContent = <i className="rubixicon rubixicon-loading"></i>;
     }
 
     return <RcMention

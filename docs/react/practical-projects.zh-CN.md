@@ -5,7 +5,7 @@ title: 项目实战
 
 [dva](https://github.com/dvajs/dva) 是一个基于 react 和 redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。
 
-本文会引导你使用 dva 和 antd 从 0 开始创建一个简单应用。
+本文会引导你使用 dva 和 rubix 从 0 开始创建一个简单应用。
 
 会包含以下内容：
 
@@ -47,9 +47,9 @@ webpack: bundle build is now finished.
 
 在浏览器里打开 http://localhost:8989 ，你会看到 dva 的欢迎界面。
 
-## 使用 antd
+## 使用 rubix
 
-通过 npm 安装 `antd` 和 `babel-plugin-import` 。`babel-plugin-import` 是用来自动引入 antd 的脚本和样式的，详见 [repo](https://github.com/rubix-design/babel-plugin-import) 。
+通过 npm 安装 `rubix` 和 `babel-plugin-import` 。`babel-plugin-import` 是用来自动引入 antd 的脚本和样式的，详见 [repo](https://github.com/rubix-design/babel-plugin-import) 。
 
 ```bash
 $ npm install antd babel-plugin-import --save
@@ -59,7 +59,7 @@ $ npm install antd babel-plugin-import --save
 
 ```diff
 + webpackConfig.babel.plugins.push(['import', {
-+   libraryName: 'antd',
++   libraryName: 'rubix',
 +   style: 'css',
 + }]);
 ```
@@ -104,7 +104,7 @@ export default Products;
 
 ```javascript
 import React, { PropTypes } from 'react';
-import { Table, Popconfirm, Button } from 'antd';
+import { Table, Popconfirm, Button } from 'rubix';
 
 const ProductList = ({ onDelete, products }) => {
   const columns = [
@@ -226,9 +226,6 @@ export default connect(({ products }) => ({
 
 刷新浏览器，应该能看到以下效果：
 
-<p style="text-align: center">
-  <img src="https://zos.alipayobjects.com/rmsportal/GQJeDDeUCSTRMMg.gif" />
-</p>
 
 ## 构建应用
 

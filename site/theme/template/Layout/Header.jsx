@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import enquire from 'enquire.js';
 import debounce from 'lodash.debounce';
 import classNames from 'classnames';
-import { Select, Menu, Row, Col, Icon, Button, Popover } from 'antd';
+import { Select, Menu, Row, Col, Icon, Button, Popover } from 'rubix';
 
 const Option = Select.Option;
 

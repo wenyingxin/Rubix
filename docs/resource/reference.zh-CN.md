@@ -7,7 +7,7 @@ title: 文献素材
 
 <div class="resource-cards">
 <a target="_blank" href="http://book.douban.com/subject/26642302/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/PeeRQQIGQJCswxe.png">
+  <img src="http://10.230.135.97:8000/resources/book1.png">
   <span class="resource-card-content">
     <span class="resource-card-title">About Face 4</span>
     <span class="resource-card-description">作者: Alan.cooper</span>
@@ -15,7 +15,7 @@ title: 文献素材
   </span>
 </a>
 <a target="_blank" href="http://book.douban.com/subject/3821157/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/CoojVXLtoWrUSmI.png">
+  <img src="http://10.230.135.97:8000/resources/book2.png">
   <span class="resource-card-content">
     <span class="resource-card-title">Web 界面设计</span>
     <span class="resource-card-description">作者: Bill Scott / Theresa Neil</span>
@@ -23,7 +23,7 @@ title: 文献素材
   </span>
 </a>
 <a target="_blank" href="http://book.douban.com/subject/25716088/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/oRxdwgZMwfEFeJa.png">
+  <img src="http://10.230.135.97:8000/resources/book3.png">
   <span class="resource-card-content">
     <span class="resource-card-title">界面设计模式</span>
     <span class="resource-card-description">作者: Tidwell,J.</span>
@@ -31,7 +31,7 @@ title: 文献素材
   </span>
 </a>
 <a target="_blank" href="http://book.douban.com/subject/3323633/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/SNdJVyZaZwdwJmr.png">
+  <img src="http://10.230.135.97:8000/resources/book4.png">
   <span class="resource-card-content">
     <span class="resource-card-title">写给大家看的设计书</span>
     <span class="resource-card-description">作者: Robin Williams</span>
@@ -39,7 +39,7 @@ title: 文献素材
   </span>
 </a>
 <a target="_blank" href="http://book.douban.com/subject/26102860/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/txGrSvGFMTTrwjY.png">
+  <img src="http://10.230.135.97:8000/resources/book5.png">
   <span class="resource-card-content">
     <span class="resource-card-title">设计心理学 1</span>
     <span class="resource-card-description">作者: 唐纳德•A•诺曼</span>
@@ -47,7 +47,7 @@ title: 文献素材
   </span>
 </a>
 <a target="_blank" href="http://book.douban.com/subject/26424688/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/cZQyAARFxzaKEOG.png">
+  <img src="http://10.230.135.97:8000/resources/book6.png">
   <span class="resource-card-content">
     <span class="resource-card-title">设计心理学 3</span>
     <span class="resource-card-description">作者: 唐纳德•A•诺曼</span>
@@ -55,7 +55,7 @@ title: 文献素材
   </span>
 </a>
 <a target="_blank" href="http://book.douban.com/subject/4886100/" class="resource-card">
-  <img src="https://os.alipayobjects.com/rmsportal/moeFnnuXrputdag.png">
+  <img src="http://10.230.135.97:8000/resources/book7.png">
   <span class="resource-card-content">
     <span class="resource-card-title">Web 表单设计：点石成金的艺术</span>
     <span class="resource-card-description">作者: Luke Wroblewski</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { Icon } from 'antd';
+import { Icon } from 'rubix';
 
 export default class CopyableIcon extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export default class CopyableIcon extends React.Component {
       <CopyToClipboard text={text} onCopy={this.onCopied}>
         <li className={this.state.justCopied ? 'copied' : ''}>
           <Icon type={this.props.type} />
-          <span className="anticon-class">{this.props.type}</span>
+          <span className="rubixicon-class">{this.props.type}</span>
         </li>
       </CopyToClipboard>
     );

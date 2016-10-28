@@ -9,13 +9,13 @@ title:
 
 点击菜单，收起其他展开的所有菜单，保持菜单聚焦简洁。
 
-> 该用法要求 antd@2.0+
+> 该用法要求 rubix@2.0+
 
 ## en-US
 
 Click the menu and you will see that all the other menus gets collapsed to keep the entire menu compact.
 
-> This demo is for antd@2.0+.
+> This demo is for rubix@2.0+.
 
 ````jsx
 import { Menu, Icon } from 'rubix';

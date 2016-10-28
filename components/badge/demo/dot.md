@@ -27,7 +27,7 @@ ReactDOM.render(<div>
 ````
 
 <style>
-.anticon-notification {
+.rubixicon-notification {
   width: 16px;
   height: 16px;
   line-height: 16px;

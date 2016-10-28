@@ -23,7 +23,7 @@ title: Dropdown
 | visible     | 菜单是否显示 | Boolean   | -           |
 | onVisibleChange  | 菜单显示状态改变时调用，参数为 { visible } | Function | - |
 
-菜单可由 `antd.Menu` 取得，可设置 `onSelect` 回调，菜单还包括菜单项 `antd.Menu.Item`，分割线 `antd.Menu.Divider`。
+菜单可由 `rubix.Menu` 取得，可设置 `onSelect` 回调，菜单还包括菜单项 `rubix.Menu.Item`，分割线 `rubix.Menu.Divider`。
 
 > 注意： Menu.Item 必须设置唯一的 key 属性。
 

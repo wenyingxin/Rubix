@@ -17,32 +17,22 @@ Rubix Design React 致力于提供给程序员**愉悦**的开发体验。
 
 ### 1. 安装脚手架工具
 
-> 使用 `antd-init` 前，务必确认 [Node.js](https://nodejs.org/en/) 已经升级到 v4.x 或以上。
+> 使用 `rubix-init` 前，务必确认 [Node.js](https://nodejs.org/en/) 已经升级到 v4.x 或以上。
 
 ```bash
-$ npm install antd-init -g
+$ npm install rubix-init -g
 ```
-
-更多功能请参考 [脚手架工具](https://github.com/rubix-design/antd-init/) 和 [开发工具文档](http://rubix-tool.github.io/)。
-
-> 除了官方提供的脚手架，您也可以使用社区提供的脚手架和范例：
->
->   - [react-redux-antd](https://github.com/okoala/react-redux-antd)
->   - [react-antd-admin](https://github.com/fireyy/react-antd-admin)
->   - [react-antd-redux-router-starter](https://github.com/yuzhouisme/react-antd-redux-router-starter)
->   - [react-redux-antd-starter](https://github.com/BetaRabbit/react-redux-antd-starter)
->   - [更多](https://github.com/rubix-design/rubix-design/issues/129)
 
 ### 2. 创建一个项目
 
 使用命令行进行初始化。
 
 ```bash
-$ mkdir antd-demo && cd antd-demo
-$ antd-init
+$ mkdir rubix-demo && cd rubix-demo
+$ rubix-init
 ```
 
-antd-init 会自动安装 npm 依赖，若有问题则可自行安装。
+rubix-init 会自动安装 npm 依赖，若有问题则可自行安装。
 
 若安装缓慢报错，可尝试用 `cnpm` 或别的镜像源自行安装：`rm -rf node_modules && cnpm install`。
 
@@ -50,12 +40,12 @@ antd-init 会自动安装 npm 依赖，若有问题则可自行安装。
 
 脚手架会生成一个 Todo 应用实例（一个很有参考价值的 React 上手示例），先不管它，我们用来测试组件。
 
-直接用下面的代码替换 `index.js` 的内容，用 React 的方式直接使用 antd 组件。
+直接用下面的代码替换 `index.js` 的内容，用 React 的方式直接使用 rubix 组件。
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { DatePicker, message } from 'rubix';
 
 class App extends React.Component {
   constructor(props) {
@@ -99,11 +89,11 @@ $ npm run build
 
 入口文件会构建到 `dist` 目录中，你可以自由部署到不同环境中进行引用。
 
-> 上述例子用于帮助你理解 Ant Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。
+> 上述例子用于帮助你理解 Rubix Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。
 
 ## 兼容性
 
-Ant Design React 支持所有的现代浏览器和 IE9+。
+Rubix Design React 支持所有的现代浏览器和 IE9+。
 
 对于 IE8/9 等浏览器，需要提供 [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) 等 Polyfills 的支持，推荐使用 [babel-polyfill](https://babeljs.io/docs/usage/polyfill/)。特别对于 IE8 需要配合使用 [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) 版本。
 
@@ -128,9 +118,7 @@ Ant Design React 支持所有的现代浏览器和 IE9+。
 </html>
 ```
 
-另外，由于 `babel@6.x` 对 IE8 的支持不佳，你可能会遇到类似 [#28](https://github.com/rubix-tool/atool-build/issues/28) 和 [#858](https://github.com/rubix-design/rubix-design/issues/858) 的 default 报错的问题。
-
-[antd-init](http://github.com/rubix-design/antd-init) 脚手架已经解决了这个问题，你也可以参照这个 [webpack 配置](https://github.com/rubix-design/antd-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8)。
+另外，由于 `babel@6.x` 对 IE8 的支持不佳。
 
 > 更多 IE8 下使用 React 的相关问题可以参考：https://github.com/xcatliu/react-ie8
 

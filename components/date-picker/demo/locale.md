@@ -20,7 +20,7 @@ moment will use your time zone automatically. If you want to set other time zone
 
 ````jsx
 import { DatePicker } from 'rubix';
-import enUS from 'antd/lib/date-picker/locale/en_US';
+import enUS from 'rubix/lib/date-picker/locale/en_US';
 import moment from 'moment-timezone/moment-timezone';
 // It's recommended to set moment locale and time zone globally in entry file,
 // otherwise, you need to set it by `value` or `defaultValue`.

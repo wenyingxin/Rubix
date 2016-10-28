@@ -15,7 +15,7 @@ Wrap your app with `LocaleProvider`, and apply the corresponding language packag
 
 ````jsx
 import { Pagination, LocaleProvider } from 'rubix';
-import enUS from 'antd/lib/locale-provider/en_US';
+import enUS from 'rubix/lib/locale-provider/en_US';
 
 function App() {
   return (

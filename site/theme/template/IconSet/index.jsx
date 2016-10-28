@@ -16,7 +16,7 @@ export default class IconSet extends React.Component {
   render() {
     const { className, catigory } = this.props;
     const listClassName = classNames({
-      'anticons-list': true,
+      'rubixicons-list': true,
       clearfix: true,
       [className]: !!className,
     });

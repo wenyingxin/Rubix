@@ -27,12 +27,12 @@ toc: false
 最终会渲染为：
 
 ```html
-<i class="anticon anticon-${type}"></i>
+<i class="rubixicon rubixicon-${type}"></i>
 ```
 
 ## 本地部署
 
-图标组件使用 [iconfont.cn](http://iconfont.cn)，默认公网可访问。如需本地部署，可参考 [示例](https://github.com/rubix-design/antd-init/tree/master/examples/local-iconfont)。
+图标组件使用 [iconfont.cn](http://iconfont.cn)，默认公网可访问。如需本地部署，可参考 [示例](https://github.com/rubix-design/rubixd-init/tree/master/examples/local-iconfont)。
 
 ## 图标列表
 
@@ -61,12 +61,12 @@ ReactDOM.render(<IconSet className="icons" catigory="other" />, mountNode);
 .markdown .icons {
   width: 100%;
 }
-ul.anticons-list {
+ul.rubixicons-list {
   margin: 40px 0;
   list-style: none;
   overflow: hidden;
 }
-ul.anticons-list li {
+ul.rubixicons-list li {
   float: left;
   width: 16.66%;
   text-align: center;
@@ -82,13 +82,13 @@ ul.anticons-list li {
   overflow: hidden;
   padding: 10px 0 0 0;
 }
-ul.anticons-list li:hover {
+ul.rubixicons-list li:hover {
   background-color: #eaf8fe;
 }
-ul.anticons-list li.copied:hover {
+ul.rubixicons-list li.copied:hover {
   color: rgba(255,255,255,0.2);
 }
-ul.anticons-list li:after {
+ul.rubixicons-list li:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -101,19 +101,19 @@ ul.anticons-list li:after {
   transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   opacity: 0;
 }
-ul.anticons-list li.copied:after {
+ul.rubixicons-list li.copied:after {
   opacity: 1;
   top: -10px;
 }
-.anticon {
+.rubixicon {
   font-size: 24px;
   margin: 12px 0 16px;
   transition: all .3s;
 }
-ul.anticons-list li:hover .anticon {
+ul.rubixicons-list li:hover .rubixicon {
   transform: scale(1.4);
 }
-.anticon-class {
+.rubixicon-class {
   display: block;
   text-align: center;
   transform: scale(0.83);

@@ -14,7 +14,7 @@ LocaleProvider 使用 React 的 [context](https://facebook.github.io/react/docs/
 
 
 ```jsx
-import enUS from 'antd/lib/locale-provider/en_US';
+import enUS from 'rubix/lib/locale-provider/en_US';
 
 ...
 
@@ -33,4 +33,4 @@ We supply an English locale package. Other language users can create a locale pa
 
 | 参数    | 说明           | 类型              | 默认值        |
 |--------|----------------|------------------|--------------|
-| locale | 语言包配置，语言包可到 `antd/lib/locale-provider/` 目录下寻找 | Object | - |
+| locale | 语言包配置，语言包可到 `rubix/lib/locale-provider/` 目录下寻找 | Object | - |

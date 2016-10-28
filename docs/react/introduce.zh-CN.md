@@ -6,9 +6,9 @@ title: Rubix of React
 这里是 Rubix 的 React 实现，开发和服务于互联网前端产品。
 
 <div class="pic-plus">
-  <img width="150" src="http://10.230.135.97:8000/logo-rubix.svg">
+  <img width="180" src="http://10.230.135.97:8000/logo-rubix.svg">
   <span>+</span>
-  <img width="160" src="http://10.230.135.97:8000/react.svg">
+  <img width="140" src="http://10.230.135.97:8000/react.svg">
 </div>
 
 <style>
