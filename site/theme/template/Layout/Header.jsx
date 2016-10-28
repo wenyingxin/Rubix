@@ -151,7 +151,7 @@ export default class Header extends React.Component {
         <Row>
           <Col lg={4} md={6} sm={7} xs={24}>
             <Link to="/" id="logo">
-              <img alt="logo" src="http://10.230.135.97:8888/docs/react/logo-rubix.svg" />
+              <img alt="logo" src="http://10.230.135.97:8000/logo-rubix.svg" />
               <span>Rubix</span>
             </Link>
           </Col>
