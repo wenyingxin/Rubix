@@ -70,6 +70,8 @@ function getStyle() {
       width: 100%;
       background: #fff;
     }
+    #logo span{color:#fff;}
+    .home-nav-white #logo span{color:#666;}
     #footer {
       background: #000;
     }

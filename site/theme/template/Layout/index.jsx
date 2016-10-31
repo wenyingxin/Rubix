@@ -16,7 +16,7 @@ const language = (typeof localStorage === 'undefined' || !localStorage.getItem('
         navigator.language : localStorage.getItem('locale');
 const isZhCN = language === 'zh-CN';
 
-const appLocale = isZhCN ? cnLocale : enLocale;
+const appLocale = isZhCN ? cnLocale : cnLocale;
 addLocaleData(appLocale.data);
 
 export default class Layout extends React.Component {
