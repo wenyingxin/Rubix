@@ -60,7 +60,7 @@ export default class Header extends React.Component {
 
   handleLangChange = () => {
     if (typeof localStorage !== 'undefined') {
-      const locale = this.context.intl.locale === 'zh-CN' ? 'en-US' : 'zh-CN';
+      const locale = this.context.intl.locale === 'zh-CN' ? 'zh-CN' : 'zh-CN';
       localStorage.setItem('locale', locale);
       location.reload();
     }
@@ -78,7 +78,7 @@ export default class Header extends React.Component {
     }
 
     const locale = this.context.intl.locale;
-    const excludedSuffix = locale === 'zh-CN' ? 'en-US.md' : 'zh-CN.md';
+    const excludedSuffix = locale === 'zh-CN' ? 'zh-CN.md' : 'zh-CN.md';
     const options = components
             .filter(({ meta }) => !meta.filename.endsWith(excludedSuffix))
             .map(({ meta }) => {

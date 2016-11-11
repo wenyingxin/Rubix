@@ -15,7 +15,7 @@ module.exports = {
     Other: 4,
   },
   docVersions: {
-    '1.x': 'http://10.230.135.97:8888/',
+    '1.x': 'http://10.230.135.97:8001/',
   },
   routes: {
     path: '/',
