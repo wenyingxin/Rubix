@@ -2,7 +2,7 @@
 order: 9
 title:
   zh-CN: 加载
-  en-US: Loading
+  en-US: 加载
 ---
 
 ---

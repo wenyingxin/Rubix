@@ -1,67 +1,51 @@
 ---
 order: 1
-title: Getting Started
+title: 快速上手
 ---
 
-Ant Design React is dedicated to providing a **good development experience** for programmers.
+Rubix Design React 致力于提供给程序员**愉悦**的开发体验。
 
 ---
 
-Before delving into Ant Design React, a good knowledge of [React](http://facebook.github.io/react/) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
+在开始之前，推荐先学习 [React](http://facebook.github.io/react/) 和 [ES2015](http://babeljs.io/docs/learn-es2015/)。
 
-## First Example
 
-The following CodePen demo is the simplest usage case, and it's also a good habit to fork this demo to provide a re-producible demo while reporting a bug. Please don't use this demo as a scaffold in real world.
+## 标准开发
 
-- [antd CodePen](http://codepen.io/anon/pen/wGOWGW?editors=001)
+实际项目开发中，你会需要对 ES2015 和 JSX 代码的构建、调试、代理、打包部署等一系列工程化的需求。
+我们提供了一套 `npm` + `webpack` 的开发工具链来辅助开发，下面我们用一个简单的实例来说明。
 
-## Standard Development Flow
+### 1. 安装脚手架工具
 
-During development, you may need to compile and debug JSX and ES2015 code, and even proxy some of the request to mocked data or some external services. And all of these to be done with a quick feedback provided through hot reloading of changes.
-
-Such features, together with packaging the production version are covered in this work flow.
-
-### 1. Installation
-
-> Please make sure that you had installed [Node.js](https://nodejs.org/en/)(> v4.x) before using `antd-init`.
+> 使用 `rubix-init` 前，务必确认 [Node.js](https://nodejs.org/en/) 已经升级到 v4.x 或以上。
 
 ```bash
-$ npm install antd-init -g
+$ npm install rubix-init -g
 ```
 
-Read [the documentation of `antd-init`](https://github.com/rubix-design/antd-init/) and [the documentation of `rubix-tool`](http://rubix-tool.github.io/) to explore more features.
+### 2. 创建一个项目
 
-> Also, you can use scaffold/demo which is provided by community:
->
->   - [react-redux-antd](https://github.com/okoala/react-redux-antd)
->   - [react-antd-admin](https://github.com/fireyy/react-antd-admin)
->   - [react-antd-redux-router-starter](https://github.com/yuzhouisme/react-antd-redux-router-starter)
->   - [react-redux-antd-starter](https://github.com/BetaRabbit/react-redux-antd-starter)
->   - [more](https://github.com/rubix-design/rubix-design/issues/129)
-
-### 2. Create a New Project
-
-A new project can be created using CLI tools.
+使用命令行进行初始化。
 
 ```bash
-$ mkdir antd-demo && cd antd-demo
-$ antd-init
+$ mkdir rubix-demo && cd rubix-demo
+$ rubix-init
 ```
 
-`antd-init` will run `npm install` after a project is created. If it fails, you can run `npm install` by yourself.
+rubix-init 会自动安装 npm 依赖，若有问题则可自行安装。
 
-### 3. Use antd's Components
+若安装缓慢报错，可尝试用 `cnpm` 或别的镜像源自行安装：`rm -rf node_modules && cnpm install`。
 
-By default, besides the scaffolding needed to start the development, a fully working Todo application is created.
-You may study this example later. For now, just follow this guide in order to get some experience working with the result of `antd-init`.
+### 3. 使用组件
 
-Replace the content of `index.js` with the following code.
-As you can see, there is no difference between antd's components and usual React components.
+脚手架会生成一个 Todo 应用实例（一个很有参考价值的 React 上手示例），先不管它，我们用来测试组件。
+
+直接用下面的代码替换 `index.js` 的内容，用 React 的方式直接使用 rubix 组件。
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { DatePicker, message } from 'rubix';
 
 class App extends React.Component {
   constructor(props) {
@@ -71,14 +55,14 @@ class App extends React.Component {
     };
   }
   handleChange(date) {
-    message.info('Selected Date: ' + date.toString());
+    message.info('您选择的日期是: ' + date.toString());
     this.setState({ date });
   }
   render() {
     return (
       <div style={{ width: 400, margin: '100px auto' }}>
         <DatePicker onChange={value => this.handleChange(value)} />
-        <div style={{ marginTop: 20 }}>Date: {this.state.date.toString()}</div>
+        <div style={{ marginTop: 20 }}>当前日期：{this.state.date.toString()}</div>
       </div>
     );
   }
@@ -87,39 +71,38 @@ class App extends React.Component {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-> All the components in antd are listed in the sidebar.
+> 你可以在左侧菜单选用更多组件。
 
-### 4. Development & Debugging
+### 4. 开发调试
 
-Run your project and visit http://127.0.0.1:8000
+一键启动调试，访问 http://127.0.0.1:8000 查看效果。
 
 ```bash
 $ npm start
 ```
 
-### 5. Building & Deployment
+### 5. 构建和部署
 
 ```bash
 $ npm run build
 ```
 
-Entry files will be built and generated in `dist` directory, then we can deploy it to different environments.
+入口文件会构建到 `dist` 目录中，你可以自由部署到不同环境中进行引用。
 
-> This guide is designed to help you to understand how to use antd, so it may not be similar to what you do in the real world.
-> But you can use those tools in your project, depending on your context and needs.
+> 上述例子用于帮助你理解 Rubix Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。
 
-## Compatibility
+## 兼容性
 
-Ant Design React supports all the modern browsers and IE9+.
+Rubix Design React 支持所有的现代浏览器和 IE9+。
 
-But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) and other polyfills for IE8/9, and [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) is a better choice. What's more, use [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) to support IE8.
+对于 IE8/9 等浏览器，需要提供 [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) 等 Polyfills 的支持，推荐使用 [babel-polyfill](https://babeljs.io/docs/usage/polyfill/)。特别对于 IE8 需要配合使用 [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) 版本。
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- import stylesheet -->
+    <!-- 引入样式 -->
     <link rel="stylesheet" href="/index.css">
     <!-- Polyfills -->
     <!--[if lt IE 10]>
@@ -128,49 +111,19 @@ But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-
   </head>
   <body>
   </body>
-  <!-- import common dependencies -->
+  <!-- 引入公用文件 -->
   <script src="/common.js"></script>
-  <!-- import entry file -->
+  <!-- 引入入口文件 -->
   <script src="/index.js"></script>
 </html>
 ```
 
-You may encounter problems like [#28](https://github.com/rubix-tool/atool-build/issues/28) and [#858](https://github.com/rubix-design/rubix-design/issues/858), since `babel@6.x` doesn't support IE8.
+另外，由于 `babel@6.x` 对 IE8 的支持不佳。
 
-[antd-init](http://github.com/rubix-design/antd-init) had solved those problems and you can refer to this [webpack config](https://github.com/rubix-design/antd-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8).
+> 更多 IE8 下使用 React 的相关问题可以参考：https://github.com/xcatliu/react-ie8
 
-> More about how to use React in IE8: https://github.com/xcatliu/react-ie8
 
-## Customized Work Flow
+## 小甜点
 
-If you want to customize your work flow, we recommend to use [webpack](http://webpack.github.io/) to build and debug code.
-
-Also, you can use any [scaffold](https://github.com/enaqx/awesome-react#boilerplates) available in React ecosystem. If you encounter problems, you can use our [webpack config](https://github.com/rubix-tool/atool-build/blob/master/src/getWebpackCommonConfig.js) and [modify it](http://rubix-tool.github.io/webpack-config.html).
-
-There are some [scaffolds](https://github.com/rubix-design/rubix-design/issues/129) which have already integrated antd, so you can try and start with one of these, and even contribute.
-
-## Import on Demand
-
-If we import a component like this `import { Button } from 'antd';`, then all the components of antd will be imported. But, we can import component on demand:
-
-```jsx
-import Button from 'antd/lib/button';
-```
-
-If you use `babel`, we recommend to use [babel-plugin-import](https://github.com/rubix-design/babel-plugin-import). This plugin will convert the following code to the above form:
-
-```jsx
-import { Button } from 'antd';
-```
-
-And this plugin can also load styles on demand. See the [usage](https://github.com/rubix-design/babel-plugin-import#usage) for further details.
-
-## Customization
-
-- [Customize Theme](https://github.com/rubix-design/antd-init/tree/master/examples/customize-antd-theme)
-- [Local Iconfont](https://github.com/rubix-design/antd-init/tree/master/examples/local-iconfont)
-
-## Tips
-
-- You can use any `npm` modules.
-- We recommend to write code in [ES2015](http://babeljs.io/blog/2015/06/07/react-on-es6-plus) as `babel` has been integrated in our work flow.
+- 你可以享用 `npm` 生态圈里的所有模块。
+- 我们使用了 `babel`，试试用 [ES2015](http://babeljs.io/blog/2015/06/07/react-on-es6-plus) 的写法来提升编码的愉悦感。

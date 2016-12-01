@@ -6,7 +6,7 @@ import MainContent from './MainContent';
 const language = (typeof localStorage === 'undefined' || !localStorage.getItem('locale')) ?
         navigator.language : localStorage.getItem('locale');
 const isZhCN = language === 'zh-CN';
-const locale = isZhCN ? 'zh-CN' : 'en-US';
+const locale = isZhCN ? 'zh-CN' : 'zh-CN';
 
 export function collect(nextProps, callback) {
   const pageData = nextProps.location.pathname === 'changelog' ?

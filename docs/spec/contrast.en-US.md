@@ -1,50 +1,48 @@
 ---
-category: Principles
+category: 设计原则
 order: 3
-title: Contrast
+title: 对比
 ---
 
-Contrast is one of the effective ways to add visual interest to your page, and to create an organizational hierarchy among different element that aid user in finding the information quickly.
+对比是增加视觉效果最有效方法之一，同时也能在不同元素之间建立一种有组织的层次结构，让用户快速识别关键信息。
 
-> Note: The important rule for contrast to be effective, it must be strong. Don't be wimp.
+> 注：要实现有效的对比，对比就必须强烈，切不可畏畏缩缩。
 
 ---
 
-## The Contrast of major and minor relationship
+## 主次关系对比
 
-<img class="preview-img good" align="right" alt="good example" src="https://os.alipayobjects.com/rmsportal/RruKZUSYEwauGdF.png">
-<img class="preview-img bad" align="right" alt="bad example" src="https://os.alipayobjects.com/rmsportal/TOupLSPNQkBTmYw.png">
+<img class="preview-img good" align="right" alt="正确示例" src="http://10.230.135.97:8000/contrast/contrast1.png">
+<img class="preview-img bad" align="right" alt="错误示例" src="http://10.230.135.97:8000/contrast/contrast2.png">
 
-In order to help user make a quick operation (something like the form，modal), a more important operation or a operation with higher frequency would be emphasized.
+为了让用户能在操作上（类似表单、弹出框等场景）快速做出判断， 来突出其中一项相对更重要或者更高频的操作。
 
-
-> Notes: ways of emphasizing are not just to intensify the key item. It could also weaken the other items.
-
+> 注意：突出的方法，不局限于强化重点项，也可以是弱化其他项。
 
 <br>
 
-<img class="preview-img" align="right" alt="Example of ignoring the primary and secondary sequence" description="Accept and Reject should use default button, for UI should not affect user's decision." src="https://os.alipayobjects.com/rmsportal/xskurfmyKPumFSv.png">
+<img class="preview-img" align="right" alt="不区分主次的示例" description="『通过』和『驳回』都使用次按钮，系统保持中立。" src="http://10.230.135.97:8000/contrast/contrast3.png">
 
-When there’s something needs users to make decision prudently, the system should remain neutral. It shouldn’t make the decision for users or lead them to make judgement.
-
----
-
-## Contrast of whole and part
-
-<img class="preview-img" align="right" alt="Example of whole and part 1" src="https://os.alipayobjects.com/rmsportal/HEDJpTyufnfXUOP.png">
-
-<img class="preview-img" align="right" alt="Example of whole and part 2" src="https://os.alipayobjects.com/rmsportal/bafqoUWFgXjsuSG.png">
-
-Taking advantage of changing the typesetting, the typeface and the size, we highlight the different levels and differentiate the ensemble and the part, which would make the page be more flexible and rhythmic.
+在一些需要用户慎重决策的场景中，系统应该保持中立，不能替用户或者诱导用户做出判断。
 
 ---
 
-## Contrast of the state relation
+## 总分关系对比
 
-<img class="preview-img" align="right" alt="Example of static contrast" description="Points with various colors would be used to show different states. " src="https://os.alipayobjects.com/rmsportal/UHjarNwxrXndznP.png">
+<img class="preview-img" align="right" alt="总分关系示例 1" src="http://10.230.135.97:8000/contrast/contrast4.png">
 
-<img class="preview-img" align="right" alt="Example of dynamic contrast" description="When the mouse doesn’t be moved, this item and other items would show different visual effects obviously, which would influence the user’s operation." src="https://os.alipayobjects.com/rmsportal/DCAtXAEaFnAXEmG.png">
+<img class="preview-img" align="right" alt="总分关系示例 2" src="http://10.230.135.97:8000/contrast/contrast5.png">
 
-Taking advantage of changing colors and adding assistant shapes, we realize the comparison of state relation, which could help users differentiate various information better
+通过调整排版、字体、大小等方式来突出层次感，区分总分关系，使得页面更具张力和节奏感。
 
-The forms we usually see include 『static contrast』 and 『dynamic contrast』.
+---
+
+## 状态关系对比
+
+<img class="preview-img" align="right" alt="静态对比示例" description="用不同颜色点，来表明不同状态。" src="http://10.230.135.97:8000/contrast/contrast6.png">
+
+<img class="preview-img" align="right" alt="动态对比示例" description="鼠标悬停时，该项和其他项呈现出明显不同的视觉效果，响应用户操作。" src="http://10.230.135.97:8000/contrast/contrast7.png">
+
+通过改变颜色、增加辅助形状等方法来实现状态关系的对比，以便用户更好的区分信息。
+
+常见类型有『静态对比』、『动态对比』。

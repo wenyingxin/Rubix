@@ -1,14 +1,14 @@
 ---
 order: 0
-title: Rubix Design of React
+title: Rubix of React
 ---
 
-We supply a react implementation `antd` following Ant Design specification, which designed to help developing RIA such as dashboards or other enterprise-like complex UI needs.
+这里是 Rubix 的 React 实现，开发和服务于互联网前端产品。
 
 <div class="pic-plus">
-  <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
+  <img width="180" src="http://10.230.135.97:8000/logo-rubix.svg">
   <span>+</span>
-  <img width="160" src="https://t.alipayobjects.com/images/rmsweb/T16xRhXkxbXXXXXXXX.svg">
+  <img width="140" src="http://10.230.135.97:8000/react.svg">
 </div>
 
 <style>
@@ -25,76 +25,9 @@ We supply a react implementation `antd` following Ant Design specification, whic
 
 ---
 
-## Features
+## 特性
 
-- Following Ant Design, a design language for creating user friendly and beautiful websites.
-- It is a set of high quality UI components and based on [React Component](http://react-component.github.io/badgeboard/).
-- Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript.
+- Designed as Rubix，提炼和服务互联网前端产品的交互语言和视觉风格。
+- [React Component](http://react-component.github.io/badgeboard/) 基础上精心封装的高质量 UI 组件。
+- 基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。
 
-## Installation
-
-```bash
-$ npm install antd
-```
-
-## Example
-
-```jsx
-import { DatePicker } from 'antd';
-ReactDOM.render(<DatePicker />, mountNode);
-```
-
-Import style:
-
-```jsx
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
-```
-
-You can use:
-
-- `import DatePicker from 'antd/lib/date-picker';`
-- `import { DatePicker } from 'antd';` when [babel-plugin-import](https://github.com/rubix-design/babel-plugin-import) is also used.
-
-> babel-plugin-import supports importing components and styles on demand.
-
-## Version
-
-- Stable: [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
-- Beta: [![](https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm)](https://www.npmjs.org/package/antd)
-
-## Compatibility
-
-Modern browsers and IE9+.
-
-> [IE8 issues](https://github.com/xcatliu/react-ie8)
-
-## Useful Links
-
-- [Home Page](http://ant.design/)
-- [Change Log](/changelog)
-- [Scaffold](https://github.com/rubix-design/antd-init/)
-- [Development Tools](http://rubix-tool.github.io/)
-- [React Component](http://react-component.github.io/)
-- [Ant Design Mobile](http://mobile.ant.design)
-- [React Code Style](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
-- [Component Design Principles](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
-- [Design Handbook](https://os.alipayobjects.com/rmsportal/HTXUgPGkyyxEivE.png)
-- [Scaffold and Demo Supported by Community](https://github.com/rubix-design/rubix-design/issues/129)
-
-## Who is using antd
-
-- Ant Financial
-- Alibaba
-- Koubei
-- China Internet Plus
-- Didi
-
-> If your company or product uses Ant Design, you are welcome to comment in [this issue]((https://github.com/rubix-design/rubix-design/issues/477)). Thank you!
-
-## Contributing
-
-Please read our [CONTRIBUTING.md](https://github.com/rubix-design/rubix-design/blob/master/.github/CONTRIBUTING.md) first.
-
-If you have any idea to improve antd, just create a [Pull Request](https://github.com/rubix-design/rubix-design/pulls). Also, you can also [issue](https://github.com/rubix-design/rubix-design/issues/new) bugs or [ask questions](https://github.com/rubix-design/rubix-design/issues).
-
-> Recommend to read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html) and [How to Ask a Question in Open Source Community](https://github.com/seajs/seajs/issues/545) and [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html), a smart question will get right answer quickly.

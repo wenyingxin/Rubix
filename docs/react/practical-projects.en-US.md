@@ -1,42 +1,42 @@
 ---
 order: 3
-title: Practical Projects
+title: 项目实战
 ---
 
-[dva](https://github.com/dvajs/dva) is a React and redux based, lightweight and elm-style framework, which supports side effects, hot module replacement, dynamic on demand, react-native, SSR. And it has been widely used in production environment.
+[dva](https://github.com/dvajs/dva) 是一个基于 react 和 redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。
 
-This article will guide you to create a simple application from zero using dva and antd.
+本文会引导你使用 dva 和 rubix 从 0 开始创建一个简单应用。
 
-Include the following:
+会包含以下内容：
 
 ---
 
-## Install dva
+## 安装 dva
 
-Install dva with npm.
+通过 npm 安装 dva 。
 
 ```bash
 $ npm install dva-cli -g
 ```
 
-## Create New App
+## 创建新应用
 
-After installed dva-cli, you can have access to the `dva` command in terminal. Now, create a new application with `dva new`.
+安装完 dva-cli 之后，就可以在 terminal 里访问到 `dva` 命令。现在，你可以通过 `dva new` 创建新应用。
 
 ```bash
 $ dva new dva-quickstart
 ```
 
-This creates `dva-quickstart` directory, that contains the project directories and files, and provides development server, build script, mock service, proxy server and so on.
+这会创建 `dva-quickstart` 目录，包含项目初始化目录和文件，并提供开发服务器、构建脚本、数据 mock 服务、代理服务器等功能。
 
-Then `cd` the `dva-quickstart` directory, and start the development server.
+然后我们 `cd` 进入 `dva-quickstart` 目录，并启动开发服务器：
 
 ```bash
 $ cd dva-quickstart
 $ npm start
 ```
 
-After a few seconds, you will see thw following output:
+几秒钟后，你会看到以下输出：
 
 ```bash
           proxy: load rule from proxy.config.js
@@ -45,32 +45,32 @@ After a few seconds, you will see thw following output:
 webpack: bundle build is now finished.
 ```
 
-Open http://localhost:8989 in your browser, you will see dva welcome page.
+在浏览器里打开 http://localhost:8989 ，你会看到 dva 的欢迎界面。
 
-## Integrate antd
+## 使用 rubix
 
-Install `antd` and `babel-plugin-import` with npm. `babel-plugin-import` is used to automatically import scripts and stylesheets from antd. See [repo](https://github.com/rubix-design/babel-plugin-import) 。
+通过 npm 安装 `rubix` 和 `babel-plugin-import` 。`babel-plugin-import` 是用来自动引入 antd 的脚本和样式的，详见 [repo](https://github.com/rubix-design/babel-plugin-import) 。
 
 ```bash
 $ npm install antd babel-plugin-import --save
 ```
 
-Edit `webpack.config.js` to integrate `babel-plugin-import`.
+编辑 `webpack.config.js`，使 `babel-plugin-import` 插件生效。
 
 ```diff
 + webpackConfig.babel.plugins.push(['import', {
-+   libraryName: 'antd',
++   libraryName: 'rubix',
 +   style: 'css',
 + }]);
 ```
 
-> Notice: No need to manually restart the server, it will restart automatically after you save the `webpack.config.js`.
+> 注：这里不需要手动重启开发服务器，保存 `webpack.config.js` 后会自动重启。
 
-## Define Router
+## 定义路由
 
-We need to write an application displaying the list of products. The first step is to create a route.
+我们要写个应用来先显示产品列表。首先第一步是创建路由，路由可以想象成是组成应用的不同页面。
 
-Create a route component `routes/Products.js`:
+新建 route component `routes/Products.js`，内容如下：
 
 ```javascript
 import React from 'react';
@@ -84,7 +84,7 @@ const Products = (props) => {
 export default Products;
 ```
 
-Add routing infomation to router, edit `router.js`:
+添加路由信息到路由表，编辑 `router.js` :
 
 ```diff
 + import Products from './routes/Products';
@@ -92,19 +92,19 @@ Add routing infomation to router, edit `router.js`:
 + <Route path="/products" component={Products} />
 ```
 
-Then open http://localhost:8989/#/products in your browser, you should be able to see the `<h2>` tag defined before.
+然后在浏览器里打开 http://localhost:8989/#/products ，你应该能看到前面定义的 `<h2>` 标签。
 
-## Write UI Components
+## 编写 UI Component
 
-As your application grows and you notice you are sharing UI elements between multiple pages (or using them multiple times on the same page), in dva it's called reusable components.
+随着应用的发展，你会需要在多个页面分享 UI 元素 (或在一个页面使用多次)，在 dva 里你可以把这部分抽成 component 。
 
-Let's create a `ProductList` component that we can use in multiple places to show a list of products.
+我们来编写一个 `ProductList` component，这样就能在不同的地方显示产品列表了。
 
-Create `components/ProductList.js` and typing:
+新建 `components/ProductList.js` 文件：
 
 ```javascript
 import React, { PropTypes } from 'react';
-import { Table, Popconfirm, Button } from 'antd';
+import { Table, Popconfirm, Button } from 'rubix';
 
 const ProductList = ({ onDelete, products }) => {
   const columns = [
@@ -139,13 +139,13 @@ ProductList.proptypes = {
 export default ProductList;
 ```
 
-## Define Model
+## 定义 Model
 
-After complete the UI, we will begin processing the data and logic.
+完成 UI 后，现在开始处理数据和逻辑。
 
-dva manages domain model with `model`, with reducers for synchronous state update, effects for async logic, and subscriptions for data source subscribe.
+dva 通过 model 的概念把一个领域的模型管理起来，包含同步更新 state 的 reducers，处理异步逻辑的 effects，订阅数据源的 subscriptions 。
 
-Let's create a model `models/products.js` and typing:
+新建 model `models/products.js` ：
 
 ```javascript
 import dva from 'dva';
@@ -161,26 +161,26 @@ export default {
 };
 ```
 
-In this model:
+这个 model 里：
 
-- `namespace` represent the key on global state
-- `state` is the initial value, here is an empty array
-- `reducers` is equal to reducer in redux, accepting action, and update state synchronously
+- `namespace` 表示在全局 state 上的 key
+- `state` 是初始值，在这里是空数组
+- `reducers` 等同于 redux 里的 reducer，接收 action，同步更新 state
 
-Then don't forget to require it in `index.js`:
+然后别忘记在 `index.js` 里载入他：
 
 ```diff
 // 3. Model
 + app.model(require('./models/products'));
 ```
 
-## Connect
+## connect 起来
 
-So far, wee have completed a seperate model and component. Then how to connect these together? 
+到这里，我们已经单独完成了 model 和 component，那么他们如何串联起来呢? 
 
-dva provides a `connect` method. If you are familar with redux, this `connect` is from react-router.
+dva 提供了 connect 方法。如果你熟悉 redux，这个 connect 就是 react-redux 的 connect 。
 
-Edit `routes/Products.js` and replace with following:
+编辑 `routes/Products.js`，替换为以下内容：
 
 ```javascript
 import React from 'react';
@@ -210,7 +210,7 @@ export default connect(({ products }) => ({
 }))(Products);
 ```
 
-Finally, we need some initial data to make the application run together. Edit `index.js`:
+最后，我们还需要一些初始数据让这个应用 run 起来。编辑 `index.js`：
 
 ```diff
 - const app = dva();
@@ -224,21 +224,18 @@ Finally, we need some initial data to make the application run together. Edit `i
 + });
 ```
 
-Refresh your browser, you should see the following result:
+刷新浏览器，应该能看到以下效果：
 
-<p style="text-align: center">
-  <img src="https://zos.alipayobjects.com/rmsportal/GQJeDDeUCSTRMMg.gif" />
-</p>
 
-## Build
+## 构建应用
 
-Now that we've written our application and verified that it works in development, it's time to get it ready to deploy to our users. To do so, run the following command:
+完成开发并且在开发环境验证之后，就需要部署给我们的用户了。先执行下面的命令：
 
 ```bash
 $ npm run build
 ```
 
-After a few seconds, the output should be as follows:
+几秒后，输出应该如下：
 
 ```bash
 Child
@@ -250,23 +247,23 @@ Child
      index.css     127 kB    1, 0  [emitted]  index
 ```
 
-The `build` command packages up all of the assets that make up your application —— JavaScript, templates, CSS, web fonts, images, and more. Then you can find these files in the `dist /` directory.
+`build` 命令会打包所有的资源，包含 JavaScript, CSS, web fonts, images, html 等。然后你可以在 `dist/` 目录下找到这些文件。
 
-## What's Next
+## 下一步
 
-We have completed a simple application, but you may still have lots of questions, such as:
+我们已经完成了一个简单应用，你可能还有很多疑问，比如：
 
-- How to dealing with async logic
-- How to load initial data elegantly
-- How to handle onError globally and locally
-- How to load Routes and Models on demand
-- How to implement HMR
-- How to mock data
-- and so on...
+- 如何处理异步请求
+- 如何优雅地加载初始数据
+- 如何统一处理出错，以及特定操作的出错
+- 如何动态加载路由和 Model，以加速页面载入速度
+- 如何实现 hmr
+- 如何 mock 数据
+- 等等
 
-You can:
+你可以：
 
-- Visit [dva offical website](https://github.com/dvajs/dva)
-- View all the [API](https://github.com/dvajs/dva#api)
-- View [toturial](https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/tutorial/01-%E6%A6%82%E8%A6%81.md), complete a medium application step by step
-- View examples, such as [dva version of hackernews](https://github.com/dvajs/dva-hackernews)
+- 访问 [dva 官网](https://github.com/dvajs/dva)
+- 查看所有 [API](https://github.com/dvajs/dva#api)
+- [教程](https://github.com/dvajs/dva-docs/blob/master/v1/zh-cn/tutorial/01-%E6%A6%82%E8%A6%81.md)，一步步完成一个中型应用
+- 看看 [dva 版 hackernews](https://github.com/dvajs/dva-hackernews) 是[如何实现](https://github.com/sorrycc/blog/issues/9)的

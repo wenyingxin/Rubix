@@ -2,7 +2,7 @@
 order: 6
 title:
   zh-CN: 表格：复杂数据
-  en-US: Complex-table
+  en-US: 表格：复杂数据
 ---
 
 表格也用于展示复杂和高度结构化数据。

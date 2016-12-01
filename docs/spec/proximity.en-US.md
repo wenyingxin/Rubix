@@ -1,37 +1,37 @@
 ---
-category: Principles
+category: 设计原则
 order: 1
-title: Proximity
+title: 亲密性
 ---
 
-When several items are in close proximity to each other, they become one visual unit rather than several separate units. Otherwise, their distance should be larger and look more like several visual units. The basic purpose of proximity is to organize. To give an apparent view of the page structure and the hierarchy of information to users.
+如果信息之间关联性越高，它们之间的距离就应该越接近，也越像一个视觉单元；反之，则它们的距离就应该越远，也越像多个视觉单元。亲密性的根本目的是实现组织性，让用户对页面结构和信息层次一目了然。
 
 ---
 
-## The relation of vertical spacing
+## 纵向间距关系
 
-<img class="preview-img" align="right" alt="Example of the different vertical distance" description="In Ant Design, the three different formats are 8px (small spacing), 16px (middle spacing) and 24px (large spacing)." src="https://os.alipayobjects.com/rmsportal/blBCqHsUJhKxxAU.png">
+<img class="preview-img" align="right" alt="纵向间距示例" description="在 Rubix Design 中，这三种规格分别为：8px（小号间距）、16px（中号间距）、24px（大号间距）。" src="http://10.230.135.97:8000/proximity/proximity1.png">
 
-Divide the hierarchy of information through three formats:『small spacing』, 『middle spacing』and『large spacing』
+通过『小号间距』、『中号间距』、『大号间距』这三种规格来划分信息层次。
 
 <br>
 
-<img class="preview-img" align="right" alt="Example of added element" description="To make the hierarchy more apparent through adding 『guides』." src="https://os.alipayobjects.com/rmsportal/EWpTfSlQzueWlbp.png">
+<img class="preview-img" align="right" alt="增加元素示例" description="通过增加『分割线』来拉开层次。" src="http://10.230.135.97:8000/proximity/proximity2.png">
 
-In the case that the three formats are not inapplicable, the hierarchy of information can be separated clearly through adding or cutting down the multiple of 『basic spacing』, or adding elements. 
+在这三种规格不适用的情况下，可以通过加减『基础间距』的倍数，或者增加元素来拉开信息层次。
 
-> Note: in Ant Design, y=8+8*n, among which，n>=0，y stands for the vertical spacing and 8 represents 『basic spacing』.
+> 注：在 Rubix Design 中，`y=8+8*n`。其中，`n>=0`，y 是纵向间距，8 是『基础间距』。
 
 ---
 
-## Relationship of horizontal spacing   
+## 横向间距关系
 
-<img class="preview-img" align="right" alt="Example of combination and configuration" src="https://os.alipayobjects.com/rmsportal/LdomydjSKKlFhiv.png">
+<img class="preview-img" align="right" alt="组合排布示例" src="http://10.230.135.97:8000/proximity/proximity3.png">
 
-To adapt to screens of different sizes, in the horizontal direction, use grid layout to arrange the components to ensure the flexibility of the layout. 
+为了适用不同尺寸的屏幕，在横向采用栅格布局来排布组件，从而保证布局的灵活性。
 
 <br>
 
-<img class="preview-img" align="right" alt="Example of checkbox" src="https://os.alipayobjects.com/rmsportal/DxzQXtIEnFcFxGY.png">
+<img class="preview-img" align="right" alt="复选框内示例" src="http://10.230.135.97:8000/proximity/proximity4.png">
 
-In the inner of a component, the horizontal spacing of elements should differ too.
+在一个组件内部，元素的横向间距也应该有所不同。

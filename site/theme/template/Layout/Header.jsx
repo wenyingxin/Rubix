@@ -60,7 +60,7 @@ export default class Header extends React.Component {
 
   handleLangChange = () => {
     if (typeof localStorage !== 'undefined') {
-      const locale = this.context.intl.locale === 'zh-CN' ? 'zh-CN' : 'zh-CN';
+      const locale = this.context.intl.locale === 'zh-CN' ? 'zh-CN' : 'en-US';
       localStorage.setItem('locale', locale);
       location.reload();
     }
@@ -78,7 +78,7 @@ export default class Header extends React.Component {
     }
 
     const locale = this.context.intl.locale;
-    const excludedSuffix = locale === 'zh-CN' ? 'zh-CN.md' : 'zh-CN.md';
+    const excludedSuffix = locale === 'zh-CN' ? 'zh-CN.md' : 'en-US.md';
     const options = components
             .filter(({ meta }) => !meta.filename.endsWith(excludedSuffix))
             .map(({ meta }) => {
@@ -134,7 +134,7 @@ export default class Header extends React.Component {
       </Menu>,
     ];
 
-    const searchPlaceholder = locale === 'zh-CN' ? '搜索组件...' : 'Search...';
+    const searchPlaceholder = locale === 'zh-CN' ? '搜索组件...' : '搜索组件...';
     return (
       <header id="header" className={headerClassName}>
         <Popover

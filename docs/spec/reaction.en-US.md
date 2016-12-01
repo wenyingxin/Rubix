@@ -1,75 +1,76 @@
 ---
-category: Principles
+category: 设计原则
 order: 10
-title: React Immediately
+title: 即时反应
 ---
 
-Invitations are powerful because they directly address discoverability and provide feedback before an interaction happens. Transitions are useful because they provide visual feedback during an interaction. But another class of feedback exists. It is the feedback that happens immediately after each interaction with the system, an immediate reaction paired with the user’s action.
+『提供邀请』的强大体现在`交互之前`给出反馈，解决易发现性问题；『巧用过渡』的有用体现在它能够在`交互期间`为用户提供视觉反馈；『即时反应』的重要性体现在`交互之后`立即给出反馈。
 
-While we can’t literally extend Newton’s law to the world of user interfaces, we certainly can apply this principle to the way we should interact with users. When users click on a button, they expect the button to depress. When they type in a field, they expect to see characters show up in the text box. When they make a mistake, they want the application to tell them where they goofed.
+就像『牛顿第三定律』所描述作用力和反作用一样，用户进行了操作或者内部数据发生了变化，系统就应该立即有一个对应的反馈，同时输入量级越大、重要性越高，那么反馈量级越大、重要性越高。
 
-While there is a possibility of too much feedback (or, more accurately, too much of the wrong feedback—a concept we will discuss in the upcoming chapters), a system with little or no feedback feels sluggish and thickheaded.
+虽然反馈太多（准确的说，错误的反馈太多）是一个问题，但是反馈太少甚至没有反馈的系统，则让人感觉迟钝和笨拙，用户体验更差。
 
-> ** Newton’s Third Law of Motion **: For every action, there is an equal and opposite reaction, from Wikipedia.
-
----
-
-## Lookup Patterns
-
-
-<img class="preview-img" align="right" alt="example of Certain Category" description="The keyword of the user query is only displayed in three categories, Topics, Questions and Articles." src="https://os.alipayobjects.com/rmsportal/fgQfkNakHrUiAun.png">
-
-<img class="preview-img" align="right" alt="example of Uncertain Category" description="The number of categories the keyword of the user query belongs to is uncetain." src="https://os.alipayobjects.com/rmsportal/hUfCsXwnOsVlskl.png">
-
-Auto Complete: As the user types input into a field, a drop-down menu of matching values is displayed.
-Depending on the categories of search results, it can be divided into two types, Certain Category and Uncertain Category.
-
-<br>
-
-<img class="preview-img" align="right" alt="example of Live Search" description="When the user type a search value, the system instantly displays the search results." src="https://os.alipayobjects.com/rmsportal/OyJCVmOigyXKWCf.png">
-
-Live Suggest: Live Suggest provides real-time search term suggestions for creating a search.
-
-<br>
-
-Refining Search: Refining Search provides a set of live filters that allow the search results to be tuned in real time. Learn more on [Pattern/Advanced Search](/docs/pattern/advanced-search).
-
-<br>
+> ** 牛顿第三定律 ** ：当两个物体互相作用时，彼此施加于对方的力，其大小相等、方向相反。——摘自《维基百科》
 
 ---
-## Live Suggest
 
-<img class="preview-img" align="right" alt="example of Live Preview" description="Depending on the type of the input from the user, the system provides instant feedback on password strength and validation." src="https://os.alipayobjects.com/rmsportal/jecYhRgfbHleGDJ.png">
-
-Live Preview: A Live Preview gives the users a glimpse beforehand of how the application will interpret their input once submitted.
-
->Note: An ounce of prevention is worth a pound of cure. Use Live Previews to prevent errors.
-
-<br>
-
-Progressive Disclosure: When users are faced with a series of steps, it is often best to provide hints only when they are needed, instead of cluttering the interface by displaying all the hints at once. Learn more cases on [Stay on the Page/Progressive Disclosure](/docs/spec/stay#Process-Flows)。
-
-<br>
-
-<img class="preview-img" align="right" alt="example of Loading Button" src="https://os.alipayobjects.com/rmsportal/FBAZGqfeUnDlUtw.png">
-
-<img class="preview-img" align="right" alt="example of Loading Table" src="https://os.alipayobjects.com/rmsportal/FPXsINbTgsuSStI.png">
-
-<img class="preview-img" align="right" alt="example of Loading List" src="https://os.alipayobjects.com/rmsportal/WJqeUHzthTXaHnW.png">
-
-<img class="preview-img" align="right" alt="example of Loading Page" src="https://os.alipayobjects.com/rmsportal/qPWjexSmFfCiLVJ.png">
+## 查询模式
 
 
-Progress Indicator: Progress Indicators keep a conversation going with the user when the rest of the interface is currently unavailable. Common Progress Indicators, such as Loading Button, Loading Table, Loading List and Loading Page, can be displayed respectively according to the frequency and importance of operation.
+<img class="preview-img" align="right" alt="确定类目示例" description="用户所查询的关键词，只会在『话题』、『问题』、『文章』这 3 种类目中出现。" src="http://10.230.135.97:8000/react/react1.png">
+
+<img class="preview-img" align="right" alt="不确定类目示例" description="用户所查询的关键词，其所属的类目数量不确定，可能 4 个，可能 5 个，可能更多。" src="http://10.230.135.97:8000/react/react2.png">
+
+自动完成：用户输入时，下拉列表会随着输入的关键词显示匹配项。
+根据查询结果分类的多少，可以分为『确定类目』、『不确定类目』两种类型。
 
 <br>
 
-<img class="preview-img" align="right" alt="example of Click Refresh" src="https://os.alipayobjects.com/rmsportal/DdmWqoqIFSCSAvq.png">
+<img class="preview-img" align="right" alt="实时搜索示例" description="用户输入一个搜索值，系统随即显示查询结果。" src="http://10.230.135.97:8000/react/react3.png">
 
-Click Refresh: Click Refresh notifies the user of fresh content and provides button or tool to refresh.
+实时搜索：随着用户输入，实时显示搜索结果。『自动完成』、『实时建议』的近亲。
 
 <br>
 
-<img class="preview-img" align="right" alt="example of Periodic Refresh"  description="The added list item turns to be highlighted and get back to normal in a few seconds." src="https://os.alipayobjects.com/rmsportal/guiuShsfpJzxZQx.png">
+微调搜索：随着用户调整搜索条件，实时调整搜索结构。具体可见：[『模式／高级搜索』](/docs/pattern/advanced-search)。
 
-Periodic Refresh: Periodic Refresh brings in fresh content on a periodic basis without direct user interaction.
+<br>
+
+---
+## 反馈模式
+
+<img class="preview-img" align="right" alt="实时预览示例" description="根据用户的输入，提供关于密码强度和有效性的实时反馈。" src="http://10.230.135.97:8000/react/react4.png">
+
+实时预览：在用户提交输入之前，让他先行了解系统将如何处理他的输入。
+
+>注：解决错误最好的办法，就是不让错误发生。而『实时预览』就是有效避免错误的好设计。
+
+<br>
+
+渐进式展现：在必要的时候提供必要的提示，而不是一股脑儿显示所有提示，导致界面混乱，增加认知负担。案例详见[『足不出户／渐进式展现』](/docs/spec/stay#流程处理)。
+
+<br>
+
+<img class="preview-img" align="right" alt="按钮加载示例" src="http://10.230.135.97:8000/react/react5.png">
+
+<img class="preview-img" align="right" alt="表格加载示例" src="http://10.230.135.97:8000/react/react6.png">
+
+<img class="preview-img" align="right" alt="富列表加载示例" src="http://10.230.135.97:8000/react/react7.png">
+
+<img class="preview-img" align="right" alt="页面加载示例" src="http://10.230.135.97:8000/react/react8.png">
+
+
+进度指示：当一个操作需要一定时间完成时，就需要即时告知进度，保持与用户的沟通。
+常见的进度指示：『按钮加载』、『表格加载』、『富列表加载』、『页面加载』。可根据操作的量级和重要性，展示不同类型的进度指示。
+
+<br>
+
+<img class="preview-img" align="right" alt="点击刷新示例" src="http://10.230.135.97:8000/react/react9.png">
+
+点击刷新：告知用户有新内容，并提供按钮等工具帮助用户查看新内容。
+
+<br>
+
+<img class="preview-img" align="right" alt="定时示例"  description="新增的列表项『高亮』，持续几秒后恢复正常。" src="http://10.230.135.97:8000/react/react10.png">
+
+定时刷新：无需用户介入，定时展示新内容。

@@ -1,19 +1,19 @@
 ---
-category: Principles
+category: 设计原则
 order: 4
-title: Repetition
+title: 重复
 ---
 
-The same elements keep repeating in the whole interface, which not only could lower the user’s learning cost effectively, but also help user recognize the relevance between these elements.
+相同的元素在整个界面中不断重复，不仅可以有效降低用户的学习成本，也可以帮助用户识别出这些元素之间的关联性。
 
 ---
 
-## Repetitive elements
+## 重复元素
 
-<img class="preview-img" align="right" alt="Example of repetitive wireframe" src="https://os.alipayobjects.com/rmsportal/SREcKOUMmiWPQNO.png">
+<img class="preview-img" align="right" alt="线框重复示例" src="http://10.230.135.97:8000/repetition/repetition1.png">
 
-<img class="preview-img" align="right" alt="Example of repetitive design elements" src="https://os.alipayobjects.com/rmsportal/ZjFUWyPHGzyQJYD.png">
+<img class="preview-img" align="right" alt="设计要素重复示例" src="http://10.230.135.97:8000/repetition/repetition2.png">
 
-<img class="preview-img" align="right" alt="Example of repetitive of formats" src="https://os.alipayobjects.com/rmsportal/mveDxAdjucdJDll.png">
+<img class="preview-img" align="right" alt="文案格式重复示例" src="http://10.230.135.97:8000/repetition/repetition3.png">
 
-The repetitive element may be a thick rule(line), a wireframe， color, design elements, particular format, spatial relationships, etc.
+重复元素可以是一条粗线、一种线框，某种相同的颜色、设计要素、设计风格，某种格式、空间关系等。

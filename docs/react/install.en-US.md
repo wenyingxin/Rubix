@@ -1,68 +1,23 @@
 ---
 order: 2
-title: Installation
+title: 安装
 ---
 
-## Using npm to install
+## 使用 npm 安装
 
-**We recommend using npm to install**，it not only makes development easier，but you can also take advantage of the whole ecosystem.
+**我们推荐使用 npm 的方式进行开发**，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。
 
+可以通过 npm 直接安装到项目中，使用 `import` 或 `require` 进行引用。
 
-If using npm to install, you could use `import` or `require`.
-
-Stable version：
-
-[![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
 
 ```bash
-$ npm install antd --save
+$ npm install rubix --save
 ```
 
-You can Subscribe to this feed for new version notification: https://github.com/rubix-design/rubix-design/releases.atom
 
 
-Beta version：
+## 浏览器引入
 
-[![](https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm)](https://www.npmjs.org/package/antd)
+我们在 npm 发布包内的 `rubix/dist` 目录下提供了 `rubix.js` `rubix.css` 以及 `rubix.min.js` `rubix.min.css` 用于一次性引入所有的 rubix 组件。
 
-```bash
-$ npm install antd@beta --save
-```
-
-> **Past releases**：https://github.com/rubix-design/rubix-design/releases
-
-## Import in Browser
-
-We provide `antd.js` `antd.css` and `antd.min.js` `antd.min.css` under `antd/dist` in antd's npm package, in order to import all the components of antd directly. Also, you can use [unpkg](https://unpkg.com/).
-
-> It's not recommended to use the already built files, as you cannot get bugfixes from the dependencies of antd.
-
-#### stable
-
-- https://unpkg.com/antd/dist/antd.js
-- https://unpkg.com/antd/dist/antd.css
-- https://unpkg.com/antd/dist/antd.min.js
-- https://unpkg.com/antd/dist/antd.min.css
-
-#### beta
-
-- https://unpkg.com/antd@beta/dist/antd.js
-- https://unpkg.com/antd@beta/dist/antd.css
-- https://unpkg.com/antd@beta/dist/antd.min.js
-- https://unpkg.com/antd@beta/dist/antd.min.css
-
-> Here is an [example](https://github.com/rubix-design/antd-init/tree/master/examples/build-antd-standalone) of how to build your own antd.js if you are using antd@<1.0.0.
-
-## Development tool
-
-We provide React components [Scaffold tool](https://github.com/rubix-design/antd-init).
-
-```bash
-$ npm install antd-init -g
-```
-
-Inside an empty folder run `antd-init` to init.
-
-You can explore the latest structure of scaffold [here](https://github.com/rubix-design/antd-init/tree/master/boilerplates), it is a good habit to watch this repo to get the latest features.
-
-> [More development tools](http://rubix-tool.github.io/)。
+> 不推荐使用构建文件，因为难以获得底层依赖模块的 bug 快速修复支持。

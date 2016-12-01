@@ -2,7 +2,7 @@
 order: 9
 title:
   zh-CN: 对话框
-  en-US: Dialog
+  en-US: 对话框
 ---
 ---
 

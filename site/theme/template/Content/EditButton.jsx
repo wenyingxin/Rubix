@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip, Icon } from 'antd';
+import { Tooltip, Icon } from 'rubix';
 
 const branchUrl = 'https://github.com/rubix-design/rubix-design/blob/master/';
 

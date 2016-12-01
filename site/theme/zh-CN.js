@@ -20,7 +20,7 @@ module.exports = {
     'app.home.best-practice': '最佳实践',
     'app.home.experience': '通过互联网银行、互联网金融三大平台设计实践，积累了大量的优秀案例。',
     'app.home.design-pattern': '设计模式',
-    'app.home.pattern': '总结中后台设计中反复出现的问题，并提供相应的解决方案。',
+    'app.home.pattern': '总结前台设计中反复出现的问题，并提供相应的解决方案。',
     'app.home.reusable-components': '丰富的基础组件',
     'app.home.components-intro': '丰富、灵活、实用的基础组件，为业务产品提供强有力的设计支持。',
     'app.home.learn-more': '了解更多',

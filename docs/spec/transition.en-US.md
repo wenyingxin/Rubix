@@ -1,80 +1,77 @@
 ---
-category: Principles
+category: 设计原则
 order: 9
-title: Use Transition
+title: 巧用过渡
 ---
 
-Our Gray Matter are wired to react to dynamic things like movement,shape change and colour change. Transitions smooth out the jarring world of the Web, making changes appear more natural. The main purpose for Transitions is to provide an engaging interface and reinforce communication.
+人脑灰质（Gray Matter）会对动态的事物（eg：移动、形变、色变等）保持敏感。在界面中，适当的加入一些过渡效果，能让界面保持生动，同时也能增强用户和界面的沟通。
 
-- Adding: The added elements should inform the users how to use, and the modified elements should be recognized.
-- Receding: The irrelevant page elements should be removed properly.
-- Normal: The elements without any change on the page can be safely ignored.
-
----
-
-## Maintain Context While Changing Views
-
-<video class="transition-video-player" alt="example of Slide In and Slide Out
-" src="https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4" />
-
-Slide In and Slide Out: Create an illusion of virtual space.
-
-<br>
-
-<video class="transition-video-player" alt="example of Carousel" src="https://os.alipayobjects.com/rmsportal/GIutPgZMTyfFfrH.mp4" />
-
-Carousel: Carousels are great for extending vir- tual space.
-
-<br>
-
-<video class="transition-video-player" alt="example of Accordion" src="https://os.alipayobjects.com/rmsportal/ERKhqHlcHiCDSQu.mp4" />
-
-Accordion: Accordion helps maintain context while switching views.
-
-<br>
-
-<p><span class="waiting">View Navigation (coming soon)</span></p>
-
-<br>
+- Adding: 新加入的信息元素应被告知如何使用，从页面转变的信息元素需被重新识别。
+- Receding: 与当前页无关的信息元素应采用适当方式移除。
+- Normal: 指那些从转场开始到结束都没有发生变化的信息元素。
 
 ---
 
-## Explain What Just Happened
+## 在视图变化时保持上下文
 
-<video class="transition-video-player" alt="example of Adding an Object" description="When an object is added, the highlighted area shows it to the user. The highlight fades in several seconds in order not to interfere the user flow." src="https://os.alipayobjects.com/rmsportal/FqkQMyFqNqielOw.mp4" />
+<video class="transition-video-player" alt="滑入与滑出示例" src="http://10.230.135.97:8000/transition/transition1.mp4" />
 
-Adding an Object: Add an object in the table or chart.
-
-<br>
-
-<video class="transition-video-player" alt="example of Deleting Objects" src="https://os.alipayobjects.com/rmsportal/pnNkNIMoowmGUQy.mp4" />
-
-Deleting an Object: Delete an object in the table or chart.
+滑入与滑出：可以有效构建虚拟空间。
 
 <br>
 
-<video class="transition-video-player" alt="example of Modifying an object" description="Status No.1: The user modifies the value of Detail. <br>Status No.2: After the user click the save button, a yellow fill is displayed in the grid of Detail, which indicates the change of the object. <br>Status No.3: The fill fades in several seconds and returned to normal." src="https://os.alipayobjects.com/rmsportal/XrUIWmsmOlEnZGc.mp4" />
+<video class="transition-video-player" alt="传送带示例" src="http://10.230.135.97:8000/transition/transition2.mp4" />
 
-Modifying an Object: Modify an object in the table or chart.
+传送带：可极大地扩展虚拟空间。
 
 <br>
 
-<video class="transition-video-player" alt="example of Calling out an Object" src="https://os.alipayobjects.com/rmsportal/gSNilqbiXOufDXF.mp4" />
+<video class="transition-video-player" alt="折叠窗口示例" src="http://10.230.135.97:8000/transition/transition3.mp4" />
 
-Calling out an Object: Click the page element and call out a new object.
+折叠窗口：在视图切换时，有助于保持上下文，同时也能拓展虚拟空间。
+
+<br>
+
+<p><span class="waiting">视图定位 (敬请期待)</span></p>
+
+<br>
 
 ---
 
-## Improve Perceived Performance
+## 解释刚刚发生了什么
 
-If actual performance can hardly improved, there is a difference between actual performance and perceived performance. Diverting the user’s attention is a good way to improve the perceived time an operation takes.
+<video class="transition-video-player" alt="对象增加示例" description="新增一条对象时，该行『高亮』告知用户这是新增项；几秒后『高亮』消失，以免过度干扰用户。" src="http://10.230.135.97:8000/transition/transition4.mp4" />
+
+对象增加：在列表/表格中，新增了一个对象。
 
 <br>
 
-<p><span class="waiting">Image (coming soon)</span></p>
+<video class="transition-video-player" alt="对象删除示例" src="http://10.230.135.97:8000/transition/transition5.mp4" />
+
+对象删除：在列表/表格中，删除了一个对象。
+
+<br>
+
+<video class="transition-video-player" alt="对象更改示例" description="状态一：用户更改了『详情』中的值；<br>状态二：用户点击『保存』后，详情所在的网格出现『黄底』，表明该对象发生了更改；<br>状态三：底色持续几秒后，恢复正常。" src="http://10.230.135.97:8000/transition/transition6.mp4" />
+
+对象更改：在列表/表格中，更改了一个对象。
+
+<br>
+
+<video class="transition-video-player" alt="对象呼出示例" src="http://10.230.135.97:8000/transition/transition7.mp4" />
+
+对象呼出：点击页面中元素，呼出一个新对象。
 
 ---
 
-## Natural Motion
+## 改善感知性能
 
-Please refer to [Ant Motion, a motion language](http://motion.ant.design/#/language/)。
+当无法有效提升『实际性能』时，可以考虑适当转移用户的注意力，来缩短某项操作的感知时间，改善感知性能。
+
+<br>
+
+<p><span class="waiting">图片（敬请期待）</span></p>
+
+---
+
+## 自然运动
