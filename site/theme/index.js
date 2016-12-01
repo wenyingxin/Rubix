@@ -34,7 +34,7 @@ module.exports = {
       path: 'changelog',
       component: contentTmpl,
     }, {
-      path: 'components/:children/',
+      path: 'components/:children',
       component: contentTmpl,
     }, {
       path: 'docs/spec/:children',
