@@ -13,7 +13,8 @@ function getActiveMenuItem(props) {
 }
 
 function fileNameToPath(filename) {
-  const snippets = filename.replace(/(\/index)?((\.zh-CN)|(\.en-US))?\.md$/i, '').split('/');
+  
+ const snippets = filename.replace(/(\/index)?((\.zh-CN)|(\.en-US))?\.md$/i, '').split('/');
   return snippets[snippets.length - 1];
 }
 
@@ -82,6 +83,7 @@ export default class MainContent extends React.Component {
               <span className="chinese" key="chinese">{item.subtitle}</span>,
             ];
     const disabled = item.disabled;
+    
     const url = item.filename.replace(/(\/index)?((\.zh-CN)|(\.en-US))?\.md$/i, '').toLowerCase();
     const child = !item.link ?
       <Link to={/^components/.test(url) ? `${url}/` : url} disabled={disabled}>

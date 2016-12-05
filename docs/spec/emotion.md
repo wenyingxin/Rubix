@@ -1,8 +1,7 @@
 ---
 category: 设计原则
 order: 15
-subtitle: 
-english: 情感体验
+title: 情感体验
 ---
 
 
